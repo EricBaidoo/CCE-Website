@@ -1,643 +1,77 @@
-<?php
-// CCE Homepage - Cross-Cutting Excellence
-include 'header.php';
-?>
-
-<!-- Hero Section - Professional Design with CCE Orange -->                    <!-- About Us Brief -->
-                    <div class="about-brief">
-                        <p class="about-text fs-5 mb-4 text-muted">
-                            <strong class="text-dark">Cross-Cutting Excellence (CCE)</strong> is a dynamic network of Christian professionals dedicated to manifesting God's wisdom and excellence across every sector of society. We believe in transforming spheres of influence through professional competence guided by Kingdom principles.
-                        </p>
-                    </div>ction class="hero-section position-relative overflow-hidden">
-    <div class="hero-background"></div>
-    <div class="container">
-        <div class="row min-vh-100 align-items-center">
-            <div class="col-lg-6">
-                <div class="hero-content">
-                    <div class="hero-badge mb-4">
-                        <span class="badge-text">Cross-Cutting Excellence</span>
-                    </div>
-                    <h1 class="hero-title display-3 fw-bold mb-4">
-                        Transform Your <span class="text-accent">Sphere of Influence</span>
-                    </h1>
-                    <p class="hero-subtitle fs-5 mb-5 text-muted">
-                        Building the capacity of Christian professionals to manifest God's wisdom 
-                        and excellence in every sector of society.
-                    </p>
-                    <div class="hero-values mb-5">
-                        <div class="value-pills d-flex flex-wrap gap-3">
-                            <div class="value-pill">
-                                <i class="fas fa-lightbulb"></i>
-                                <span>INSPIRED</span>
-                            </div>
-                            <div class="value-pill">
-                                <i class="fas fa-target"></i>
-                                <span>INTENTIONAL</span>
-                            </div>
-                            <div class="value-pill">
-                                <i class="fas fa-bolt"></i>
-                                <span>INTENSE</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hero-actions d-flex flex-wrap gap-3">
-                        <a href="get-involved.php" class="btn btn-hero-primary">
-                            <i class="fas fa-users me-2"></i>
-                            Join the Movement
-                        </a>
-                        <a href="about.php" class="btn btn-hero-secondary">
-                            <i class="fas fa-compass me-2"></i>
-                            Discover Our Mission
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="hero-visual">
-                    <div class="hero-logo-section">
-                        <div class="logo-container">
-                            <div class="logo-ring"></div>
-                            <div class="logo-glow"></div>
-                            <img src="assets/image/logo.jpeg" alt="CCE Logo" class="hero-logo">
-                        </div>
-                        <div class="hero-stats-mini">
-                            <div class="mini-stat">
-                                <div class="mini-number">500+</div>
-                                <div class="mini-label">Professionals</div>
-                            </div>
-                            <div class="mini-stat">
-                                <div class="mini-number">15+</div>
-                                <div class="mini-label">Countries</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="scroll-indicator">
-        <div class="scroll-text">Explore More</div>
-        <div class="scroll-arrow"></div>
-    </div>
+<?php include 'header.php'; ?>
+<!-- HERO SECTION: Modern, Professional, CCE Orange Theme -->
+<section class="hero-section position-relative overflow-hidden p-0 cce-hero-bg">
+	<div id="cceHeroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<div class="cce-hero-slide d-flex align-items-center" style="background-image: url('assets/image/hero1.jpg');">
+					<div class="container">
+						<div class="row align-items-center min-vh-60">
+							<div class="col-lg-7 text-center text-lg-start">
+								<span class="badge cce-hero-badge rounded-pill px-4 py-2 mb-3 fw-semibold">Cross-Cutting Excellence</span>
+								<h1 class="display-3 fw-bold mb-3 cce-hero-title">Transform Your <span class="cce-hero-accent">Sphere of Influence</span></h1>
+								<p class="lead mb-4 cce-hero-subtitle">Building the capacity of Christian professionals to manifest God’s wisdom and excellence in every sector of society.</p>
+								<div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+									<a href="get-involved.php" class="btn btn-lg btn-primary px-4 cce-hero-btn">Join the Movement</a>
+									<a href="about.php" class="btn btn-lg btn-outline-primary px-4 cce-hero-btn-outline">Discover Our Mission</a>
+								</div>
+							</div>
+							<div class="col-lg-5 d-none d-lg-flex justify-content-center">
+								<img src="assets/image/logo.jpeg" alt="CCE Logo" class="img-fluid rounded-circle shadow-lg cce-hero-logo">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<div class="cce-hero-slide d-flex align-items-center" style="background-image: url('assets/image/hero2.jpg');">
+					<div class="container">
+						<div class="row align-items-center min-vh-60">
+							<div class="col-lg-7 text-center text-lg-start">
+								<span class="badge cce-hero-badge rounded-pill px-4 py-2 mb-3 fw-semibold">CCE Community</span>
+								<h1 class="display-3 fw-bold mb-3 cce-hero-title">A Network of <span class="cce-hero-accent">Excellence</span></h1>
+								<p class="lead mb-4 cce-hero-subtitle">Join a vibrant community of Christian professionals making a difference across the globe.</p>
+								<div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+									<a href="get-involved.php" class="btn btn-lg btn-primary px-4 cce-hero-btn">Become a Member</a>
+									<a href="about.php" class="btn btn-lg btn-outline-primary px-4 cce-hero-btn-outline">Learn More</a>
+								</div>
+							</div>
+							<div class="col-lg-5 d-none d-lg-flex justify-content-center">
+								<img src="assets/image/hero2-logo.jpg" alt="CCE Community" class="img-fluid rounded-circle shadow-lg cce-hero-logo">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<div class="cce-hero-slide d-flex align-items-center" style="background-image: url('assets/image/hero3.jpg');">
+					<div class="container">
+						<div class="row align-items-center min-vh-60">
+							<div class="col-lg-7 text-center text-lg-start">
+								<span class="badge cce-hero-badge rounded-pill px-4 py-2 mb-3 fw-semibold">Inspired • Intentional • Intense</span>
+								<h1 class="display-3 fw-bold mb-3 cce-hero-title">Manifest <span class="cce-hero-accent">God’s Wisdom</span></h1>
+								<p class="lead mb-4 cce-hero-subtitle">Experience growth, mentorship, and impact through CCE’s unique approach to professional and spiritual excellence.</p>
+								<div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+									<a href="get-involved.php" class="btn btn-lg btn-primary px-4 cce-hero-btn">Get Involved</a>
+									<a href="about.php" class="btn btn-lg btn-outline-primary px-4 cce-hero-btn-outline">Our Story</a>
+								</div>
+							</div>
+							<div class="col-lg-5 d-none d-lg-flex justify-content-center">
+								<img src="assets/image/hero3-logo.jpg" alt="CCE Impact" class="img-fluid rounded-circle shadow-lg cce-hero-logo">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#cceHeroCarousel" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#cceHeroCarousel" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+	</div>
 </section>
-
-<!-- Impact Stats Section - Consistent Orange Theme -->
-<section class="impact-stats py-5">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-3 col-md-6">
-                <div class="stat-item text-center">
-                    <div class="stat-icon mb-3">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <div class="stat-number" data-count="500">0</div>
-                    <div class="stat-label">Professionals Equipped</div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="stat-item text-center">
-                    <div class="stat-icon mb-3">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="stat-number" data-count="50">0</div>
-                    <div class="stat-label">Training Programs</div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="stat-item text-center">
-                    <div class="stat-icon mb-3">
-                        <i class="fas fa-globe-africa"></i>
-                    </div>
-                    <div class="stat-number" data-count="15">0</div>
-                    <div class="stat-label">Countries Reached</div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="stat-item text-center">
-                    <div class="stat-icon mb-3">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <div class="stat-number" data-count="10">0</div>
-                    <div class="stat-label">Years of Impact</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Who We Are Section - Clean & Mission-Focused -->
-<section class="who-we-are py-5 bg-white">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="section-header text-center mb-5">
-                    <h2 class="section-title display-4 fw-bold mb-3">
-                        Who <span class="text-primary">We Are</span>
-                    </h2>
-                    <p class="section-subtitle lead text-muted">
-                        A vibrant network of Christian professionals transforming the world
-                    </p>
-                </div>
-        <div class="row align-items-center g-5">
-            <!-- Removed image column -->
-            <div class="col-lg-12">
-                <div class="about-content">
-                    <h3 class="about-title fw-semibold mb-3">Cross-Cutting Excellence (CCE)</h3>
-                    <p class="about-text fs-5 mb-3">
-                        <strong>CCE is a vibrant network of Christian professionals dedicated to transforming their spheres of influence with God’s wisdom, for the glory of Christ Jesus.</strong>
-                    </p>
-                    <!-- Mission & Vision Cards -->
-                    <div class="row g-4 mb-5">
-                        <div class="col-lg-6">
-                            <div class="mission-card h-100">
-                                <div class="card-icon mb-3">
-                                    <i class="fas fa-bullseye"></i>
-                                </div>
-                                <h3 class="card-title mb-3">Our Vision</h3>
-                                <p class="card-text">
-                                    Christians establishing the glory of Jesus Christ across the world through their professions, until the kingdoms of this world become the kingdoms of our Lord and His Christ.
-                                </p>
-                                <div class="card-accent"></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="mission-card h-100">
-                                <div class="card-icon mb-3">
-                                    <i class="fas fa-seedling"></i>
-                                </div>
-                                <h3 class="card-title mb-3">Our Mission</h3>
-                                <p class="card-text">
-                                    Building the capacity of Christian professionals to transform their spheres with the manifold wisdom of God through excellence, integrity, and Kingdom values.
-                                </p>
-                                <div class="card-accent"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Core Values -->
-                    <div class="core-values text-center">
-                        <h4 class="values-title mb-4">Our Core Values</h4>
-                        <div class="values-grid">
-                            <div class="value-item">
-                                <div class="value-icon">
-                                    <i class="fas fa-cross"></i>
-                                </div>
-                                <div class="value-label">Godliness in Secular Space</div>
-                            </div>
-                            <div class="value-item">
-                                <div class="value-icon">
-                                    <i class="fas fa-award"></i>
-                                </div>
-                                <div class="value-label">Professional Excellence</div>
-                            </div>
-                            <div class="value-item">
-                                <div class="value-icon">
-                                    <i class="fas fa-globe-africa"></i>
-                                </div>
-                                <div class="value-label">Kingdom Transformation</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-5">
-            <div class="col-lg-10 mx-auto">
-                <div class="context-content bg-white rounded shadow-sm p-4">
-                    <h4 class="context-title fw-bold mb-3">The CCE Context</h4>
-                    <p class="context-text mb-3">
-                        <strong>Our generation faces daunting challenges:</strong> hunger, poor health, political strife, moral decay, and more. Yet, God’s word declares:
-                    </p>
-                    <blockquote class="bible-quote border-start border-4 ps-3 mb-3 text-secondary fst-italic">
-                        "But ye are a chosen generation, a royal priesthood, an holy nation, a peculiar people; that ye should shew forth the praises of him who hath called you out of darkness into his marvelous light." <br>
-                        <span class="fw-normal">- 1 Peter 2:9</span>
-                    </blockquote>
-                    <p class="context-text mb-0">
-                        At CCE, we believe every Christian is called to manifest God’s love and wisdom in their profession. If we diligently seek Him, we will see His reality and reward in every sphere of life.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- What We Do Section -->
-<section class="what-we-do">
-    <div class="container">
-        <div class="section-header text-center">
-            <h2 class="section-title">What <span class="text-gradient">We Do</span></h2>
-            <p class="section-subtitle">Our Strategy: Consistent Seculo-Spiritual Aptitude (SSA)</p>
-        </div>
-        <div class="row mb-5">
-            <div class="col-12">
-                <div class="strategy-content text-center">
-                    <h4 class="strategy-title">Secular-Spiritual Aptitude (SSA)</h4>
-                    <p class="strategy-desc">
-                        SSA is excellence in godliness. It is the quality of one's godly lifestyle as you function in the secular space into which the Lord has led you. At CCE we inspire you to excel, deliver in excess, high-end competence in your profession.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="faculty-grid">
-            <div class="faculty-card">
-                <div class="faculty-icon">
-                    <i class="fas fa-balance-scale"></i>
-                </div>
-                <h3 class="faculty-title">Governance & Development (GAD)</h3>
-                <p class="faculty-desc">Leadership, policy-making, and sustainable development initiatives that transform society with Kingdom principles.</p>
-                <a href="faculty.php#gad" class="faculty-link">Explore <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="faculty-card">
-                <div class="faculty-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <h3 class="faculty-title">Education & Training (EAT)</h3>
-                <p class="faculty-desc">Academic excellence and professional development programs for lifelong Kingdom-focused learning.</p>
-                <a href="faculty.php#eat" class="faculty-link">Explore <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="faculty-card">
-                <div class="faculty-icon">
-                    <i class="fas fa-microscope"></i>
-                </div>
-                <h3 class="faculty-title">Science & Technology (SAT)</h3>
-                <p class="faculty-desc">Innovation, research, and technological advancement guided by divine wisdom and excellence.</p>
-                <a href="faculty.php#sat" class="faculty-link">Explore <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="faculty-card">
-                <div class="faculty-icon">
-                    <i class="fas fa-palette"></i>
-                </div>
-                <h3 class="faculty-title">Philosophy & Arts (PAA)</h3>
-                <p class="faculty-desc">Creative expression and philosophical discourse that shapes culture through Kingdom values.</p>
-                <a href="faculty.php#paa" class="faculty-link">Explore <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="faculty-card">
-                <div class="faculty-icon">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h3 class="faculty-title">Finance & Business (FAB)</h3>
-                <p class="faculty-desc">Economic empowerment and business excellence for Kingdom prosperity and transformation.</p>
-                <a href="faculty.php#fab" class="faculty-link">Explore <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="faculty-card">
-                <div class="faculty-icon">
-                    <i class="fas fa-heart"></i>
-                </div>
-                <h3 class="faculty-title">Relationship & Family (RAF)</h3>
-                <p class="faculty-desc">Building godly relationships and strong families that reflect Kingdom values.</p>
-                <a href="faculty.php#raf" class="faculty-link">Explore <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="faculty-card">
-                <div class="faculty-icon">
-                    <i class="fas fa-globe"></i>
-                </div>
-                <h3 class="faculty-title">Missions & Apologetics (MAA)</h3>
-                <p class="faculty-desc">Defending the faith and advancing the Gospel through professional excellence.</p>
-                <a href="faculty.php#maa" class="faculty-link">Explore <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="faculty-card">
-                <div class="faculty-icon">
-                    <i class="fas fa-broadcast-tower"></i>
-                </div>
-                <h3 class="faculty-title">Communication & Media (CAM)</h3>
-                <p class="faculty-desc">Strategic communication and media excellence for Kingdom influence and impact.</p>
-                <a href="faculty.php#cam" class="faculty-link">Explore <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CCE People Section -->
-<section class="cce-people">
-    <div class="container">
-        <div class="section-header text-center">
-            <h2 class="section-title">CCE <span class="text-gradient">People</span></h2>
-            <p class="section-subtitle">Our expanding network of Christian professionals transforming their spheres</p>
-        </div>
-        <div class="row mb-5">
-            <div class="col-12">
-                <div class="people-intro text-center">
-                    <p class="people-desc">
-                        <strong>CCE People network is expanding and deepening.</strong> A key strategy in CCE operations is the informal, organic flexible growth mechanism we use. People are our best resource. We grow people.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="people-grid">
-            <div class="person-card">
-                <div class="person-image">
-                    <img src="assets/images/consultants.jpg" alt="CCE Consultants">
-                    <div class="person-overlay">
-                        <a href="consultants.php" class="person-link"><i class="fas fa-user-tie"></i></a>
-                    </div>
-                </div>
-                <div class="person-info">
-                    <h3 class="person-title">CCE Consultants</h3>
-                    <p class="person-desc">The Lord is blessing us with an array of high-end experts serving as CCE Consultants. We have at least twenty (20) Consultants some of whom have international and global influence.</p>
-                    <div class="person-stats">
-                        <span class="stat">20+ Consultants</span>
-                        <span class="stat">Global Influence</span>
-                    </div>
-                    <div class="person-achievements">
-                        <h5>Recent Achievements:</h5>
-                        <ul>
-                            <li>Dr. Kenneth Edem Kukuia - Attained Professorship at University of Ghana Medical School</li>
-                            <li>Dr. Elias Adanu - Moved to University of Texas for higher challenge</li>
-                            <li>Michael Seshie - CEO of nursing and care company in the United States</li>
-                            <li>Mr. Enoch Abeku Amoah - Admitted into ICAG</li>
-                            <li>Dr. Adjabeng - Completed post-Graduate work in the U.K., now qualified public health advocate</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="person-card">
-                <div class="person-image">
-                    <img src="assets/images/coordinators.jpg" alt="CCE Coordinators">
-                    <div class="person-overlay">
-                        <a href="coordinators.php" class="person-link"><i class="fas fa-users-cog"></i></a>
-                    </div>
-                </div>
-                <div class="person-info">
-                    <h3 class="person-title">CCE Coordinators</h3>
-                    <p class="person-desc">Our workforce of hard-working Coordinators is deepening as these FE Team Leaders drive the on-the-ground activities of CCE in a manner that moves us away from much talk into efficient actions.</p>
-                    <div class="person-stats">
-                        <span class="stat">FE Team Leaders</span>
-                        <span class="stat">Action-Oriented</span>
-                    </div>
-                    <div class="person-features">
-                        <div class="feature-item">
-                            <i class="fas fa-users"></i>
-                            <span>Managing Facilitators</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-hands-helping"></i>
-                            <span>Mobilizing Volunteers</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-tasks"></i>
-                            <span>Getting Jobs Done in Each Faculty Endeavour</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-12">
-                <div class="people-framework">
-                    <h4 class="framework-title">CCE Foresight Institute</h4>
-                    <p class="framework-desc">
-                        Provides a programme designed to facilitate a lifestyle of personal efficiency. Our <strong>HeNERORR framework</strong> pulls together seven couples of key life parameters designed to catalyse your capacity to live an integrated and godly life:
-                    </p>
-                    <div class="framework-grid">
-                        <div class="framework-item">
-                            <span class="framework-letter">He</span>
-                            <span class="framework-word">Heritage & Health</span>
-                        </div>
-                        <div class="framework-item">
-                            <span class="framework-letter">N</span>
-                            <span class="framework-word">Nutrition & Necessities</span>
-                        </div>
-                        <div class="framework-item">
-                            <span class="framework-letter">E</span>
-                            <span class="framework-word">Education & Energy</span>
-                        </div>
-                        <div class="framework-item">
-                            <span class="framework-letter">R</span>
-                            <span class="framework-word">Relationships & Reliability</span>
-                        </div>
-                        <div class="framework-item">
-                            <span class="framework-letter">O</span>
-                            <span class="framework-word">Occupation & Organisation</span>
-                        </div>
-                        <div class="framework-item">
-                            <span class="framework-letter">R</span>
-                            <span class="framework-word">Resources & Remedies</span>
-                        </div>
-                        <div class="framework-item">
-                            <span class="framework-letter">R</span>
-                            <span class="framework-word">Relay & Reward</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CCE Companies Section -->
-<section class="cce-companies">
-    <div class="container">
-        <div class="section-header text-center">
-            <h2 class="section-title">CCE <span class="text-gradient">Companies</span></h2>
-            <p class="section-subtitle">Strategic business partnerships and affiliated organizations</p>
-        </div>
-        <div class="companies-content">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <div class="partnership-info">
-                        <h3 class="partnership-title">Our Business Network</h3>
-                        <p class="partnership-desc">
-                            CCE partners with leading companies and organizations that share our vision of Kingdom 
-                            excellence. These partnerships create opportunities for professional development, 
-                            business collaboration, and Kingdom advancement in the marketplace.
-                        </p>
-                        <div class="partnership-benefits">
-                            <div class="benefit-item">
-                                <i class="fas fa-handshake"></i>
-                                <span>Strategic Partnerships</span>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-briefcase"></i>
-                                <span>Business Opportunities</span>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-users"></i>
-                                <span>Professional Networks</span>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-chart-line"></i>
-                                <span>Growth Collaboration</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="companies-grid">
-                        <div class="company-card">
-                            <div class="company-logo">
-                                <i class="fas fa-building"></i>
-                            </div>
-                            <h4 class="company-name">Corporate Partners</h4>
-                            <p class="company-type">Leading businesses committed to Kingdom principles</p>
-                        </div>
-                        <div class="company-card">
-                            <div class="company-logo">
-                                <i class="fas fa-industry"></i>
-                            </div>
-                            <h4 class="company-name">Manufacturing</h4>
-                            <p class="company-type">Industrial excellence with divine wisdom</p>
-                        </div>
-                        <div class="company-card">
-                            <div class="company-logo">
-                                <i class="fas fa-laptop-code"></i>
-                            </div>
-                            <h4 class="company-name">Technology Firms</h4>
-                            <p class="company-type">Innovation driven by Kingdom values</p>
-                        </div>
-                        <div class="company-card">
-                            <div class="company-logo">
-                                <i class="fas fa-hospital"></i>
-                            </div>
-                            <h4 class="company-name">Service Providers</h4>
-                            <p class="company-type">Excellence in professional services</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Our Activities and Events Section -->
-<section class="activities-events">
-    <div class="container">
-        <div class="section-header text-center">
-            <h2 class="section-title">Our Activities <span class="text-gradient">& Events</span></h2>
-            <p class="section-subtitle">Building capacity through transformative conferences and experiences</p>
-        </div>
-        <div class="row mb-5">
-            <div class="col-12">
-                <div class="activities-intro">
-                    <h4 class="activities-title">CCE Conferences</h4>
-                    <p class="activities-desc">
-                        <strong>CCE Conferences are important platforms for mobilizing and providing support to like-minded believers.</strong> CCE Excel Conferences are strategically designed to build capacity of Christian professionals so that we can deliberately, legitimately and practically manifest the presence of God, over the presence of Satan, in our secular endeavours.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="activities-grid">
-            <div class="activity-card">
-                <div class="activity-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <h3 class="activity-title">Knowledge, Skills & Experience (KSE)</h3>
-                <p class="activity-desc">Through the Excel Conferences Christians from diverse professional backgrounds share generated and/or acquired knowledge, practical skills, and real-world experience.</p>
-                <div class="activity-details">
-                    <span class="detail-item"><i class="fas fa-brain"></i> Knowledge Sharing</span>
-                    <span class="detail-item"><i class="fas fa-tools"></i> Practical Skills</span>
-                </div>
-                <a href="conferences.php" class="activity-link">Learn More</a>
-            </div>
-            <div class="activity-card">
-                <div class="activity-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-                <h3 class="activity-title">Professional Competence</h3>
-                <p class="activity-desc">Excel provides skills for efficient decision making, workplace competence and relational skills consistent with godliness and professional excellence.</p>
-                <div class="activity-details">
-                    <span class="detail-item"><i class="fas fa-lightbulb"></i> Decision Making</span>
-                    <span class="detail-item"><i class="fas fa-handshake"></i> Relational Skills</span>
-                </div>
-                <a href="training.php" class="activity-link">View Programs</a>
-            </div>
-            <div class="activity-card">
-                <div class="activity-icon">
-                    <i class="fas fa-cross"></i>
-                </div>
-                <h3 class="activity-title">Godliness & Character</h3>
-                <p class="activity-desc">Godliness means a life expressly guided by God's Spirit and manifests the character of the Lord Jesus Christ in all things - humility, boldness, truth, wisdom, patience, joy and the fear of God.</p>
-                <div class="activity-details">
-                    <span class="detail-item"><i class="fas fa-heart"></i> Christ-like Character</span>
-                    <span class="detail-item"><i class="fas fa-praying-hands"></i> Spirit-Guided Living</span>
-                </div>
-                <a href="character.php" class="activity-link">Explore</a>
-            </div>
-            <div class="activity-card">
-                <div class="activity-icon">
-                    <i class="fas fa-star"></i>
-                </div>
-                <h3 class="activity-title">Biblical Excellence</h3>
-                <p class="activity-desc">We are inspired by biblical examples: Noah the ship builder, Joseph managing a World Food Programme, Moses learned in Egyptian wisdom, Esther the first lady of an empire, Daniel the Prime Minister, and many others.</p>
-                <div class="activity-details">
-                    <span class="detail-item"><i class="fas fa-book"></i> Biblical Models</span>
-                    <span class="detail-item"><i class="fas fa-crown"></i> Professional Excellence</span>
-                </div>
-                <a href="biblical-excellence.php" class="activity-link">Be Inspired</a>
-            </div>
-        </div>
-        <div class="row mt-5">
-            <div class="col-12">
-                <div class="conference-highlight">
-                    <h4 class="highlight-title">Biblical Professionals Who Inspire Us</h4>
-                    <div class="biblical-examples">
-                        <div class="example-grid">
-                            <div class="example-item">
-                                <i class="fas fa-ship"></i>
-                                <h5>Noah</h5>
-                                <p>Ship builder in a cynical generation</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-wheat"></i>
-                                <h5>Joseph</h5>
-                                <p>Managed World Food Programme during global famine</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-scroll"></i>
-                                <h5>Moses</h5>
-                                <p>Learned in all wisdom of Egyptians, mighty in words and deed</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-crown"></i>
-                                <h5>Esther</h5>
-                                <p>First lady of empire with 127 provinces from India to Ethiopia</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-gavel"></i>
-                                <h5>Daniel</h5>
-                                <p>Prime Minister of Babylon with excelling ability</p>
-                            </div>
-                            <div class="example-item">
-                                <i class="fas fa-hammer"></i>
-                                <h5>Jesus</h5>
-                                <p>Carpenter who transformed the world</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Call to Action Section -->
-<section class="cta-section">
-    <div class="container">
-        <div class="cta-content text-center">
-            <h2 class="cta-title">Ready to Transform Your Sphere?</h2>
-            <p class="cta-subtitle">Join thousands of Christian professionals making an eternal impact in their fields</p>
-            <div class="cta-actions">
-                <a href="get-involved.php" class="btn btn-cta-primary">Start Your Journey</a>
-                <a href="events.php" class="btn btn-cta-secondary">Upcoming Events</a>
-            </div>
-        </div>
-        <div class="cta-visual">
-            <div class="network-visualization">
-                <div class="network-node" data-node="1"></div>
-                <div class="network-node" data-node="2"></div>
-                <div class="network-node" data-node="3"></div>
-                <div class="network-node" data-node="4"></div>
-                <div class="network-node" data-node="5"></div>
-                <div class="network-connection" data-connect="1-2"></div>
-                <div class="network-connection" data-connect="2-3"></div>
-                <div class="network-connection" data-connect="3-4"></div>
-                <div class="network-connection" data-connect="4-5"></div>
-                <div class="network-connection" data-connect="5-1"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- JavaScript for animations and interactions -->
-<script src="assets/js/main.js"></script>
-<script src="assets/js/homepage.js"></script>
-
 <?php include 'footer.php'; ?>
