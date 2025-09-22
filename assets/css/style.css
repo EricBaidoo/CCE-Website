@@ -2092,7 +2092,7 @@ h1, h2, h3, h4, h5, h6, p, span, div {
     color: #e68900;
 }
 
-/* CCE People Section */
+/* CCE People Section - Updated */
 .cce-people {
     padding: 6rem 0;
     background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
@@ -2105,7 +2105,7 @@ h1, h2, h3, h4, h5, h6, p, span, div {
 
 .people-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 3rem;
     margin-top: 4rem;
 }
@@ -2126,7 +2126,7 @@ h1, h2, h3, h4, h5, h6, p, span, div {
 
 .person-image {
     position: relative;
-    height: 250px;
+    height: 200px;
     overflow: hidden;
 }
 
@@ -2181,6 +2181,7 @@ h1, h2, h3, h4, h5, h6, p, span, div {
 .person-stats {
     display: flex;
     gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .person-stats .stat {
@@ -2192,32 +2193,49 @@ h1, h2, h3, h4, h5, h6, p, span, div {
     font-weight: 600;
 }
 
-/* Companies Section */
-.companies {
+.person-features {
+    margin-top: 1rem;
+}
+
+.person-features .feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    color: #cccccc;
+}
+
+.person-features .feature-item i {
+    color: var(--primary-color);
+    margin-right: 1rem;
+    width: 20px;
+}
+
+/* CCE Companies Section */
+.cce-companies {
     padding: 6rem 0;
     background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
 }
 
-.partnership-info .partnership-title {
+.cce-companies .partnership-title {
     font-size: 2.5rem;
     font-weight: 800;
     color: #1a1a1a;
     margin-bottom: 2rem;
 }
 
-.partnership-desc {
+.cce-companies .partnership-desc {
     font-size: 1.1rem;
     line-height: 1.8;
     color: #555;
     margin-bottom: 2rem;
 }
 
-.partnership-benefits {
+.cce-companies .partnership-benefits {
     display: grid;
     gap: 1rem;
 }
 
-.benefit-item {
+.cce-companies .benefit-item {
     display: flex;
     align-items: center;
     font-size: 1.1rem;
@@ -2225,20 +2243,20 @@ h1, h2, h3, h4, h5, h6, p, span, div {
     color: #333;
 }
 
-.benefit-item i {
+.cce-companies .benefit-item i {
     color: var(--primary-color);
     margin-right: 1rem;
     font-size: 1.2rem;
     width: 20px;
 }
 
-.companies-grid {
+.cce-companies .companies-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
 
-.company-card {
+.cce-companies .company-card {
     background: #ffffff;
     border-radius: 15px;
     padding: 2rem;
@@ -2248,13 +2266,13 @@ h1, h2, h3, h4, h5, h6, p, span, div {
     border: 2px solid transparent;
 }
 
-.company-card:hover {
+.cce-companies .company-card:hover {
     transform: translateY(-5px);
     border-color: var(--primary-color);
     box-shadow: 0 10px 30px rgba(255, 152, 0, 0.2);
 }
 
-.company-logo {
+.cce-companies .company-logo {
     width: 60px;
     height: 60px;
     background: linear-gradient(135deg, var(--primary-color) 0%, #e68900 100%);
@@ -2267,17 +2285,136 @@ h1, h2, h3, h4, h5, h6, p, span, div {
     color: #ffffff;
 }
 
-.company-name {
+.cce-companies .company-name {
     font-size: 1.2rem;
     font-weight: 700;
     color: #1a1a1a;
     margin-bottom: 0.5rem;
 }
 
-.company-type {
+.cce-companies .company-type {
     color: #666;
     font-size: 0.9rem;
     margin: 0;
+}
+
+/* Activities and Events Section */
+.activities-events {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.activities-events .section-title,
+.activities-events .section-subtitle {
+    color: #ffffff;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.activity-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 152, 0, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.activity-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 152, 0, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.activity-card:hover::before {
+    left: 100%;
+}
+
+.activity-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    background: rgba(255, 152, 0, 0.1);
+}
+
+.activity-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #e68900 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    font-size: 2rem;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.activity-card:hover .activity-icon {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.activity-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.activity-desc {
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.activity-details {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.detail-item {
+    background: rgba(255, 152, 0, 0.2);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.activity-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.activity-link:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+    transform: translateY(-2px);
 }
 
 /* Responsive Design for Five Sections */
@@ -2306,13 +2443,63 @@ h1, h2, h3, h4, h5, h6, p, span, div {
         gap: 1rem;
     }
     
+    .activities-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
     .partnership-info .partnership-title {
+        font-size: 2rem;
+    }
+    
+    .cce-companies .partnership-title {
         font-size: 2rem;
     }
     
     .person-stats {
         flex-direction: column;
         gap: 0.5rem;
+    }
+    
+    .activity-details {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-motto {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-logo {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .cta-title {
+        font-size: 2rem;
+    }
+    
+    .cta-actions {
+        flex-direction: column;
+        align-items: center;
     }
 }
 @media (max-width: 992px) {
