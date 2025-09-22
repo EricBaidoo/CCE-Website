@@ -85,98 +85,320 @@ include 'components/header.php';
     </div>
 </section>
 
-<!-- Vision Mission Section -->
-<section class="vision-mission">
+<!-- Who We Are Section -->
+<section class="who-we-are">
     <div class="container">
         <div class="section-header text-center">
-            <h2 class="section-title">Driven by Purpose</h2>
-            <p class="section-subtitle">Our vision and mission guide everything we do</p>
+            <h2 class="section-title">Who <span class="text-gradient">We Are</span></h2>
+            <p class="section-subtitle">Discover the story and values that define CCE</p>
         </div>
-        <div class="row g-5">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <div class="vision-card">
-                    <div class="card-icon">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h3 class="card-title">Our Vision</h3>
-                    <p class="card-content">
-                        Christians establishing the glory of the Lord Jesus Christ across the world through their secular professions until the kingdoms of this world become the kingdoms of our Lord and His Christ.
+                <div class="about-content">
+                    <h3 class="about-title">Center for Cross-Cutting Excellence</h3>
+                    <p class="about-text">
+                        CCE is a transformative movement dedicated to building the capacity of Christian professionals 
+                        to manifest God's wisdom and excellence in every sector of society. We believe that the 
+                        kingdoms of this world can become the kingdoms of our Lord through intentional, inspired, 
+                        and intense engagement in secular professions.
                     </p>
-                    <div class="card-accent"></div>
+                    <p class="about-text">
+                        Our approach combines biblical principles with professional excellence, creating leaders 
+                        who transform their spheres of influence with divine wisdom and supernatural impact.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Biblical Foundation</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Professional Excellence</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Global Impact</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="mission-card">
-                    <div class="card-icon">
-                        <i class="fas fa-target"></i>
+                <div class="about-visual">
+                    <div class="about-image-container">
+                        <img src="assets/image/logo.jpeg" alt="CCE Vision" class="about-image">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h4>10+ Years</h4>
+                                <p>of Kingdom Impact</p>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="card-title">Our Mission</h3>
-                    <p class="card-content">
-                        Building the capacity of Christian Professionals to transform their various spheres of endeavour with the manifold wisdom of God.
-                    </p>
-                    <div class="card-accent"></div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Faculty Areas Section -->
-<section class="faculty-showcase">
+<!-- What We Do Section -->
+<section class="what-we-do">
     <div class="container">
         <div class="section-header text-center">
-            <h2 class="section-title">Excellence Across Every Sphere</h2>
-            <p class="section-subtitle">Transforming society through specialized faculty areas</p>
+            <h2 class="section-title">What <span class="text-gradient">We Do</span></h2>
+            <p class="section-subtitle">Comprehensive programs designed to transform professionals and their spheres</p>
         </div>
-        <div class="faculty-grid">
-            <div class="faculty-item" data-aos="fade-up" data-aos-delay="100">
-                <div class="faculty-card">
-                    <div class="faculty-icon">
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="service-title">Professional Development</h3>
+                <p class="service-desc">Intensive training programs that integrate biblical principles with professional excellence.</p>
+                <ul class="service-features">
+                    <li>Leadership Training</li>
+                    <li>Excellence Seminars</li>
+                    <li>Skills Development</li>
+                    <li>Mentorship Programs</li>
+                </ul>
+                <a href="programs.php" class="service-link">Learn More</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="service-title">Community Building</h3>
+                <p class="service-desc">Creating networks of like-minded professionals for collaboration and mutual support.</p>
+                <ul class="service-features">
+                    <li>Professional Networks</li>
+                    <li>Mastermind Groups</li>
+                    <li>Peer Mentoring</li>
+                    <li>Strategic Partnerships</li>
+                </ul>
+                <a href="community.php" class="service-link">Join Community</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3 class="service-title">Global Initiatives</h3>
+                <p class="service-desc">International programs expanding the Kingdom's influence across continents.</p>
+                <ul class="service-features">
+                    <li>International Conferences</li>
+                    <li>Cross-Cultural Exchange</li>
+                    <li>Global Partnerships</li>
+                    <li>Mission Projects</li>
+                </ul>
+                <a href="global.php" class="service-link">Go Global</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3 class="service-title">Innovation Hub</h3>
+                <p class="service-desc">Pioneering solutions that advance both professional and Kingdom objectives.</p>
+                <ul class="service-features">
+                    <li>Research & Development</li>
+                    <li>Innovation Labs</li>
+                    <li>Technology Solutions</li>
+                    <li>Creative Projects</li>
+                </ul>
+                <a href="innovation.php" class="service-link">Innovate</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Various Bodies Section -->
+<section class="various-bodies">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">Various <span class="text-gradient">Bodies</span></h2>
+            <p class="section-subtitle">Organized structures that govern and guide our mission across all spheres</p>
+        </div>
+        <div class="bodies-container">
+            <div class="body-card">
+                <div class="body-header">
+                    <div class="body-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 class="body-title">Board of Trustees</h3>
+                </div>
+                <p class="body-desc">Visionary leaders providing strategic oversight and ensuring alignment with Kingdom principles.</p>
+                <div class="body-members">
+                    <span class="member-count">12 Members</span>
+                    <a href="board.php" class="view-members">View Board</a>
+                </div>
+            </div>
+            <div class="body-card">
+                <div class="body-header">
+                    <div class="body-icon">
                         <i class="fas fa-balance-scale"></i>
                     </div>
-                    <h3 class="faculty-title">Governance & Development</h3>
-                    <p class="faculty-desc">Leadership, policy-making, and sustainable development initiatives</p>
-                    <a href="faculty.php#gad" class="faculty-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    <h3 class="body-title">Advisory Council</h3>
+                </div>
+                <p class="body-desc">Distinguished professionals from various spheres providing wisdom and guidance.</p>
+                <div class="body-members">
+                    <span class="member-count">25 Members</span>
+                    <a href="advisory.php" class="view-members">Meet Advisors</a>
                 </div>
             </div>
-            <div class="faculty-item" data-aos="fade-up" data-aos-delay="200">
-                <div class="faculty-card">
-                    <div class="faculty-icon">
-                        <i class="fas fa-graduation-cap"></i>
+            <div class="body-card">
+                <div class="body-header">
+                    <div class="body-icon">
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="faculty-title">Education & Training</h3>
-                    <p class="faculty-desc">Academic excellence and professional development programs</p>
-                    <a href="faculty.php#eat" class="faculty-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    <h3 class="body-title">Faculty Council</h3>
+                </div>
+                <p class="body-desc">Academic and professional leaders ensuring excellence in program delivery.</p>
+                <div class="body-members">
+                    <span class="member-count">15 Members</span>
+                    <a href="faculty.php" class="view-members">View Faculty</a>
                 </div>
             </div>
-            <div class="faculty-item" data-aos="fade-up" data-aos-delay="300">
-                <div class="faculty-card">
-                    <div class="faculty-icon">
-                        <i class="fas fa-microscope"></i>
+            <div class="body-card">
+                <div class="body-header">
+                    <div class="body-icon">
+                        <i class="fas fa-hands-helping"></i>
                     </div>
-                    <h3 class="faculty-title">Science & Technology</h3>
-                    <p class="faculty-desc">Innovation, research, and technological advancement</p>
-                    <a href="faculty.php#sat" class="faculty-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    <h3 class="body-title">Alumni Network</h3>
+                </div>
+                <p class="body-desc">Graduates continuing the mission in their respective spheres worldwide.</p>
+                <div class="body-members">
+                    <span class="member-count">500+ Members</span>
+                    <a href="alumni.php" class="view-members">Join Network</a>
                 </div>
             </div>
-            <div class="faculty-item" data-aos="fade-up" data-aos-delay="400">
-                <div class="faculty-card">
-                    <div class="faculty-icon">
-                        <i class="fas fa-palette"></i>
+        </div>
+    </div>
+</section>
+
+<!-- CCE People Section -->
+<section class="cce-people">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">CCE <span class="text-gradient">People</span></h2>
+            <p class="section-subtitle">Meet the extraordinary individuals driving transformation across every sphere</p>
+        </div>
+        <div class="people-grid">
+            <div class="person-card">
+                <div class="person-image">
+                    <img src="assets/images/leadership-team.jpg" alt="Leadership Team">
+                    <div class="person-overlay">
+                        <a href="leadership.php" class="person-link"><i class="fas fa-crown"></i></a>
                     </div>
-                    <h3 class="faculty-title">Philosophy & Arts</h3>
-                    <p class="faculty-desc">Creative expression and philosophical discourse</p>
-                    <a href="faculty.php#paa" class="faculty-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="person-info">
+                    <h3 class="person-title">Leadership Team</h3>
+                    <p class="person-desc">Visionary leaders with a passion for Kingdom transformation and professional excellence.</p>
+                    <div class="person-stats">
+                        <span class="stat">Executive Leadership</span>
+                        <span class="stat">Global Vision</span>
+                    </div>
                 </div>
             </div>
-            <div class="faculty-item" data-aos="fade-up" data-aos-delay="500">
-                <div class="faculty-card">
-                    <div class="faculty-icon">
-                        <i class="fas fa-chart-line"></i>
+            <div class="person-card">
+                <div class="person-image">
+                    <img src="assets/images/faculty-experts.jpg" alt="Faculty Experts">
+                    <div class="person-overlay">
+                        <a href="faculty.php" class="person-link"><i class="fas fa-graduation-cap"></i></a>
                     </div>
-                    <h3 class="faculty-title">Finance & Business</h3>
-                    <p class="faculty-desc">Economic empowerment and business excellence</p>
-                    <a href="faculty.php#fab" class="faculty-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="person-info">
+                    <h3 class="person-title">Faculty Experts</h3>
+                    <p class="person-desc">Accomplished professionals and academics bringing real-world expertise to every program.</p>
+                    <div class="person-stats">
+                        <span class="stat">50+ Experts</span>
+                        <span class="stat">5 Faculty Areas</span>
+                    </div>
+                </div>
+            </div>
+            <div class="person-card">
+                <div class="person-image">
+                    <img src="assets/images/community-champions.jpg" alt="Community Champions">
+                    <div class="person-overlay">
+                        <a href="community.php" class="person-link"><i class="fas fa-users"></i></a>
+                    </div>
+                </div>
+                <div class="person-info">
+                    <h3 class="person-title">Community Champions</h3>
+                    <p class="person-desc">Active members and volunteers creating impact in their local communities and beyond.</p>
+                    <div class="person-stats">
+                        <span class="stat">Global Community</span>
+                        <span class="stat">15 Countries</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Companies Section -->
+<section class="companies">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">Partner <span class="text-gradient">Organizations</span></h2>
+            <p class="section-subtitle">Strategic alliances amplifying Kingdom influence across all sectors</p>
+        </div>
+        <div class="companies-content">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="partnership-info">
+                        <h3 class="partnership-title">Strategic Partnerships</h3>
+                        <p class="partnership-desc">
+                            We collaborate with leading organizations, churches, and institutions worldwide to expand 
+                            our reach and multiply our impact. These partnerships create opportunities for professional 
+                            development, resource sharing, and Kingdom advancement.
+                        </p>
+                        <div class="partnership-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-handshake"></i>
+                                <span>Corporate Partnerships</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-church"></i>
+                                <span>Church Collaborations</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-university"></i>
+                                <span>Academic Institutions</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-globe-africa"></i>
+                                <span>NGO Alliances</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="companies-grid">
+                        <div class="company-card">
+                            <div class="company-logo">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h4 class="company-name">Corporate Partners</h4>
+                            <p class="company-type">Business & Industry Leaders</p>
+                        </div>
+                        <div class="company-card">
+                            <div class="company-logo">
+                                <i class="fas fa-cross"></i>
+                            </div>
+                            <h4 class="company-name">Church Networks</h4>
+                            <p class="company-type">Denominational Partners</p>
+                        </div>
+                        <div class="company-card">
+                            <div class="company-logo">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4 class="company-name">Universities</h4>
+                            <p class="company-type">Educational Institutions</p>
+                        </div>
+                        <div class="company-card">
+                            <div class="company-logo">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4 class="company-name">NGOs</h4>
+                            <p class="company-type">Non-Profit Organizations</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
