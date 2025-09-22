@@ -1,47 +1,74 @@
 <?php
 // CCE Homepage - Cross-Cutting Excellence
-include 'components/header.php';
+include 'header.php';
 ?>
 
-<!-- Hero Section - Powerful Opening -->
-<section class="hero-section">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <div class="container">
-            <div class="row align-items-center min-vh-100">
-                <div class="col-lg-6">
-                    <div class="hero-text">
-                        <h1 class="hero-title">
-                            Transform Your 
-                            <span class="text-gradient">Sphere of Influence</span>
-                        </h1>
-                        <p class="hero-subtitle">
-                            Building the capacity of Christian professionals to manifest God's wisdom and excellence in every sector of society.
+<!-- Hero Section - Professional Design with CCE Orange -->                    <!-- About Us Brief -->
+                    <div class="about-brief">
+                        <p class="about-text fs-5 mb-4 text-muted">
+                            <strong class="text-dark">Cross-Cutting Excellence (CCE)</strong> is a dynamic network of Christian professionals dedicated to manifesting God's wisdom and excellence across every sector of society. We believe in transforming spheres of influence through professional competence guided by Kingdom principles.
                         </p>
-                        <div class="hero-motto">
-                            <span class="motto-word">INSPIRED</span>
-                            <span class="motto-separator">•</span>
-                            <span class="motto-word">INTENTIONAL</span>
-                            <span class="motto-separator">•</span>
-                            <span class="motto-word">INTENSE</span>
-                        </div>
-                        <div class="hero-actions">
-                            <a href="get-involved.php" class="btn btn-hero-primary">Join the Movement</a>
-                            <a href="about.php" class="btn btn-hero-secondary">Discover Our Mission</a>
+                    </div>ction class="hero-section position-relative overflow-hidden">
+    <div class="hero-background"></div>
+    <div class="container">
+        <div class="row min-vh-100 align-items-center">
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    <div class="hero-badge mb-4">
+                        <span class="badge-text">Cross-Cutting Excellence</span>
+                    </div>
+                    <h1 class="hero-title display-3 fw-bold mb-4">
+                        Transform Your <span class="text-accent">Sphere of Influence</span>
+                    </h1>
+                    <p class="hero-subtitle fs-5 mb-5 text-muted">
+                        Building the capacity of Christian professionals to manifest God's wisdom 
+                        and excellence in every sector of society.
+                    </p>
+                    <div class="hero-values mb-5">
+                        <div class="value-pills d-flex flex-wrap gap-3">
+                            <div class="value-pill">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>INSPIRED</span>
+                            </div>
+                            <div class="value-pill">
+                                <i class="fas fa-target"></i>
+                                <span>INTENTIONAL</span>
+                            </div>
+                            <div class="value-pill">
+                                <i class="fas fa-bolt"></i>
+                                <span>INTENSE</span>
+                            </div>
                         </div>
                     </div>
+                    <div class="hero-actions d-flex flex-wrap gap-3">
+                        <a href="get-involved.php" class="btn btn-hero-primary">
+                            <i class="fas fa-users me-2"></i>
+                            Join the Movement
+                        </a>
+                        <a href="about.php" class="btn btn-hero-secondary">
+                            <i class="fas fa-compass me-2"></i>
+                            Discover Our Mission
+                        </a>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="hero-visual">
-                        <div class="hero-logo-container">
-                            <img src="assets/image/logo.jpeg" alt="CCE Logo" class="hero-logo">
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-visual">
+                    <div class="hero-logo-section">
+                        <div class="logo-container">
+                            <div class="logo-ring"></div>
                             <div class="logo-glow"></div>
+                            <img src="assets/image/logo.jpeg" alt="CCE Logo" class="hero-logo">
                         </div>
-                        <div class="floating-elements">
-                            <div class="float-element" data-float="1">💡</div>
-                            <div class="float-element" data-float="2">🎯</div>
-                            <div class="float-element" data-float="3">⚡</div>
-                            <div class="float-element" data-float="4">🌟</div>
+                        <div class="hero-stats-mini">
+                            <div class="mini-stat">
+                                <div class="mini-number">500+</div>
+                                <div class="mini-label">Professionals</div>
+                            </div>
+                            <div class="mini-stat">
+                                <div class="mini-number">15+</div>
+                                <div class="mini-label">Countries</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -49,34 +76,47 @@ include 'components/header.php';
         </div>
     </div>
     <div class="scroll-indicator">
+        <div class="scroll-text">Explore More</div>
         <div class="scroll-arrow"></div>
     </div>
 </section>
 
-<!-- Impact Stats Section -->
-<section class="impact-stats">
+<!-- Impact Stats Section - Consistent Orange Theme -->
+<section class="impact-stats py-5">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-12">
-                <div class="stat-item">
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-item text-center">
+                    <div class="stat-icon mb-3">
+                        <i class="fas fa-users"></i>
+                    </div>
                     <div class="stat-number" data-count="500">0</div>
                     <div class="stat-label">Professionals Equipped</div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <div class="stat-item">
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-item text-center">
+                    <div class="stat-icon mb-3">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
                     <div class="stat-number" data-count="50">0</div>
                     <div class="stat-label">Training Programs</div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <div class="stat-item">
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-item text-center">
+                    <div class="stat-icon mb-3">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
                     <div class="stat-number" data-count="15">0</div>
                     <div class="stat-label">Countries Reached</div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <div class="stat-item">
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-item text-center">
+                    <div class="stat-icon mb-3">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
                     <div class="stat-number" data-count="10">0</div>
                     <div class="stat-label">Years of Impact</div>
                 </div>
@@ -85,17 +125,19 @@ include 'components/header.php';
     </div>
 </section>
 
-<!-- Who We Are Section (Redesigned) -->
-<section class="who-we-are py-5 bg-light">
+<!-- Who We Are Section - Clean & Mission-Focused -->
+<section class="who-we-are py-5 bg-white">
     <div class="container">
-        <div class="section-header text-center mb-5">
-            <h2 class="section-title display-5 fw-bold">
-                Who <span class="text-gradient">We Are</span>
-            </h2>
-            <p class="section-subtitle lead">
-                Cross-Cutting Excellence: Focus, Diligence, Consistency
-            </p>
-        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="section-header text-center mb-5">
+                    <h2 class="section-title display-4 fw-bold mb-3">
+                        Who <span class="text-primary">We Are</span>
+                    </h2>
+                    <p class="section-subtitle lead text-muted">
+                        A vibrant network of Christian professionals transforming the world
+                    </p>
+                </div>
         <div class="row align-items-center g-5">
             <!-- Removed image column -->
             <div class="col-lg-12">
@@ -104,33 +146,54 @@ include 'components/header.php';
                     <p class="about-text fs-5 mb-3">
                         <strong>CCE is a vibrant network of Christian professionals dedicated to transforming their spheres of influence with God’s wisdom, for the glory of Christ Jesus.</strong>
                     </p>
-                    <ul class="list-unstyled mb-4">
-                        <li class="mb-2">
-                            <i class="fas fa-bullseye text-success me-2"></i>
-                            <strong>Vision:</strong> Christians establishing the glory of Jesus Christ across the world through their professions, until the kingdoms of this world become the kingdoms of our Lord and His Christ.
-                        </li>
-                        <li>
-                            <i class="fas fa-seedling text-success me-2"></i>
-                            <strong>Mission:</strong> Building the capacity of Christian professionals to transform their spheres with the manifold wisdom of God.
-                        </li>
-                    </ul>
-                    <div class="row mb-4">
-                        <div class="col-md-4 mb-2">
-                            <div class="feature-card p-3 bg-white rounded shadow-sm text-center h-100">
-                                <i class="fas fa-cross fa-lg text-primary mb-2"></i>
-                                <div class="fw-semibold">Godliness in the Secular Space</div>
+                    <!-- Mission & Vision Cards -->
+                    <div class="row g-4 mb-5">
+                        <div class="col-lg-6">
+                            <div class="mission-card h-100">
+                                <div class="card-icon mb-3">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <h3 class="card-title mb-3">Our Vision</h3>
+                                <p class="card-text">
+                                    Christians establishing the glory of Jesus Christ across the world through their professions, until the kingdoms of this world become the kingdoms of our Lord and His Christ.
+                                </p>
+                                <div class="card-accent"></div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-2">
-                            <div class="feature-card p-3 bg-white rounded shadow-sm text-center h-100">
-                                <i class="fas fa-award fa-lg text-primary mb-2"></i>
-                                <div class="fw-semibold">Professional Excellence with Kingdom Purpose</div>
+                        <div class="col-lg-6">
+                            <div class="mission-card h-100">
+                                <div class="card-icon mb-3">
+                                    <i class="fas fa-seedling"></i>
+                                </div>
+                                <h3 class="card-title mb-3">Our Mission</h3>
+                                <p class="card-text">
+                                    Building the capacity of Christian professionals to transform their spheres with the manifold wisdom of God through excellence, integrity, and Kingdom values.
+                                </p>
+                                <div class="card-accent"></div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-2">
-                            <div class="feature-card p-3 bg-white rounded shadow-sm text-center h-100">
-                                <i class="fas fa-globe-africa fa-lg text-primary mb-2"></i>
-                                <div class="fw-semibold">Transforming Spheres of Influence</div>
+                    </div>
+                    <!-- Core Values -->
+                    <div class="core-values text-center">
+                        <h4 class="values-title mb-4">Our Core Values</h4>
+                        <div class="values-grid">
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <i class="fas fa-cross"></i>
+                                </div>
+                                <div class="value-label">Godliness in Secular Space</div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="value-label">Professional Excellence</div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <i class="fas fa-globe-africa"></i>
+                                </div>
+                                <div class="value-label">Kingdom Transformation</div>
                             </div>
                         </div>
                     </div>
@@ -577,4 +640,4 @@ include 'components/header.php';
 <script src="assets/js/main.js"></script>
 <script src="assets/js/homepage.js"></script>
 
-<?php include 'components/footer.php'; ?>
+<?php include 'footer.php'; ?>
