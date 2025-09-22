@@ -3,252 +3,216 @@
 include 'components/header.php';
 ?>
 
-<!-- 1. WHO WE ARE -->
-<section class="hero-welcome text-center">
+<!-- Hero Section - Powerful Opening -->
+<section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            Transform Your 
+                            <span class="text-gradient">Sphere of Influence</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Building the capacity of Christian professionals to manifest God's wisdom and excellence in every sector of society.
+                        </p>
+                        <div class="hero-motto">
+                            <span class="motto-word">INSPIRED</span>
+                            <span class="motto-separator">•</span>
+                            <span class="motto-word">INTENTIONAL</span>
+                            <span class="motto-separator">•</span>
+                            <span class="motto-word">INTENSE</span>
+                        </div>
+                        <div class="hero-actions">
+                            <a href="get-involved.php" class="btn btn-hero-primary">Join the Movement</a>
+                            <a href="about.php" class="btn btn-hero-secondary">Discover Our Mission</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-visual">
+                        <div class="hero-logo-container">
+                            <img src="assets/image/logo.jpeg" alt="CCE Logo" class="hero-logo">
+                            <div class="logo-glow"></div>
+                        </div>
+                        <div class="floating-elements">
+                            <div class="float-element" data-float="1">💡</div>
+                            <div class="float-element" data-float="2">🎯</div>
+                            <div class="float-element" data-float="3">⚡</div>
+                            <div class="float-element" data-float="4">🌟</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <div class="scroll-arrow"></div>
+    </div>
+</section>
+
+<!-- Impact Stats Section -->
+<section class="impact-stats">
     <div class="container">
-        <img src="assets/image/logo.jpeg" alt="CCE Logo" class="hero-logo">
-        <h1 class="hero-title">Welcome to Cross-Cutting Excellence (CCE)</h1>
-        <p class="hero-theme">INSPIRED &bull; INTENTIONAL &bull; INTENSE</p>
-        <p class="hero-desc">Building the capacity of Christian professionals to transform their spheres of endeavour with the manifold wisdom of God.</p>
-        <a href="about.php" class="btn hero-btn">Learn More About Us</a>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="500">0</div>
+                    <div class="stat-label">Professionals Equipped</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">Training Programs</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label">Countries Reached</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="10">0</div>
+                    <div class="stat-label">Years of Impact</div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- Who We Are Section -->
-<section class="section-banner bg-light py-4">
-    <div class="container text-center">
-        <h2 class="section-heading">Who We Are</h2>
-        <p class="section-lead">CCE is a network of Christian professionals dedicated to manifesting the wisdom and glory of Christ in every sphere of society.</p>
+<!-- Vision Mission Section -->
+<section class="vision-mission">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">Driven by Purpose</h2>
+            <p class="section-subtitle">Our vision and mission guide everything we do</p>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-6">
+                <div class="vision-card">
+                    <div class="card-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="card-title">Our Vision</h3>
+                    <p class="card-content">
+                        Christians establishing the glory of the Lord Jesus Christ across the world through their secular professions until the kingdoms of this world become the kingdoms of our Lord and His Christ.
+                    </p>
+                    <div class="card-accent"></div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="mission-card">
+                    <div class="card-icon">
+                        <i class="fas fa-target"></i>
+                    </div>
+                    <h3 class="card-title">Our Mission</h3>
+                    <p class="card-content">
+                        Building the capacity of Christian Professionals to transform their various spheres of endeavour with the manifold wisdom of God.
+                    </p>
+                    <div class="card-accent"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<main class="container">
-    <!-- Vision & Mission Cards -->
-    <section class="row g-4 mb-5 mt-4">
-        <div class="col-lg-6 col-12">
-            <div class="card h-100 p-4">
-                <h3 class="section-title">Our Vision</h3>
-                <p>Christians establishing the glory of the Lord Jesus Christ across the world through their secular professions until the kingdoms of this world become the kingdoms of our Lord and His Christ.</p>
-            </div>
+<!-- Faculty Areas Section -->
+<section class="faculty-showcase">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">Excellence Across Every Sphere</h2>
+            <p class="section-subtitle">Transforming society through specialized faculty areas</p>
         </div>
-        <div class="col-lg-6 col-12">
-            <div class="card h-100 p-4">
-                <h3 class="section-title">Our Mission</h3>
-                <p>Building the capacity of Christian Professionals to transform their various spheres of endeavour with the manifold wisdom of God.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 2. WHAT WE DO -->
-    <section class="section-banner bg-primary text-white text-center py-4 mb-4">
-        <h2 class="section-heading">What We Do</h2>
-        <p class="section-lead">Equipping believers to transform their world through professional excellence, advocacy, and godly influence.</p>
-    </section>
-
-    <section class="row g-4 mb-5">
-        <div class="col-md-4 col-12">
-            <div class="card h-100 text-center p-4">
-                <div class="service-icon mb-3">🎯</div>
-                <h3>Technical Assistance</h3>
-                <p>Support for MSMEs, sustainable growth, and business health tools (MEALS: Monitoring, Evaluation, Accountability, Learning, Scaling).</p>
-            </div>
-        </div>
-        <div class="col-md-4 col-12">
-            <div class="card h-100 text-center p-4">
-                <div class="service-icon mb-3">💼</div>
-                <h3>Consultancy Services</h3>
-                <p>Professional consultancy in governance, development, education, training, science, technology, and strategic planning.</p>
-            </div>
-        </div>
-        <div class="col-md-4 col-12">
-            <div class="card h-100 text-center p-4">
-                <div class="service-icon mb-3">📢</div>
-                <h3>Advocacy & Action</h3>
-                <p>SDGs implementation, human rights advocacy, direct action, and capacity building for national and international development.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. VARIOUS BODIES (Faculty Endeavours) -->
-    <section class="section-banner bg-secondary text-white text-center py-4 mb-4">
-        <h2 class="section-heading">Our Various Bodies</h2>
-        <p class="section-lead">CCE operates through specialized faculties, each focused on a key area of societal transformation.</p>
-    </section>
-
-    <section class="mb-5">
-        <h2 class="text-center mb-4 faculty-title">Faculty Endeavours</h2>
-        <div class="row g-3">
-            <div class="col-md-3 col-6">
-                <a href="faculty.php#gad" class="card h-100 text-center py-4 faculty-card">
-                    <div class="faculty-icon mb-2">🏛️</div>
-                    <strong class="faculty-code">GAD</strong><br>
-                    <span class="faculty-name">Governance & Development</span>
-                </a>
-            </div>
-            <div class="col-md-3 col-6">
-                <a href="faculty.php#eat" class="card h-100 text-center py-4 faculty-card">
-                    <div class="faculty-icon mb-2">🎓</div>
-                    <strong class="faculty-code">EAT</strong><br>
-                    <span class="faculty-name">Education & Training</span>
-                </a>
-            </div>
-            <div class="col-md-3 col-6">
-                <a href="faculty.php#sat" class="card h-100 text-center py-4 faculty-card">
-                    <div class="faculty-icon mb-2">🔬</div>
-                    <strong class="faculty-code">SAT</strong><br>
-                    <span class="faculty-name">Science & Technology</span>
-                </a>
-            </div>
-            <div class="col-md-3 col-6">
-                <a href="faculty.php#paa" class="card h-100 text-center py-4 faculty-card">
-                    <div class="faculty-icon mb-2">🎭</div>
-                    <strong class="faculty-code">PAA</strong><br>
-                    <span class="faculty-name">Philosophy & Arts</span>
-                </a>
-            </div>
-            <div class="col-md-3 col-6">
-                <a href="faculty.php#fab" class="card h-100 text-center py-4 faculty-card">
-                    <div class="faculty-icon mb-2">💰</div>
-                    <strong class="faculty-code">FAB</strong><br>
-                    <span class="faculty-name">Finance & Business</span>
-                </a>
-            </div>
-            <div class="col-md-3 col-6">
-                <a href="faculty.php#raf" class="card h-100 text-center py-4 faculty-card">
-                    <div class="faculty-icon mb-2">👨‍👩‍👧‍👦</div>
-                    <strong class="faculty-code">RAF</strong><br>
-                    <span class="faculty-name">Relationship & Family</span>
-                </a>
-            </div>
-            <div class="col-md-3 col-6">
-                <a href="faculty.php#maa" class="card h-100 text-center py-4 faculty-card">
-                    <div class="faculty-icon mb-2">🌍</div>
-                    <strong class="faculty-code">MAA</strong><br>
-                    <span class="faculty-name">Missions & Apologetics</span>
-                </a>
-            </div>
-            <div class="col-md-3 col-6">
-                <a href="faculty.php#cam" class="card h-100 text-center py-4 faculty-card">
-                    <div class="faculty-icon mb-2">📡</div>
-                    <strong class="faculty-code">CAM</strong><br>
-                    <span class="faculty-name">Communication & Media</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. CCE PEOPLE -->
-    <section class="section-banner bg-success text-white text-center py-4 mb-4">
-        <h2 class="section-heading">CCE People</h2>
-        <p class="section-lead">Meet the passionate professionals and leaders driving the CCE vision forward.</p>
-    </section>
-
-    <section class="mb-5">
-        <h2 class="text-center mb-4">Featured Consultants & Team</h2>
-        <div class="row g-4 justify-content-center">
-            <div class="col-md-4 col-12">
-                <div class="card h-100 text-center p-4 people-card">
-                    <div class="person-avatar mb-3">👨‍⚕️</div>
-                    <h3>Dr. Kenneth Edem Kukuia</h3>
-                    <p class="person-title">Health & Development Expert</p>
-                    <p>Professor, University of Ghana Medical School. International expert in health systems and development initiatives.</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-12">
-                <div class="card h-100 text-center p-4 people-card">
-                    <div class="person-avatar mb-3">👨‍💼</div>
-                    <h3>Michael Seshie</h3>
-                    <p class="person-title">Finance & Business Specialist</p>
-                    <p>Finance expert and CEO of nursing and care company, USA. Specialist in business development and financial management.</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-12">
-                <div class="card h-100 text-center p-4 people-card">
-                    <div class="person-avatar mb-3">👩‍💼</div>
-                    <h3>Dr. Sarah Johnson</h3>
-                    <p class="person-title">Program Director</p>
-                    <p>CCE Program Director with expertise in organizational development and Christian leadership transformation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. CCE COMPANIES -->
-    <section class="section-banner bg-warning text-dark text-center py-4 mb-4">
-        <h2 class="section-heading">CCE Companies</h2>
-        <p class="section-lead">Our companies provide professional services and amplify our impact in society.</p>
-    </section>
-
-    <section class="mb-5">
-        <div class="row g-4 justify-content-center">
-            <div class="col-md-5 col-12">
-                <a href="#" class="card h-100 text-center p-4 company-card">
-                    <div class="company-icon mb-3">🏢</div>
-                    <h3 class="company-name">CCE Consulting</h3>
-                    <p>Professional consultancy services for MSMEs, governance, development, and strategic planning initiatives.</p>
-                    <div class="company-services">
-                        <span class="service-tag">MSME Support</span>
-                        <span class="service-tag">Governance</span>
-                        <span class="service-tag">Development</span>
+        <div class="faculty-grid">
+            <div class="faculty-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="faculty-card">
+                    <div class="faculty-icon">
+                        <i class="fas fa-balance-scale"></i>
                     </div>
-                </a>
+                    <h3 class="faculty-title">Governance & Development</h3>
+                    <p class="faculty-desc">Leadership, policy-making, and sustainable development initiatives</p>
+                    <a href="faculty.php#gad" class="faculty-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
-            <div class="col-md-5 col-12">
-                <a href="#" class="card h-100 text-center p-4 company-card">
-                    <div class="company-icon mb-3">📺</div>
-                    <h3 class="company-name">CCE Media</h3>
-                    <p>Communication, media production, knowledge management, and advocacy platforms for maximum impact.</p>
-                    <div class="company-services">
-                        <span class="service-tag">Media Production</span>
-                        <span class="service-tag">Communication</span>
-                        <span class="service-tag">Advocacy</span>
+            <div class="faculty-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="faculty-card">
+                    <div class="faculty-icon">
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
-                </a>
+                    <h3 class="faculty-title">Education & Training</h3>
+                    <p class="faculty-desc">Academic excellence and professional development programs</p>
+                    <a href="faculty.php#eat" class="faculty-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="faculty-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="faculty-card">
+                    <div class="faculty-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3 class="faculty-title">Science & Technology</h3>
+                    <p class="faculty-desc">Innovation, research, and technological advancement</p>
+                    <a href="faculty.php#sat" class="faculty-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="faculty-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="faculty-card">
+                    <div class="faculty-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="faculty-title">Philosophy & Arts</h3>
+                    <p class="faculty-desc">Creative expression and philosophical discourse</p>
+                    <a href="faculty.php#paa" class="faculty-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="faculty-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="faculty-card">
+                    <div class="faculty-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="faculty-title">Finance & Business</h3>
+                    <p class="faculty-desc">Economic empowerment and business excellence</p>
+                    <a href="faculty.php#fab" class="faculty-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Quick Access Section -->
-    <section class="mb-5">
-        <h2 class="text-center mb-4">Quick Access</h2>
-        <div class="row g-3">
-            <div class="col-md-3 col-6">
-                <a href="events.php" class="card h-100 text-center p-3 quicklink-card">
-                    <div class="quicklink-icon">📅</div>
-                    <span>Events</span>
-                </a>
-            </div>
-            <div class="col-md-3 col-6">
-                <a href="resources.php" class="card h-100 text-center p-3 quicklink-card">
-                    <div class="quicklink-icon">📚</div>
-                    <span>Resources</span>
-                </a>
-            </div>
-            <div class="col-md-3 col-6">
-                <a href="news.php" class="card h-100 text-center p-3 quicklink-card">
-                    <div class="quicklink-icon">📰</div>
-                    <span>News</span>
-                </a>
-            </div>
-            <div class="col-md-3 col-6">
-                <a href="get-involved.php" class="card h-100 text-center p-3 quicklink-card">
-                    <div class="quicklink-icon">🤝</div>
-                    <span>Get Involved</span>
-                </a>
+<!-- Call to Action Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content text-center">
+            <h2 class="cta-title">Ready to Transform Your Sphere?</h2>
+            <p class="cta-subtitle">Join thousands of Christian professionals making an eternal impact in their fields</p>
+            <div class="cta-actions">
+                <a href="get-involved.php" class="btn btn-cta-primary">Start Your Journey</a>
+                <a href="events.php" class="btn btn-cta-secondary">Upcoming Events</a>
             </div>
         </div>
-    </section>
+        <div class="cta-visual">
+            <div class="network-visualization">
+                <div class="network-node" data-node="1"></div>
+                <div class="network-node" data-node="2"></div>
+                <div class="network-node" data-node="3"></div>
+                <div class="network-node" data-node="4"></div>
+                <div class="network-node" data-node="5"></div>
+                <div class="network-connection" data-connect="1-2"></div>
+                <div class="network-connection" data-connect="2-3"></div>
+                <div class="network-connection" data-connect="3-4"></div>
+                <div class="network-connection" data-connect="4-5"></div>
+                <div class="network-connection" data-connect="5-1"></div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Featured Event -->
-    <section class="featured-event text-center mb-5">
-        <div class="card event-card p-4">
-            <h2 class="event-title">Upcoming Event</h2>
-            <h3 class="event-name">Excel-2024 Conference</h3>
-            <p class="event-theme">Theme: Inspired, Intentional, Intense</p>
-            <p class="event-desc">Join Christian professionals from around the world for our annual conference focused on excellence and transformation.</p>
-            <a href="events.php" class="btn btn-event">View All Events</a>
-        </div>
-    </section>
-</main>
+<!-- JavaScript for animations and interactions -->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/homepage.js"></script>
 
 <?php include 'components/footer.php'; ?>
