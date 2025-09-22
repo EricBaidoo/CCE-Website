@@ -2298,10 +2298,262 @@ h1, h2, h3, h4, h5, h6, p, span, div {
     margin: 0;
 }
 
-/* Activities and Events Section */
-.activities-events {
-    padding: 6rem 0;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+/* Additional Styling for CCE Content */
+
+/* Context Content */
+.context-content {
+    background: rgba(255, 152, 0, 0.05);
+    border-left: 4px solid var(--primary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.context-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.context-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.bible-quote {
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+    font-style: italic;
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Strategy Content */
+.strategy-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.strategy-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.strategy-desc {
+    font-size: 1.1rem;
+    color: #cccccc;
+    line-height: 1.7;
+}
+
+/* People Intro */
+.people-intro {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.people-desc {
+    font-size: 1.1rem;
+    color: #cccccc;
+    line-height: 1.7;
+}
+
+/* Person Achievements */
+.person-achievements {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.person-achievements h5 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.person-achievements ul {
+    list-style: none;
+    padding: 0;
+}
+
+.person-achievements li {
+    color: #cccccc;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.person-achievements li::before {
+    content: '⭐';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* Framework Section */
+.people-framework {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.framework-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.framework-desc {
+    color: #cccccc;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.framework-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.framework-item {
+    background: rgba(255, 152, 0, 0.1);
+    border: 1px solid rgba(255, 152, 0, 0.3);
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.framework-letter {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.framework-word {
+    color: #cccccc;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Activities Intro */
+.activities-intro {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.activities-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.activities-desc {
+    color: #cccccc;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+/* Conference Highlight */
+.conference-highlight {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.highlight-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.example-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.example-item {
+    background: rgba(255, 152, 0, 0.1);
+    border: 1px solid rgba(255, 152, 0, 0.3);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.example-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 152, 0, 0.2);
+    border-color: var(--primary-color);
+}
+
+.example-item i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.example-item h5 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.example-item p {
+    color: #cccccc;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Mobile Responsive Updates */
+@media (max-width: 768px) {
+    .framework-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .example-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .person-achievements li {
+        font-size: 0.8rem;
+    }
+    
+    .context-content,
+    .strategy-content,
+    .people-intro,
+    .activities-intro,
+    .conference-highlight {
+        padding: 1.5rem;
+    }
 }
 
 .activities-events .section-title,
