@@ -3,11 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CCE - Cross-Cutting Excellence</title>
+    <?php
+    // allow pages to set $meta = ['title'=>..., 'description'=>..., 'image'=>..., 'url'=>..., 'type'=>...]
+    $meta = isset($meta) && is_array($meta) ? $meta : [];
+    $title = isset($meta['title']) ? $meta['title'] : 'CCE - Cross-Cutting Excellence';
+    $description = isset($meta['description']) ? $meta['description'] : 'Cross-Cutting Excellence (CCE) mobilizes Christian professionals to reclaim and transform secular institutions through godly wisdom and professional excellence.';
+    $image = isset($meta['image']) ? $meta['image'] : '/CCE/assets/image/logo.jpeg';
+    $url = isset($meta['url']) ? $meta['url'] : ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http') . '://' . ($_SERVER['HTTP_HOST'] ?? 'localhost') . ($_SERVER['REQUEST_URI'] ?? '/CCE/');
+    $type = isset($meta['type']) ? $meta['type'] : 'website';
+    ?>
+    <title><?= htmlspecialchars($title) ?></title>
     <link rel="icon" type="image/jpeg" href="/CCE/assets/image/logo.jpeg">
+    <meta name="description" content="<?= htmlspecialchars($description) ?>">
+    <!-- Open Graph -->
+    <meta property="og:title" content="<?= htmlspecialchars($title) ?>">
+    <meta property="og:description" content="<?= htmlspecialchars($description) ?>">
+    <meta property="og:image" content="<?= htmlspecialchars($image) ?>">
+    <meta property="og:url" content="<?= htmlspecialchars($url) ?>">
+    <meta property="og:type" content="<?= htmlspecialchars($type) ?>">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?= htmlspecialchars($title) ?>">
+    <meta name="twitter:description" content="<?= htmlspecialchars($description) ?>">
+    <meta name="twitter:image" content="<?= htmlspecialchars($image) ?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/CCE/assets/css/global.css">
-    <link rel="stylesheet" href="/CCE/assets/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Cache-busting token added during active development to ensure latest CSS is loaded -->
+    <link rel="stylesheet" href="/CCE/assets/css/global.css?v=20250924.1">
+    <link rel="stylesheet" href="/CCE/assets/css/index.css?v=20250924.1">
+    <?php
+    // render page-provided JSON-LD if present
+    if (!empty($meta['json_ld'])) {
+        echo "<script type=\"application/ld+json\">" . $meta['json_ld'] . "</script>\n";
+    }
+    ?>
         <style>
         .professional-header {
             background: var(--cce-black);

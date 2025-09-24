@@ -6,6 +6,14 @@
 <footer class="professional-footer">
     <style>
         .professional-footer {
+            /* full-bleed background regardless of container */
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            width: 100vw;
+            box-sizing: border-box;
             background: var(--cce-black);
             color: var(--cce-white);
             padding: 3.5rem 0 2rem 0;
@@ -240,32 +248,35 @@
                         </ul>
                     </div>
                 </div>
-                <!-- Contact Info -->
+                <!-- Contact Info / Reach Us -->
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-section">
-                        <h4 class="footer-title">Contact Info</h4>
+                        <h4 class="footer-title">Contact & Reach</h4>
                         <div class="footer-contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="contact-details">
+                                    <strong>Office</strong>
+                                    <span>Accra, Ghana</span>
+                                </div>
+                            </div>
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
                                 <div class="contact-details">
                                     <strong>Email</strong>
-                                    <span>info@cce-global.org</span>
+                                    <span>hello@crosscuttingexcellence.org</span>
                                 </div>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-phone"></i>
                                 <div class="contact-details">
                                     <strong>Phone</strong>
-                                    <span>+233 (0) 123 456 789</span>
+                                    <span>+233 24 555 0123</span>
                                 </div>
                             </div>
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div class="contact-details">
-                                    <strong>Address</strong>
-                                    <span>Accra, Ghana</span>
-                                </div>
-                            </div>
+                        </div>
+                        <div class="footer-contact-cta" style="margin-top:1rem;">
+                            <a href="/CCE/contact.php?source=footer" class="hero-btn btn-contact" aria-label="Contact CCE">Contact CCE</a>
                         </div>
                     </div>
                 </div>
@@ -279,21 +290,26 @@
             </div>
             <div class="footer-social">
                 <span class="social-title">Follow Us:</span>
-                <div class="social-links">
-                    <a href="https://facebook.com/" class="social-link" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener">
-                        <i class="fab fa-facebook-f"></i>
+                    <div class="social-links">
+                    <a href="https://facebook.com/" class="social-link" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer">
+                        <img src="/CCE/assets/icons/facebook.svg" class="social-icon" alt="Facebook logo">
+                        <span class="sr-only">Facebook (opens in a new tab)</span>
                     </a>
-                    <a href="https://twitter.com/" class="social-link" aria-label="Twitter" title="Twitter" target="_blank" rel="noopener">
-                        <i class="fab fa-twitter"></i>
+                    <a href="https://twitter.com/" class="social-link" aria-label="Twitter" title="Twitter" target="_blank" rel="noopener noreferrer">
+                        <img src="/CCE/assets/icons/twitter.svg" class="social-icon" alt="Twitter logo">
+                        <span class="sr-only">Twitter (opens in a new tab)</span>
                     </a>
-                    <a href="https://linkedin.com/" class="social-link" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener">
-                        <i class="fab fa-linkedin-in"></i>
+                    <a href="https://linkedin.com/" class="social-link" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <img src="/CCE/assets/icons/linkedin.svg" class="social-icon" alt="LinkedIn logo">
+                        <span class="sr-only">LinkedIn (opens in a new tab)</span>
                     </a>
-                    <a href="https://instagram.com/" class="social-link" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener">
-                        <i class="fab fa-instagram"></i>
+                    <a href="https://instagram.com/" class="social-link" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer">
+                        <img src="/CCE/assets/icons/instagram.svg" class="social-icon" alt="Instagram logo">
+                        <span class="sr-only">Instagram (opens in a new tab)</span>
                     </a>
-                    <a href="https://youtube.com/" class="social-link" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener">
-                        <i class="fab fa-youtube"></i>
+                    <a href="https://youtube.com/" class="social-link" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer">
+                        <img src="/CCE/assets/icons/youtube.svg" class="social-icon" alt="YouTube logo">
+                        <span class="sr-only">YouTube (opens in a new tab)</span>
                     </a>
                 </div>
             </div>

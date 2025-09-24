@@ -207,3 +207,569 @@
         font-size: 1.1rem;
     }
 }
+
+/* Who We Are Section */
+.who-we-are {
+    padding: 6vh 2rem;
+    background: #fff;
+    color: var(--cce-black);
+    display: flex;
+    justify-content: center;
+}
+.who-grid {
+    width: 100%;
+    max-width: 92rem; /* keeps content centered and readable on wide screens */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+/* When image is removed let content take full width */
+.who-content.full-width {
+    grid-column: 1 / -1;
+}
+.who-content { width: 100%; }
+.who-card {
+    background: #ffffff;
+    padding: 2.6rem 3rem;
+    border-radius: 0.9rem;
+    box-shadow: 0 1.2rem 2.4rem rgba(11,11,11,0.06);
+    position: relative;
+    overflow: visible;
+}
+/* vertical accent bar to left of the card header for brand identity */
+.who-card::before{
+    content: '';
+    position: absolute;
+    top: 1.8rem;
+    left: 0;
+    width: 6px;
+    height: 36px;
+    background: linear-gradient(180deg,#ffb74d,#f57c00);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.who-card h2 {
+    margin-top: 0;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 2.6rem; /* larger scale for clarity */
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--cce-black);
+    margin-bottom: 0.35rem;
+    line-height: 1.03;
+}
+
+/* small accent under H2 for visual identity */
+.who-card h2::after {
+    content: '';
+    display: block;
+    width: 4.5rem; /* accent length */
+    height: 0.35rem;
+    background: linear-gradient(90deg, #ffb74d, #f57c00);
+    border-radius: 0.5rem;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+}
+.who-card .lead {
+    margin-bottom: 1.1rem;
+    color: #333;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    max-width: 70ch;
+}
+.who-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+
+/* Sub-headings inside columns */
+.who-columns h4,
+.who-content h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--cce-orange-dark);
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.01em;
+}
+
+.who-columns p { color: #303030; }
+.henerorr-list {
+    margin: 1rem 0 1.2rem 0;
+    padding-left: 1.1rem;
+}
+.henerorr-list li { margin-bottom: 0.6rem; }
+.who-cta-row {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 1.6rem;
+    align-items: start;
+    margin-top: 1.6rem;
+}
+.who-stats { display:flex; gap: 1.4rem; align-items: baseline; }
+.stat-item { text-align: left; }
+.stat-number { font-size: 2.4rem; font-weight: 800; color: #f57c00; line-height: 1; }
+.stat-label { font-size: 0.95rem; color: #666; display: block; margin-top: 0.25rem; }
+.who-quote {
+    background: #fffaf8;
+    padding: 1.4rem 1.2rem;
+    border-radius: 0.8rem;
+    border-left: 0.28rem solid rgba(245,124,0,0.18);
+    box-shadow: 0 6px 18px rgba(245,124,0,0.04);
+}
+.who-quote blockquote { margin: 0 0 0.6rem 0; font-style: italic; color: #222; }
+.who-card { transition: transform 220ms ease, box-shadow 220ms ease; }
+.who-card:hover { transform: translateY(-6px); box-shadow: 0 2.2rem 3.6rem rgba(12,12,12,0.08); }
+.who-card p { color: #333; }
+
+/* CTA button prominent style inside Who We Are */
+.who-card .hero-btn {
+    display: inline-block;
+    background: #f57c00;
+    color: #fff;
+    padding: 0.9rem 1.6rem;
+    border-radius: 40px;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(245,124,0,0.14);
+}
+.who-card .hero-btn:hover{ background:#ff9800; color:#fff; }
+
+@media (max-width: 80em) {
+    .who-grid { max-width: 70rem; }
+}
+
+@media (max-width: 60em) {
+    .who-grid.detailed { grid-template-columns: 1fr; }
+    .who-columns { grid-template-columns: 1fr; }
+    .who-cta-row { grid-template-columns: 1fr; }
+    .who-we-are { padding: 3vh 1rem; }
+    .who-card { padding: 1.4rem; }
+    .stat-number { font-size: 1.8rem; }
+    .who-card h2 { font-size: 1.8rem; }
+    .who-columns h4, .who-content h4 { font-size: 1rem; }
+}
+
+/* Faculty Endeavours */
+.faculty-section {
+    padding: 4vh 2rem;
+    background: #f9f9fb;
+}
+.faculty-section .section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+.faculty-section .section-header h2 {
+    font-size: 2.25rem;
+    margin-bottom: 0.6rem;
+}
+.faculty-section .lead {
+    color: #555;
+    font-size: 1.05rem;
+}
+.fe-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.6rem;
+}
+.fe-card {
+    background: #fff;
+    border-radius: 0.8rem;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    box-shadow: 0 1.6rem 3rem rgba(15,15,15,0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.fe-card:hover {
+    transform: translateY(-0.6rem);
+    box-shadow: 0 2.4rem 4rem rgba(15,15,15,0.08);
+}
+.fe-icon {
+    width: 3.6rem;
+    height: 3.6rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: rgba(245,124,0,0.06);
+    border-radius: 0.8rem;
+    margin-bottom: 0.9rem;
+    color: var(--cce-orange-dark);
+}
+/* Reverted the experimental Events & News block that introduced a global .section-header layout
+   Original, narrower styles for events/news are kept further down in this file. */
+
+
+/* CCE People Section */
+.people-section { padding: 4vh 2rem; background: #ffffff; }
+.people-section .section-header { text-align: center; margin-bottom: 2rem; }
+.people-section .section-header h2 { font-size: 2rem; margin-bottom: 0.4rem; }
+.people-section .lead { color: #444; max-width: 64ch; margin: 0 auto; }
+
+.people-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* stack groups vertically by default */
+    gap: 1.8rem;
+    align-items: start;
+}
+.person-card {
+    background: #fff;
+    border-radius: 0.8rem;
+    padding: 1.2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    box-shadow: 0 0.8rem 1.8rem rgba(10,10,10,0.04);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.person-card:hover { transform: translateY(-6px); box-shadow: 0 1.6rem 3rem rgba(10,10,10,0.06); }
+.person-avatar { width: 72px; height: 72px; flex: 0 0 72px; border-radius: 0.6rem; overflow: hidden; background: rgba(0,0,0,0.04); }
+.person-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.person-name, .company-name { margin: 0; font-size: var(--h3); font-weight: 700; color: var(--heading-color); }
+.person-role { margin: 0.2rem 0 0.6rem 0; color: var(--muted-color); font-size: var(--h4); }
+.person-bio { margin: 0; color: var(--text-color); font-size: 1rem; line-height: 1.45; }
+.person-link { color: var(--cce-orange); font-weight: 600; text-decoration: none; }
+.person-link:hover { text-decoration: underline; }
+
+/* Group headings inside people section */
+.people-group-heading {
+    font-size: 1.25rem;
+    margin: 0 0 0.8rem 0;
+    color: var(--cce-black);
+    font-weight: 700;
+}
+.group-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 80em) {
+    .people-grid { grid-template-columns: 1fr; }
+    .group-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 60em) {
+    .people-grid { grid-template-columns: 1fr; }
+    .group-grid { grid-template-columns: 1fr; }
+    .person-card { padding: 1rem; }
+    .person-avatar { width: 64px; height: 64px; flex: 0 0 64px; }
+}
+
+/* People modal styles */
+.people-modal { display: none; position: fixed; inset: 0; z-index: 9999; align-items: center; justify-content: center; }
+.people-modal[aria-hidden="false"] { display: flex; }
+.people-modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.55); }
+.people-modal-panel { position: relative; background: #fff; width: min(72rem, 94%); max-height: 88vh; overflow: auto; border-radius: 0.6rem; padding: 2rem; box-shadow: 0 2.4rem 4.8rem rgba(10,10,10,0.16); z-index: 2; }
+.people-modal-close { position: absolute; top: 0.6rem; right: 0.6rem; background: transparent; border: none; font-size: 1.25rem; cursor: pointer; }
+.people-modal-body { display: grid; grid-template-columns: 160px 1fr; gap: 1.6rem; align-items: start; }
+.people-modal-photo { width: 160px; height: 160px; object-fit: cover; border-radius: 0.6rem; }
+.people-modal-role { color: #666; margin-top: 0.25rem; margin-bottom: 0.8rem; }
+.people-modal-bio { color: #222; line-height: 1.6; }
+/* Contacts (cards + modal) */
+.person-contacts { display:flex; gap:0.6rem; margin-top:0.8rem; }
+.person-contacts a { display:inline-flex; gap:0.5rem; align-items:center; padding:0.36rem 0.6rem; border-radius:0.6rem; text-decoration:none; background:rgba(245,124,0,0.06); color:var(--cce-orange); font-weight:600; font-size:0.92rem; }
+.person-contacts a:hover { background:rgba(245,124,0,0.12); }
+.person-contacts svg, .people-modal-contacts svg { width:1.05rem; height:1.05rem; display:block; }
+.people-modal-contacts { display:flex; gap:0.8rem; margin-top:0.8rem; }
+.people-modal-contacts a { background: rgba(0,0,0,0.03); padding:0.5rem 0.8rem; border-radius:0.6rem; color:var(--cce-orange); text-decoration:none; font-weight:700; }
+.people-modal-contacts a:hover { background: rgba(245,124,0,0.06); }
+
+@media (max-width: 60em) {
+    .people-modal-panel { padding: 1rem; }
+    .people-modal-body { grid-template-columns: 1fr; grid-auto-rows: auto; }
+    .people-modal-photo { width: 100%; height: auto; border-radius: 0.4rem; }
+}
+.fe-icon svg { width: 1.6rem; height: 1.6rem; display:block; }
+.fe-icon img { width: 1.6rem; height: 1.6rem; display:block; }
+.fe-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+.fe-card p {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 1rem;
+}
+.fe-link {
+    margin-top: auto;
+    color: var(--cce-orange);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width: 80em) {
+    .fe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 60em) {
+    .fe-grid {
+        grid-template-columns: 1fr;
+    }
+    .faculty-section { padding: 3vh 1rem; }
+}
+
+/* Entrance animation for who-card (triggered by IntersectionObserver) */
+.who-card { opacity: 0; transform: translateY(18px); transition: opacity 420ms ease, transform 420ms ease; }
+.who-card.animate-in { opacity: 1; transform: translateY(0); }
+
+@keyframes cardFadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+
+/* CCE Companies */
+.companies-section { padding: 4vh 2rem; background: #fbfbfc; }
+.companies-section .section-header { text-align: center; margin-bottom: 1.8rem; }
+.companies-section .section-header h2 { font-size: var(--h2); margin-bottom: 0.4rem; color: var(--heading-color); }
+.companies-section .lead { color: var(--text-color); max-width: 64ch; margin: 0 auto; }
+.companies-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; align-items: start; }
+.company-card { background: #fff; border-radius: 0.6rem; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; box-shadow: 0 0.8rem 1.6rem rgba(10,10,10,0.04); transition: transform 160ms ease, box-shadow 160ms ease; }
+.company-card:hover { transform: translateY(-6px); box-shadow: 0 1.6rem 3rem rgba(10,10,10,0.06); }
+.company-logo { width: 88px; height: 88px; flex: 0 0 88px; border-radius: 0.5rem; overflow: hidden; background: rgba(0,0,0,0.03); display:flex; align-items:center; justify-content:center; }
+.company-logo img { width:100%; height:100%; object-fit:cover; display:block; }
+.company-body h3 { margin:0; font-size: var(--h3); color: var(--heading-color); }
+.company-body p { margin:0.4rem 0; color: var(--text-color); }
+.company-link { color:var(--cce-orange); font-weight:700; text-decoration:none; }
+.company-link:hover { text-decoration:underline; }
+
+@media (max-width: 80em) {
+    .companies-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 60em) {
+    .companies-grid { grid-template-columns: repeat(2, 1fr); }
+    .company-logo { width:72px; height:72px; flex:0 0 72px; }
+}
+@media (max-width: 40em) {
+    .companies-grid { grid-template-columns: 1fr; }
+    .company-card { align-items:center; }
+    .company-body { text-align:left; }
+}
+/* Company owners (avatar list) */
+.company-owners { margin-top: 0.8rem; display:flex; gap:0.6rem; align-items:center; }
+.owner-link { display:inline-block; width:40px; height:40px; border-radius:50%; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.06); }
+.owner-avatar { width:100%; height:100%; object-fit:cover; display:block; }
+/* Events section */
+.events-section { padding: 4vh 2rem; background: #fffaf8; }
+.events-section .section-header { text-align:center; margin-bottom:1.2rem; }
+.events-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem; }
+.event-card { background:#fff; border-radius:0.6rem; overflow:hidden; box-shadow:0 0.8rem 1.8rem rgba(10,10,10,0.04); display:flex; flex-direction:column; }
+.event-media { height:160px; overflow:hidden; }
+.event-media img { width:100%; height:100%; object-fit:cover; display:block; }
+.event-body { padding:1rem; }
+.event-body h3 { margin:0 0 0.3rem 0; font-size:1.05rem; }
+.meta { font-size:0.9rem; color:#777; margin-bottom:0.6rem; }
+.event-link { color:var(--cce-orange); font-weight:700; text-decoration:none; }
+.event-link:hover { text-decoration:underline; }
+
+/* Date badge in the media area */
+.event-badge {
+    position: absolute;
+    right: 0.8rem;
+    bottom: 0.8rem;
+    background: linear-gradient(180deg,#ffb74d,#f57c00);
+    color: #fff;
+    padding: 0.45rem 0.75rem;
+    border-radius: 0.6rem;
+    font-weight: 800;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.14);
+    font-size: 0.95rem;
+}
+
+/* Positioning for badge container */
+.event-media { position: relative; }
+
+/* Actions */
+.event-actions { display:flex; gap:0.8rem; align-items:center; margin-top:0.8rem; }
+.event-cta { background: var(--cce-orange); color: #fff; padding: 0.5rem 0.9rem; border-radius: 0.6rem; text-decoration: none; font-weight: 800; }
+.event-cta:hover { background: #ff9800; }
+
+/* Upcoming vs past visual states */
+.event-upcoming { border-left: 0.6rem solid #f57c00; }
+.event-past { opacity: 0.7; filter: grayscale(0.08); }
+
+/* Featured events highlight */
+.event-featured {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 1rem;
+    background: linear-gradient(90deg, rgba(245,124,0,0.06), rgba(255,235,205,0.03));
+    border-radius: 0.8rem;
+    padding: 0.6rem;
+    align-items: stretch;
+}
+.event-featured .event-media { flex: 0 0 40%; height: 220px; }
+.event-featured .event-body { flex: 1; padding: 1.2rem; }
+
+@media (max-width: 60em) {
+    .events-grid.featured-row { grid-template-columns: 1fr; }
+    .events-grid.featured-row .event-featured { flex-direction: column; }
+    .events-grid.featured-row .event-featured .event-media { flex: 0 0 auto; width: 100%; height: 220px; }
+    .events-grid.featured-row .event-featured .event-body { padding: 0.8rem; }
+}
+
+/* Event detail page */
+.event-detail { padding: 2rem 0; }
+.event-detail .event-media img { width:100%; height:auto; border-radius:0.4rem; margin-bottom:1rem; }
+.event-detail .event-content { margin-top:1rem; color:#222; line-height:1.6; }
+.event-detail .event-cta { margin-right:0.8rem; }
+
+@media (max-width: 80em) { .events-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 60em) { .events-grid { grid-template-columns: 1fr; } .event-media { height:200px; } }
+
+/* News & Media section */
+.news-section { padding: 4vh 2rem; background: #ffffff; }
+.news-section .section-header { text-align:center; margin-bottom:1.2rem; }
+.news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap:1rem; }
+.news-card { background:#fff; border-radius:0.6rem; overflow:hidden; box-shadow:0 0.8rem 1.8rem rgba(10,10,10,0.04); display:flex; gap:1rem; }
+.news-media { width:36%; min-width:140px; height:100%; overflow:hidden; }
+.news-media img { width:100%; height:100%; object-fit:cover; display:block; }
+.news-body { padding:1rem; flex:1; }
+.news-body h3 { margin:0 0 0.3rem 0; font-size:1.05rem; }
+.news-body .meta { font-size:0.9rem; color:#777; margin-bottom:0.6rem; }
+.news-link { color:var(--cce-orange); font-weight:700; text-decoration:none; }
+.news-link:hover { text-decoration:underline; }
+
+@media (max-width: 80em) { .news-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 60em) { .news-grid { grid-template-columns: 1fr; } .news-media { width:40%; } .news-card { flex-direction:row; } }
+
+/* Scoped additions for redesigned Conferences & Events */
+.events-hero { display:flex; gap:1.2rem; align-items: center; background: linear-gradient(180deg,#fffaf8,#fff); padding:1rem; border-radius:0.8rem; margin-bottom:1rem; box-shadow: 0 8px 24px rgba(10,10,10,0.04); }
+.events-hero-media { flex: 0 0 42%; min-width: 220px; max-height: 260px; overflow:hidden; border-radius:0.6rem; }
+.events-hero-media img { width:100%; height:100%; object-fit:cover; display:block; }
+.events-hero-body { flex:1; padding:0.6rem 0.8rem; }
+.events-hero-body h3 { margin:0 0 0.4rem 0; font-size:1.45rem; }
+.events-hero-body .lead { margin:0 0 0.8rem 0; color:#333; font-size:1rem; }
+
+.events-grid-compact { display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem; margin-top:1rem; grid-auto-rows: 1fr; }
+.event-card.compact {
+    display:flex;
+    gap:0.75rem;
+    align-items: center;
+    background: #fff;
+    border: 1px solid rgba(10,10,10,0.04);
+    padding: 0.5rem;
+    border-radius: 0.6rem;
+    height: 100%;
+}
+.event-card.compact .event-media {
+    flex: 0 0 72px;
+    width: 72px;
+    height: 72px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(10,10,10,0.03);
+}
+.event-card.compact .event-media img { width:100%; height:100%; object-fit:cover; display:block; }
+.event-card.compact .event-body {
+    padding: 0;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    min-height: 72px;
+}
+.event-card.compact h3 { font-size:1rem; margin:0 0 0.15rem 0; font-weight:700; }
+.event-card.compact .meta { font-size:0.82rem; color:#666; margin-bottom:0.2rem; }
+.event-card.compact .excerpt.short { font-size:0.92rem; color:#333; margin:0; line-height:1.2; max-height:2.6rem; overflow:hidden; }
+
+/* CTA styles inside compact cards */
+.event-card.compact .event-actions { margin-top:0.6rem; display:flex; gap:0.5rem; align-items:center; }
+.event-card.compact .event-cta {
+    background: transparent;
+    color: var(--cce-orange);
+    padding: 0.28rem 0.6rem;
+    border-radius: 0.45rem;
+    border: 1px solid rgba(245,124,0,0.12);
+    text-decoration: none;
+    font-weight:700;
+    font-size:0.9rem;
+}
+.event-card.compact .event-cta:hover { background: var(--cce-orange); color:#fff; border-color: transparent; }
+.event-card.compact .event-link { font-size:0.9rem; color:#111; text-decoration:none; }
+
+/* Use -webkit-line-clamp for modern browsers to show at most 2 lines */
+.event-card.compact .excerpt.short {
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media (max-width: 80em) {
+    .events-grid-compact { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 60em) {
+    .events-hero { flex-direction: column; }
+    .events-hero-media { width:100%; max-height: 240px; }
+    .events-grid-compact { grid-template-columns: 1fr; }
+    .event-card.compact { flex-direction: row; }
+    .event-card.compact .event-media { height: 120px; flex:0 0 40%; }
+}
+
+/* Alternate list layout: stacked full-width event rows (no date badge) */
+.events-list { display: grid; gap: 0.9rem; margin-top: 1rem; }
+.events-list .event-card { display:flex; gap:1rem; align-items:stretch; padding:0; border-radius:0.6rem; overflow:hidden; box-shadow: 0 8px 18px rgba(10,10,10,0.04); }
+.events-list .event-media { flex: 0 0 38%; height: 160px; }
+.events-list .event-body { padding:1rem; display:flex; flex-direction:column; justify-content:space-between; }
+.events-list .event-body h3 { font-size:1.1rem; }
+.events-list .event-badge { display:none; }
+
+@media (max-width: 60em) {
+    .events-list .event-media { height: 180px; flex: 0 0 auto; width:100%; }
+    .events-list .event-card { flex-direction: column; }
+}
+
+/* Styles for new event-row partial */
+.event-row { display:flex; gap:1rem; align-items:stretch; background:#fff; border-radius:0.6rem; overflow:hidden; box-shadow:0 8px 20px rgba(10,10,10,0.04); }
+.event-row .event-row-media { flex:0 0 38%; max-width:42%; height: 180px; overflow:hidden; }
+.event-row .event-row-media img { width:100%; height:100%; object-fit:cover; display:block; }
+.event-row .event-row-body { padding:1rem; display:flex; flex-direction:column; justify-content:space-between; }
+.event-row .meta { color:#666; font-size:0.95rem; margin-bottom:0.4rem; }
+.event-row .excerpt { color:#333; margin:0; }
+.event-row .event-row-actions { margin-top:0.6rem; display:flex; gap:0.6rem; }
+.event-row .event-cta { background: var(--cce-orange); color:#fff; padding:0.5rem 0.9rem; border-radius:0.45rem; text-decoration:none; font-weight:700; }
+.event-row .event-cta:hover { background:#ff9800; }
+.event-row.featured { border-left: 6px solid var(--cce-orange); }
+
+@media (max-width: 60em) {
+    .event-row { flex-direction: column; }
+    .event-row .event-row-media { width:100%; height:220px; max-width:100%; }
+}
+
+/* Typography harmonization - apply tokenized sizes/colors for homepage */
+:root {
+    /* fallback tokens if not defined in global.css */
+    --text-color: var(--text-color, #111);
+    --muted-color: var(--muted-color, #6b6b6b);
+    --heading-color: var(--heading-color, #111);
+    --base-font-size: var(--base-font-size, 1rem);
+    --h1: var(--h1, 3rem);
+    --h2: var(--h2, 2rem);
+    --h3: var(--h3, 1.25rem);
+    --h4: var(--h4, 1rem);
+}
+
+/* Global text sizing */
+html { font-size: calc(var(--base-font-size)); }
+body { color: var(--text-color); }
+
+/* Headings used on the homepage */
+h1, .hero-title { font-size: var(--h1); color: var(--heading-color); line-height: 1.05; }
+h2, .section-heading { font-size: var(--h2); color: var(--heading-color); margin-top: 0.25rem; margin-bottom: 0.75rem; }
+h3, .card-title, .person-name { font-size: var(--h3); color: var(--heading-color); }
+h4, .card-meta { font-size: var(--h4); color: var(--muted-color); }
+
+/* Body and muted text */
+p, li, .card-excerpt, .news-excerpt { font-size: 1rem; color: var(--text-color); line-height: 1.5; }
+.muted, .meta, .small { color: var(--muted-color); }
+
+/* Buttons - ensure readable contrast and size */
+.btn, .button, .cta { font-size: 0.95rem; }
+
+/* Small responsive tweak */
+@media (max-width: 768px) {
+    :root { --h1: 2rem; --h2: 1.5rem; --h3: 1.1rem; }
+    .hero-title { font-size: var(--h1); }
+}
+

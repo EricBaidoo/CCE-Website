@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
     
     // Observe elements for animation
-    const animateElements = document.querySelectorAll('.stat-item, .vision-card, .mission-card, .faculty-card');
+    const animateElements = document.querySelectorAll('.stat-item, .vision-card, .mission-card, .faculty-card, .who-card');
     animateElements.forEach(el => observer.observe(el));
     
     // Observe stat numbers
@@ -307,3 +307,150 @@ document.addEventListener('DOMContentLoaded', function() {
 if ('ontouchstart' in window) {
     document.addEventListener('touchstart', function() {}, {passive: true});
 }
+
+// People modal: open on card click / Enter key, populate content, trap focus
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('people-modal');
+    if (!modal) return;
+    const panel = modal.querySelector('.people-modal-panel');
+    const titleEl = modal.querySelector('#people-modal-title');
+    const roleEl = modal.querySelector('.people-modal-role');
+    const photoEl = modal.querySelector('.people-modal-photo');
+    const bioEl = modal.querySelector('.people-modal-bio');
+    const contactsEl = modal.querySelector('.people-modal-contacts');
+    const closeButtons = modal.querySelectorAll('[data-action="close"]');
+    const closeBtn = modal.querySelector('.people-modal-close');
+    const mainEl = document.querySelector('main');
+
+    let lastFocused = null;
+
+    function openModal(data, triggerEl) {
+        lastFocused = triggerEl || document.activeElement;
+        titleEl.textContent = data.name;
+        roleEl.textContent = data.role;
+        photoEl.src = data.photo;
+        photoEl.alt = data.name;
+        bioEl.textContent = data.bio;
+        // populate contacts
+        if (contactsEl) {
+            contactsEl.innerHTML = '';
+            if (data.email) {
+                const a = document.createElement('a');
+                a.href = 'mailto:' + data.email;
+                a.textContent = 'Email';
+                a.className = 'modal-contact-email';
+                contactsEl.appendChild(a);
+            }
+            if (data.linkedin) {
+                const a2 = document.createElement('a');
+                a2.href = data.linkedin;
+                a2.textContent = 'LinkedIn';
+                a2.target = '_blank';
+                a2.rel = 'noopener';
+                a2.className = 'modal-contact-linkedin';
+                contactsEl.appendChild(a2);
+            }
+        }
+        modal.setAttribute('aria-hidden', 'false');
+        // hide main from AT and set focus to close button
+        if (mainEl) mainEl.setAttribute('aria-hidden', 'true');
+        if (closeBtn) closeBtn.focus();
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.setAttribute('aria-hidden', 'true');
+        if (mainEl) mainEl.removeAttribute('aria-hidden');
+        document.body.style.overflow = '';
+        if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+    }
+
+    // Click handlers for close
+    closeButtons.forEach(btn => btn.addEventListener('click', closeModal));
+
+    // Backdrop click closes
+    modal.addEventListener('click', (e) => {
+        if (e.target.classList.contains('people-modal-backdrop')) closeModal();
+    });
+
+    // Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') closeModal();
+        // focus trap: if modal open, manage Tab/Shift+Tab
+        if (modal.getAttribute('aria-hidden') === 'false' && (e.key === 'Tab')) {
+            const focusable = panel.querySelectorAll('a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])');
+            const focusableArray = Array.prototype.slice.call(focusable);
+            if (!focusableArray.length) {
+                e.preventDefault();
+                return;
+            }
+            const first = focusableArray[0];
+            const last = focusableArray[focusableArray.length - 1];
+            if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            } else if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            }
+        }
+    });
+
+    // Open modal when a person-card is clicked or activated via keyboard
+    document.querySelectorAll('.person-card').forEach(card => {
+        card.addEventListener('click', () => {
+            openModal({
+                name: card.dataset.personName,
+                role: card.dataset.personRole,
+                photo: card.dataset.personPhoto,
+                bio: card.dataset.personBio
+                ,
+                email: card.dataset.personEmail,
+                linkedin: card.dataset.personLinkedin
+            }, card);
+        });
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                card.click();
+            }
+        });
+    });
+});
+
+// Lightweight CTA tracking for events
+document.addEventListener('click', function(e) {
+    const target = e.target.closest('[data-evt-action]');
+    if (!target) return;
+    try {
+        const action = target.getAttribute('data-evt-action');
+        const id = target.getAttribute('data-evt-id');
+        const href = target.getAttribute('href');
+        const label = target.textContent.trim();
+        const payload = { event: 'cce_event_cta', action, id, label, href };
+        // console log for local debugging
+        console.info('CTA click:', payload);
+        // push to dataLayer if available (non-fatal)
+        if (window.dataLayer && typeof window.dataLayer.push === 'function') {
+            window.dataLayer.push(payload);
+        }
+
+        // send to local analytics endpoint if present
+        try {
+            const endpoint = '/analytics/log.php';
+            const body = JSON.stringify(payload);
+            const headers = { type: 'application/json' };
+            if (navigator.sendBeacon) {
+                const blob = new Blob([body], { type: 'application/json' });
+                navigator.sendBeacon(endpoint, blob);
+            } else {
+                fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body }).catch(() => {});
+            }
+        } catch (sErr) {
+            // ignore analytics failure
+        }
+    } catch (err) {
+        // swallow errors to avoid breaking other scripts
+        console.warn('CTA tracking error', err);
+    }
+});

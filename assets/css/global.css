@@ -5,13 +5,22 @@
   --cce-orange-dark: #e67c00;
   --cce-orange-active: #cc6a00;
   --cce-white: #fff;
+  /* Typography tokens */
+  --text-color: #11110f; /* primary body */
+  --muted-color: #6b6b6b; /* secondary/muted text */
+  --heading-color: #111; /* headings */
+  --base-font-size: 1rem; /* 16px */
+  --h1: 3rem; /* large hero */
+  --h2: 2rem; /* section headings */
+  --h3: 1.25rem; /* card / subhead */
+  --h4: 1rem; /* small headings */
 }
 /* ========== GLOBAL STYLESHEET ========== */
 /* Layout, colors, typography, header, footer */
 body {
   font-family: 'Inter', 'Arial', sans-serif;
   background: var(--cce-white);
-  color: var(--cce-black);
+  color: var(--text-color);
 }
 
 /* Global Typography */
@@ -44,3 +53,40 @@ p, li, span, a, small {
   color: var(--cce-white);
   box-shadow: 0 1px 4px rgba(255,152,0,0.10);
 }
+
+/* Accessibility helper — visually hidden but available to screen readers */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Focus styles for interactive footer elements */
+.social-link:focus {
+  outline: 3px solid rgba(255,152,0,0.35);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(255,152,0,0.08);
+  border-radius: 50%;
+}
+
+.hero-btn.btn-contact {
+  padding: 0.55rem 1rem;
+  font-size: 0.98rem;
+}
+
+/* Inline SVG social icon styling */
+.social-icon {
+  width: 1.125rem; /* 18px */
+  height: 1.125rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.social-link { color: var(--cce-orange); }
+.social-link:hover { color: #fff; background: var(--cce-orange); }
