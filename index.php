@@ -73,5 +73,108 @@
 			<span class="visually-hidden">Next</span>
 		</button>
 	</div>
+<!-- WHO WE ARE SECTION -->
+<section class="who-we-are-section py-5 bg-light">
+	<div class="container">
+		<div class="row justify-content-center mb-5">
+			<div class="col-lg-8 text-center">
+				<h2 class="display-5 fw-bold mb-3 cce-section-title">Who We Are</h2>
+				<p class="lead cce-section-lead">Cross-Cutting Excellence (CCE) is a dynamic network of Christian professionals dedicated to manifesting God’s wisdom and excellence in every sphere of society. We empower individuals to lead, innovate, and transform their fields with integrity and purpose.</p>
+			</div>
+		</div>
+		<div class="row g-4 mb-4">
+			<div class="col-md-4">
+				<div class="card h-100 shadow-sm border-0 cce-card">
+					<div class="card-body text-center">
+						<div class="mb-3"><i class="fas fa-bullseye fa-2x cce-icon-accent"></i></div>
+						<h5 class="card-title fw-bold">Our Mission</h5>
+						<p class="card-text">To build the capacity of Christian professionals to transform their spheres of endeavour with the manifold wisdom of God.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card h-100 shadow-sm border-0 cce-card">
+					<div class="card-body text-center">
+						<div class="mb-3"><i class="fas fa-eye fa-2x cce-icon-accent"></i></div>
+						<h5 class="card-title fw-bold">Our Vision</h5>
+						<p class="card-text">A global community of Christian professionals who exemplify excellence, integrity, and godly influence in every sector of society.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card h-100 shadow-sm border-0 cce-card">
+					<div class="card-body text-center">
+						<div class="mb-3"><i class="fas fa-gem fa-2x cce-icon-accent"></i></div>
+						<h5 class="card-title fw-bold">Our Values</h5>
+						<ul class="list-unstyled mb-0 cce-values-list">
+							<li><strong>Excellence</strong></li>
+							<li><strong>Integrity</strong></li>
+							<li><strong>Service</strong></li>
+							<li><strong>Innovation</strong></li>
+							<li><strong>Faith</strong></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-lg-10">
+				<div class="card border-0 shadow cce-card-highlight">
+					<div class="card-body p-4 text-center">
+						<h4 class="fw-bold mb-2">What Makes CCE Unique?</h4>
+						<p class="mb-0">CCE brings together professionals from diverse backgrounds, fostering mentorship, collaboration, and spiritual growth. Our unique approach integrates faith and professional development, equipping members to be catalysts of positive change in their workplaces, communities, and nations.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
+<!-- WHAT WE DO SECTION -->
+<section class="what-we-do-section py-5">
+	<div class="container">
+		<div class="row justify-content-center mb-5">
+			<div class="col-lg-8 text-center">
+				<h2 class="display-5 fw-bold mb-3 cce-section-title">What We Do</h2>
+				<p class="lead cce-section-lead">CCE empowers Christian professionals through transformative programs, impactful events, and a vibrant network—equipping them to lead and serve with excellence in every sphere.</p>
+			</div>
+		</div>
+		<div class="row g-4">
+			<div class="col-md-4">
+				<div class="card h-100 shadow-sm border-0 cce-card cce-program-card">
+					<div class="card-body text-center">
+						<div class="mb-3"><i class="fas fa-chalkboard-teacher fa-2x cce-icon-accent"></i></div>
+						<h5 class="card-title fw-bold">Leadership Development</h5>
+						<p class="card-text">Workshops, seminars, and mentorship to cultivate visionary, ethical leaders who influence their fields for Christ.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card h-100 shadow-sm border-0 cce-card cce-program-card">
+					<div class="card-body text-center">
+						<div class="mb-3"><i class="fas fa-users fa-2x cce-icon-accent"></i></div>
+						<h5 class="card-title fw-bold">Professional Networking</h5>
+						<p class="card-text">Connect with like-minded professionals, share expertise, and collaborate on projects that advance God’s kingdom.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card h-100 shadow-sm border-0 cce-card cce-program-card">
+					<div class="card-body text-center">
+						<div class="mb-3"><i class="fas fa-hands-helping fa-2x cce-icon-accent"></i></div>
+						<h5 class="card-title fw-bold">Community Impact</h5>
+						<p class="card-text">Outreach, service, and advocacy initiatives that demonstrate Christ’s love and transform communities.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row mt-5">
+			<div class="col text-center">
+				<a href="programs.php" class="btn btn-lg btn-outline-primary px-5 cce-hero-btn-outline">See All Programs</a>
+			</div>
+		</div>
+	</div>
+</section>
+</section>
+
+
 <?php include 'footer.php'; ?>

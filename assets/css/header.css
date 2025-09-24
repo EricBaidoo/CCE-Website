@@ -1,0 +1,70 @@
+/* ========== HEADER SECTION STYLES ========== */
+.professional-header {
+  background: var(--cce-black);
+  color: var(--cce-orange);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  position: relative;
+  z-index: 100;
+}
+
+.navbar {
+  background: transparent;
+}
+
+.navbar-brand .logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  margin-right: 0.75rem;
+}
+
+.brand-name {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--cce-orange);
+  letter-spacing: -1px;
+}
+
+.brand-tagline {
+  font-size: 0.95rem;
+  color: var(--cce-orange);
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link {
+  color: var(--cce-orange);
+  font-weight: 500;
+  font-size: 1.08rem;
+  margin-right: 1.2rem;
+  transition: color 0.2s, background 0.2s;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--cce-white);
+  background: var(--cce-orange);
+  border-radius: 1.5rem;
+  padding: 0.35em 1.1em;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(255,152,0,0.10);
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--cce-orange);
+  background: transparent;
+  text-decoration: none;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-link {
+    margin-right: 0.5rem;
+    font-size: 1rem;
+  }
+  .navbar-brand .logo {
+    width: 32px;
+    height: 32px;
+  }
+}
