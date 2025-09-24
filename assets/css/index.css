@@ -1,0 +1,209 @@
+/* Modern, Professional, Classic Hero Slider Styles */
+.hero-slider {
+    position: relative;
+    /* full-bleed across the viewport */
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-slider .slider-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(0,0,0,0.7) 0%, rgba(255,140,0,0.3) 100%);
+    z-index: 1;
+}
+
+.hero-slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.9s ease, transform 0.9s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-slider .slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.hero-slider img {
+    width: 100vw;
+    height: 70vh;
+    object-fit: cover;
+    filter: brightness(0.6);
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* Visually hidden helper for screen reader live region */
+.sr-live {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.slide-caption.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: rgba(0,0,0,0.45);
+    padding: 2.2em 3em;
+    border-radius: 1.6em;
+    box-shadow: 0 0 1.6em 0 rgba(0,0,0,0.18);
+    text-align: center;
+    max-width: 70%;
+    z-index: 3;
+}
+
+.slide-caption.centered h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.2em;
+    color: #fff;
+    letter-spacing: 0.08em;
+    text-shadow: 0 0 0.5em rgba(255,140,0,0.18);
+}
+
+.slide-caption.centered p {
+    font-size: 1.7rem;
+    color: #fff;
+    margin-bottom: 2.2em;
+    font-weight: 400;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: orange;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0.8em 2.2em;
+    border-radius: 2em;
+    text-decoration: none;
+    box-shadow: 0 0 1em 0 rgba(255,140,0,0.15);
+    transition: background 0.3s, color 0.3s;
+    border: none;
+}
+
+.hero-btn:hover {
+    background: #fff;
+    color: orange;
+}
+
+.hero-slider .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: orange;
+    border: none;
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 0.5em 1em;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 4;
+    opacity: 0.85;
+    transition: background 0.3s, color 0.3s;
+}
+
+.hero-slider .slider-btn:hover {
+    background: orange;
+    color: #fff;
+    opacity: 1;
+}
+
+.hero-slider .slider-btn.prev {
+    left: 2%;
+}
+
+.hero-slider .slider-btn.next {
+    right: 2%;
+}
+
+/* Indicators */
+.slider-indicators {
+    position: absolute;
+    left: 50%;
+    bottom: 4%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.6em;
+    z-index: 5;
+}
+
+.slider-indicators .indicator {
+    width: 4.2rem;
+    height: 2.6rem;
+    background: rgba(255,255,255,0.06);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.25s ease, background 0.25s ease;
+    padding: 0;
+    overflow: hidden;
+}
+
+.slider-indicators .indicator img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slider-indicators .indicator.active {
+    background: rgba(255,140,0,0.95);
+    transform: scale(1.05);
+    box-shadow: 0 0.2em 1em rgba(0,0,0,0.18);
+}
+
+/* Caption animation */
+.slide-caption.centered { opacity: 0; transform: translate(-50%, -45%); transition: opacity 0.6s ease, transform 0.6s ease; }
+.slide.active .slide-caption.centered { opacity: 1; transform: translate(-50%, -50%); }
+
+/* Accessibility focus */
+.slider-indicators .indicator:focus,
+.hero-slider .slider-btn:focus,
+.hero-btn:focus {
+    outline: 0.12rem solid rgba(255,140,0,0.6);
+    outline-offset: 0.2rem;
+}
+
+@media (max-width: 60em) {
+    .slide-caption.centered {
+        padding: 1.2em 1.5em;
+        max-width: 95%;
+    }
+    .slide-caption.centered h1 {
+        font-size: 2rem;
+    }
+    .slide-caption.centered p {
+        font-size: 1.1rem;
+    }
+}

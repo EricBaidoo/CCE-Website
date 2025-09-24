@@ -1,3 +1,102 @@
+
+// Hero Slider Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.hero-slider');
+    if (slider) {
+        const slides = slider.querySelectorAll('.slide');
+        const prevBtn = slider.querySelector('.slider-btn.prev');
+        const nextBtn = slider.querySelector('.slider-btn.next');
+        const indicators = slider.querySelectorAll('.indicator');
+        let current = 0;
+        let autoSlideInterval = null;
+        let isPaused = false;
+
+        function updateIndicators(idx) {
+            indicators.forEach((btn, i) => {
+                btn.classList.toggle('active', i === idx);
+                btn.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+            });
+        }
+
+        function showSlide(idx) {
+            slides.forEach((slide, i) => {
+                const isActive = i === idx;
+                slide.classList.toggle('active', isActive);
+                slide.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+            });
+            updateIndicators(idx);
+            // Update live region for screen readers
+            const live = slider.querySelector('.sr-live');
+            const title = slides[idx].querySelector('.hero-title') || slides[idx].querySelector('h1');
+            if (live && title) {
+                live.textContent = `Slide ${idx + 1} of ${slides.length}: ${title.textContent.trim()}`;
+            }
+        }
+
+        function goTo(idx) {
+            current = (idx + slides.length) % slides.length;
+            showSlide(current);
+        }
+
+        function nextSlide() {
+            goTo(current + 1);
+        }
+
+        function prevSlide() {
+            goTo(current - 1);
+        }
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        indicators.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const idx = parseInt(e.currentTarget.dataset.slideTo, 10);
+                goTo(idx);
+            });
+        });
+
+        // Auto-slide with pause on hover/focus
+        function startAutoSlide() {
+            stopAutoSlide();
+            autoSlideInterval = setInterval(() => {
+                if (!isPaused) nextSlide();
+            }, 6000); // keep 6s to allow crossfade
+        }
+
+        function stopAutoSlide() {
+            if (autoSlideInterval) clearInterval(autoSlideInterval);
+            autoSlideInterval = null;
+        }
+
+        slider.addEventListener('mouseenter', () => { isPaused = true; });
+        slider.addEventListener('mouseleave', () => { isPaused = false; });
+        slider.addEventListener('focusin', () => { isPaused = true; });
+        slider.addEventListener('focusout', () => { isPaused = false; });
+
+        // Keyboard navigation
+        slider.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+
+        // Touch swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+        slider.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, {passive:true});
+        slider.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) nextSlide(); else prevSlide();
+            }
+        }, {passive:true});
+
+        // init
+        showSlide(current);
+        startAutoSlide();
+    }
+});
 // Powerful Homepage JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     

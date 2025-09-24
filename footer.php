@@ -125,11 +125,10 @@
             border: 2px solid var(--cce-orange);
             box-shadow: 0 2px 8px rgba(255,152,0,0.10);
             outline: none;
-            text-decoration: none;
+            text-decoration: none !important;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-        }
         }
         .footer-social .social-link:hover {
             color: var(--cce-white);
@@ -137,7 +136,7 @@
             transform: scale(1.18);
             border-color: var(--cce-black);
             box-shadow: 0 4px 16px rgba(255,152,0,0.18);
-            text-decoration: none;
+            text-decoration: none !important;
         }
         .footer-contact-info .contact-item {
             display: flex;
@@ -301,10 +300,7 @@
         </div>
     </div>
 </footer>
-<!-- Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<!-- Bootstrap JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Footer scripts removed: now loaded in header.php -->
 <!-- Footer Enhancement Script -->
 <script>
     // Back to top functionality

@@ -6,7 +6,8 @@
     <title>CCE - Cross-Cutting Excellence</title>
     <link rel="icon" type="image/jpeg" href="/CCE/assets/image/logo.jpeg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/CCE/assets/css/global.css">
+    <link rel="stylesheet" href="/CCE/assets/css/global.css">
+    <link rel="stylesheet" href="/CCE/assets/css/index.css">
         <style>
         .professional-header {
             background: var(--cce-black);
