@@ -13,23 +13,23 @@ if (!$found) {
 }
 ?>
 <?php include 'header.php'; ?>
-<main class="container" style="padding:4vh 2rem;">
-    <article style="max-width:62rem;margin:0 auto;background:#fff;padding:2rem;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.06);">
-        <div style="display:grid;grid-template-columns:160px 1fr;gap:1.4rem;align-items:start;">
-            <img src="<?= htmlspecialchars($found['photo']) ?>" alt="<?= htmlspecialchars($found['name']) ?>" style="width:160px;height:160px;object-fit:cover;border-radius:8px;">
+<main class="container person-profile">
+    <article class="person-article">
+        <div class="person-grid">
+            <img src="<?= htmlspecialchars($found['photo']) ?>" alt="<?= htmlspecialchars($found['name']) ?>" class="person-photo">
             <div>
-                <h1 style="margin:0"><?= htmlspecialchars($found['name']) ?></h1>
-                <p style="color:#666;margin:0.4rem 0 1rem 0"><?= htmlspecialchars($found['role']) ?></p>
-                <div style="color:#222;line-height:1.6"><?= nl2br(htmlspecialchars($found['bio_long'])) ?></div>
-                <div style="margin-top:1.2rem;">
+                <h1 class="person-name"><?= htmlspecialchars($found['name']) ?></h1>
+                <p class="people-modal-role"><?= htmlspecialchars($found['role']) ?></p>
+                <div class="people-modal-bio"><?= nl2br(htmlspecialchars($found['bio_long'])) ?></div>
+                <div class="person-contacts-row">
                     <?php if (!empty($found['email'])): ?>
-                        <a href="mailto:<?= htmlspecialchars($found['email']) ?>" style="margin-right:1rem;">Email</a>
+                        <a href="mailto:<?= htmlspecialchars($found['email']) ?>" class="person-contact-link">Email</a>
                     <?php endif; ?>
                     <?php if (!empty($found['linkedin'])): ?>
-                        <a href="<?= htmlspecialchars($found['linkedin']) ?>" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="<?= htmlspecialchars($found['linkedin']) ?>" target="_blank" rel="noopener" class="person-contact-link">LinkedIn</a>
                     <?php endif; ?>
                 </div>
-                <p style="margin-top:1.2rem;"><a href="index.php" class="hero-btn">Back to CCE People</a></p>
+                <p class="person-back"><a href="index.php" class="hero-btn">Back to CCE People</a></p>
             </div>
         </div>
     </article>
