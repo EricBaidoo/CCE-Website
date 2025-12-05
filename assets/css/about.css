@@ -1,0 +1,300 @@
+:root {
+    --primary-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    --base-font-size: 1rem;
+    --h1-size: 3rem;
+    --h2-size: 2.25rem;
+    --h3-size: 1.5rem;
+    --h4-size: 1.25rem;
+    --small-size: 0.875rem;
+    --large-size: 1.125rem;
+    --text-color: #333;
+    --heading-color: #1a1a1a;
+    --muted-color: #6b7280;
+    --cce-orange: #f57c00;
+    --cce-orange-dark: #e65100;
+    --cce-orange-light: #ffb74d;
+    --cce-white: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+/* About Page Specific Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-font);
+    font-size: var(--base-font-size);
+    line-height: 1.6;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* About Hero Section */
+.about-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    background: linear-gradient(135deg, #2E1065 0%, #1a0b3d 100%);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(245, 124, 0, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(245, 124, 0, 0.05) 0%, transparent 50%);
+    z-index: 1;
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.about-hero h1 {
+    font-size: var(--h1-size);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #ffffff 0%, var(--cce-orange) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.about-hero p {
+    font-size: var(--large-size);
+    opacity: 0.95;
+    line-height: 1.8;
+}
+
+/* About Content Sections */
+.about-section {
+    padding: 5rem 0;
+    position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+}
+
+.about-section:nth-child(even) {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .about-container {
+        padding: 0 2rem;
+    }
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.about-content h2 {
+    font-size: var(--h2-size);
+    color: var(--heading-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.about-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 4rem;
+    height: 0.25rem;
+    background: linear-gradient(90deg, var(--cce-orange) 0%, var(--cce-orange-light) 100%);
+    border-radius: 2px;
+}
+
+.about-content p {
+    font-size: var(--base-font-size);
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.about-image {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+    transform: translateY(-0.5rem);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Mission, Vision, Values */
+.mvv-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #2E1065 0%, #1a0b3d 100%);
+    color: white;
+}
+
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.mvv-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.mvv-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--cce-orange) 0%, var(--cce-orange-light) 100%);
+}
+
+.mvv-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 2rem 4rem rgba(245, 124, 0, 0.2);
+}
+
+.mvv-card h3 {
+    font-size: var(--h3-size);
+    margin-bottom: 1.5rem;
+    color: var(--cce-orange);
+}
+
+.mvv-card p {
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* Team Section */
+.team-section {
+    padding: 5rem 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.team-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(245, 124, 0, 0.1);
+}
+
+.team-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 2rem 4rem rgba(245, 124, 0, 0.15);
+}
+
+.team-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    border: 4px solid var(--cce-orange);
+    overflow: hidden;
+}
+
+.team-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-card h4 {
+    font-size: var(--h4-size);
+    margin-bottom: 0.5rem;
+    color: var(--heading-color);
+}
+
+.team-card .role {
+    color: var(--cce-orange);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.team-card p {
+    font-size: var(--small-size);
+    line-height: 1.6;
+    color: var(--muted-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-hero {
+        height: 50vh;
+        min-height: 350px;
+    }
+    
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-section {
+        padding: 3rem 0;
+    }
+    
+    .mvv-section {
+        padding: 3rem 0;
+    }
+    
+    .team-section {
+        padding: 3rem 0;
+    }
+}

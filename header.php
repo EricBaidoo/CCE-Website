@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="/CCE/assets/css/global.css?v=20250925.2">
     <link rel="stylesheet" href="/CCE/assets/css/index.css?v=20250925.2">
     <link rel="stylesheet" href="/CCE/assets/css/header.css?v=20250925.2">
-    <link rel="stylesheet" href="/CCE/assets/css/footer.css?v=20250925.2">
+    <link rel="stylesheet" href="/CCE/assets/css/footer.css?v=20251203.1">
     <link rel="stylesheet" href="/CCE/assets/css/person.css?v=20250925.2">
     <?php
     // render page-provided JSON-LD if present

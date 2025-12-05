@@ -2,7 +2,11 @@
 .professional-header {
   position: relative;
   z-index: 100;
-  width: 100%;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* Brand Section (Top) - ILO Style */
@@ -13,7 +17,10 @@
   min-height: 60px;
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .brand-section .container {
@@ -80,8 +87,11 @@
   background: #2E1065;
   padding: 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  width: 100%;
+  width: 100vw;
   border-top: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .main-navigation .container {
