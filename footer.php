@@ -11,7 +11,7 @@
                 <!-- About Section -->
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-section">
-                        <img src="/CCE/assets/image/logo.jpeg" alt="CCE Logo" class="footer-logo">
+                        <img src="assets/image/logo.jpeg" alt="CCE Logo" class="footer-logo">
                         <h3 class="footer-brand-name">CCE</h3>
                         <p class="footer-description">
                             Building the capacity of Christian professionals to transform their spheres of endeavour with the manifold wisdom of God.
@@ -26,11 +26,11 @@
                     <div class="footer-section">
                         <h4 class="footer-title">Quick Links</h4>
                         <ul class="footer-links">
-                            <li><a href="/CCE/index.php">Home</a></li>
-                            <li><a href="/CCE/about.php">About Us</a></li>
-                            <li><a href="/CCE/faculty.php">Faculty</a></li>
-                            <li><a href="/CCE/events.php">Events</a></li>
-                            <li><a href="/CCE/news.php">News</a></li>
+                            <li><a href="index.php">Home</a></li>
+                            <li><a href="about.php">About Us</a></li>
+                            <li><a href="faculty.php">Faculty</a></li>
+                            <li><a href="events.php">Events</a></li>
+                            <li><a href="news.php">News</a></li>
                         </ul>
                     </div>
                 </div>
@@ -39,11 +39,11 @@
                     <div class="footer-section">
                         <h4 class="footer-title">Faculty Areas</h4>
                         <ul class="footer-links">
-                            <li><a href="/CCE/faculty.php#gad">Governance & Development</a></li>
-                            <li><a href="/CCE/faculty.php#eat">Education & Training</a></li>
-                            <li><a href="/CCE/faculty.php#sat">Science & Technology</a></li>
-                            <li><a href="/CCE/faculty.php#paa">Philosophy & Arts</a></li>
-                            <li><a href="/CCE/faculty.php#fab">Finance & Business</a></li>
+                            <li><a href="faculty.php#gad">Governance & Development</a></li>
+                            <li><a href="faculty.php#eat">Education & Training</a></li>
+                            <li><a href="faculty.php#sat">Science & Technology</a></li>
+                            <li><a href="faculty.php#paa">Philosophy & Arts</a></li>
+                            <li><a href="faculty.php#fab">Finance & Business</a></li>
                         </ul>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                             </div>
                         </div>
                         <div class="footer-contact-cta">
-                            <a href="/CCE/contact.php?source=footer" class="hero-btn btn-contact" aria-label="Contact CCE">Contact CCE</a>
+                            <a href="contact.php?source=footer" class="hero-btn btn-contact" aria-label="Contact CCE">Contact CCE</a>
                         </div>
                     </div>
                 </div>
@@ -91,23 +91,23 @@
                 <span class="social-title">Follow Us:</span>
                     <div class="social-links">
                     <a href="https://facebook.com/" class="social-link" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer">
-                        <img src="/CCE/assets/icons/facebook.svg" class="social-icon" alt="Facebook logo">
+                        <img src="assets/icons/facebook.svg" class="social-icon" alt="Facebook logo">
                         <span class="sr-only">Facebook (opens in a new tab)</span>
                     </a>
                     <a href="https://twitter.com/" class="social-link" aria-label="Twitter" title="Twitter" target="_blank" rel="noopener noreferrer">
-                        <img src="/CCE/assets/icons/twitter.svg" class="social-icon" alt="Twitter logo">
+                        <img src="assets/icons/twitter.svg" class="social-icon" alt="Twitter logo">
                         <span class="sr-only">Twitter (opens in a new tab)</span>
                     </a>
                     <a href="https://linkedin.com/" class="social-link" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
-                        <img src="/CCE/assets/icons/linkedin.svg" class="social-icon" alt="LinkedIn logo">
+                        <img src="assets/icons/linkedin.svg" class="social-icon" alt="LinkedIn logo">
                         <span class="sr-only">LinkedIn (opens in a new tab)</span>
                     </a>
                     <a href="https://instagram.com/" class="social-link" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer">
-                        <img src="/CCE/assets/icons/instagram.svg" class="social-icon" alt="Instagram logo">
+                        <img src="assets/icons/instagram.svg" class="social-icon" alt="Instagram logo">
                         <span class="sr-only">Instagram (opens in a new tab)</span>
                     </a>
                     <a href="https://youtube.com/" class="social-link" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer">
-                        <img src="/CCE/assets/icons/youtube.svg" class="social-icon" alt="YouTube logo">
+                        <img src="assets/icons/youtube.svg" class="social-icon" alt="YouTube logo">
                         <span class="sr-only">YouTube (opens in a new tab)</span>
                     </a>
                 </div>

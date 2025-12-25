@@ -3,7 +3,7 @@
 $meta = [
     'title' => 'Cross-Cutting Excellence - Transforming Secular Institutions with Christian Professional Excellence',
     'description' => 'CCE mobilizes Christian professionals to transform secular institutions through faith-driven leadership, training, and the application of godly wisdom in professional spaces.',
-    'image' => '/CCE/assets/image/hero/001-w800.jpg',
+    'image' => 'assets/image/hero/001-w800.jpg',
     'url' => 'https://crosscuttingexcellence.org',
     'type' => 'website',
     'json_ld' => json_encode([
