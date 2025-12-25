@@ -29,7 +29,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
     <!-- Cache-busting token added during active development to ensure latest CSS is loaded -->
-    <link rel="stylesheet" href="assets/css/global.css?v=20250925.2">
     <link rel="stylesheet" href="assets/css/index.css?v=20250925.2">
     <link rel="stylesheet" href="assets/css/header.css?v=20250925.2">
     <link rel="stylesheet" href="assets/css/footer.css?v=20251203.1">

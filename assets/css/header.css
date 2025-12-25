@@ -1,10 +1,171 @@
+.brand-section {
+  width: 100%;
+  background: var(--cce-orange);
+}
+.brand-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 3rem 1.5rem 2rem;
+  box-sizing: border-box;
+  min-height: 90px;
+}
+
+.brand-area {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.mission-area {
+  text-align: right;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.2;
+  max-width: 600px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 991px) {
+  .brand-section .container {
+    padding: 1rem 1rem 1rem 1rem;
+    min-height: 70px;
+  }
+  .brand-area {
+    gap: 0.7rem;
+  }
+  .mission-area {
+    font-size: 1.05rem;
+    max-width: 45vw;
+  }
+}
+.brand-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.brand-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mission-area {
+  text-align: right;
+  min-width: 250px;
+  flex: 1;
+}
+
+@media (max-width: 991px) {
+  .brand-section .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1rem;
+  }
+  .mission-area {
+    text-align: left;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+}
+/* Header container spacing and shadow */
+header.professional-header {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  background: #fff;
+}
+
+.brand-section .container,
+.main-navigation .container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 991.98px) {
+  .brand-section .container,
+  .main-navigation .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .brand-section .container,
+  .main-navigation .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+/* Brand/logo area vertical centering and spacing */
+.brand-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-logo {
+  display: block;
+  margin: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.org-name {
+  margin-left: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2E1065;
+  letter-spacing: 0.01em;
+}
+
+/* Navigation bar height and spacing */
+.main-navigation .navbar {
+  min-height: 56px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.navbar-nav .nav-link {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-link {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-nav .nav-link {
+    font-size: 0.97rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+}
 /* ========== HEADER SECTION STYLES ========== */
 .professional-header {
   position: relative;
   z-index: 100;
-  width: 100vw;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
   margin-left: 0;
   margin-right: 0;
 }
@@ -15,19 +176,19 @@
   padding: 0.8rem 0;
   color: white;
   min-height: 60px;
-  display: flex;
-  align-items: center;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
 }
 
 .brand-section .container {
-  max-width: 75rem; /* 1200px */
+  max-width: 1200px;
   width: 100%;
-  padding: 0 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .brand-area {
@@ -87,18 +248,20 @@
   background: #2E1065;
   padding: 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  width: 100vw;
+  width: 100%;
   border-top: 1px solid rgba(255,255,255,0.1);
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .main-navigation .container {
-  max-width: 75rem; /* 1200px */
+  max-width: 1200px;
   width: 100%;
-  padding: 0 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .main-navigation .navbar {
@@ -295,20 +458,24 @@
 
 @media (max-width: 576px) {
   .brand-logo {
-    width: 3.125rem; /* 50px */
-    height: 3.125rem; /* 50px */
+    width: 2rem;
+    height: 2rem;
   }
-  
-  .brand-section {
-    padding: 0.6rem 0;
+  .brand-section .container {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    min-height: 48px;
   }
-  
-  .brand-section .container,
-  .main-navigation .container {
-    padding: 0 0.75rem;
+  .brand-area {
+    gap: 0.2rem;
   }
-  
+  .org-title {
+    font-size: 0.9rem;
+  }
+  .mission-area {
+    font-size: 0.85rem;
+    max-width: 40vw;
+  }
   .navbar-nav .nav-link {
-    font-size: 0.95rem;
+    font-size: 0.93rem;
   }
 }
