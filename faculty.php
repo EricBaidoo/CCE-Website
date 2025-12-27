@@ -9,8 +9,8 @@ include 'header.php';
     <section class="faculty-main-hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="page-title">Faculty Endeavours</h1>
-            <p class="page-subtitle">We equip Christian Professionals to be excellent in high-end productivity across 8 Faculty Endeavours</p>
+            <h1>Faculty Endeavours</h1>
+            <p>We equip Christian Professionals to be excellent in high-end productivity across 8 Faculty Endeavours</p>
         </div>
     </section>
 

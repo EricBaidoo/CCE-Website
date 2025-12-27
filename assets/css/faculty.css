@@ -1,11 +1,11 @@
-/* Faculty Main Page Hero */
+/* Faculty Main Page Hero - Redesigned for Maximum Visibility */
 .faculty-main-hero {
     position: relative;
-    min-height: 50vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #252163 0%, #3a3780 50%, #252163 100%);
+    background: linear-gradient(135deg, #1a1650 0%, #252163 50%, #1a1650 100%);
     overflow: hidden;
 }
 
@@ -15,7 +15,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(37, 33, 99, 0.95) 0%, rgba(58, 55, 128, 0.9) 100%);
+    background: rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -27,36 +27,41 @@
     right: 0;
     bottom: 0;
     background-image: 
-        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px),
-        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px);
+        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.05) 2px, rgba(255, 255, 255, 0.05) 4px),
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.05) 2px, rgba(255, 255, 255, 0.05) 4px);
 }
 
 .faculty-main-hero .hero-content {
     position: relative;
     z-index: 2;
     text-align: center;
-    padding: 4rem 2rem;
-    max-width: 56rem;
+    padding: 5rem 2rem;
+    max-width: 64rem;
     margin: 0 auto;
 }
 
-.faculty-main-hero .page-title {
-    font-size: 4rem;
-    font-weight: 300;
-    color: #ffffff !important;
-    margin: 0 0 1.5rem 0;
+.faculty-main-hero .hero-content h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 2rem 0;
     letter-spacing: -0.02em;
-    line-height: 1.1;
-    text-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3);
+    line-height: 1;
+    text-transform: uppercase;
+    text-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.5);
+    background: linear-gradient(180deg, #ffffff 0%, #e0e0ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.faculty-main-hero .page-subtitle {
-    font-size: 1.375rem;
-    line-height: 1.8;
-    color: #ffffff !important;
-    font-weight: 300;
+.faculty-main-hero .hero-content p {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: #fff;
+    font-weight: 400;
     margin: 0;
-    text-shadow: 0 0.0625rem 0.25rem rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 
 /* Faculty Intro Section */
