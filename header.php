@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
     <!-- Cache-busting token added during active development to ensure latest CSS is loaded -->
-    <link rel="stylesheet" href="assets/css/index.css?v=20251227.16">
+    <link rel="stylesheet" href="assets/css/index.css?v=20251227.17">
     <link rel="stylesheet" href="assets/css/header.css?v=20251227.2">
     <link rel="stylesheet" href="assets/css/footer.css?v=20251227.2">
     <link rel="stylesheet" href="assets/css/about.css?v=20251227.3">
@@ -48,7 +48,7 @@
         echo "<script type=\"application/ld+json\">" . $meta['json_ld'] . "</script>\n";
     }
     ?>
-        <!-- header styles moved to assets/css/header.css -->
+    <!-- header styles moved to assets/css/header.css -->
 </head>
 <body>
 <header class="cce-header">

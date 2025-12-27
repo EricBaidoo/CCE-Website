@@ -354,12 +354,12 @@ $meta = [
                 for ($repeat = 0; $repeat < 2; $repeat++):
                   foreach ($companies as $company): 
                 ?>
-                <div class="company-carousel-card">
+                <a href="company.php?id=<?= urlencode($company['id']) ?>" class="company-carousel-card" title="View <?= htmlspecialchars($company['name']) ?> profile">
                   <div class="company-carousel-logo">
                     <img src="<?= htmlspecialchars($company['logo']) ?>" alt="<?= htmlspecialchars($company['name']) ?>" loading="lazy" decoding="async">
                   </div>
                   <h3 class="company-carousel-name"><?= htmlspecialchars($company['name']) ?></h3>
-                </div>
+                </a>
                 <?php 
                   endforeach;
                 endfor;

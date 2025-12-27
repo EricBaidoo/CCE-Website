@@ -1003,12 +1003,20 @@
     text-align: center;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     gap: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 .company-carousel-card:hover {
     box-shadow: 0 8px 24px rgba(46, 16, 101, 0.12);
     transform: translateY(-4px);
     border-color: var(--primary-light);
+}
+
+.company-carousel-card:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
 .company-carousel-logo {
