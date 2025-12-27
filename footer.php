@@ -6,7 +6,7 @@
             <img src="assets/image/logo.jpeg" alt="CCE Logo" class="cce-footer__logo" />
             <div class="cce-footer__brand">Cross-Cutting Excellence</div>
             <div class="cce-footer__desc">Building the capacity of Christian professionals to transform their spheres of endeavour with the manifold wisdom of God.</div>
-            <div class="cce-footer__inspire">FOCUS &bull; DILIGENT &bull; CONSISTENCY</div>
+            <div class="cce-footer__inspire">FOCUS &bull; DILIGENCE &bull; CONSISTENCY</div>
         </div>
 
         <!-- Quick Links Column -->
@@ -59,7 +59,7 @@
         <div class="cce-footer__bottom-bar-container">
             <div class="cce-footer__bottom-bar-left">
                 <span class="cce-footer__copyright">&copy; <?php echo date('Y'); ?> Cross-Cutting Excellence. All rights reserved.</span>
-                <span class="cce-footer__powered">Powered by <a href="https://e7tech.solutions" target="_blank" rel="noopener noreferrer">E7 Technology Solutions</a></span>
+                <span class="cce-footer__powered">Powered by <a href="https://e7world.tech" target="_blank" rel="noopener noreferrer">E7 Technology Solutions</a></span>
             </div>
             <div class="cce-footer__bottom-bar-right">
                 <div class="cce-footer__socials">

@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
     <!-- Cache-busting token added during active development to ensure latest CSS is loaded -->
-    <link rel="stylesheet" href="assets/css/index.css?v=20251227.14">
+    <link rel="stylesheet" href="assets/css/index.css?v=20251227.15">
     <link rel="stylesheet" href="assets/css/header.css?v=20251227.2">
     <link rel="stylesheet" href="assets/css/footer.css?v=20251227.2">
     <link rel="stylesheet" href="assets/css/about.css?v=20251227.3">
@@ -60,7 +60,7 @@
             </div>
         </div>
         <div class="cce-header-mission">
-            <div class="cce-header-mission-title">FOCUS &bull; DILIGENT &bull; CONSISTENCY</div>
+            <div class="cce-header-mission-title">FOCUS &bull; DILIGENCE &bull; CONSISTENCY</div>
         </div>
         <button class="cce-header-hamburger d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#cceHeaderNav" aria-controls="cceHeaderNav" aria-expanded="false" aria-label="Toggle navigation">
             <span>&#9776;</span>
