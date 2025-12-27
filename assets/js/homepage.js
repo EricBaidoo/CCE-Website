@@ -28,8 +28,49 @@ function initHeroSlider() {
     // Add event listeners
     setupEventListeners();
     
-    // Animate counters on first load
-    setTimeout(() => animateCounters(), 500);
+    // Animate counters for Global Impact when in view
+        setTimeout(() => {
+            setupImpactCounterAnimation();
+        }, 500);
+// === GLOBAL IMPACT COUNTER ANIMATION ===
+function setupImpactCounterAnimation() {
+    const section = document.getElementById('global-impact');
+    if (!section) return;
+    let animated = false;
+    function onScroll() {
+        const rect = section.getBoundingClientRect();
+        if (!animated && rect.top < window.innerHeight - 80 && rect.bottom > 80) {
+            animateImpactCounters();
+            animated = true;
+            window.removeEventListener('scroll', onScroll);
+        }
+    }
+    window.addEventListener('scroll', onScroll);
+    // In case already in view
+    onScroll();
+}
+
+function animateImpactCounters() {
+    document.querySelectorAll('.global-impact-stat .stat-number').forEach(el => {
+        const target = parseInt(el.getAttribute('data-count'), 10) || 0;
+        animateCountUp(el, target, 1200);
+    });
+}
+
+function animateCountUp(element, target, duration) {
+    let start = 0;
+    const step = Math.ceil(target / (duration / 16));
+    function update() {
+        start += step;
+        if (start >= target) {
+            element.textContent = target.toLocaleString();
+        } else {
+            element.textContent = start.toLocaleString();
+            requestAnimationFrame(update);
+        }
+    }
+    update();
+}
 }
 
 function showSlide(index) {

@@ -1,21 +1,35 @@
 <?php
-// CCE Faculty Endeavours Page
-include 'components/header.php';
+$meta = [
+    'title' => 'CCE Faculty Endeavours',
+    'description' => 'Eight faculties mobilizing Christian professionals to transform institutions with excellence.',
+];
+include 'header.php';
+
+$faculties = [
+    ['code' => 'GAD', 'name' => 'Governance & Development', 'desc' => 'Ethical governance, policy and institutional reform.', 'icon' => 'G'],
+    ['code' => 'EAT', 'name' => 'Education & Training', 'desc' => 'Pedagogy, curriculum and professional development.', 'icon' => 'E'],
+    ['code' => 'SAT', 'name' => 'Science & Technology', 'desc' => 'Evidence, innovation and responsible tech adoption.', 'icon' => 'S'],
+    ['code' => 'PAA', 'name' => 'Philosophy & the Arts', 'desc' => 'Christian thought informing culture and creativity.', 'icon' => 'P'],
+    ['code' => 'FAB', 'name' => 'Finance & Business', 'desc' => 'Stewardship, entrepreneurship and market integrity.', 'icon' => 'F'],
+    ['code' => 'RAF', 'name' => 'Relationship & Family', 'desc' => 'Wholesome communities and family flourishing.', 'icon' => 'R'],
+    ['code' => 'MAA', 'name' => 'Missions & Apologetics', 'desc' => 'Witness, defense of truth and service.', 'icon' => 'M'],
+    ['code' => 'CAM', 'name' => 'Communication & Media', 'desc' => 'Narratives, public discourse and media excellence.', 'icon' => 'C'],
+];
 ?>
-<main class="container">
-    <section class="card">
-        <h1>Faculty Endeavours</h1>
-        <ul>
-            <li><strong>GAD:</strong> Governance and Development</li>
-            <li><strong>EAT:</strong> Education and Training</li>
-            <li><strong>SAT:</strong> Science and Technology</li>
-            <li><strong>PAA:</strong> Philosophy and the Arts</li>
-            <li><strong>FAB:</strong> Finance and Business</li>
-            <li><strong>RAF:</strong> Relationship and Family</li>
-            <li><strong>MAA:</strong> Missions and Apologetics</li>
-            <li><strong>CAM:</strong> Communication and Media</li>
-        </ul>
-        <p>[Add more details about each faculty as needed]</p>
+<main class="faculty-page">
+    <section class="page-header">
+        <h1 class="page-title">Faculty Endeavours</h1>
+        <p class="page-subtitle">Eight faculties working in concert to reclaim and transform secular institutions through godly wisdom and professional excellence</p>
+    </section>
+    <section class="faculty-grid">
+        <?php foreach ($faculties as $fac): ?>
+            <article class="faculty-card">
+                <div class="faculty-icon"><?= htmlspecialchars($fac['icon']) ?></div>
+                <p class="faculty-code"><?= htmlspecialchars($fac['code']) ?></p>
+                <h3 class="faculty-name"><?= htmlspecialchars($fac['name']) ?></h3>
+                <p class="faculty-desc"><?= htmlspecialchars($fac['desc']) ?></p>
+            </article>
+        <?php endforeach; ?>
     </section>
 </main>
-<?php include 'components/footer.php'; ?>
+<?php include 'footer.php'; ?>

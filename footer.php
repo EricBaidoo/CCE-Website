@@ -1,142 +1,85 @@
-<?php
-// =============================
-// CCE Professional Footer Component
-// =============================
-?>
-<footer class="professional-footer">
-    <!-- Footer styling moved into assets/css/global.css -->
-    <div class="container">
-        <div class="footer-main">
-            <div class="row g-4">
-                <!-- About Section -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-section">
-                        <img src="assets/image/logo.jpeg" alt="CCE Logo" class="footer-logo">
-                        <h3 class="footer-brand-name">CCE</h3>
-                        <p class="footer-description">
-                            Building the capacity of Christian professionals to transform their spheres of endeavour with the manifold wisdom of God.
-                        </p>
-                        <div class="footer-motto">
-                            <span class="motto-text">Inspired • Intentional • Intense</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Quick Links -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-section">
-                        <h4 class="footer-title">Quick Links</h4>
-                        <ul class="footer-links">
-                            <li><a href="index.php">Home</a></li>
-                            <li><a href="about.php">About Us</a></li>
-                            <li><a href="faculty.php">Faculty</a></li>
-                            <li><a href="events.php">Events</a></li>
-                            <li><a href="news.php">News</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Faculty Areas -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-section">
-                        <h4 class="footer-title">Faculty Areas</h4>
-                        <ul class="footer-links">
-                            <li><a href="faculty.php#gad">Governance & Development</a></li>
-                            <li><a href="faculty.php#eat">Education & Training</a></li>
-                            <li><a href="faculty.php#sat">Science & Technology</a></li>
-                            <li><a href="faculty.php#paa">Philosophy & Arts</a></li>
-                            <li><a href="faculty.php#fab">Finance & Business</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Contact Info / Reach Us -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-section">
-                        <h4 class="footer-title">Contact & Reach</h4>
-                        <div class="footer-contact-info">
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div class="contact-details">
-                                    <strong>Office</strong>
-                                    <span>Accra, Ghana</span>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <div class="contact-details">
-                                    <strong>Email</strong>
-                                    <span>hello@crosscuttingexcellence.org</span>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <div class="contact-details">
-                                    <strong>Phone</strong>
-                                    <span>+233 24 555 0123</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="footer-contact-cta">
-                            <a href="contact.php?source=footer" class="hero-btn btn-contact" aria-label="Contact CCE">Contact CCE</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- Modern Footer -->
+<footer class="cce-footer">
+    <div class="cce-footer__container">
+        <!-- About Column -->
+        <div class="cce-footer__col cce-footer__about">
+            <img src="assets/image/logo.jpeg" alt="CCE Logo" class="cce-footer__logo" />
+            <div class="cce-footer__brand">CCE</div>
+            <div class="cce-footer__desc">Building the capacity of Christian professionals to transform their spheres of endeavour with the manifold wisdom of God.</div>
+            <div class="cce-footer__inspire">Inspired &bull; Intentional &bull; Intense</div>
         </div>
-        <div class="footer-divider"></div>
-        <div class="footer-bottom">
-            <div class="footer-copyright">
-                <p>&copy; <?php echo date('Y'); ?> Cross-Cutting Excellence (CCE). All rights reserved.</p>
-                <p class="powered-by">Powered by <a href="#" class="e7-link">E7 Technology Solutions</a></p>
+
+        <!-- Quick Links Column -->
+        <div class="cce-footer__col cce-footer__links">
+            <div class="cce-footer__heading">Quick Links</div>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About Us</a></li>
+                <li><a href="faculty.php">Faculty</a></li>
+                <li><a href="events.php">Events</a></li>
+                <li><a href="news.php">News</a></li>
+                <li><a href="resources.php">Resources</a></li>
+            </ul>
+        </div>
+
+        <!-- Faculty Areas Column -->
+        <div class="cce-footer__col cce-footer__faculty">
+            <div class="cce-footer__heading">Faculty Areas</div>
+            <ul>
+                <li>Governance &amp; Development</li>
+                <li>Education &amp; Training</li>
+                <li>Science &amp; Technology</li>
+                <li>Philosophy &amp; Arts</li>
+                <li>Finance &amp; Business</li>
+            </ul>
+        </div>
+
+        <!-- Contact Column -->
+        <div class="cce-footer__col cce-footer__contact">
+            <div class="cce-footer__heading">Contact Us</div>
+            <p><span class="cce-footer__label">Office:</span><br>Accra, Ghana</p>
+            <p><span class="cce-footer__label">Email:</span><br>
+                <a href="mailto:hello@crosscuttingexcellence.org">hello@crosscuttingexcellence.org</a>
+            </p>
+            <p><span class="cce-footer__label">Phone:</span><br>
+                <a href="tel:+233245550123">+233 24 555 0123</a>
+            </p>
+            <a href="contact.php" class="cce-footer__contact-btn">Get In Touch</a>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="cce-footer__bottom-bar">
+        <div class="cce-footer__bottom-bar-container">
+            <div class="cce-footer__bottom-bar-left">
+                <span class="cce-footer__copyright">&copy; <?php echo date('Y'); ?> Cross-Cutting Excellence. All rights reserved.</span>
+                <span class="cce-footer__powered">Powered by <a href="https://e7tech.solutions" target="_blank" rel="noopener noreferrer">E7 Technology Solutions</a></span>
             </div>
-            <div class="footer-social">
-                <span class="social-title">Follow Us:</span>
-                    <div class="social-links">
-                    <a href="https://facebook.com/" class="social-link" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/icons/facebook.svg" class="social-icon" alt="Facebook logo">
-                        <span class="sr-only">Facebook (opens in a new tab)</span>
+            <div class="cce-footer__bottom-bar-right">
+                <div class="cce-footer__socials">
+                    <a href="https://facebook.com/crosscuttingexcellence" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://twitter.com/" class="social-link" aria-label="Twitter" title="Twitter" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/icons/twitter.svg" class="social-icon" alt="Twitter logo">
-                        <span class="sr-only">Twitter (opens in a new tab)</span>
+                    <a href="https://twitter.com/cce_org" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="https://linkedin.com/" class="social-link" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/icons/linkedin.svg" class="social-icon" alt="LinkedIn logo">
-                        <span class="sr-only">LinkedIn (opens in a new tab)</span>
+                    <a href="https://linkedin.com/company/crosscuttingexcellence" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://instagram.com/" class="social-link" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/icons/instagram.svg" class="social-icon" alt="Instagram logo">
-                        <span class="sr-only">Instagram (opens in a new tab)</span>
+                    <a href="https://instagram.com/cce_org" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://youtube.com/" class="social-link" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/icons/youtube.svg" class="social-icon" alt="YouTube logo">
-                        <span class="sr-only">YouTube (opens in a new tab)</span>
+                    <a href="https://youtube.com/@crosscuttingexcellence" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-youtube"></i>
                     </a>
                 </div>
             </div>
         </div>
     </div>
 </footer>
-<!-- Footer scripts removed: now loaded in header.php -->
-<!-- Footer Enhancement Script -->
-<script>
-    // Back to top functionality
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }
-    // Show/hide back to top button
-    window.addEventListener('scroll', function() {
-        const backToTopBtn = document.querySelector('.btn-back-to-top');
-        if (window.scrollY > 300) {
-            backToTopBtn.style.opacity = '1';
-            backToTopBtn.style.transform = 'translateY(0)';
-        } else {
-            backToTopBtn.style.opacity = '0';
-            backToTopBtn.style.transform = 'translateY(20px)';
-        }
-    });
-</script>
+
+<!-- Font Awesome CDN for social icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,60 +1,198 @@
-/* Person profile page styles (moved from global.css) */
+/* ========================================
+   PERSON PROFILE PAGE STYLES
+   Modern, professional profile layout
+   ======================================== */
+
 .person-profile {
-  padding: 4vh 2rem;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
 }
 
 .person-article {
-  max-width: 62rem;
+  max-width: 75rem;
   margin: 0 auto;
-  background: var(--color-surface, #fff);
-  padding: 2rem;
-  border-radius: 0.5rem; /* 8px */
-  box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.06); /* 8px = 0.5rem, 24px = 1.5rem */
+  background: #fff;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
+/* Hero Section */
 .person-grid {
   display: grid;
-  grid-template-columns: 10rem 1fr; /* 160px = 10rem */
-  gap: 1.4rem;
+  grid-template-columns: 20rem 1fr;
+  gap: 4rem;
   align-items: start;
+  padding: 4rem 3rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+  border-bottom: 0.0625rem solid rgba(37, 33, 99, 0.1);
 }
 
 .person-photo {
-  width: 10rem; /* 160px */
-  height: 10rem; /* 160px */
+  width: 100%;
+  height: 20rem;
   object-fit: cover;
-  border-radius: 0.5rem; /* 8px */
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 3rem rgba(37, 33, 99, 0.15);
+  border: 0.25rem solid #fff;
 }
 
 .person-name {
-  margin: 0 0 0.25rem 0;
-  font-family: var(--font-heading);
-  color: var(--color-heading);
+  margin: 0 0 0.75rem 0;
+  font-family: 'Inter', 'Montserrat', Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #252163;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.people-modal-role {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ff8800;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.people-modal-bio {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 2rem;
 }
 
 .person-contacts-row {
-  margin-top: 1.2rem;
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .person-contact-link {
-  margin-right: 1rem;
-  color: var(--cce-orange);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(90deg, #ff8800 0%, #ff9900 100%);
+  color: #fff;
+  padding: 0.75rem 1.75rem;
+  border-radius: 3.125rem;
+  font-weight: 600;
   text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0.3125rem 1.25rem rgba(255, 136, 0, 0.25);
+  font-size: 0.95rem;
+}
+
+.person-contact-link:hover {
+  background: linear-gradient(90deg, #e67600 0%, #ff8800 100%);
+  box-shadow: 0 0.5rem 1.5625rem rgba(255, 136, 0, 0.35);
+  transform: translateY(-0.125rem);
+  color: #fff;
 }
 
 .person-back {
-  margin-top: 1.2rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 0.0625rem solid rgba(37, 33, 99, 0.1);
 }
 
-@media (max-width: 40rem) { /* 640px = 40rem */
+.person-back .hero-btn {
+  background: transparent;
+  color: #252163;
+  padding: 0.75rem 2rem;
+  border-radius: 3.125rem;
+  border: 0.125rem solid #252163;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.person-back .hero-btn:hover {
+  background: #252163;
+  color: #fff;
+  transform: translateY(-0.125rem);
+}
+
+/* Responsive Design */
+@media (max-width: 64em) {
   .person-grid {
-    grid-template-columns: 1fr;
-    grid-auto-flow: row;
-    justify-items: start;
+    grid-template-columns: 16rem 1fr;
+    gap: 3rem;
+    padding: 3rem 2rem;
   }
 
   .person-photo {
-    width: 7.5rem; /* 120px */
-    height: 7.5rem; /* 120px */
+    height: 16rem;
+  }
+
+  .person-name {
+    font-size: 2rem;
+  }
+
+  .people-modal-role {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .person-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+  }
+
+  .person-photo {
+    width: 12rem;
+    height: 12rem;
+    margin: 0 auto;
+  }
+
+  .person-name {
+    font-size: 1.75rem;
+  }
+
+  .people-modal-role {
+    font-size: 1rem;
+  }
+
+  .people-modal-bio {
+    text-align: left;
+  }
+
+  .person-contacts-row {
+    justify-content: center;
+  }
+
+  .person-back {
+    text-align: center;
+  }
+}
+
+@media (max-width: 30em) {
+  .person-grid {
+    padding: 2rem 1rem;
+  }
+
+  .person-photo {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .person-name {
+    font-size: 1.5rem;
+  }
+
+  .people-modal-bio {
+    font-size: 0.95rem;
+  }
+
+  .person-contact-link {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.9rem;
   }
 }

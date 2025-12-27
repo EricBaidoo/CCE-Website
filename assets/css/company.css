@@ -1,0 +1,313 @@
+/* Company Profile Page Styles */
+
+.company-profile {
+    padding: 4rem 2rem;
+}
+
+.company-article {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.company-grid {
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    gap: 4rem;
+    padding: 4rem 3rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+    border-radius: 1.5rem;
+    box-shadow: 0 0.5rem 2rem rgba(37, 33, 99, 0.08);
+}
+
+.company-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.company-logo-wrapper {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 1rem 3rem rgba(37, 33, 99, 0.15);
+    border: 0.25rem solid #fff;
+}
+
+.company-logo-large {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5rem;
+}
+
+.company-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.company-name-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #252163;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.company-tagline {
+    font-size: 1.125rem;
+    color: #ff8800;
+    font-weight: 600;
+    margin: 0.5rem 0 1.5rem 0;
+    font-style: italic;
+}
+
+.company-description {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.company-description p {
+    margin: 0 0 1rem 0;
+}
+
+.company-section {
+    margin-top: 2rem;
+}
+
+.company-section-heading {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #252163;
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 0.1875rem solid #ff8800;
+}
+
+.company-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.company-list li {
+    padding: 0.75rem 0 0.75rem 1.5rem;
+    position: relative;
+    line-height: 1.6;
+    color: #333;
+}
+
+.company-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #ff8800;
+    font-weight: 700;
+}
+
+.company-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 0.5rem 1rem;
+}
+
+.company-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.company-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #ff8800 0%, #ff9900 100%);
+    color: #fff;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.company-contact-info {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border-left: 0.25rem solid #ff8800;
+}
+
+.company-contact-info p {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.company-contact-info strong {
+    color: #252163;
+    display: inline-block;
+    min-width: 6rem;
+}
+
+.company-contact-info a {
+    color: #ff8800;
+    text-decoration: none;
+}
+
+.company-contact-info a:hover {
+    text-decoration: underline;
+}
+
+.company-team-section {
+    margin-top: 2rem;
+}
+
+.company-team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 1.5rem;
+}
+
+.company-team-member {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 1rem rgba(37, 33, 99, 0.08);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.company-team-member:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.625rem 2rem rgba(37, 33, 99, 0.15);
+}
+
+.company-team-photo {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.125rem solid #ff8800;
+}
+
+.company-team-info {
+    flex: 1;
+}
+
+.company-team-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #252163;
+    margin: 0 0 0.25rem 0;
+}
+
+.company-team-role {
+    font-size: 0.875rem;
+    color: #666;
+    margin: 0;
+}
+
+.company-actions {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.company-actions .hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    background: linear-gradient(90deg, #252163 0%, #3a0ca3 100%);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3.125rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0.3125rem 1.25rem rgba(37, 33, 99, 0.25);
+}
+
+.company-actions .hero-btn:hover {
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.5rem 1.5rem rgba(37, 33, 99, 0.35);
+}
+
+/* Responsive Design */
+@media (max-width: 64em) {
+    .company-grid {
+        grid-template-columns: 16rem 1fr;
+        gap: 3rem;
+        padding: 3rem 2.5rem;
+    }
+
+    .company-name-title {
+        font-size: 2.25rem;
+    }
+
+    .company-section-heading {
+        font-size: 1.5rem;
+    }
+
+    .company-team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    }
+}
+
+@media (max-width: 48em) {
+    .company-profile {
+        padding: 2rem 1rem;
+    }
+
+    .company-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2.5rem 2rem;
+    }
+
+    .company-sidebar {
+        text-align: center;
+    }
+
+    .company-logo-wrapper {
+        max-width: 16rem;
+        margin: 0 auto;
+    }
+
+    .company-name-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .company-section-heading {
+        font-size: 1.5rem;
+    }
+
+    .company-team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .company-actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 30em) {
+    .company-logo-wrapper {
+        max-width: 12rem;
+        padding: 1.5rem;
+    }
+
+    .company-name-title {
+        font-size: 1.75rem;
+    }
+
+    .company-description {
+        font-size: 1rem;
+    }
+
+    .company-section-heading {
+        font-size: 1.25rem;
+    }
+}
