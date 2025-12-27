@@ -106,18 +106,18 @@ $meta = [
       <div class="who-we-are-container">
         <div class="who-we-are-header">
           <h2 class="who-we-are-title">Who We Are</h2>
-          <p class="who-we-are-subtitle">Cross-Cutting Excellence (CCE) mobilizes Christian professionals to reclaim and transform the secular institutions of society by applying the manifold wisdom of God in practical, professional, and ethical ways.</p>
+          <p class="who-we-are-subtitle">A network of Young business leaders creating a future of sustainable and godly prosperity</p>
         </div>
         <div class="who-we-are-content">
           <div class="who-we-are-text">
-            <h4>Context</h4>
-            <p>Our generation faces cascading crises—moral decay, geopolitical instability, environmental threats, and rising social fragmentation. CCE believes that principled, faith-driven leadership in professional spaces can reverse these trends and restore flourishing.</p>
+            <h4>CCE Network</h4>
+            <p>CCE Network is a connection of Christian Professionals transforming their communities with the wisdom of God.</p>
             <h4>Vision</h4>
-            <p>Christians establishing the glory of the Lord across the world through their secular professions until the kingdoms of this world become the kingdoms of our Lord and His Christ.</p>
+            <p>We see Christians establishing the glory of the Lord Jesus Christ across the world through their secular professions.</p>
             <h4>Mission</h4>
-            <p>To build the capacity of Christian professionals—through training, mentorship, and mobilization—so they can ethically and effectively transform their spheres of influence.</p>
-            <h4>Strategy - SSA</h4>
-            <p><strong>Secular-Spiritual Aptitude (SSA)</strong> is our central philosophy: excellence in godliness while operating in the secular space. SSA means combining high professional competence with visible Christlike character.</p>
+            <p>Building the capacity of Christian professionals to transform their various spheres of endeavour with the manifold wisdom of God.</p>
+            <h4>What We Do</h4>
+            <p>We equip Christian Professionals to be excellent in high-end productivity across 8 Faculty Endeavours (FEs)</p>
           </div>
           <div class="who-we-are-image">
             <img src="assets/image/hero/001-w800.jpg" alt="Who We Are Image">
@@ -140,25 +140,6 @@ $meta = [
           </div>
         </div>
       </div>
-        <div class="who-cta-row">
-      <div class="who-cta-row">
-        <div class="who-stats" role="group" aria-label="CCE Impact Statistics">
-          <div class="stat">
-            <span class="stat-number" data-count="20">20+</span>
-            <span class="stat-label">Consultants</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number" data-count="150">150+</span>
-            <span class="stat-label">Volunteers</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number" data-count="12">12+</span>
-            <span class="stat-label">Conferences</span>
-          </div>
-        </div>
-      </div>
-      </div>
-     
     </section>
 
     <!-- FACULTY ENDEAVOURS SECTION -->

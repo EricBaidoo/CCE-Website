@@ -59,17 +59,7 @@ include 'header.php';
             </div>
         </div>
 
-        <div class="content-card contact-card">
-            <h2>Contact Us</h2>
-            <div class="contact-details">
-                <p><strong>Office Line:</strong> +233(0)302799724</p>
-                <p><strong>Mobile:</strong> +233(0)504042869; +233242603183</p>
-                <p><strong>Website:</strong> <a href="http://www.crosscuttingexcellence.com">www.crosscuttingexcellence.com</a></p>
-                <p><strong>Email:</strong> <a href="mailto:crosscuttingexcellence@gmail.com">crosscuttingexcellence@gmail.com</a></p>
-                <p><strong>Skype:</strong> Cross-Cutting Excellence CCE</p>
-                <p><strong>Office Location:</strong> 4th Otsew Street, South La Estates, La Beach Road<br>Opposite "Jokers", near the La General Hospital</p>
-            </div>
-        </div>
+    
     </section>
 </main>
 <?php include 'footer.php'; ?>

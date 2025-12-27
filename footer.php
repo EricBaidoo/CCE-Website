@@ -37,13 +37,19 @@
         <!-- Contact Column -->
         <div class="cce-footer__col cce-footer__contact">
             <div class="cce-footer__heading">Contact Us</div>
-            <p><span class="cce-footer__label">Office:</span><br>Accra, Ghana</p>
+            <p><span class="cce-footer__label">Office:</span><br>
+            4th Otsew Street, South La Estates<br>
+            La Beach Road, Accra, Ghana<br>
+            Opposite "Jokers", near La General Hospital</p>
             <p><span class="cce-footer__label">Email:</span><br>
-                <a href="mailto:hello@crosscuttingexcellence.org">hello@crosscuttingexcellence.org</a>
+                <a href="mailto:crosscuttingexcellence@gmail.com">crosscuttingexcellence@gmail.com</a>
             </p>
             <p><span class="cce-footer__label">Phone:</span><br>
-                <a href="tel:+233245550123">+233 24 555 0123</a>
+                Office: <a href="tel:+233302799724">+233(0)302799724</a><br>
+                Mobile: <a href="tel:+233504042869">+233(0)504042869</a><br>
+                <a href="tel:+233242603183">+233242603183</a>
             </p>
+            <p><span class="cce-footer__label">Skype:</span> Cross-Cutting Excellence CCE</p>
             <a href="contact.php" class="cce-footer__contact-btn">Get In Touch</a>
         </div>
     </div>

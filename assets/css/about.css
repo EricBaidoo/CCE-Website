@@ -18,80 +18,78 @@
     --glass-border: rgba(255, 255, 255, 0.2);
 }
 
-/* About Page Specific Styles */
+/* About Page Specific Styles - Modern Classic Flowing Design */
 .about-page {
     min-height: 100vh;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    padding: 4rem 2rem;
+    background: #ffffff;
+    padding: 0;
 }
 
 .about-page .page-header {
-    max-width: 87.5rem;
-    margin: 0 auto 4rem;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 6rem 2rem 4rem;
     text-align: center;
+    border-bottom: 0.0625rem solid rgba(37, 33, 99, 0.1);
 }
 
 .about-page .page-title {
-    font-size: 3rem;
-    font-weight: 800;
+    font-size: 3.5rem;
+    font-weight: 300;
     color: #252163;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, #252163, #3a0ca3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
 }
 
 .about-page .page-subtitle {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 400;
     color: #ff8800;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
 }
 
 .about-content {
-    max-width: 87.5rem;
+    max-width: 75rem;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    padding: 4rem 2rem;
 }
 
 .content-card {
-    background: white;
-    border-radius: 1rem;
-    padding: 2.5rem;
-    box-shadow: 0 0.5rem 2rem rgba(37, 33, 99, 0.08);
-    transition: all 0.3s ease;
+    padding: 0 0 4rem 0;
+    margin-bottom: 4rem;
+    border-bottom: 0.0625rem solid rgba(37, 33, 99, 0.1);
 }
 
-.content-card:hover {
-    box-shadow: 0 1rem 3rem rgba(37, 33, 99, 0.15);
+.content-card:last-child {
+    border-bottom: none;
 }
 
 .content-card h2 {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.5rem;
+    font-weight: 300;
     color: #252163;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 0.25rem solid;
-    border-image: linear-gradient(90deg, #ff8800, #ff9900) 1;
+    margin-bottom: 2rem;
+    letter-spacing: -0.01em;
 }
 
 .content-card h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 400;
     color: #252163;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+}
+
+.content-card h3:first-of-type {
+    margin-top: 0;
 }
 
 .content-card p {
     font-size: 1.125rem;
     color: #495057;
-    line-height: 1.8;
-    margin-bottom: 1rem;
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
 }
 
 .content-card p:last-child {
@@ -100,21 +98,24 @@
 
 .operations-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    gap: 2rem;
-    margin-top: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 4rem;
+    margin-top: 3rem;
 }
 
 .operation-item {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    border-left: 0.25rem solid #ff8800;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    border-left: 0.125rem solid #ff8800;
+    padding-left: 2rem;
 }
 
 .operation-item h3 {
-    color: #ff8800;
-    margin-bottom: 0.5rem;
+    color: #252163;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    font-size: 1.25rem;
 }
 
 .operation-item p {
@@ -123,13 +124,15 @@
 }
 
 .contact-card {
-    background: linear-gradient(135deg, #252163, #3a0ca3);
+    background: #252163;
     color: white;
+    padding: 4rem 3rem;
+    margin: 4rem 0 0 0;
+    border-bottom: none;
 }
 
 .contact-card h2 {
     color: white;
-    border-image: linear-gradient(90deg, #ff8800, #ff9900) 1;
 }
 
 .contact-details p {
@@ -145,6 +148,7 @@
 
 .contact-details a:hover {
     color: #ff9900;
+    text-decoration: underline;
 }
 
 .contact-details strong {
@@ -153,47 +157,64 @@
 
 /* Responsive Design */
 @media (max-width: 64em) {
-    .about-page {
-        padding: 3rem 1.5rem;
+    .about-page .page-header {
+        padding: 4rem 2rem 3rem;
     }
 
     .about-page .page-title {
-        font-size: 2.5rem;
+        font-size: 2.75rem;
     }
 
     .about-page .page-subtitle {
         font-size: 1.25rem;
     }
 
+    .about-content {
+        padding: 3rem 2rem;
+    }
+
     .operations-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 2.5rem;
     }
 }
 
 @media (max-width: 48em) {
-    .about-page {
-        padding: 2rem 1rem;
+    .about-page .page-header {
+        padding: 3rem 1.5rem 2.5rem;
     }
 
     .about-page .page-title {
-        font-size: 2rem;
+        font-size: 2.25rem;
     }
 
     .about-page .page-subtitle {
         font-size: 1rem;
     }
 
+    .about-content {
+        padding: 2.5rem 1.5rem;
+    }
+
     .content-card {
-        padding: 2rem 1.5rem;
+        padding: 0 0 3rem 0;
+        margin-bottom: 3rem;
     }
 
     .content-card h2 {
-        font-size: 1.5rem;
+        font-size: 2rem;
+    }
+
+    .content-card h3 {
+        font-size: 1.25rem;
     }
 
     .operation-item {
-        padding: 1.25rem;
+        padding-left: 1.5rem;
+    }
+
+    .contact-card {
+        padding: 3rem 2rem;
     }
 }
 

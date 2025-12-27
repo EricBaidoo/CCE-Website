@@ -49,24 +49,26 @@ include 'header.php';
             <div class="contact-info-card">
                 <div class="contact-info-icon">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                     </svg>
                 </div>
-                <h3 class="contact-info-title">Location</h3>
-                <p class="contact-info-text">Accra, Ghana</p>
+                <h3 class="contact-info-title">Phone</h3>
+                <p class="contact-info-text">Office: +233(0)302799724<br>Mobile: +233(0)504042869<br>+233242603183</p>
+                <a href="tel:+233302799724" class="contact-info-link">Call us</a>
             </div>
 
             <div class="contact-info-card">
                 <div class="contact-info-icon">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                     </svg>
                 </div>
-                <h3 class="contact-info-title">Social</h3>
-                <p class="contact-info-text">@cce_network</p>
+                <h3 class="contact-info-title">Location</h3>
+                <p class="contact-info-text">4th Otsew Street, South La Estates<br>La Beach Road<br>Opposite "Jokers", near La General Hospital<br>Accra, Ghana</p>
             </div>
-        </div>
+
+            
     </section>
 </main>
 <?php include 'footer.php'; ?>

@@ -32,10 +32,11 @@
     <link rel="stylesheet" href="assets/css/index.css?v=20251226.26">
     <link rel="stylesheet" href="assets/css/header.css?v=20251226.1">
     <link rel="stylesheet" href="assets/css/footer.css?v=20251226.2">
+    <link rel="stylesheet" href="assets/css/about.css?v=20251226.1">
     <link rel="stylesheet" href="assets/css/person.css?v=20251226.1">
     <link rel="stylesheet" href="assets/css/company.css?v=20251226.1">
     <link rel="stylesheet" href="assets/css/companies.css?v=20251226.1">
-    <link rel="stylesheet" href="assets/css/faculty.css?v=20251226.1">
+    <link rel="stylesheet" href="assets/css/faculty.css?v=20251227.3">
     <link rel="stylesheet" href="assets/css/events.css?v=20251226.1">
     <link rel="stylesheet" href="assets/css/resources.css?v=20251226.1">
     <link rel="stylesheet" href="assets/css/contact.css?v=20251226.1">
