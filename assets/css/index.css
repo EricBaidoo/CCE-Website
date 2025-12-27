@@ -2550,4 +2550,225 @@
     .excel-featured-section p[style*="font-size: 1.5rem"] {
         font-size: 1.25rem !important;
     }
+    
+    /* Events Section Mobile */
+    .home-events-section {
+        padding: 3rem 0;
+    }
+    
+    .section-header-modern {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .header-content-wrapper {
+        width: 100%;
+    }
+    
+    .section-title-modern {
+        font-size: 1.75rem;
+    }
+    
+    .section-description {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+    
+    .view-all-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .home-events-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .event-compact-card {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 1rem;
+    }
+    
+    .event-compact-image {
+        width: 120px;
+        height: 120px;
+        flex-shrink: 0;
+    }
+    
+    .event-compact-body {
+        padding: 1rem;
+    }
+    
+    /* News Section Mobile */
+    .home-news-section {
+        padding: 3rem 0;
+    }
+    
+    .home-news-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .news-compact-card {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 1rem;
+    }
+    
+    .news-compact-image {
+        width: 120px;
+        height: 120px;
+        flex-shrink: 0;
+    }
+    
+    .news-compact-body {
+        padding: 1rem;
+    }
+    
+    .news-compact-title a {
+        font-size: 1rem;
+        -webkit-line-clamp: 2;
+    }
+    
+    .news-compact-excerpt {
+        font-size: 0.75rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+    }
+    
+    .pagination-btn {
+        padding: 0.625rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .pagination-number {
+        min-width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Events Section Mobile Small */
+    .home-events-section {
+        padding: 2rem 0;
+    }
+    
+    .section-label-badge {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.75rem;
+    }
+    
+    .section-title-modern {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .section-description {
+        font-size: 0.9375rem;
+        line-height: 1.5;
+    }
+    
+    .view-all-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.875rem;
+    }
+    
+    .home-events-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .event-compact-card {
+        grid-template-columns: 100px 1fr;
+        gap: 0.75rem;
+    }
+    
+    .event-compact-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .event-compact-body {
+        padding: 0.75rem;
+    }
+    
+    .event-compact-meta {
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.7rem;
+    }
+    
+    .event-compact-title a {
+        font-size: 0.9375rem;
+        -webkit-line-clamp: 2;
+    }
+    
+    /* News Section Mobile Small */
+    .home-news-section {
+        padding: 2rem 0;
+    }
+    
+    .home-news-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .news-compact-card {
+        grid-template-columns: 100px 1fr;
+        gap: 0.75rem;
+    }
+    
+    .news-compact-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .news-compact-body {
+        padding: 0.75rem;
+    }
+    
+    .news-compact-meta {
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.7rem;
+    }
+    
+    .news-compact-title a {
+        font-size: 0.9375rem;
+        -webkit-line-clamp: 2;
+    }
+    
+    .news-compact-excerpt {
+        font-size: 0.7rem;
+        -webkit-line-clamp: 2;
+        margin-bottom: 0.75rem;
+    }
+    
+    .pagination {
+        flex-wrap: wrap;
+        gap: 0.25rem;
+        margin-top: 1rem;
+    }
+    
+    .pagination-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.75rem;
+    }
+    
+    .pagination-number {
+        min-width: 32px;
+        height: 32px;
+        font-size: 0.75rem;
+    }
+    
+    .pagination-arrow {
+        padding: 0.5rem;
+    }
 }

@@ -84,7 +84,7 @@ return [
         'name' => 'Courage Doe',
         'role' => 'CCE Member',
         'group' => 'Members',
-        'photo' => 'assets/image/companies-and-people/cce-logo.jpeg',
+        'photo' => 'assets/image/companies-and-people/Courage-Doe.jpeg',
         'email' => 'couragesotoranking@gmail.com',
         'linkedin' => '',
         'bio_short' => 'Member of the Cross-Cutting Excellence Network.',
