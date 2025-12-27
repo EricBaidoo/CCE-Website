@@ -78,7 +78,7 @@ $meta = [
                         </svg>
                     </div>
                     <div class="stat-content">
-                        <div class="stat-number">5000+</div>
+                        <div class="stat-number">200+</div>
                         <div class="stat-label">Professionals</div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@ $meta = [
                         </svg>
                     </div>
                     <div class="stat-content">
-                        <div class="stat-number">25+</div>
+                        <div class="stat-number">5+</div>
                         <div class="stat-label">Countries</div>
                     </div>
                 </div>
