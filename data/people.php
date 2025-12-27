@@ -51,7 +51,7 @@ return [
         'name' => 'Eric Baidoo',
         'role' => 'CCE Member',
         'group' => 'Members',
-        'photo' => 'assets/image/companies-and-people/eric-baidoo.png',
+        'photo' => 'assets/image/companies-and-people/Eric-Baidoo.png',
         'email' => 'kbaidu7@gmail.com',
         'linkedin' => '',
         'bio_short' => 'Member of the Cross-Cutting Excellence Network.',
