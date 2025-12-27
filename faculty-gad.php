@@ -10,15 +10,17 @@
     <?php include 'header.php'; ?>
 
     <main class="faculty-page">
-        <div class="faculty-hero">
+        <section class="faculty-hero">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <div class="faculty-icon-box-hero">G</div>
-                <h1>Governance & Development</h1>
-                <p class="hero-subtitle">Equipping governance practitioners with seculo-spiritual aptitude to produce godly and competent leadership that drives true development.</p>
-                <span class="faculty-code-tag">GAD</span>
+                <div class="hero-icon">G</div>
+                <div class="hero-text">
+                    <h1 class="hero-title">Governance & Development</h1>
+                    <p class="hero-description">Equipping governance practitioners with seculo-spiritual aptitude to produce godly and competent leadership that drives true development.</p>
+                    <span class="hero-badge">GAD</span>
+                </div>
             </div>
-        </div>
+        </section>
 
         <div class="faculty-content">
             <section class="content-section">

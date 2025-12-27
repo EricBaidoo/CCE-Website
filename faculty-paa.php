@@ -10,15 +10,17 @@
     <?php include 'header.php'; ?>
 
     <main class="faculty-page">
-        <div class="faculty-hero">
+        <section class="faculty-hero">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <div class="faculty-icon-box-hero">P</div>
-                <h1>Philosophy & Arts</h1>
-                <p class="hero-subtitle">Cultivating artists and philosophers who create transformative work that promotes the glory of Jesus and elevates culture.</p>
-                <span class="faculty-code-tag">PAA</span>
+                <div class="hero-icon">P</div>
+                <div class="hero-text">
+                    <h1 class="hero-title">Philosophy & Arts</h1>
+                    <p class="hero-description">Cultivating artists and philosophers who create transformative work that promotes the glory of Jesus and elevates culture.</p>
+                    <span class="hero-badge">PAA</span>
+                </div>
             </div>
-        </div>
+        </section>
 
         <div class="faculty-content">
             <section class="content-section">

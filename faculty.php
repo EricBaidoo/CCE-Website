@@ -9,8 +9,10 @@ include 'header.php';
     <section class="faculty-main-hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Faculty Endeavours</h1>
-            <p class="hero-subtitle">We equip Christian Professionals to be excellent in high-end productivity across 8 Faculty Endeavours</p>
+            <div class="hero-text">
+                <h1 class="hero-title">Faculty Endeavours</h1>
+                <p class="hero-description">We equip Christian Professionals to be excellent in high-end productivity across 8 Faculty Endeavours</p>
+            </div>
         </div>
     </section>
 
@@ -118,18 +120,18 @@ include 'header.php';
         <div class="content-card faculty-detail">
             <div class="faculty-left-column">
                 <div class="faculty-header-section">
-                    <div class="faculty-icon-box">C</div>
+                    <div class="faculty-icon-box">M</div>
                     <div>
-                        <h2>FE-6: Christianity & Religion</h2>
-                        <p class="faculty-code-tag">CAR</p>
+                        <h2>FE-7: Missions & Apologetics</h2>
+                        <p class="faculty-code-tag">MAA</p>
                     </div>
                 </div>
-                <p class="faculty-full-desc">CCE trains Christian Apologists to competently explain the Christian faith to thinking skeptics who could then make informed decisions on following Christ Jesus.</p>
-                <a href="faculty-car.php" class="faculty-link">Explore Christianity & Religion →</a>
+                <p class="faculty-full-desc">Preparing professionals to engage culture with the gospel, defend the faith thoughtfully and serve missionally.</p>
+                <a href="faculty-maa.php" class="faculty-link">Explore Missions & Apologetics →</a>
             </div>
             <div class="faculty-right-column">
                 <div class="faculty-image">
-                    <img src="assets/image/hero/001-w800.jpg" alt="Christianity & Religion" loading="lazy">
+                    <img src="assets/image/hero/001-w800.jpg" alt="Missions & Apologetics" loading="lazy">
                 </div>
             </div>
         </div>
@@ -139,7 +141,7 @@ include 'header.php';
                 <div class="faculty-header-section">
                     <div class="faculty-icon-box">R</div>
                     <div>
-                        <h2>FE-7: Relationship & Family (R&F)</h2>
+                        <h2>FE-6: Relationship & Family (R&F)</h2>
                         <p class="faculty-code-tag">RAF</p>
                     </div>
                 </div>

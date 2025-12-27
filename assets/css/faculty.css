@@ -1,71 +1,183 @@
-/* Faculty Main Page Hero - Fully Responsive Design */
+/* ========================================
+   FACULTY HERO SECTIONS - REDESIGNED
+   ======================================== */
+
+/* Main Faculty Page Hero */
 .faculty-main-hero {
     position: relative;
-    min-height: 50vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #1a1650 0%, #252163 50%, #1a1650 100%);
     overflow: hidden;
-    padding: 3rem 1rem;
+    padding: 4rem 2rem;
 }
 
 .faculty-main-hero .hero-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.2);
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
     z-index: 1;
 }
 
 .faculty-main-hero .hero-overlay::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background-image: 
-        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.05) 2px, rgba(255, 255, 255, 0.05) 4px),
-        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.05) 2px, rgba(255, 255, 255, 0.05) 4px);
+        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.04) 2px, rgba(255, 255, 255, 0.04) 4px),
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.04) 2px, rgba(255, 255, 255, 0.04) 4px);
 }
 
 .faculty-main-hero .hero-content {
     position: relative;
     z-index: 2;
-    text-align: center;
-    padding: 2rem 1.5rem;
-    max-width: 64rem;
-    margin: 0 auto;
     width: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
 }
 
-.faculty-main-hero .hero-content h1 {
-    font-size: clamp(2rem, 5vw + 1rem, 5rem);
-    font-weight: 700;
+.faculty-main-hero .hero-text {
+    text-align: center;
+}
+
+.faculty-main-hero .hero-title {
+    font-size: clamp(2.5rem, 6vw, 6rem);
+    font-weight: 800;
     color: #fff;
     margin: 0 0 1.5rem 0;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
+    letter-spacing: -0.03em;
+    line-height: 0.95;
     text-transform: uppercase;
-    text-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.5);
-    background: linear-gradient(180deg, #ffffff 0%, #e0e0ff 100%);
+    text-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.6);
+    background: linear-gradient(180deg, #ffffff 0%, #c7d2fe 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    word-wrap: break-word;
 }
 
-.faculty-main-hero .hero-content .hero-subtitle {
-    font-size: clamp(1rem, 2vw + 0.5rem, 1.5rem);
-    line-height: 1.6;
-    color: #fff;
+.faculty-main-hero .hero-description {
+    font-size: clamp(1.125rem, 2.5vw, 1.75rem);
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.95);
     font-weight: 400;
+    margin: 1rem auto 0;
+    text-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.4);
+    text-align: center;
+    max-width: 800px;
+}
+
+/* Individual Faculty Page Hero */
+.faculty-hero {
+    position: relative;
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #252163 0%, #3a3780 50%, #252163 100%);
+    overflow: hidden;
+    padding: 4rem 2rem;
+}
+
+.faculty-hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(37, 33, 99, 0.92) 0%, rgba(58, 55, 128, 0.88) 100%);
+    z-index: 1;
+}
+
+.faculty-hero .hero-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.02) 2px, rgba(255, 255, 255, 0.02) 4px),
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.02) 2px, rgba(255, 255, 255, 0.02) 4px);
+}
+
+.faculty-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.faculty-hero .hero-icon {
+    width: clamp(6rem, 15vw, 11rem);
+    height: clamp(6rem, 15vw, 11rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(3rem, 9vw, 6rem);
+    font-weight: 700;
+    color: #ff8800;
+    margin: 0 auto 2.5rem;
+    background: rgba(255, 136, 0, 0.08);
+    border: clamp(0.1875rem, 0.4vw, 0.3125rem) solid rgba(255, 136, 0, 0.4);
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.faculty-hero .hero-icon::before {
+    content: '';
+    position: absolute;
+    inset: -0.75rem;
+    border: 0.0625rem solid rgba(255, 136, 0, 0.15);
+}
+
+.faculty-hero:hover .hero-icon {
+    background: rgba(255, 136, 0, 0.15);
+    border-color: rgba(255, 136, 0, 0.6);
+    transform: scale(1.05) rotate(2deg);
+}
+
+.faculty-hero .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.faculty-hero .hero-title {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    font-weight: 400;
+    color: #fff;
     margin: 0;
-    text-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.5);
-    max-width: 100%;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    text-shadow: 0 0.375rem 1.5rem rgba(0, 0, 0, 0.5);
+}
+
+.faculty-hero .hero-description {
+    font-size: clamp(1.0625rem, 2.2vw, 1.5rem);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.92);
+    font-weight: 300;
+    margin: 0;
+    max-width: 50rem;
+    text-shadow: 0 0.1875rem 0.75rem rgba(0, 0, 0, 0.4);
+}
+
+.faculty-hero .hero-badge {
+    display: inline-flex;
+    font-size: clamp(0.875rem, 1.8vw, 1.125rem);
+    font-weight: 700;
+    color: #ff8800;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    padding: clamp(0.5rem, 1.2vw, 0.75rem) clamp(1.5rem, 3vw, 2.5rem);
+    border: 0.1875rem solid rgba(255, 136, 0, 0.4);
+    background: rgba(255, 136, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.faculty-hero .hero-badge:hover {
+    background: rgba(255, 136, 0, 0.15);
+    border-color: rgba(255, 136, 0, 0.7);
+    transform: translateY(-0.125rem);
 }
 
 /* Faculty Intro Section */

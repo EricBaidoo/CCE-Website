@@ -10,15 +10,17 @@
     <?php include 'header.php'; ?>
 
     <main class="faculty-page">
-        <div class="faculty-hero">
+        <section class="faculty-hero">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <div class="faculty-icon-box-hero">F</div>
-                <h1>Finance & Business</h1>
-                <p class="hero-subtitle">Developing Christian leaders who steward global resources with competence, godliness, and integrity.</p>
-                <span class="faculty-code-tag">FAB</span>
+                <div class="hero-icon">F</div>
+                <div class="hero-text">
+                    <h1 class="hero-title">Finance & Business</h1>
+                    <p class="hero-description">Developing Christian leaders who steward global resources with competence, godliness, and integrity.</p>
+                    <span class="hero-badge">FAB</span>
+                </div>
             </div>
-        </div>
+        </section>
 
         <div class="faculty-content">
             <section class="content-section">

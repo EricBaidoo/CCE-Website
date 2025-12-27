@@ -10,15 +10,17 @@
     <?php include 'header.php'; ?>
 
     <main class="faculty-page">
-        <div class="faculty-hero">
+        <section class="faculty-hero">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <div class="faculty-icon-box-hero">R</div>
-                <h1>Relationship & Family</h1>
-                <p class="hero-subtitle">Building strong, godly relationships and families as the foundation for healthy communities and societal transformation.</p>
-                <span class="faculty-code-tag">RAF</span>
+                <div class="hero-icon">R</div>
+                <div class="hero-text">
+                    <h1 class="hero-title">Relationships & Family</h1>
+                    <p class="hero-description">Building strong, godly relationships and families as the foundation for healthy communities and societal transformation.</p>
+                    <span class="hero-badge">RAF</span>
+                </div>
             </div>
-        </div>
+        </section>
 
         <div class="faculty-content">
             <section class="content-section">

@@ -10,15 +10,17 @@
     <?php include 'header.php'; ?>
 
     <main class="faculty-page">
-        <div class="faculty-hero">
+        <section class="faculty-hero">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <div class="faculty-icon-box-hero">S</div>
-                <h1>Science & Technology</h1>
-                <p class="hero-subtitle">Positioning Christian scientists at the cutting edge of explorative science and ethical, godly innovation.</p>
-                <span class="faculty-code-tag">SAT</span>
+                <div class="hero-icon">S</div>
+                <div class="hero-text">
+                    <h1 class="hero-title">Science & Technology</h1>
+                    <p class="hero-description">Positioning Christian scientists at the cutting edge of explorative science and ethical, godly innovation.</p>
+                    <span class="hero-badge">SAT</span>
+                </div>
             </div>
-        </div>
+        </section>
 
         <div class="faculty-content">
             <section class="content-section">

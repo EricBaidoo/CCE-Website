@@ -2,6 +2,22 @@
 // Simple events data file for the homepage
 return [
     [
+        'id' => 'excel-2024',
+        'title' => 'EXCEL 2024 Conference',
+        'date' => 'Nov 15–17, 2024',
+        'start_date' => '2024-11-15',
+        'end_date' => '2024-11-17',
+        'start_datetime' => '2024-11-15 09:00:00',
+        'end_datetime' => '2024-11-17 17:00:00',
+        'timezone' => 'Africa/Accra',
+        'location' => 'Accra, Ghana',
+        'image' => 'assets/image/hero/001-w800.jpg',
+        'excerpt' => 'INSPIRED • INTENTIONAL • INTENSE - Our annual conference designed to inspire and equip young Christian professionals with foresight and insight. Three days of transformative learning, worship, and networking with 100+ Christian professionals.',
+        'link' => 'excel-2024.php',
+        'registration_url' => '',
+        'is_featured' => true
+    ],
+    [
         'id' => 'annual-summit-2025',
         'title' => 'CCE Annual Summit',
         'date' => 'Nov 12–14',

@@ -10,15 +10,17 @@
     <?php include 'header.php'; ?>
 
     <main class="faculty-page">
-        <div class="faculty-hero">
+        <section class="faculty-hero">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <div class="faculty-icon-box-hero">M</div>
-                <h1>Communication & Media</h1>
-                <p class="hero-subtitle">Equipping Christians to access and control the global communication and media space for kingdom impact.</p>
-                <span class="faculty-code-tag">CAM</span>
+                <div class="hero-icon">M</div>
+                <div class="hero-text">
+                    <h1 class="hero-title">Communication & Media</h1>
+                    <p class="hero-description">Equipping Christians to access and control the global communication and media space for kingdom impact.</p>
+                    <span class="hero-badge">CAM</span>
+                </div>
             </div>
-        </div>
+        </section>
 
         <div class="faculty-content">
             <section class="content-section">

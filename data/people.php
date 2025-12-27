@@ -5,13 +5,13 @@ return [
     [
         'id' => 'emmanuel-mensah',
         'name' => 'Emmanuel Kwame Mensah',
-        'role' => 'CCE Member',
-        'group' => 'Members',
+        'role' => 'General Coordinator',
+        'group' => 'Leadership',
         'photo' => 'assets/image/companies-and-people/Mr. Emmanuel Mensah.JPG',
         'email' => 'kwamesdgs@gmail.com',
         'linkedin' => '',
-        'bio_short' => 'Member of the Cross-Cutting Excellence Network.',
-        'bio_long' => 'Emmanuel Kwame Mensah is a committed member of the CCE Network, contributing to excellence across various domains.'
+        'bio_short' => 'General Coordinator of Cross-Cutting Excellence (CCE) and international development consultant with over 20 years of UN experience.',
+        'bio_long' => 'Emmanuel Kwame Mensah is the General Coordinator of Cross-Cutting Excellence (CCE) and an international development consultant with more than 2 decades of experience with the international civil service (United Nations), working as a policy advisor, tools developer and trainer to governments, business owners and workers across Africa, Asia and Europe. His expertise is on International Labour Standards (ILS) specializing in the Fundamental Principles and Rights at Work (FPRW). Kwame is also a solutionist with focus on productivity standards. He is a frontliner in the development of outcome measurements and impact assessment, driving the application of MEALS (Monitoring Evaluation Accountability Learning and Scaling) tools in business productivity, decent work and regional development. He is a strong advocate on the Sustainable Development Goals (SDGs) as applicable in a godly manner. In Africa he has strengthened capabilities in several countries including Benin, La Côte d\'Ivoire, Liberia, Ghana, Togo, Namibia, Nigeria and South Africa. Emmanuel is the CEO of CCE Consult and Excell Creation. He lives in Accra with his wife Lily and family; working with local churches and Christian brethren to enhance godliness in the secular space to the glory of God in Christ Jesus our ONLY Lord and Saviour.'
     ],
     [
         'id' => 'cecil-dadzie',
@@ -51,7 +51,7 @@ return [
         'name' => 'Eric Baidoo',
         'role' => 'CCE Member',
         'group' => 'Members',
-        'photo' => 'assets/image/companies-and-people/cce-logo.jpeg',
+        'photo' => 'assets/image/companies-and-people/eric-baidoo.png',
         'email' => 'kbaidu7@gmail.com',
         'linkedin' => '',
         'bio_short' => 'Member of the Cross-Cutting Excellence Network.',
@@ -172,10 +172,10 @@ return [
         'name' => 'Enoch Amoah',
         'role' => 'CCE Member',
         'group' => 'Members',
-        'photo' => 'assets/image/avatars/avatar-placeholder.jpg',
+        'photo' => 'assets/image/companies-and-people/enoch-amoah.jpeg',
         'email' => 'enochamoah81@gmail.com',
         'linkedin' => '',
-        'bio_short' => 'Member of the Cross-Cutting Excellence Network.',
-        'bio_long' => 'Enoch Amoah is a committed member of the CCE Network, contributing to excellence across various domains.'
+        'bio_short' => 'Chartered Accountant and CEO of ENEL Business Centre with expertise in accounting and finance.',
+        'bio_long' => 'Enoch Amoah is a Chartered Accountant and holds an MSc in Accounting & Finance. He serves as the CEO of ENEL Business Centre, bringing professional expertise in financial management and business consulting. As a committed member of the Cross-Cutting Excellence Network, Enoch contributes his accounting and financial acumen to support organizational excellence and sustainable business practices. He is married with one child and balances his professional commitments with family life.'
     ],
 ];

@@ -29,17 +29,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
     <!-- Cache-busting token added during active development to ensure latest CSS is loaded -->
-    <link rel="stylesheet" href="assets/css/index.css?v=20251226.26">
-    <link rel="stylesheet" href="assets/css/header.css?v=20251227.1">
-    <link rel="stylesheet" href="assets/css/footer.css?v=20251227.1">
-    <link rel="stylesheet" href="assets/css/about.css?v=20251226.1">
-    <link rel="stylesheet" href="assets/css/person.css?v=20251226.1">
-    <link rel="stylesheet" href="assets/css/company.css?v=20251226.1">
+    <link rel="stylesheet" href="assets/css/index.css?v=20251227.14">
+    <link rel="stylesheet" href="assets/css/header.css?v=20251227.2">
+    <link rel="stylesheet" href="assets/css/footer.css?v=20251227.2">
+    <link rel="stylesheet" href="assets/css/about.css?v=20251227.3">
+    <link rel="stylesheet" href="assets/css/person.css?v=20251227.2">
+    <link rel="stylesheet" href="assets/css/company.css?v=20251227.2">
     <link rel="stylesheet" href="assets/css/companies.css?v=20251226.1">
-    <link rel="stylesheet" href="assets/css/faculty.css?v=20251227.6">
-    <link rel="stylesheet" href="assets/css/events.css?v=20251226.1">
-    <link rel="stylesheet" href="assets/css/resources.css?v=20251226.1">
-    <link rel="stylesheet" href="assets/css/contact.css?v=20251226.1">
+    <link rel="stylesheet" href="assets/css/faculty.css?v=20251227.8">
+    <link rel="stylesheet" href="assets/css/events.css?v=20251227.6">
+    <link rel="stylesheet" href="assets/css/event.css?v=20251227.6">
+    <link rel="stylesheet" href="assets/css/news.css?v=20251227.2">
+    <link rel="stylesheet" href="assets/css/resources.css?v=20251227.2">
+    <link rel="stylesheet" href="assets/css/contact.css?v=20251227.2">
     <?php
     // render page-provided JSON-LD if present
     if (!empty($meta['json_ld'])) {
@@ -58,8 +60,7 @@
             </div>
         </div>
         <div class="cce-header-mission">
-            <div class="cce-header-mission-title">Building capacity of Christian professionals</div>
-            <div class="cce-header-mission-subtitle">Transforming spheres of influence with godly wisdom</div>
+            <div class="cce-header-mission-title">FOCUS &bull; DILIGENT &bull; CONSISTENCY</div>
         </div>
         <button class="cce-header-hamburger d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#cceHeaderNav" aria-controls="cceHeaderNav" aria-expanded="false" aria-label="Toggle navigation">
             <span>&#9776;</span>
@@ -70,7 +71,7 @@
             <li><a class="cce-header-nav-link" href="index.php">Home</a></li>
             <li><a class="cce-header-nav-link" href="about.php">About</a></li>
             <li><a class="cce-header-nav-link" href="faculty.php">Faculty</a></li>
-            <li><a class="cce-header-nav-link" href="companies.php">Companies</a></li>
+            <li><a class="cce-header-nav-link" href="excel-2024.php">Excel 2024</a></li>
             <li><a class="cce-header-nav-link" href="events.php">Events</a></li>
             <li><a class="cce-header-nav-link" href="resources.php">Resources</a></li>
             <li><a class="cce-header-nav-link" href="news.php">News</a></li>

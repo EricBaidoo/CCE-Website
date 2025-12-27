@@ -79,11 +79,11 @@ main, #main-content {
 }
 
 .cce-footer__brand {
-  font-size: 1.75rem;
-  font-weight: 800;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: #ff8800;
   margin-bottom: 1rem;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }

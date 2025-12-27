@@ -1,7 +1,46 @@
 <?php
 // Simple data file for CCE companies; edit or extend as needed
 return [
-  
+    [
+        'id' => 'huds-cleaning',
+        'name' => 'Huds Cleaning',
+        'logo' => 'assets/image/companies-and-people/cce-logo.jpeg',
+        'excerpt' => '',
+        'description' => '',
+        'website' => '',
+            'link' => '#',
+            'owners' => []
+        ],
+        [
+        'id' => 'surge-digital',
+        'name' => 'Surge Digital',
+        'logo' => 'assets/image/companies-and-people/cce-logo.jpeg',
+        'excerpt' => '',
+        'description' => '',
+        'website' => '',
+        'link' => '#',
+        'owners' => []
+        ],
+        [
+        'id' => 'women-in-nations',
+        'name' => 'Women in Nations',
+        'logo' => 'assets/image/companies-and-people/cce-logo.jpeg',
+        'excerpt' => '',
+        'description' => '',
+        'website' => '',
+        'link' => '#',
+        'owners' => []
+        ],
+        [
+        'id' => 'lightroom-studios',
+        'name' => 'LightRoom Studios',
+        'logo' => 'assets/image/companies-and-people/cce-logo.jpeg',
+        'excerpt' => '',
+        'description' => '',
+        'website' => '',
+        'link' => '#',
+        'owners' => []
+        ],
     [
         'id' => 'courage-computers',
         'name' => 'Courage Computers',
@@ -112,8 +151,8 @@ return [
         ],
         'founded' => '2024',
         'location' => 'Ghana and Africa',
-        'website' => '#',
-        'link' => '#',
+        'website' => 'https://e7world.tech/',
+        'link' => 'https://e7world.tech/',
         'owners' => [
             // Add relevant owner IDs here
         ]
@@ -121,7 +160,7 @@ return [
     [
         'id' => 'cce-consult',
         'name' => 'CCE Consult',
-        'logo' => 'assets/image/companies-and-people/AWUK8089.jpg',
+        'logo' => 'assets/image/companies-and-people/cce-logo.jpeg',
         'excerpt' => 'Providing expert consultancy services on Governance and Development, Education, Science and Technology, Philosophy and the Arts, Finance and Business, Missions and Apologetics, Relationship and Family, and Communication and Media. The Consulting Agent for CCE Network, delivering MEALS services.',
         'description' => 'CCE Consult provides comprehensive consultancy services across multiple sectors including Governance and Development (including the Sustainable Development Goals), Education and Training, Science and Technology, Philosophy and the Arts, Finance and Business, Missions and Apologetics, Relationship and Family, and Communication and Media. As the official Consulting Agent for CCE Network, we provide specialized MEALS (Monitoring, Evaluation, Accountability, Learning and Scaling) services to the Network, ensuring effective program implementation, impact assessment, and continuous improvement.',
         'services' => [

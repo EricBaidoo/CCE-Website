@@ -4,9 +4,9 @@
         <!-- About Column -->
         <div class="cce-footer__col cce-footer__about">
             <img src="assets/image/logo.jpeg" alt="CCE Logo" class="cce-footer__logo" />
-            <div class="cce-footer__brand">CCE</div>
+            <div class="cce-footer__brand">Cross-Cutting Excellence</div>
             <div class="cce-footer__desc">Building the capacity of Christian professionals to transform their spheres of endeavour with the manifold wisdom of God.</div>
-            <div class="cce-footer__inspire">Inspired &bull; Intentional &bull; Intense</div>
+            <div class="cce-footer__inspire">FOCUS &bull; DILIGENT &bull; CONSISTENCY</div>
         </div>
 
         <!-- Quick Links Column -->

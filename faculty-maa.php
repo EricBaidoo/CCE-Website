@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christianity & Religion | Cross-Cutting Excellence</title>
-    <link rel="stylesheet" href="assets/css/faculty.css?v=20251227.2">
+    <title>Missions & Apologetics | Cross-Cutting Excellence</title>
+    <link rel="stylesheet" href="assets/css/faculty.css?v=20251227.7">
 </head>
 <body>
     <?php include 'header.php'; ?>
@@ -13,11 +13,11 @@
         <section class="faculty-hero">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <div class="hero-icon">C</div>
+                <div class="hero-icon">M</div>
                 <div class="hero-text">
-                    <h1 class="hero-title">Christianity & Religion</h1>
-                    <p class="hero-description">Training Christian Apologists to competently explain the faith and mobilizing believers for effective missions.</p>
-                    <span class="hero-badge">CAR</span>
+                    <h1 class="hero-title">Missions & Apologetics</h1>
+                    <p class="hero-description">Preparing professionals to engage culture with the gospel, defend the faith thoughtfully and serve missionally.</p>
+                    <span class="hero-badge">MAA</span>
                 </div>
             </div>
         </section>
