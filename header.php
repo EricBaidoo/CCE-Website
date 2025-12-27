@@ -30,8 +30,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
     <!-- Cache-busting token added during active development to ensure latest CSS is loaded -->
     <link rel="stylesheet" href="assets/css/index.css?v=20251226.26">
-    <link rel="stylesheet" href="assets/css/header.css?v=20251226.1">
-    <link rel="stylesheet" href="assets/css/footer.css?v=20251226.2">
+    <link rel="stylesheet" href="assets/css/header.css?v=20251227.1">
+    <link rel="stylesheet" href="assets/css/footer.css?v=20251227.1">
     <link rel="stylesheet" href="assets/css/about.css?v=20251226.1">
     <link rel="stylesheet" href="assets/css/person.css?v=20251226.1">
     <link rel="stylesheet" href="assets/css/company.css?v=20251226.1">
@@ -66,7 +66,7 @@
         </button>
     </div>
     <nav class="cce-header-nav">
-        <ul class="cce-header-nav-list collapse navbar-collapse show" id="cceHeaderNav">
+        <ul class="cce-header-nav-list collapse navbar-collapse" id="cceHeaderNav">
             <li><a class="cce-header-nav-link" href="index.php">Home</a></li>
             <li><a class="cce-header-nav-link" href="about.php">About</a></li>
             <li><a class="cce-header-nav-link" href="faculty.php">Faculty</a></li>
@@ -84,13 +84,5 @@
                 </svg>
             </button>
         </div>
-            <div class="cce-header-lang">
-                <form id="langForm" method="get" action="">
-                    <label for="lang-select" class="visually-hidden">Language:</label>
-                    <select id="lang-select" name="lang" onchange="this.form.submit()">
-                        <option value="en" selected>English</option>
-                        <option value="fr">Français</option>
-                    </select>
-                </form>
-            </div>
+            
     </nav>
