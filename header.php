@@ -66,7 +66,8 @@
     </div>
     <nav class="cce-header-nav">
         <ul class="cce-header-nav-list collapse navbar-collapse show" id="cceHeaderNav">
-            <li><a class="cce-header-nav-link active" href="index.php">About</a></li>
+            <li><a class="cce-header-nav-link" href="index.php">Home</a></li>
+            <li><a class="cce-header-nav-link" href="about.php">About</a></li>
             <li><a class="cce-header-nav-link" href="faculty.php">Faculty</a></li>
             <li><a class="cce-header-nav-link" href="companies.php">Companies</a></li>
             <li><a class="cce-header-nav-link" href="events.php">Events</a></li>

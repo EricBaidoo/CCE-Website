@@ -32,11 +32,12 @@ $meta = [
         <div class="slide active">
           <div class="hero-content">
             <div class="container">
-              <span class="hero-badge">Welcome to CCE</span>
+              <span class="hero-badge">FOCUS DILIGENCE CONSISTENCY</span>
               <h1 class="hero-title">
-                Transforming Institutions Globally
-                <span class="accent">Empowering Excellence Everywhere</span>
+                CCE Network
+                <span class="accent">Transforming Communities with God's Wisdom</span>
               </h1>
+              <p class="hero-description">A connection of Christian Professionals transforming their communities with the wisdom of God</p>
               <div class="hero-buttons">
                 <a href="get-involved.php" class="btn-primary">Get Involved</a>
                 <a href="about.php" class="btn-secondary">Learn More</a>
@@ -48,11 +49,12 @@ $meta = [
         <div class="slide">
           <div class="hero-content">
             <div class="container">
-              <span class="hero-badge">Global Community</span>
+              <span class="hero-badge">FOCUS</span>
               <h1 class="hero-title">
-                Connect & Collaborate
-                <span class="accent">Across Borders</span>
+                Focus Your Life
+                <span class="accent">On Eternal Things</span>
               </h1>
+              <p class="hero-description">Temporal things are consequentially vain and a waste of time</p>
               <div class="hero-buttons">
                 <a href="events.php" class="btn-primary">See Events</a>
                 <a href="contact.php" class="btn-secondary">Contact Us</a>
@@ -64,13 +66,31 @@ $meta = [
         <div class="slide">
           <div class="hero-content">
             <div class="container">
-              <span class="hero-badge">Lead with Purpose</span>
+              <span class="hero-badge">DILIGENCE</span>
               <h1 class="hero-title">
-                Make an Impact
-                <span class="accent">Join the Movement</span>
+                Be Diligent
+                <span class="accent">Avoid Mediocrity</span>
               </h1>
+              <p class="hero-description">Be diligent; not negligent. Avoid mediocrity</p>
               <div class="hero-buttons">
                 <a href="get-involved.php" class="btn-primary">Start Now</a>
+                <a href="faculty.php" class="btn-secondary">Our Faculty</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="slide">
+          <div class="hero-content">
+            <div class="container">
+              <span class="hero-badge">CONSISTENCY</span>
+              <h1 class="hero-title">
+                Sustainable Transformation
+                <span class="accent">Through Consistent Productivity</span>
+              </h1>
+              <p class="hero-description">Consistent productivity brings sustainable transformation</p>
+              <div class="hero-buttons">
+                <a href="companies.php" class="btn-primary">Our Partners</a>
                 <a href="about.php" class="btn-secondary">Learn More</a>
               </div>
             </div>

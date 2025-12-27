@@ -19,6 +19,185 @@
 }
 
 /* About Page Specific Styles */
+.about-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 4rem 2rem;
+}
+
+.about-page .page-header {
+    max-width: 87.5rem;
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+
+.about-page .page-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #252163;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #252163, #3a0ca3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.about-page .page-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ff8800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.about-content {
+    max-width: 87.5rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.content-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: 0 0.5rem 2rem rgba(37, 33, 99, 0.08);
+    transition: all 0.3s ease;
+}
+
+.content-card:hover {
+    box-shadow: 0 1rem 3rem rgba(37, 33, 99, 0.15);
+}
+
+.content-card h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #252163;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 0.25rem solid;
+    border-image: linear-gradient(90deg, #ff8800, #ff9900) 1;
+}
+
+.content-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #252163;
+    margin-bottom: 0.75rem;
+}
+
+.content-card p {
+    font-size: 1.125rem;
+    color: #495057;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.content-card p:last-child {
+    margin-bottom: 0;
+}
+
+.operations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.operation-item {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border-left: 0.25rem solid #ff8800;
+}
+
+.operation-item h3 {
+    color: #ff8800;
+    margin-bottom: 0.5rem;
+}
+
+.operation-item p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.contact-card {
+    background: linear-gradient(135deg, #252163, #3a0ca3);
+    color: white;
+}
+
+.contact-card h2 {
+    color: white;
+    border-image: linear-gradient(90deg, #ff8800, #ff9900) 1;
+}
+
+.contact-details p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1rem;
+}
+
+.contact-details a {
+    color: #ff8800;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #ff9900;
+}
+
+.contact-details strong {
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 64em) {
+    .about-page {
+        padding: 3rem 1.5rem;
+    }
+
+    .about-page .page-title {
+        font-size: 2.5rem;
+    }
+
+    .about-page .page-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .operations-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 48em) {
+    .about-page {
+        padding: 2rem 1rem;
+    }
+
+    .about-page .page-title {
+        font-size: 2rem;
+    }
+
+    .about-page .page-subtitle {
+        font-size: 1rem;
+    }
+
+    .content-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .content-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .operation-item {
+        padding: 1.25rem;
+    }
+}
+
+/* Old About Hero Section */
 body {
     margin: 0;
     padding: 0;
