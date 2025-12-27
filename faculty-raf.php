@@ -15,8 +15,8 @@
             <div class="hero-content">
                 <div class="faculty-icon-box-hero">R</div>
                 <h1>Relationship & Family</h1>
-                <p class="faculty-code-tag">RAF</p>
-                <p class="hero-description">Building strong godly families and multi-dimensional relationships as the foundation of society.</p>
+                <p class="hero-subtitle">Building strong, godly relationships and families as the foundation for healthy communities and societal transformation.</p>
+                <span class="faculty-code-tag">RAF</span>
             </div>
         </div>
 

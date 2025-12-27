@@ -15,8 +15,8 @@
             <div class="hero-content">
                 <div class="faculty-icon-box-hero">C</div>
                 <h1>Christianity & Religion</h1>
-                <p class="faculty-code-tag">CAR</p>
-                <p class="hero-description">Training Christian Apologists to competently explain the faith and mobilizing believers for effective missions.</p>
+                <p class="hero-subtitle">Training Christian Apologists to competently explain the faith and mobilizing believers for effective missions.</p>
+                <span class="faculty-code-tag">CAR</span>
             </div>
         </div>
 

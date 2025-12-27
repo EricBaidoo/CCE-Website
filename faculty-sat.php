@@ -15,8 +15,8 @@
             <div class="hero-content">
                 <div class="faculty-icon-box-hero">S</div>
                 <h1>Science & Technology</h1>
-                <p class="faculty-code-tag">SAT</p>
-                <p class="hero-description">Positioning Christian scientists at the cutting edge of explorative science and ethical, godly innovation.</p>
+                <p class="hero-subtitle">Positioning Christian scientists at the cutting edge of explorative science and ethical, godly innovation.</p>
+                <span class="faculty-code-tag">SAT</span>
             </div>
         </div>
 

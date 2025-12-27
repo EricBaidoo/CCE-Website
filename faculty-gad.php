@@ -15,8 +15,8 @@
             <div class="hero-content">
                 <div class="faculty-icon-box-hero">G</div>
                 <h1>Governance & Development</h1>
-                <p class="faculty-code-tag">GAD</p>
-                <p class="hero-description">Equipping governance practitioners with seculo-spiritual aptitude to produce godly and competent leadership that drives true development.</p>
+                <p class="hero-subtitle">Equipping governance practitioners with seculo-spiritual aptitude to produce godly and competent leadership that drives true development.</p>
+                <span class="faculty-code-tag">GAD</span>
             </div>
         </div>
 

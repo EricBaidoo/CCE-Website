@@ -15,8 +15,8 @@
             <div class="hero-content">
                 <div class="faculty-icon-box-hero">F</div>
                 <h1>Finance & Business</h1>
-                <p class="faculty-code-tag">FAB</p>
-                <p class="hero-description">Developing Christian leaders who steward global resources with competence, godliness, and integrity.</p>
+                <p class="hero-subtitle">Developing Christian leaders who steward global resources with competence, godliness, and integrity.</p>
+                <span class="faculty-code-tag">FAB</span>
             </div>
         </div>
 

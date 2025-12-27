@@ -15,8 +15,8 @@
             <div class="hero-content">
                 <div class="faculty-icon-box-hero">M</div>
                 <h1>Communication & Media</h1>
-                <p class="faculty-code-tag">CAM</p>
-                <p class="hero-description">Equipping Christians to access and control the global communication and media space for kingdom impact.</p>
+                <p class="hero-subtitle">Equipping Christians to access and control the global communication and media space for kingdom impact.</p>
+                <span class="faculty-code-tag">CAM</span>
             </div>
         </div>
 

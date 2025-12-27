@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="assets/css/person.css?v=20251226.1">
     <link rel="stylesheet" href="assets/css/company.css?v=20251226.1">
     <link rel="stylesheet" href="assets/css/companies.css?v=20251226.1">
-    <link rel="stylesheet" href="assets/css/faculty.css?v=20251227.4">
+    <link rel="stylesheet" href="assets/css/faculty.css?v=20251227.6">
     <link rel="stylesheet" href="assets/css/events.css?v=20251226.1">
     <link rel="stylesheet" href="assets/css/resources.css?v=20251226.1">
     <link rel="stylesheet" href="assets/css/contact.css?v=20251226.1">

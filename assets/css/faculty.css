@@ -1,12 +1,13 @@
-/* Faculty Main Page Hero - Redesigned for Maximum Visibility */
+/* Faculty Main Page Hero - Fully Responsive Design */
 .faculty-main-hero {
     position: relative;
-    min-height: 60vh;
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #1a1650 0%, #252163 50%, #1a1650 100%);
     overflow: hidden;
+    padding: 3rem 1rem;
 }
 
 .faculty-main-hero .hero-overlay {
@@ -35,33 +36,36 @@
     position: relative;
     z-index: 2;
     text-align: center;
-    padding: 5rem 2rem;
+    padding: 2rem 1.5rem;
     max-width: 64rem;
     margin: 0 auto;
+    width: 100%;
 }
 
 .faculty-main-hero .hero-content h1 {
-    font-size: 5rem;
+    font-size: clamp(2rem, 5vw + 1rem, 5rem);
     font-weight: 700;
     color: #fff;
-    margin: 0 0 2rem 0;
+    margin: 0 0 1.5rem 0;
     letter-spacing: -0.02em;
-    line-height: 1;
+    line-height: 1.1;
     text-transform: uppercase;
     text-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.5);
     background: linear-gradient(180deg, #ffffff 0%, #e0e0ff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    word-wrap: break-word;
 }
 
-.faculty-main-hero .hero-content p {
-    font-size: 1.5rem;
-    line-height: 1.7;
+.faculty-main-hero .hero-content .hero-subtitle {
+    font-size: clamp(1rem, 2vw + 0.5rem, 1.5rem);
+    line-height: 1.6;
     color: #fff;
     font-weight: 400;
     margin: 0;
     text-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.5);
+    max-width: 100%;
 }
 
 /* Faculty Intro Section */
@@ -106,15 +110,16 @@
     background: #ffffff;
 }
 
-/* Hero Section */
+/* Hero Section - Fully Responsive */
 .faculty-hero {
     position: relative;
-    min-height: 60vh;
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #252163 0%, #3a3780 50%, #252163 100%);
     overflow: hidden;
+    padding: 3rem 1rem;
 }
 
 .hero-overlay {
@@ -143,22 +148,23 @@
     position: relative;
     z-index: 2;
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 2rem 1.5rem;
     max-width: 56rem;
     margin: 0 auto;
+    width: 100%;
 }
 
 .faculty-icon-box-hero {
-    width: 10rem;
-    height: 10rem;
-    border: 0.25rem solid rgba(255, 136, 0, 0.3);
+    width: clamp(5rem, 15vw, 10rem);
+    height: clamp(5rem, 15vw, 10rem);
+    border: clamp(0.125rem, 0.3vw, 0.25rem) solid rgba(255, 136, 0, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 5rem;
+    font-size: clamp(2.5rem, 8vw, 5rem);
     font-weight: 600;
     color: #ff8800;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1.5rem;
     background: rgba(255, 136, 0, 0.05);
     transition: all 0.5s ease;
     position: relative;
@@ -181,33 +187,36 @@
 }
 
 .hero-content h1 {
-    font-size: 4rem;
+    font-size: clamp(1.75rem, 4vw + 0.5rem, 4rem);
     font-weight: 300;
     color: white;
     margin: 0 0 1rem 0;
     letter-spacing: -0.02em;
-    line-height: 1.1;
+    line-height: 1.2;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.hero-content .hero-subtitle {
+    font-size: clamp(1rem, 2vw + 0.25rem, 1.25rem);
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    margin: 0 0 1.5rem 0;
+    max-width: 100%;
 }
 
 .hero-content .faculty-code-tag {
     display: inline-block;
-    font-size: 1rem;
+    font-size: clamp(0.75rem, 1.5vw + 0.25rem, 1rem);
     font-weight: 600;
     color: #ff8800;
     text-transform: uppercase;
-    letter-spacing: 0.3em;
-    margin: 0 0 2rem 0;
-    padding: 0.5rem 1.5rem;
+    letter-spacing: clamp(0.15em, 0.5vw, 0.3em);
+    margin: 0;
+    padding: clamp(0.375rem, 1vw, 0.5rem) clamp(1rem, 2vw, 1.5rem);
     border: 0.125rem solid rgba(255, 136, 0, 0.3);
     background: rgba(255, 136, 0, 0.05);
-}
-
-.hero-description {
-    font-size: 1.25rem;
-    line-height: 1.8;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 300;
-    margin: 0;
 }
 
 /* Content Sections */

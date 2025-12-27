@@ -15,8 +15,8 @@
             <div class="hero-content">
                 <div class="faculty-icon-box-hero">E</div>
                 <h1>Education & Training</h1>
-                <p class="faculty-code-tag">EAT</p>
-                <p class="hero-description">Empowering educators and trainers to formulate educational systems that drive industry and promote the glory of God.</p>
+                <p class="hero-subtitle">Empowering educators and trainers to formulate educational systems that drive industry and promote the glory of God.</p>
+                <span class="faculty-code-tag">EAT</span>
             </div>
         </div>
 

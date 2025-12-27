@@ -15,8 +15,8 @@
             <div class="hero-content">
                 <div class="faculty-icon-box-hero">P</div>
                 <h1>Philosophy & Arts</h1>
-                <p class="faculty-code-tag">PAA</p>
-                <p class="hero-description">Cultivating artists and philosophers who create transformative work that promotes the glory of Jesus and elevates culture.</p>
+                <p class="hero-subtitle">Cultivating artists and philosophers who create transformative work that promotes the glory of Jesus and elevates culture.</p>
+                <span class="faculty-code-tag">PAA</span>
             </div>
         </div>
 
