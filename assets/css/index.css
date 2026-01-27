@@ -492,8 +492,9 @@
     border-radius: 1.5rem;
     box-shadow: 0 0.625rem 2.5rem rgba(37, 33, 99, 0.08);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #1a1a1a;
 }
 
 .who-we-are-image img {
@@ -501,6 +502,235 @@
     height: auto;
     border-radius: 1rem;
     object-fit: cover;
+}
+
+.coordinator-message {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+    color: #555;
+    line-height: 1.7;
+}
+
+.message-kicker {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #ff8800;
+    margin: 0;
+}
+
+.coordinator-message h4 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ff8800;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.message-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #ff8800;
+}
+
+.coordinator-message p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.coordinator-signoff {
+    font-weight: 700;
+    color: #ff8800;
+}
+
+.read-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    background: linear-gradient(135deg, #ff8800 0%, #e67600 100%);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 136, 0, 0.3);
+    margin-top: 1rem;
+}
+
+.read-more-btn:hover {
+    background: linear-gradient(135deg, #e67600 0%, #d66a00 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 136, 0, 0.4);
+}
+
+.read-more-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.read-more-btn:hover svg {
+    transform: translateX(4px);
+}
+
+/* ========================================
+   GENERAL COORDINATOR MODAL
+   ======================================== */
+
+.gc-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.3s ease;
+}
+
+.gc-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.gc-modal-content {
+    background: #fff;
+    border-radius: 1.5rem;
+    max-width: 800px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gc-modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: #666;
+    z-index: 1;
+}
+
+.gc-modal-close:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: #252163;
+    transform: rotate(90deg);
+}
+
+.gc-modal-header {
+    padding: 2.5rem 2.5rem 1.5rem;
+    border-bottom: 2px solid #f8f9fa;
+}
+
+.gc-modal-kicker {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #ff8800;
+    margin: 0 0 0.75rem;
+}
+
+.gc-modal-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #252163;
+    margin: 0;
+}
+
+.gc-modal-body {
+    padding: 2rem 2.5rem 2.5rem;
+}
+
+.gc-modal-body p {
+    margin: 0 0 1.25rem;
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.gc-modal-body p:last-child {
+    margin-bottom: 0;
+}
+
+.gc-modal-signoff {
+    font-weight: 700;
+    color: #ff8800;
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 48em) {
+    .gc-modal.active {
+        padding: 1rem;
+    }
+    
+    .gc-modal-content {
+        max-height: 90vh;
+        border-radius: 1rem;
+    }
+    
+    .gc-modal-header {
+        padding: 2rem 1.5rem 1.25rem;
+    }
+    
+    .gc-modal-title {
+        font-size: 1.5rem;
+    }
+    
+    .gc-modal-body {
+        padding: 1.5rem;
+    }
+    
+    .gc-modal-body p {
+        font-size: 1rem;
+    }
+    
+    .read-more-btn {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 .who-we-are-stats-row {

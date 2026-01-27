@@ -2,46 +2,7 @@
 // Simple data file for CCE companies; edit or extend as needed
 return [
     [
-        'id' => 'huds-cleaning',
-        'name' => 'Huds Cleaning',
-        'logo' => 'assets/image/companies-and-people/cce-logo.jpeg',
-        'excerpt' => '',
-        'description' => '',
-        'website' => '',
-            'link' => '#',
-            'owners' => []
-        ],
-        [
-        'id' => 'surge-digital',
-        'name' => 'Surge Digital',
-        'logo' => 'assets/image/companies-and-people/cce-logo.jpeg',
-        'excerpt' => '',
-        'description' => '',
-        'website' => '',
-        'link' => '#',
-        'owners' => []
-        ],
-        [
-        'id' => 'women-in-nations',
-        'name' => 'Women in Nations',
-        'logo' => 'assets/image/companies-and-people/cce-logo.jpeg',
-        'excerpt' => '',
-        'description' => '',
-        'website' => '',
-        'link' => '#',
-        'owners' => []
-        ],
-        [
-        'id' => 'lightroom-studios',
-        'name' => 'LightRoom Studios',
-        'logo' => 'assets/image/companies-and-people/cce-logo.jpeg',
-        'excerpt' => '',
-        'description' => '',
-        'website' => '',
-        'link' => '#',
-        'owners' => []
-        ],
-    [
+        'id' => 'courage-computers',
         'id' => 'courage-computers',
         'name' => 'Courage Computers',
         'logo' => 'assets/image/companies-and-people/Courage-Computers-Logo.jpg',
@@ -181,6 +142,130 @@ return [
             // Add relevant owner IDs here
         ]
     ],
+    [
+        'id' => 'school-farms',
+    'name' => 'School Farms',
+    'logo' => 'assets/image/companies-and-people/school-farms.jpeg',
+    'excerpt' => 'A social enterprise and nonprofit initiative integrating agriculture, climate action, nutrition, and entrepreneurship into basic and secondary education. Using the CENS+ model to transform schools into practical learning hubs for food security and climate resilience.',
+    'description' => 'School Farms is a social enterprise and nonprofit initiative that integrates agriculture, climate action, nutrition, and entrepreneurship into basic and secondary education. The organisation uses its flagship Farms for Climate, Education, Nutrition & Skills (CENS+) model to transform schools into practical learning hubs where students gain hands-on skills while contributing to food security and climate resilience. School Farms works with schools, communities, development partners, and policymakers to deliver school gardens, agripreneurship training, nutrition education, and climate-smart agriculture solutions. Its work supports youth empowerment, sustainable livelihoods, and community-led development, while aligning with national education curricula and global development goals. The organisation operates at the intersection of education, agriculture, and climate innovation, with a strong focus on scalable and locally grounded impact.',
+    'services' => [
+        'School Gardens',
+        'Agripreneurship Training',
+        'Nutrition Education',
+        'Climate-Smart Agriculture Solutions',
+        'CENS+ Model Implementation'
+    ],
+    'core_values' => [
+        'Youth Empowerment',
+        'Food Security',
+        'Climate Resilience',
+        'Community-Led Development',
+        'Sustainable Livelihoods'
+    ],
+    'strengths' => [
+        'Integration of education and agriculture',
+        'Hands-on practical learning approach',
+        'Alignment with national curricula and SDGs',
+        'Scalable and locally grounded solutions',
+        'Multi-stakeholder partnerships'
+    ],
+    'website' => '',
+    'link' => '#',
+'owners' => [
+    // Add relevant owner IDs here
+]
+],
+[
+'id' => 'spiritdriven-solutions',
+    'name' => 'Spiritdriven Solutions',
+    'logo' => 'assets/image/companies-and-people/spiritdriven.png',
+    'excerpt' => 'A Design and Strategy agency committed to crafting and serving excellence in design, branding and digital marketing. Guiding clients through conceptualizing, visualizing and production stages with tailor-made solutions.',
+    'description' => 'Spiritdriven Solutions is a growing team of spirited young people committed to crafting and serving excellence in design, branding and digital marketing. With over 15 years of combined working experience, we passionately guide our clients through the entire process of conceptualising, visualising and production stages of design, branding and print. As a development-first design agency, we actively partner with institutions engaged in projects aligned with SDG 4 (Quality Education), SDG 8 (Decent Work) and SDG 10 (Reduced Inequalities). We are chiefly preoccupied with providing tailor-made design and marketing solutions that enable start-ups to meet their business objectives.',
+    'services' => [
+        'Design',
+        'Branding',
+        'Digital Marketing',
+        'Print Production'
+    ],
+    'core_values' => [
+        'Excellence',
+        'Innovation',
+        'Quality Education',
+        'Decent Work',
+        'Reduced Inequalities'
+    ],
+    'founded' => '2017',
+    'location' => 'Ghana',
+    'website' => '',
+    'link' => '#',
+    'owners' => ['miracle-hagan']
+    ],
   
-  
+
+
+[
+    'id' => 'lightroom-media',
+    'name' => 'Lightroom Media Limited',
+    'logo' => 'assets/image/companies-and-people/lightroom-media-logo.png',
+    'excerpt' => 'Delivering innovative media solutions including graphic design, branding, print creatives, and digital content production.',
+    'description' => 'Caleb works closely with individuals, businesses, and institutions to bring ideas to life through compelling visuals. His work reflects creativity, professionalism, and a commitment to excellence.',
+    'website' => '',
+    'link' => '#',
+    'owners' => ['caleb-obipeh']
+],
+
+
+[
+    'id' => 'surge-digital',
+    'name' => 'Surge Digital',
+    'logo' => 'assets/image/companies-and-people/cce-logo.jpeg',
+    'excerpt' => 'A communications and digital strategy company that helps organisations communicate with intention and impact through digital strategy, storytelling, social media, and advocacy communications.',
+    'description' => 'Surge Digital is a communications and digital strategy company that helps organisations communicate with intention and impact. We partner with institutions, initiatives, and brands to design communication solutions that inform audiences, spark interaction, and inspire meaningful action. Our work spans digital strategy, storytelling, social media, advocacy communications, and knowledge products. We believe communication should do more than share information. It should create understanding, build trust, and move people.',
+    'tagline' => 'Inform. Interact. Impact',
+    'services' => [
+        'Digital Strategy',
+        'Storytelling',
+        'Social Media',
+        'Advocacy Communications',
+        'Knowledge Products'
+    ],
+    'core_values' => [
+        'Intention',
+        'Impact',
+        'Understanding',
+        'Trust'
+    ],
+    'website' => '',
+    'link' => '#',
+    'owners' => []
+],
+[
+    'id' => 'enel-business-center',
+    'name' => 'ENEL Business Center',
+    'logo' => 'assets/image/companies-and-people/enel.jpeg',
+    'excerpt' => 'A dynamic service-oriented enterprise specializing in transport and telecommunication solutions. Committed to delivering reliable, efficient, and customer-focused services for individual and corporate needs.',
+    'description' => 'ENEL Business Center is a dynamic service-oriented enterprise specializing in transport and telecommunication solutions. The company is committed to delivering reliable, efficient, and customer-focused services that support both individual and corporate needs. In transport services, ENEL Business Center provides safe and timely mobility solutions designed to enhance convenience and operational efficiency. Its telecommunication services focus on facilitating seamless electronic cash transactions and related services. Driven by professionalism, innovation, and integrity, ENEL Business Center aims to contribute to business growth and everyday activities by ensuring accessibility, speed, and quality in every service delivered.',
+    'services' => [
+        'Transport Solutions',
+        'Telecommunication Services',
+        'Electronic Cash Transactions',
+        'Mobility Solutions'
+    ],
+    'core_values' => [
+        'Professionalism',
+        'Innovation',
+        'Integrity',
+        'Customer Focus'
+    ],
+    'strengths' => [
+        'Reliable and efficient service delivery',
+        'Safe and timely transport solutions',
+        'Seamless electronic transaction facilitation',
+        'Accessibility and quality assurance'
+    ],
+    'website' => '',
+    'link' => '#',
+    'owners' => []
+],
+
 ];

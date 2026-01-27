@@ -1,3 +1,32 @@
+// General Coordinator Modal Functions
+function openGCModal() {
+    const modal = document.getElementById('gc-modal');
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeGCModal() {
+    const modal = document.getElementById('gc-modal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+function closeGCModalOnOutside(event) {
+    if (event.target.id === 'gc-modal') {
+        closeGCModal();
+    }
+}
+
+// Close modal on Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeGCModal();
+    }
+});
 
 // Hero Slider - Working Version
 let currentSlideIndex = 0;
