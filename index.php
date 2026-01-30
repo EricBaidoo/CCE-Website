@@ -27,110 +27,67 @@ $meta = [
 <main id="main-content" role="main">
     <!-- HERO SECTION -->
     <section class="hero-section">
-        <div class="hero-background">
-            <div class="hero-gradient-overlay"></div>
-            <div class="hero-pattern"></div>
+        <!-- Hero Image Slider -->
+        <div class="hero-slider-container">
+            <div class="hero-slide active">
+                <img src="assets/image/hero/001-w2000.jpg" alt="Cross-Cutting Excellence" loading="eager">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-slide">
+                <img src="assets/image/hero/002-w2000.jpg" alt="Faculty Endeavours" loading="lazy">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-slide">
+                <img src="assets/image/hero/003-w2000.jpg" alt="Global Impact" loading="lazy">
+                <div class="hero-overlay"></div>
+            </div>
         </div>
         
-        <div class="hero-container">
-            <div class="hero-content-wrapper">
-                <!-- Hero Badge -->
-                <div class="hero-badge-wrapper">
-                    <span class="hero-badge">FOCUS • DILIGENCE • CONSISTENCY</span>
-                </div>
-                
-                <!-- Main Hero Content -->
-                <div class="hero-main-content">
-                    <h1 class="hero-main-title">
-                        <span class="title-line-1">Cross-Cutting</span>
-                        <span class="title-line-2">Excellence</span>
-                    </h1>
-                    <p class="hero-tagline">Christians Establishing the Glory of the Lord Jesus Christ</p>
-                    <p class="hero-description">Building the capacity of Christian professionals to transform their spheres of endeavour with the manifold wisdom of God</p>
-                    
-                    <!-- Hero Actions -->
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <div class="hero-container">
+                <!-- Content Slide 1 -->
+                <div class="hero-content-slide active" data-slide="0">
+                    <p class="hero-kicker">FOCUS • DILIGENCE • CONSISTENCY</p>
+                    <h1 class="hero-title">Cross-Cutting Excellence</h1>
+                    <p class="hero-subtitle">Building the capacity of Christian professionals to transform their spheres of endeavour with the manifold wisdom of God</p>
                     <div class="hero-actions">
-                        <a href="get-involved.php" class="hero-btn hero-btn-primary">
-                            <span>Get Involved</span>
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                        <a href="about.php" class="hero-btn hero-btn-secondary">
-                            <span>Learn More</span>
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Hero Stats -->
-            <div class="hero-stats-wrapper">
-                <div class="hero-stat-card">
-                    <div class="stat-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="stat-content">
-                        <div class="stat-number">200+</div>
-                        <div class="stat-label">Professionals</div>
+                        <a href="get-involved.php" class="hero-btn hero-btn-primary">Get Involved</a>
+                        <a href="about.php" class="hero-btn hero-btn-secondary">Learn More</a>
                     </div>
                 </div>
                 
-                <div class="hero-stat-card">
-                    <div class="stat-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="stat-content">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label">Countries</div>
+                <!-- Content Slide 2 -->
+                <div class="hero-content-slide" data-slide="1">
+                    <p class="hero-kicker">BUILDING CAPACITY</p>
+                    <h1 class="hero-title">Faculty Endeavours</h1>
+                    <p class="hero-subtitle">Empowering professionals across eight strategic faculties to excel in their diverse spheres of influence</p>
+                    <div class="hero-actions">
+                        <a href="faculty.php" class="hero-btn hero-btn-primary">Explore Faculties</a>
+                        <a href="about.php" class="hero-btn hero-btn-secondary">Learn More</a>
                     </div>
                 </div>
                 
-                <div class="hero-stat-card">
-                    <div class="stat-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.7088 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="stat-content">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label">Years Active</div>
-                    </div>
-                </div>
-                
-                <div class="hero-stat-card">
-                    <div class="stat-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M19 21V5C19 4.46957 18.7893 3.96086 18.4142 3.58579C18.0391 3.21071 17.5304 3 17 3H7C6.46957 3 5.96086 3.21071 5.58579 3.58579C5.21071 3.96086 5 4.46957 5 5V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M3 21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M9 7H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M9 11H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M9 15H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="stat-content">
-                        <div class="stat-number">8</div>
-                        <div class="stat-label">Faculty Endeavours</div>
+                <!-- Content Slide 3 -->
+                <div class="hero-content-slide" data-slide="2">
+                    <p class="hero-kicker">TRANSFORMING NATIONS</p>
+                    <h1 class="hero-title">Global Impact</h1>
+                    <p class="hero-subtitle">Christians establishing the glory of the Lord Jesus Christ across the world through their secular professions</p>
+                    <div class="hero-actions">
+                        <a href="get-involved.php" class="hero-btn hero-btn-primary">Join Movement</a>
+                        <a href="events.php" class="hero-btn hero-btn-secondary">View Events</a>
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- Floating Elements -->
-        <div class="hero-floating-element hero-float-1"></div>
-        <div class="hero-floating-element hero-float-2"></div>
-        <div class="hero-floating-element hero-float-3"></div>
+        <!-- Hero Controls -->
+        <div class="hero-controls">
+            <button class="hero-control active" data-slide="0" aria-label="Slide 1"></button>
+            <button class="hero-control" data-slide="1" aria-label="Slide 2"></button>
+            <button class="hero-control" data-slide="2" aria-label="Slide 3"></button>
+        </div>
+
     </section>
 
 
@@ -173,22 +130,7 @@ $meta = [
             </div>
           </div>
         </div>
-        <div class="who-we-are-stats-row">
-          <div class="who-we-are-stats">
-            <div class="stat">
-              <span class="stat-number">8</span>
-              <span class="stat-label">Faculty Endeavours</span>
-            </div>
-            <div class="stat">
-              <span class="stat-number">10+</span>
-              <span class="stat-label">Years Active</span>
-            </div>
-            <div class="stat">
-              <span class="stat-number">12+</span>
-              <span class="stat-label">Conferences</span>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
 
@@ -843,79 +785,4 @@ $meta = [
 
 <!-- FOOTER -->
 <?php include 'footer.php'; ?>
-
-<!-- HERO SLIDER JAVASCRIPT -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Hero Slider
-  let currentSlide = 0;
-  const slides = document.querySelectorAll('.hero-slider .slide');
-  function showSlide(idx) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === idx);
-      slide.style.display = i === idx ? 'block' : 'none';
-    });
-  }
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
-  showSlide(currentSlide);
-  setInterval(nextSlide, 5000);
-
-  // People Carousel Navigation and Auto-scroll
-  const carousels = document.querySelectorAll('.people-carousel');
-  
-  // Auto-scroll every 3 seconds
-  carousels.forEach(carousel => {
-    setInterval(() => {
-      const scrollAmount = 340; // Card width + gap
-      const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-      
-      if (carousel.scrollLeft >= maxScroll - 10) {
-        // Reset to beginning
-        carousel.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-      }
-    }, 3000);
-  });
-  
-  // Manual navigation buttons
-  const carouselBtns = document.querySelectorAll('.carousel-btn');
-  carouselBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-      const carouselId = this.getAttribute('data-carousel');
-      const carousel = document.getElementById(carouselId);
-      const scrollAmount = 340; // Card width + gap
-      
-      if (this.classList.contains('carousel-prev')) {
-        carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-      } else {
-        carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-      }
-    });
-  });
-
-  // Companies Carousel - Infinite Scroll (Auto-scroll only)
-  const companiesCarousel = document.getElementById('companies-carousel');
-  if (companiesCarousel) {
-    const cards = companiesCarousel.querySelectorAll('.company-carousel-card');
-    const cardCount = cards.length / 2; // Original count (duplicated for infinite effect)
-    const cardWidth = cards[0].offsetWidth + 32; // Card width + gap
-    
-    // Auto-scroll
-    setInterval(() => {
-      companiesCarousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
-      
-      // Reset to start when reaching duplicated section
-      setTimeout(() => {
-        if (companiesCarousel.scrollLeft >= cardWidth * cardCount - 50) {
-          companiesCarousel.scrollTo({ left: 0, behavior: 'auto' });
-        }
-      }, 600);
-    }, 4000);
-  }
-});
-</script>
 
