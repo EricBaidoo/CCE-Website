@@ -51,10 +51,10 @@ $meta = [
                     <p class="hero-kicker">FOCUS • DILIGENCE • CONSISTENCY</p>
                     <h1 class="hero-title">Cross-Cutting Excellence</h1>
                     <p class="hero-subtitle">Building the capacity of Christian professionals to transform their spheres of endeavour with the manifold wisdom of God</p>
-                    <div class="hero-actions">
+                    <!-- <div class="hero-actions">
                         <a href="get-involved.php" class="hero-btn hero-btn-primary">Get Involved</a>
                         <a href="about.php" class="hero-btn hero-btn-secondary">Learn More</a>
-                    </div>
+                    </div> -->
                 </div>
                 
                 <!-- Content Slide 2 -->
@@ -62,10 +62,10 @@ $meta = [
                     <p class="hero-kicker">BUILDING CAPACITY</p>
                     <h1 class="hero-title">Faculty Endeavours</h1>
                     <p class="hero-subtitle">Empowering professionals across eight strategic faculties to excel in their diverse spheres of influence</p>
-                    <div class="hero-actions">
+                    <!-- <div class="hero-actions">
                         <a href="faculty.php" class="hero-btn hero-btn-primary">Explore Faculties</a>
                         <a href="about.php" class="hero-btn hero-btn-secondary">Learn More</a>
-                    </div>
+                    </div> -->
                 </div>
                 
                 <!-- Content Slide 3 -->
@@ -73,10 +73,10 @@ $meta = [
                     <p class="hero-kicker">TRANSFORMING NATIONS</p>
                     <h1 class="hero-title">Global Impact</h1>
                     <p class="hero-subtitle">Christians establishing the glory of the Lord Jesus Christ across the world through their secular professions</p>
-                    <div class="hero-actions">
+                    <!-- <div class="hero-actions">
                         <a href="get-involved.php" class="hero-btn hero-btn-primary">Join Movement</a>
                         <a href="events.php" class="hero-btn hero-btn-secondary">View Events</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
