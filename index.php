@@ -91,75 +91,53 @@ $meta = [
     </section>
 
 
-
-  
-    <!-- WHO WE ARE SECTION (Modernized) -->
-    <section class="who-we-are-section">
-      <div class="who-we-are-container">
+      
+      <!-- WHO WE ARE SECTION (Modernized) -->
+      <section class="who-we-are-section">
+        <div class="who-we-are-container">
         <div class="who-we-are-header">
           <h2 class="who-we-are-title">Excellence is to Excel</h2>
           <p class="who-we-are-subtitle">To have excess competence, be abundantly fruitful, to have more than may be immediately required... relevant more</p>
         </div>
         <div class="who-we-are-content">
           <div class="who-we-are-text">
-            <h4>What is Excellence?</h4>
-            <p>Excellence is to excel, to have excess competence, be abundantly fruitful, to have more than may be immediately required...relevant more. Excellence is to possess eternal life.</p>
-            
-            <h4>Our Vision</h4>
-            <p>We see Christians establishing the glory of the Lord Jesus Christ across the world through their secular professions.</p>
-            
-            <h4>Our Mission</h4>
-            <p>Building the capacity of Christian professionals to transform their various spheres of endeavour with the manifold wisdom of God.</p>
-            
-            <h4>Seculo-Spiritual Aptitude (SSA)</h4>
-            <p>God's word, inspired by the Spirit of Christ Jesus, is the guidance by which the skill of godliness is manifested in secular endeavours. We call this Seculo-Spiritual Aptitude (SSA).</p>
+          <h4>What is Excellence?</h4>
+          <p>Excellence is to excel, to have excess competence, be abundantly fruitful, to have more than may be immediately required...relevant more. Excellence is to possess eternal life.</p>
+          
+          <h4>Our Vision</h4>
+          <p>We see Christians establishing the glory of the Lord Jesus Christ across the world through their secular professions.</p>
+          
+          <h4>Our Mission</h4>
+          <p>Building the capacity of Christian professionals to transform their various spheres of endeavour with the manifold wisdom of God.</p>
+          
+          <h4>Seculo-Spiritual Aptitude (SSA)</h4>
+          <p>God's word, inspired by the Spirit of Christ Jesus, is the guidance by which the skill of godliness is manifested in secular endeavours. We call this Seculo-Spiritual Aptitude (SSA).</p>
           </div>
-          <div class="who-we-are-image">
-            <div class="coordinator-message">
-              <p class="message-kicker">From The General Coordinator</p>
-              <h4 class="message-title">CCE is on the move</h4>
-              <p>CCE is on the move &mdash; empowered by the anointing of the Holy Ghost to manifest high-end Seculo-Spiritual Aptitude (SSA).</p>
-              <p>At CCE we train and equip God’s children in Governance and Development, Education and Training, Science and Technology, Philosophy and the Arts, Finance and Business, Relationships and Family, Missions and Apologetics, Communication and Media.</p>
-              <p>We are transforming our secular spaces and spheres of influence to the glory of our God, in Christ Jesus.</p>
-              <p>This anointing living in us makes us meek, hard working, patient, wise, bold, highly intelligent, efficient and driven by conviction. CCE provides what you need to make your life have eternal relevance: we focus on issues of eternal value.</p>
-              <p>We are on the ground, engaged in local government and community development, national policy and programme implementation. We train and equip volunteers and facilitators who drive change at national and internal levels, building bottom-up experience and top-down execution in a way that integrates functional systems into real life outcomes &mdash; with eternal value!</p>
-              <p>We work in the arts and philosophy, guiding film-makers, theatre performers and creatives across the range to engineer the culture of godliness that provides oxygen for prosperity in communities, nations and generations.</p>
-              <p>CCE People are business owners and consultants spreading out across everywhere, reaching out to all the continents and creating the stable network yielding the critical mass of Christian professionals required to transform our world until the kingdoms of this world become the kingdoms of our God and of His Christ.</p>
-              <p>We welcome you with open arms to come labour with and for the Lord Jesus. You will be trained and equipped to make our nations godly and prosperous for Jesus!</p>
-              <p class="coordinator-signoff">General Coordinator, CCE</p>
+            <div class="who-we-are-image">
+            <img src="assets/image/companies-and-people/Eric-Baidoo.png" alt="CCE Team" onerror="this.src='assets/image/hero/001-w800.jpg';">
+            <div class="image-caption">
+              <h4>Our Leadership Team</h4>
+              <p>Dedicated professionals transforming institutions through faith-driven excellence</p>
             </div>
+            </div>
+        </div>
+
+        <!-- From The General Coordinator -->
+        <div class="coordinator-message">
+          <h3 class="message-title">From The General Coordinator</h3>
+          <div class="message-content">
+          <p>CCE is on the move-empowered by the anointing of the Holy Ghost to manifest high-end Seculo-Spiritual Aptitude (SSA).</p>
+          <p>At CCE we train and equip God’s Children in the areas of Governance and Development, Education and Training, Science and Technology, philosophy and the Arts, Finance and Business, Relationships and Family, Missions and Apologetics, Communication and Media.</p>
+          <p>We are transforming our secular spaces and spheres of influence to the glory of our God, in Christ Jesus.</p>
+          <p>This anointing living in us makes us meek, hard working, patient, wise, bold, highly intelligent, efficient and driven by conviction. CCE provides what you need to make your life have eternal relevance: we focus on issues of eternal value. We are on the ground, engaged in local government and community development, national policy and programme implementation. We train and equip volunteers and facilitators who drive change at national and internal levels, building bottom-up experience and top-down execution in a way that integrate functional systems into real life outcomes-with eternal value! We work in the arts and philosophy, guiding film-makers, theatre performers and creatives across the range to engineer the culture of godliness that provides oxygen for prosperity in communities, nations and generations.</p>
+          <p>CCE People are business owners and consultants spreading out across everywhere, reaching out to all the continents and creating the stable network yielding the critical mass if Christian Professional required to transform our world until the kingdoms of this world become the kingdoms of our God and of his Christ. We welcome you with open arms to come labour with and for the Lord Jesus. You will be trained and equipped to make our nations godly and prosperous for Jesus!</p>
           </div>
         </div>
 
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <!-- GENERAL COORDINATOR MODAL -->
-    <div id="gc-modal" class="gc-modal" onclick="closeGCModalOnOutside(event)">
-      <div class="gc-modal-content">
-        <button class="gc-modal-close" onclick="closeGCModal()" aria-label="Close modal">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-        <div class="gc-modal-header">
-          <p class="gc-modal-kicker">From The General Coordinator</p>
-          <h3 class="gc-modal-title">CCE is on the move</h3>
-        </div>
-        <div class="gc-modal-body">
-          <p>CCE is on the move &mdash; empowered by the anointing of the Holy Ghost to manifest high-end Seculo-Spiritual Aptitude (SSA).</p>
-          <p>At CCE we train and equip God's children in Governance and Development, Education and Training, Science and Technology, Philosophy and the Arts, Finance and Business, Relationships and Family, Missions and Apologetics, Communication and Media.</p>
-          <p>We are transforming our secular spaces and spheres of influence to the glory of our God, in Christ Jesus.</p>
-          <p>This anointing living in us makes us meek, hard working, patient, wise, bold, highly intelligent, efficient and driven by conviction. CCE provides what you need to make your life have eternal relevance: we focus on issues of eternal value.</p>
-          <p>We are on the ground, engaged in local government and community development, national policy and programme implementation. We train and equip volunteers and facilitators who drive change at national and internal levels, building bottom-up experience and top-down execution in a way that integrates functional systems into real life outcomes &mdash; with eternal value!</p>
-          <p>We work in the arts and philosophy, guiding film-makers, theatre performers and creatives across the range to engineer the culture of godliness that provides oxygen for prosperity in communities, nations and generations.</p>
-          <p>CCE People are business owners and consultants spreading out across everywhere, reaching out to all the continents and creating the stable network yielding the critical mass of Christian professionals required to transform our world until the kingdoms of this world become the kingdoms of our God and of His Christ.</p>
-          <p>We welcome you with open arms to come labour with and for the Lord Jesus. You will be trained and equipped to make our nations godly and prosperous for Jesus!</p>
-          <p class="gc-modal-signoff">General Coordinator, CCE</p>
-        </div>
-      </div>
-    </div>
+ 
 
     <!-- FACULTY ENDEAVOURS SECTION -->
     <section id="faculty-endeavours" class="faculty-endeavours-section" aria-labelledby="faculty-heading">
@@ -677,51 +655,84 @@ $meta = [
     </section>
 
     <!-- GLOBAL IMPACT SECTION -->
-
     <section id="global-impact" class="global-impact-section" aria-labelledby="global-impact-heading">
       <h2 id="global-impact-heading" class="section-title">Global Impact</h2>
       <p class="section-desc">CCE's reach spans continents, empowering professionals and organizations to transform their communities with excellence and integrity.</p>
       <div class="global-impact-content">
-        <div class="container">
+        <div class="who-stats" role="group" aria-label="CCE Impact Statistics">
+          <div class="stat">
+            <span class="stat-number" data-count="5000">5,000+</span>
+            <span class="stat-label">People Trained</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-count="25">25+</span>
+            <span class="stat-label">Countries Reached</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-count="50">50+</span>
+            <span class="stat-label">Partner Organizations</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO WE ARE SECTION -->
+    <section id="who-we-are" class="who-we-are-section" aria-labelledby="who-we-are-heading">
+      <div class="container">
+        <div class="section-header">
           <h2 id="who-we-are-heading" class="section-title">Who We Are</h2>
           <p class="section-subtitle">Cross-Cutting Excellence (CCE) mobilizes Christian professionals to reclaim and transform the secular institutions of society by applying the manifold wisdom of God in practical, professional, and ethical ways.</p>
-          <div class="who-cards-row">
-            <div class="who-card who-card-text">
-              <div class="who-card-section">
-                <h4>Context</h4>
-                <p>Our generation faces cascading crises—moral decay, geopolitical instability, environmental threats, and rising social fragmentation. CCE believes that principled, faith-driven leadership in professional spaces can reverse these trends and restore flourishing.</p>
-              </div>
-              <div class="who-card-section">
-                <h4>Vision</h4>
-                <p>Christians establishing the glory of the Lord across the world through their secular professions until the kingdoms of this world become the kingdoms of our Lord and His Christ.</p>
-              </div>
-              <div class="who-card-section">
-                <h4>Mission</h4>
-                <p>To build the capacity of Christian professionals—through training, mentorship, and mobilization—so they can ethically and effectively transform their spheres of influence.</p>
-              </div>
-              <div class="who-card-section">
-                <h4>Strategy - SSA</h4>
-                <p><strong>Secular-Spiritual Aptitude (SSA)</strong> is our central philosophy: excellence in godliness while operating in the secular space. SSA means combining high professional competence with visible Christlike character.</p>
-              </div>
+        </div>
+        
+        <div class="who-content-grid">
+          <div class="who-content-text">
+            <div class="content-block">
+              <h3>Context</h3>
+              <p>Our generation faces cascading crises—moral decay, geopolitical instability, environmental threats, and rising social fragmentation. CCE believes that principled, faith-driven leadership in professional spaces can reverse these trends and restore flourishing.</p>
             </div>
-            <div class="who-card who-card-image">
-              <img src="assets/image/hero/001-w800.jpg" alt="Who We Are Image" style="width:100%;border-radius:1.2rem;box-shadow:0 0.2em 0.7em rgba(58,12,163,0.09);">
+            
+            <div class="content-block">
+              <h3>Vision</h3>
+              <p>Christians establishing the glory of the Lord across the world through their secular professions until the kingdoms of this world become the kingdoms of our Lord and His Christ.</p>
+            </div>
+            
+            <div class="content-block">
+              <h3>Mission</h3>
+              <p>To build the capacity of Christian professionals—through training, mentorship, and mobilization—so they can ethically and effectively transform their spheres of influence.</p>
+            </div>
+            
+            <div class="content-block">
+              <h3>Strategy - SSA</h3>
+              <p><strong>Secular-Spiritual Aptitude (SSA)</strong> is our central philosophy: excellence in godliness while operating in the secular space. SSA means combining high professional competence with visible Christlike character.</p>
             </div>
           </div>
-          <div class="who-cta-row">
-            <div class="who-stats" role="group" aria-label="CCE Impact Statistics">
-              <div class="stat">
-                <span class="stat-number" data-count="5000">5,000+</span>
-                <span class="stat-label">People Trained</span>
+          
+          <div class="who-content-image">
+            <div class="image-container">
+              <img src="assets/image/companies-and-people/Eric-Baidoo.png" alt="CCE Team" onerror="this.src='assets/image/hero/001-w800.jpg';">
+              <div class="image-caption">
+                <h4>Our Leadership Team</h4>
+                <p>Dedicated professionals transforming institutions through faith-driven excellence</p>
               </div>
-              <div class="stat">
-                <span class="stat-number" data-count="25">25+</span>
-                <span class="stat-label">Countries Reached</span>
-              </div>
-              <div class="stat">
-                <span class="stat-number" data-count="50">50+</span>
-                <span class="stat-label">Partner Organizations</span>
-              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="coordinator-message">
+          <div class="message-container">
+            <h3 class="message-title">From The General Coordinator</h3>
+            <div class="message-content">
+              <p class="message-intro">CCE is on the move-empowered by the anointing of the Holy Ghost to manifest high-end Seculo-Spiritual Aptitude (SSA).</p>
+              
+              <p>At CCE we train and equip God's Children in the areas of Governance and Development, Education and Training, Science and Technology, philosophy and the Arts, Finance and Business, Relationships and Family, Missions and Apologetics, Communication and Media.</p>
+              
+              <p>We are transforming our secular spaces and spheres of influence to the glory of our God, in Christ Jesus.</p>
+              
+              <p>This anointing living in us makes us meek, hard working, patient, wise, bold, highly intelligent, efficient and driven by conviction. CCE provides what you need to make your life have eternal relevance: we focus on issues of eternal value. We are on the ground, engaged in local government and community development, national policy and programme implementation. We train and equip volunteers and facilitators who drive change at national and internal levels, building bottom-up experience and top-down execution in a way that integrate functional systems into real life outcomes-with eternal value!</p>
+              
+              <p>We work in the arts and philosophy, guiding film-makers, theatre performers and creatives across the range to engineer the culture of godliness that provides oxygen for prosperity in communities, nations and generations.</p>
+              
+              <p class="message-closing">CCE People are business owners and consultants spreading out across everywhere, reaching out to all the continents and creating the stable network yielding the critical mass if Christian Professional required to transform our world until the kingdoms of this world become the kingdoms of our God and of his Christ. We welcome you with open arms to come labour with and for the Lord Jesus. You will be trained and equipped to make our nations godly and prosperous for Jesus!</p>
             </div>
           </div>
         </div>
