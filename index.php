@@ -116,7 +116,7 @@ $meta = [
             <div class="who-we-are-image">
             <img src="assets/image/companies-and-people/Eric-Baidoo.png" alt="CCE Team" onerror="this.src='assets/image/hero/001-w800.jpg';">
             <div class="image-caption">
-              <h4>Our Leadership Team</h4>
+              <h4>Our  Team</h4>
               <p>Dedicated professionals transforming institutions through faith-driven excellence</p>
             </div>
             </div>

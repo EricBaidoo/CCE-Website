@@ -1216,7 +1216,7 @@
 
 .faculty-endeavours-card {
     background: #fff;
-    border-radius: 1.5rem;
+    border-radius: 0;
     padding: 1.5rem;
     box-shadow: 0 0.625rem 2.5rem rgba(37, 33, 99, 0.08);
     border: 0.0625rem solid rgba(37, 33, 99, 0.08);
@@ -2961,6 +2961,10 @@
     
     .faculty-endeavours-grid {
         grid-template-columns: 1fr;
+    }
+
+    .faculty-endeavours-card {
+        width: 100%;
     }
     
     .people-carousel {
