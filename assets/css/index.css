@@ -1278,6 +1278,28 @@
     color: #252163;
 }
 
+/* Square corners for all index cards */
+.faculty-endeavours-card,
+.hero-stat-card,
+.people-card,
+.people-card-image,
+.people-card-image img,
+.company-carousel-card,
+.company-carousel-logo,
+.company-carousel-logo img,
+.event-compact-card,
+.event-compact-image,
+.event-compact-image img,
+.news-compact-card,
+.news-compact-image,
+.news-compact-image img,
+.news-card,
+.news-card-media,
+.news-card-media img,
+.involvement-card {
+    border-radius: 0;
+}
+
 /* ========================================
    CCE PEOPLE SECTION
    ======================================== */
