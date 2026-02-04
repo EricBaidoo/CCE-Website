@@ -30,18 +30,26 @@ $meta = [
         <!-- Hero Image Slider -->
         <div class="hero-slider-container">
             <div class="hero-slide active">
-                <img src="assets/image/hero/001-w2000.jpg" alt="Cross-Cutting Excellence" loading="eager">
-                <div class="hero-overlay"></div>
+          <img src="assets/image/hero/001-w2000.jpg" alt="Cross-Cutting Excellence" loading="eager">
+          <div class="hero-overlay"></div>
             </div>
             <div class="hero-slide">
-                <img src="assets/image/hero/002-w2000.jpg" alt="Faculty Endeavours" loading="lazy">
-                <div class="hero-overlay"></div>
+          <img src="assets/image/pics/team3.jpg" alt="Faculty Endeavours" loading="lazy">
+            <div class="hero-overlay"></div>
             </div>
             <div class="hero-slide">
-                <img src="assets/image/hero/003-w2000.jpg" alt="Global Impact" loading="lazy">
-                <div class="hero-overlay"></div>
+            <img src="assets/image/pics/elias.jpg" alt="Global Impact" loading="lazy">
+            <div class="hero-overlay"></div>
             </div>
-        </div>
+            <div class="hero-slide">
+            <img src="assets/image/pics/team2.jpg" alt="CCE Community" loading="lazy">
+            <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-slide">
+            <img src="assets/image/pics/IMG_1228.jpg" alt="Leadership Training" loading="lazy">
+            <div class="hero-overlay"></div>
+            </div>
+          </div>
         
         <!-- Hero Content -->
         <div class="hero-content">
@@ -78,6 +86,20 @@ $meta = [
                         <a href="events.php" class="hero-btn hero-btn-secondary">View Events</a>
                     </div> -->
                 </div>
+
+                <!-- Content Slide 4 -->
+                <div class="hero-content-slide" data-slide="3">
+                  <p class="hero-kicker">COMMUNITY • MENTORSHIP</p>
+                  <h1 class="hero-title">CCE People</h1>
+                  <p class="hero-subtitle">A growing network of professionals, mentors, and volunteers advancing excellence in every sphere</p>
+                </div>
+
+                <!-- Content Slide 5 -->
+                <div class="hero-content-slide" data-slide="4">
+                  <p class="hero-kicker">LEADERSHIP • TRAINING</p>
+                  <h1 class="hero-title">Equipping Leaders</h1>
+                  <p class="hero-subtitle">Developing capacity, character, and competence for impact in public and private institutions</p>
+                </div>
             </div>
         </div>
         
@@ -86,6 +108,8 @@ $meta = [
             <button class="hero-control active" data-slide="0" aria-label="Slide 1"></button>
             <button class="hero-control" data-slide="1" aria-label="Slide 2"></button>
             <button class="hero-control" data-slide="2" aria-label="Slide 3"></button>
+          <button class="hero-control" data-slide="3" aria-label="Slide 4"></button>
+          <button class="hero-control" data-slide="4" aria-label="Slide 5"></button>
         </div>
 
     </section>
@@ -114,7 +138,7 @@ $meta = [
           <p>God's word, inspired by the Spirit of Christ Jesus, is the guidance by which the skill of godliness is manifested in secular endeavours. We call this Seculo-Spiritual Aptitude (SSA).</p>
           </div>
             <div class="who-we-are-image">
-            <img src="assets/image/companies-and-people/Eric-Baidoo.png" alt="CCE Team" onerror="this.src='assets/image/hero/001-w800.jpg';">
+            <img src="assets/image/pics/team.jpg" alt="CCE Team" onerror="this.src='assets/image/hero/001-w800.jpg';">
             <div class="image-caption">
               <h4>Our  Team</h4>
               <p>Dedicated professionals transforming institutions through faith-driven excellence</p>
@@ -148,7 +172,7 @@ $meta = [
         </header>
         <div class="faculty-endeavours-grid" role="group" aria-label="CCE Faculty Endeavours">
           <article class="faculty-endeavours-card" id="fe-gad">
-            <div class="faculty-endeavours-icon"><img src="assets/icons/fe-gad.svg" alt="Governance and Development icon" loading="lazy"></div>
+            <div class="faculty-endeavours-icon"><img src="assets/image/FE-icons/GAD.svg" alt="Governance and Development icon" loading="lazy"></div>
             <div class="faculty-endeavours-body">
               <h3>Governance & Development (GAD)</h3>
               <p>Strengthening governance, public policy and institutional capacity for sustainable development and ethical leadership.</p>
@@ -157,7 +181,7 @@ $meta = [
           </article>
 
           <article class="faculty-endeavours-card" id="fe-eat">
-            <div class="faculty-endeavours-icon"><img src="assets/icons/fe-eat.svg" alt="Education and Training icon" loading="lazy"></div>
+            <div class="faculty-endeavours-icon"><img src="assets/image/FE-icons/EAT.svg" alt="Education and Training icon" loading="lazy"></div>
             <div class="faculty-endeavours-body">
               <h3>Education & Training (EAT)</h3>
               <p>Empowering educators and trainers to formulate educational systems that drive industry and promote the glory of God.</p>
@@ -166,7 +190,7 @@ $meta = [
           </article>
 
           <article class="faculty-endeavours-card" id="fe-sat">
-            <div class="faculty-endeavours-icon"><img src="assets/icons/fe-sat.svg" alt="Science and Technology icon" loading="lazy"></div>
+            <div class="faculty-endeavours-icon"><img src="assets/image/FE-icons/SAT.svg" alt="Science and Technology icon" loading="lazy"></div>
             <div class="faculty-endeavours-body">
               <h3>Science & Technology (SAT)</h3>
               <p>Promoting ethical innovation, research excellence and technology adoption that serve humanity and honour God.</p>
@@ -175,7 +199,7 @@ $meta = [
           </article>
 
           <article class="faculty-endeavours-card" id="fe-paa">
-            <div class="faculty-endeavours-icon"><img src="assets/icons/fe-paa.svg" alt="Philosophy and Arts icon" loading="lazy"></div>
+            <div class="faculty-endeavours-icon"><img src="assets/image/FE-icons/PAA.svg" alt="Philosophy and Arts icon" loading="lazy"></div>
             <div class="faculty-endeavours-body">
               <h3>Philosophy & the Arts (PAA)</h3>
               <p>Integrating faith, culture and the arts to shape worldviews and communicate timeless truths with creativity.</p>
@@ -184,7 +208,7 @@ $meta = [
           </article>
 
           <article class="faculty-endeavours-card" id="fe-fab">
-            <div class="faculty-endeavours-icon"><img src="assets/icons/fe-fab.svg" alt="Finance and Business icon" loading="lazy"></div>
+            <div class="faculty-endeavours-icon"><img src="assets/image/FE-icons/FAB.svg" alt="Finance and Business icon" loading="lazy"></div>
             <div class="faculty-endeavours-body">
               <h3>Finance & Business (FAB)</h3>
               <p>Championing integrity, stewardship and excellence in business practice and financial management.</p>
@@ -193,7 +217,7 @@ $meta = [
           </article>
 
           <article class="faculty-endeavours-card" id="fe-raf">
-            <div class="faculty-endeavours-icon"><img src="assets/icons/fe-raf.svg" alt="Relationship and Family icon" loading="lazy"></div>
+            <div class="faculty-endeavours-icon"><img src="assets/image/FE-icons/RAF.svg" alt="Relationship and Family icon" loading="lazy"></div>
             <div class="faculty-endeavours-body">
               <h3>Relationship & Family (RAF)</h3>
               <p>Supporting healthy relationships, family resilience and community formation rooted in godly principles.</p>
@@ -202,7 +226,7 @@ $meta = [
           </article>
 
           <article class="faculty-endeavours-card" id="fe-maa">
-            <div class="faculty-endeavours-icon"><img src="assets/icons/fe-maa.svg" alt="Missions and Apologetics icon" loading="lazy"></div>
+            <div class="faculty-endeavours-icon"><img src="assets/image/FE-icons/MAA.svg" alt="Missions and Apologetics icon" loading="lazy"></div>
             <div class="faculty-endeavours-body">
               <h3>Missions & Apologetics (MAA)</h3>
               <p>Preparing professionals to engage culture with the gospel, defend the faith thoughtfully and serve missionally.</p>
@@ -211,7 +235,7 @@ $meta = [
           </article>
 
           <article class="faculty-endeavours-card" id="fe-cam">
-            <div class="faculty-endeavours-icon"><img src="assets/icons/fe-cam.svg" alt="Communication and Media icon" loading="lazy"></div>
+            <div class="faculty-endeavours-icon"><img src="assets/image/FE-icons/CAM.svg" alt="Communication and Media icon" loading="lazy"></div>
             <div class="faculty-endeavours-body">
               <h3>Communication & Media (CAM)</h3>
               <p>Equipping communicators to shape narratives, produce high-quality content and influence public discourse with truth.</p>

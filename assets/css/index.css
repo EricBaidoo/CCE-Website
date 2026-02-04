@@ -56,6 +56,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top center;
     display: block;
 }
 
@@ -339,7 +340,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: top center;
 }
 
 .hero-slider-controls {
@@ -596,31 +597,31 @@
 
 .hero-stats-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
     gap: 2rem;
-    max-width: 1000px;
+    max-width: 62.5rem;
     margin: 0 auto;
     animation: fadeInScale 1s ease 1.4s both;
 }
 
 .hero-stat-card {
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(1.25rem);
+    border: 0.0625rem solid rgba(255, 255, 255, 0.2);
     border-radius: 1rem;
     padding: 2rem;
     display: flex;
     align-items: center;
     gap: 1.5rem;
     transition: all 0.4s ease;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
 }
 
 .hero-stat-card:hover {
-    transform: translateY(-5px) scale(1.02);
+    transform: translateY(-0.3125rem) scale(1.02);
     background: rgba(255, 255, 255, 0.15);
     border-color: rgba(255, 136, 0, 0.3);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.75rem 2.5rem rgba(0, 0, 0, 0.15);
 }
 
 .stat-icon {
@@ -704,9 +705,9 @@
 
 .hero-stat-card {
     background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 20px;
+    backdrop-filter: blur(1.25rem);
+    border: 0.0625rem solid rgba(255, 255, 255, 0.15);
+    border-radius: 1.25rem;
     padding: 2rem;
     display: flex;
     align-items: center;
@@ -729,10 +730,10 @@
 }
 
 .hero-stat-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-0.5rem);
     background: rgba(255, 255, 255, 0.12);
     border-color: rgba(245, 124, 0, 0.4);
-    box-shadow: 0 20px 60px rgba(245, 124, 0, 0.3);
+    box-shadow: 0 1.25rem 3.75rem rgba(245, 124, 0, 0.3);
 }
 
 .hero-stat-card:hover::before {
@@ -741,21 +742,21 @@
 
 .stat-icon {
     flex-shrink: 0;
-    width: 60px;
-    height: 60px;
+    width: 3.75rem;
+    height: 3.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #f57c00 0%, #ff9800 100%);
-    border-radius: 15px;
+    border-radius: 0.9375rem;
     color: white;
-    box-shadow: 0 8px 30px rgba(245, 124, 0, 0.4);
+    box-shadow: 0 0.5rem 1.875rem rgba(245, 124, 0, 0.4);
     transition: all 0.4s ease;
 }
 
 .hero-stat-card:hover .stat-icon {
     transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 12px 40px rgba(245, 124, 0, 0.6);
+    box-shadow: 0 0.75rem 2.5rem rgba(245, 124, 0, 0.6);
 }
 
 .stat-content {
@@ -787,8 +788,8 @@
 }
 
 .hero-float-1 {
-    width: 300px;
-    height: 300px;
+    width: 18.75rem;
+    height: 18.75rem;
     background: radial-gradient(circle, #f57c00 0%, transparent 70%);
     top: 10%;
     left: 5%;
@@ -796,8 +797,8 @@
 }
 
 .hero-float-2 {
-    width: 200px;
-    height: 200px;
+    width: 12.5rem;
+    height: 12.5rem;
     background: radial-gradient(circle, #ffb74d 0%, transparent 70%);
     top: 60%;
     right: 10%;
@@ -805,8 +806,8 @@
 }
 
 .hero-float-3 {
-    width: 250px;
-    height: 250px;
+    width: 15.625rem;
+    height: 15.625rem;
     background: radial-gradient(circle, #ff9800 0%, transparent 70%);
     bottom: 15%;
     left: 15%;
@@ -849,7 +850,7 @@
 }
 
 /* Hero Mobile Responsiveness - Maintains desktop appearance */
-@media (max-width: 1024px) {
+@media (max-width: 64em) {
     .hero-content {
         max-width: 90%;
         padding: 0 1.5rem;
@@ -877,7 +878,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48em) {
     .hero-section {
         height: auto;
         min-height: 100vh;
@@ -925,7 +926,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30em) {
     .hero-section {
         height: auto;
         min-height: 100vh;
@@ -1151,7 +1152,15 @@
 /* Responsive */
 @media (max-width: 48em) {
     .who-we-are-section {
-        padding: 4rem 0;
+        padding: 2.5rem 0;
+    }
+
+    .who-we-are-container {
+        padding: 0 1rem;
+    }
+
+    .who-we-are-header {
+        margin: 0 auto 2rem auto;
     }
     
     .who-we-are-title {
@@ -1159,11 +1168,21 @@
     }
 
     .who-we-are-content {
-        gap: 2.5rem;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .who-we-are-text {
+        gap: 1.25rem;
     }
     
     .coordinator-message {
-        padding: 2rem 1.25rem;
+        padding: 1.5rem 1rem;
+        margin: 0;
+    }
+
+    .message-content {
+        max-width: 100%;
     }
 
     .message-title {
@@ -1234,7 +1253,7 @@
 .faculty-endeavours-icon {
     width: 3rem;
     height: 3rem;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem;
 }
 
 .faculty-endeavours-icon img {
@@ -1252,6 +1271,7 @@
     font-weight: 700;
     color: #252163;
     margin-bottom: 0.75rem;
+    text-align: center;
 }
 
 .faculty-endeavours-body p {
@@ -1259,6 +1279,7 @@
     color: #666;
     line-height: 1.6;
     margin-bottom: 0;
+    text-align: justify;
 }
 
 .faculty-endeavours-actions {
@@ -1400,7 +1421,7 @@
 
 .people-card-image {
     width: 100%;
-    height: 160px;
+    height: 200px;
     overflow: hidden;
     background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--secondary-color) 100%);
 }
@@ -1409,6 +1430,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top center;
     transition: transform 0.4s ease;
 }
 
@@ -3011,6 +3033,98 @@
 }
 
 @media (max-width: 768px) {
+    .section-header-modern {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .section-title-modern {
+        font-size: 2rem;
+    }
+
+    .section-description {
+        max-width: none;
+        text-align: left;
+    }
+
+    .view-all-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .faculty-endeavours-section {
+        padding: 2.5rem 1rem;
+    }
+
+    .faculty-endeavours-container {
+        padding: 0;
+    }
+
+    .faculty-endeavours-header {
+        margin-bottom: 2rem;
+    }
+
+    .faculty-endeavours-card,
+    .people-card,
+    .company-carousel-card,
+    .event-compact-card,
+    .news-compact-card,
+    .news-card,
+    .involvement-card,
+    .event-row {
+        width: 100%;
+        margin: 0;
+    }
+
+    .people-card,
+    .company-carousel-card {
+        flex: 0 0 100%;
+    }
+
+    .faculty-endeavours-card,
+    .event-compact-card,
+    .news-compact-card,
+    .news-card,
+    .involvement-card,
+    .people-card-content,
+    .event-compact-body,
+    .news-compact-body,
+    .news-card-body,
+    .company-carousel-card {
+        padding: 1rem;
+    }
+
+    .global-impact-section .section-title {
+        font-size: 2.2rem;
+    }
+
+    .global-impact-section .section-desc {
+        font-size: 1.05rem;
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+
+    .global-impact-content {
+        padding: 0 1rem;
+    }
+
+    .global-impact-section .who-stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2rem 1.5rem;
+        border-radius: 1rem;
+    }
+
+    .global-impact-section .who-stats .stat-number {
+        font-size: 3rem;
+    }
+
+    .global-impact-section .who-stats .stat-label {
+        font-size: 1.05rem;
+    }
+
     .cce-people-section {
         padding: 3rem 1rem;
     }
@@ -3032,7 +3146,7 @@
     }
     
     .people-card-image {
-        height: 180px;
+        height: 11.25rem; /* 180px = 11.25rem (assuming 16px base) */
     }
     
     .people-card-content {
@@ -3040,8 +3154,8 @@
     }
     
     .carousel-control-btn {
-        width: 40px;
-        height: 40px;
+        width: 2.5rem;
+        height: 2.5rem;
     }
     .companies-grid {
         grid-template-columns: 1fr;
@@ -3066,6 +3180,57 @@
 }
 
 @media (max-width: 30em) {
+    .section-title-modern {
+        font-size: 1.8rem;
+    }
+
+    .section-description {
+        font-size: 0.98rem;
+    }
+
+    .view-all-btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    .faculty-endeavours-card,
+    .event-compact-card,
+    .news-compact-card,
+    .news-card,
+    .involvement-card,
+    .people-card-content,
+    .event-compact-body,
+    .news-compact-body,
+    .news-card-body,
+    .company-carousel-card {
+        padding: 0.85rem;
+    }
+
+    .global-impact-section {
+        padding: 2.5rem 1rem;
+    }
+
+    .global-impact-section .section-title {
+        font-size: 2rem;
+    }
+
+    .global-impact-section .section-desc {
+        font-size: 1rem;
+    }
+
+    .global-impact-section .who-stats {
+        padding: 1.5rem 1.25rem;
+        gap: 1.25rem;
+    }
+
+    .global-impact-section .who-stats .stat-number {
+        font-size: 2.6rem;
+    }
+
+    .global-impact-section .who-stats .stat-label {
+        font-size: 1rem;
+    }
+
     .hero-slider {
         height: 28.125rem;
     }
