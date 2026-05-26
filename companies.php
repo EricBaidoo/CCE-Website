@@ -13,7 +13,7 @@ $companies = include __DIR__ . '/data/companies.php';
     </section>
     <section class="companies-grid">
         <?php foreach ($companies as $company): ?>
-            <a href="company.php?id=<?= htmlspecialchars($company['id']) ?>" class="company-card">
+            <a href="company?id=<?= htmlspecialchars($company['id']) ?>" class="company-card">
                 <div class="company-card-logo">
                     <img src="<?= htmlspecialchars($company['logo']) ?>" alt="<?= htmlspecialchars($company['name']) ?> logo" loading="lazy">
                 </div>

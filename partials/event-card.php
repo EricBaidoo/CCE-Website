@@ -51,7 +51,7 @@ if (!empty($event['date'])) {
                 <?php if (!empty($event['registration_url']) && empty($isPast)): ?>
                     <a class="event-cta" href="<?= htmlspecialchars($event['registration_url']) ?>" target="_blank" rel="noopener" data-evt-action="register" data-evt-id="<?= htmlspecialchars($event['id']) ?>">Register</a>
                 <?php endif; ?>
-                <a class="event-link" href="event.php?id=<?= urlencode($event['id']) ?>" data-evt-action="details" data-evt-id="<?= htmlspecialchars($event['id']) ?>">Details</a>
+                <a class="event-link" href="event?id=<?= urlencode($event['id']) ?>" data-evt-action="details" data-evt-id="<?= htmlspecialchars($event['id']) ?>">Details</a>
         </p>
     </div>
 </article>

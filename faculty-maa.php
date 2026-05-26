@@ -1,105 +1,170 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Missions & Apologetics | Cross-Cutting Excellence</title>
-    <link rel="stylesheet" href="assets/css/faculty.css?v=20251227.7">
-</head>
-<body>
-    <?php include 'header.php'; ?>
+<?php
+require_once 'config/database.php';
+$meta = [
+    'title' => 'Missions & Apologetics | Faculty Endeavour | CCE',
+    'description' => 'Preparing professionals to engage culture with the gospel, defend the faith thoughtfully and serve missionally across borders.',
+];
+include 'header.php';
 
-    <main class="faculty-page">
-        <section class="faculty-hero">
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <div class="hero-icon">M</div>
-                <div class="hero-text">
-                    <h1 class="hero-title">Missions & Apologetics</h1>
-                    <p class="hero-description">Preparing professionals to engage culture with the gospel, defend the faith thoughtfully and serve missionally.</p>
-                    <span class="hero-badge">MAA</span>
-                </div>
-            </div>
-        </section>
+// Fetch Faculty Leader
+$leaderStmt = $pdo->prepare("SELECT * FROM people WHERE faculty_id = ? LIMIT 1");
+$leaderStmt->execute(['maa']);
+$leader = $leaderStmt->fetch();
 
-        <div class="faculty-content">
-            <section class="content-section">
-                <h2>Overview</h2>
-                <p>CCE trains Christian Apologists to competently explain the Christian faith to thinking skeptics who could then make informed decisions on following Christ Jesus. We also mobilize Christians for effective missions and church engagement.</p>
-            </section>
+// Fetch Recent & Upcoming Events for this Faculty
+$eventsStmt = $pdo->prepare("SELECT * FROM events WHERE faculty_id = ? ORDER BY start_date DESC LIMIT 3");
+$eventsStmt->execute(['maa']);
+$events = $eventsStmt->fetchAll();
 
-            <section class="content-section">
-                <h2>Mission</h2>
-                <p>To equip Christians with the intellectual tools and spiritual wisdom needed to articulate, defend, and share their faith with clarity, compassion, and confidence in an increasingly skeptical world.</p>
-            </section>
+// Fetch Latest News for this Faculty
+$newsStmt = $pdo->prepare("SELECT * FROM news WHERE faculty_id = ? ORDER BY published_at DESC LIMIT 3");
+$newsStmt->execute(['maa']);
+$news = $newsStmt->fetchAll();
+?>
 
-            <section class="content-section">
-                <h2>2025 Q1 Initiatives</h2>
-                <h3 style="font-size: 1.5rem; font-weight: 400; color: #252163; margin: 2rem 0 1rem 0;">Missions Track</h3>
-                <ul class="focus-list">
-                    <li>Conduct missions trip to Northern Ghana with documentation and follow-up</li>
-                    <li>Implement "People Bring People" action plan to increase CCE membership</li>
-                    <li>Revive ExGlo activities: Friday all-night prayer, 24-hour CCE-Prayer tower, SAA micro-units</li>
-                </ul>
-                <h3 style="font-size: 1.5rem; font-weight: 400; color: #252163; margin: 2rem 0 1rem 0;">Apologetics Track</h3>
-                <ul class="focus-list">
-                    <li>Build profile database of 20 young Christian Apologists</li>
-                    <li>Partner with 10 local churches to develop apologetics support systems</li>
-                    <li>Monitor impact of Christian apologetics on soul winning in 10 pilot churches</li>
-                </ul>
-            </section>
-
-            <section class="content-section">
-                <h2>Key Areas of Focus</h2>
-                <ul class="focus-list">
-                    <li>Christian Apologetics and Philosophy</li>
-                    <li>Missions and Evangelism</li>
-                    <li>Comparative Religion and Worldviews</li>
-                    <li>Prayer and Intercession</li>
-                    <li>Church Partnership and Outreach</li>
-                    <li>Soul Winning Strategies</li>
-                </ul>
-            </section>
-
-            <section class="content-section">
-                <h2>Programs and Activities</h2>
-                <p>Our faculty provides rigorous training in apologetics, theology, and religious studies. Through courses, seminars, and debates, we prepare Christians to engage with difficult questions and challenging worldviews while remaining grounded in truth and love.</p>
-            </section>
-
-            <section class="content-section past-events-section">
-                <h2>Past Events & Activities</h2>
-                <div class="events-grid">
-                    <div class="event-item">
-                        <div class="event-date">November 2024</div>
-                        <h3>Northern Ghana Missions Trip</h3>
-                        <p>Comprehensive missions outreach with planning, execution, and follow-up engaging children and young people.</p>
-                    </div>
-                    <div class="event-item">
-                        <div class="event-date">September 2024</div>
-                        <h3>ExGlo Revival Prayer Nights</h3>
-                        <p>Revitalized Friday all-night prayer and Bible study sessions, strengthening spiritual foundation of CCE community.</p>
-                    </div>
-                    <div class="event-item">
-                        <div class="event-date">July 2024</div>
-                        <h3>Church Apologetics Partnership Program</h3>
-                        <p>Collaborated with 10 local churches to develop apologetics support systems for outreach to skeptics and atheists.</p>
-                    </div>
-                    <div class="event-item">
-                        <div class="event-date">May 2024</div>
-                        <h3>Christian Apologetics Training</h3>
-                        <p>Intensive training program equipping 20 young Christians in defending and articulating the Christian faith.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="content-section cta-section">
-                <h2>Get Involved</h2>
-                <p>Join a community of thinkers and believers committed to understanding and defending the Christian faith. Whether you're a pastor, teacher, or lay person, CCE equips you to give a reason for the hope within you.</p>
-                <a href="get-involved.php" class="cta-button">Join This Faculty →</a>
-            </section>
+<main class="flex-grow bg-white">
+    <!-- FACULTY HERO -->
+    <section class="bg-primary text-white border-b-4 border-secondary pt-16 pb-32 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 flex items-center justify-center pointer-events-none">
+            <span class="text-[250px] md:text-[400px] font-heading font-bold leading-none tracking-tighter">MAA</span>
         </div>
-    </main>
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <nav class="flex text-sm text-gray-400 font-medium uppercase tracking-widest mb-8">
+                <a href="index" class="hover:text-white transition-colors">Home</a>
+                <span class="mx-3 border-l border-gray-500"></span>
+                <a href="faculty" class="hover:text-white transition-colors">Faculties</a>
+                <span class="mx-3 border-l border-gray-500"></span>
+                <span class="text-white">MAA</span>
+            </nav>
+            
+            <div class="flex items-center gap-3 mb-6">
+                <span class="inline-block bg-secondary text-white text-xs font-bold uppercase tracking-widest px-3 py-1">Faculty Endeavour</span>
+                <span class="inline-block bg-white text-primary text-xs font-bold uppercase tracking-widest px-3 py-1">MAA</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight max-w-4xl">
+                Missions & Apologetics
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl">
+                Preparing professionals to engage culture with the gospel, defend the faith thoughtfully and serve missionally across borders.
+            </p>
+        </div>
+    </section>
 
-    <?php include 'footer.php'; ?>
-</body>
-</html>
+    <!-- FACULTY CONTENT -->
+    <section class="py-16 -mt-20 relative z-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-8">
+                
+                <!-- Main Content Area -->
+                <div class="lg:w-2/3 bg-white p-8 md:p-12 shadow-xl border border-gray-100">
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-heading font-bold text-primary mb-6 border-b-2 border-secondary pb-2 inline-block">VISION & MISSION</h2>
+                        <p class="text-gray-700 leading-loose text-lg font-light">
+                            The Great Commission requires both passion and intellectual rigor. The Missions & Apologetics (MAA) faculty prepares professionals to articulate and defend the Christian worldview in a pluralistic society. We also mobilize professionals to use their secular skills as vehicles for global missions and cross-cultural outreach.
+                        </p>
+                    </div>
+
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-heading font-bold text-primary mb-6 border-b-2 border-secondary pb-2 inline-block">KEY OBJECTIVES</h2>
+                        <ul class="list-disc pl-6 space-y-4 text-gray-700 text-lg font-light marker:text-secondary">
+                            <li>Equip believers to defend the Christian faith with logic, evidence, and grace.</li>
+                                <li>Train professionals for bi-vocational missions in closed or secular nations.</li>
+                                <li>Engage secular ideologies and alternative worldviews effectively.</li>
+                                <li>Support frontline missionaries with professional and technical expertise.</li>
+                                
+                        </ul>
+                    </div>
+                    
+                    <?php if($events): ?>
+                    <div class="mt-16 pt-12 border-t border-gray-100">
+                        <h2 class="text-3xl font-heading font-bold text-primary mb-8 border-b-2 border-secondary pb-2 inline-block">RECENT & UPCOMING EVENTS</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <?php foreach($events as $event): ?>
+                            <a href="event?id=<?= $event['id'] ?>" class="block group border border-gray-200 hover:border-secondary transition-colors bg-gray-50">
+                                <?php if($event['image']): ?>
+                                <img src="<?= htmlspecialchars($event['image']) ?>" alt="<?= htmlspecialchars($event['title']) ?>" class="w-full h-48 object-cover">
+                                <?php endif; ?>
+                                <div class="p-6">
+                                    <div class="text-xs font-bold text-secondary uppercase tracking-widest mb-2"><?= htmlspecialchars($event['date_display']) ?></div>
+                                    <h3 class="text-xl font-heading font-bold text-primary group-hover:text-secondary transition-colors mb-2"><?= htmlspecialchars($event['title']) ?></h3>
+                                    <p class="text-gray-600 text-sm line-clamp-2"><?= htmlspecialchars($event['excerpt']) ?></p>
+                                </div>
+                            </a>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+
+                    <?php if($news): ?>
+                    <div class="mt-16 pt-12 border-t border-gray-100">
+                        <h2 class="text-3xl font-heading font-bold text-primary mb-8 border-b-2 border-secondary pb-2 inline-block">LATEST NEWS</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <?php foreach($news as $article): ?>
+                            <a href="news-article?id=<?= $article['id'] ?>" class="block group border border-gray-200 hover:border-secondary transition-colors bg-gray-50">
+                                <?php if($article['featured_image']): ?>
+                                <img src="<?= htmlspecialchars($article['featured_image']) ?>" alt="<?= htmlspecialchars($article['title']) ?>" class="w-full h-48 object-cover">
+                                <?php endif; ?>
+                                <div class="p-6">
+                                    <div class="text-xs font-bold text-secondary uppercase tracking-widest mb-2"><?= date('M d, Y', strtotime($article['published_at'])) ?></div>
+                                    <h3 class="text-xl font-heading font-bold text-primary group-hover:text-secondary transition-colors mb-2"><?= htmlspecialchars($article['title']) ?></h3>
+                                    <p class="text-gray-600 text-sm line-clamp-2"><?= htmlspecialchars($article['excerpt']) ?></p>
+                                </div>
+                            </a>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+                </div>
+
+                <!-- Sidebar Area -->
+                <div class="lg:w-1/3 space-y-8">
+                    <?php if($leader): ?>
+                    <!-- Faculty Leader Card -->
+                    <div class="bg-gray-50 p-8 border border-gray-200 border-t-4 border-t-primary text-center">
+                        <?php if($leader['photo']): ?>
+                        <img src="<?= htmlspecialchars($leader['photo']) ?>" alt="<?= htmlspecialchars($leader['name']) ?>" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-white shadow-md mb-4">
+                        <?php else: ?>
+                        <div class="w-32 h-32 rounded-full mx-auto bg-gray-200 flex items-center justify-center border-4 border-white shadow-md mb-4">
+                            <i class="fas fa-user text-4xl text-gray-400"></i>
+                        </div>
+                        <?php endif; ?>
+                        <h3 class="text-xl font-heading font-bold text-primary"><?= htmlspecialchars($leader['name']) ?></h3>
+                        <p class="text-secondary font-bold text-sm uppercase tracking-widest mb-4"><?= htmlspecialchars($leader['role']) ?></p>
+                        <p class="text-gray-600 font-light text-sm mb-4"><?= htmlspecialchars($leader['bio_short']) ?></p>
+                        <?php if($leader['email']): ?>
+                        <a href="mailto:<?= htmlspecialchars($leader['email']) ?>" class="inline-block bg-primary hover:bg-gray-800 text-white text-xs font-bold uppercase tracking-widest px-4 py-2 transition-colors">Contact</a>
+                        <?php endif; ?>
+                    </div>
+                    <?php endif; ?>
+
+                    <!-- Target Audience Card -->
+                    <div class="bg-gray-50 p-8 border border-gray-200 border-t-4 border-t-primary">
+                        <h3 class="text-xl font-heading font-bold text-primary mb-4 uppercase tracking-wider">Who Should Join?</h3>
+                        <p class="text-gray-600 font-light leading-relaxed mb-6">
+                            Apologists, Missionaries, Theologians, and Bi-vocational Professionals.
+                        </p>
+                        <hr class="border-gray-200 mb-6">
+                        <p class="text-sm text-gray-500 italic">
+                            Professionals seeking to align their career with God's redemptive purpose.
+                        </p>
+                    </div>
+
+                    <!-- Call to Action Card -->
+                    <div class="bg-primary text-white p-8 border-b-4 border-secondary">
+                        <h3 class="text-2xl font-heading font-bold mb-4">Ready to Engage?</h3>
+                        <p class="text-gray-300 font-light mb-6">
+                            Become a member of the MAA faculty and start transforming your sphere of influence today.
+                        </p>
+                        <a href="get-involved" class="block w-full text-center bg-secondary hover:bg-orange-600 text-white font-bold uppercase tracking-widest px-6 py-4 transition-colors">
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<?php include 'footer.php'; ?>

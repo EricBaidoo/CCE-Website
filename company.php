@@ -1,81 +1,53 @@
 <?php
-// Company profile page
-$id = isset($_GET['id']) ? $_GET['id'] : null;
-$companies = include __DIR__ . '/data/companies.php';
-$found = null;
-foreach ($companies as $c) {
-    if ($c['id'] === $id) { $found = $c; break; }
-}
-if (!$found) {
+require_once 'config/database.php';
+
+$id = $_GET['id'] ?? '';
+$stmt = $pdo->prepare("SELECT * FROM companies WHERE id = ?");
+$stmt->execute([$id]);
+$company = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if (!$company) {
     header($_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found');
-    echo '<!doctype html><html><head><meta charset="utf-8"><title>Company Not Found</title></head><body><h1>Company not found</h1><p>The requested company does not exist.</p><p><a href="index.php">Return</a></p></body></html>';
+    echo "Company not found.";
     exit;
 }
 
-// Load people data to show company owners
-$people = include __DIR__ . '/data/people.php';
-$owners = [];
-if (!empty($found['owners'])) {
-    foreach ($people as $p) {
-        if (in_array($p['id'], $found['owners'])) {
-            $owners[] = $p;
-        }
-    }
-}
+$meta = [
+    'title' => $company['name'] . ' - Institutional Partner',
+    'description' => 'Institutional Partner of CCE',
+];
+include 'header.php';
 ?>
-<?php include 'header.php'; ?>
-<main class="container company-profile">
-    <article class="company-article">
-        <div class="company-grid">
-            <div class="company-sidebar">
-                <div class="company-logo-wrapper">
-                    <img src="<?= htmlspecialchars($found['logo']) ?>" alt="<?= htmlspecialchars($found['name']) ?> logo" class="company-logo-large">
-                </div>
+
+<main class="flex-grow bg-light py-20 min-h-[60vh] flex flex-col justify-center">
+    <div class="max-w-4xl mx-auto px-4 w-full">
+        
+        <div class="bg-white border-t-4 border-secondary p-12 md:p-16 shadow-lg text-center">
+            
+            <div class="w-48 h-48 md:w-64 md:h-64 mx-auto mb-10 flex items-center justify-center p-8 border border-gray-100 shadow-inner bg-gray-50/50">
+                <img src="<?= htmlspecialchars($company['logo'] ?? 'assets/image/placeholder.jpg') ?>" alt="<?= htmlspecialchars($company['name']) ?> Logo" class="max-w-full max-h-full object-contain mix-blend-multiply">
             </div>
-            <div class="company-content">
-                <h1 class="company-name-title"><?= htmlspecialchars($found['name']) ?></h1>
-                
-                <?php if (!empty($found['tagline'])): ?>
-                    <p class="company-tagline"><?= htmlspecialchars($found['tagline']) ?></p>
-                <?php endif; ?>
 
-                <?php if (!empty($found['description'])): ?>
-                    <div class="company-description">
-                        <h2 class="company-section-heading">About</h2>
-                        <p><?= htmlspecialchars($found['description']) ?></p>
-                    </div>
-                <?php elseif (!empty($found['excerpt'])): ?>
-                    <div class="company-description">
-                        <h2 class="company-section-heading">About</h2>
-                        <p><?= htmlspecialchars($found['excerpt']) ?></p>
-                    </div>
+            <h1 class="text-primary font-heading font-bold text-4xl mb-4 uppercase tracking-widest"><?= htmlspecialchars($company['name']) ?></h1>
+            <p class="text-secondary font-bold tracking-widest uppercase text-sm mb-10">Official Institutional Partner</p>
+            
+            <div class="max-w-2xl mx-auto prose text-gray-600 font-light text-lg">
+                <?php if (!empty($company['description'])): ?>
+                    <p><?= nl2br(htmlspecialchars($company['description'])) ?></p>
+                <?php else: ?>
+                    <p>This organization is part of the Cross-Cutting Excellence (CCE) global network of institutional partners.</p>
                 <?php endif; ?>
-
-                <?php if (!empty($owners)): ?>
-                    <div class="company-team-section">
-                        <h2 class="company-section-heading">Key Contacts</h2>
-                        <div class="company-team-grid">
-                            <?php foreach ($owners as $owner): ?>
-                                <a href="person.php?id=<?= htmlspecialchars($owner['id']) ?>" class="company-team-member">
-                                    <img src="<?= htmlspecialchars($owner['photo']) ?>" alt="<?= htmlspecialchars($owner['name']) ?>" class="company-team-photo">
-                                    <div class="company-team-info">
-                                        <h3 class="company-team-name"><?= htmlspecialchars($owner['name']) ?></h3>
-                                        <p class="company-team-role"><?= htmlspecialchars($owner['role']) ?></p>
-                                    </div>
-                                </a>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>
-                <?php endif; ?>
-
-                <div class="company-actions">
-                    <?php if (!empty($found['website'])): ?>
-                        <a href="<?= htmlspecialchars($found['website']) ?>" target="_blank" rel="noopener noreferrer" class="hero-btn hero-btn-primary">Visit Website</a>
-                    <?php endif; ?>
-                    <a href="index.php#companies" class="hero-btn">Back to Companies</a>
-                </div>
             </div>
+
         </div>
-    </article>
+
+        <div class="mt-12 text-center">
+            <a href="index" class="inline-flex text-primary font-bold text-sm uppercase tracking-widest hover:text-secondary items-center gap-2 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Back to Homepage
+            </a>
+        </div>
+    </div>
 </main>
+
 <?php include 'footer.php'; ?>

@@ -11,7 +11,7 @@ if (!file_exists(__DIR__ . '/../' . $avatar)) { $avatar = $person['photo']; }
         <h3 class="person-name"><?= htmlspecialchars($person['name']) ?></h3>
         <p class="person-role"><?= htmlspecialchars($person['role']) ?></p>
         <p class="person-bio"><?= htmlspecialchars($person['bio_short']) ?></p>
-        <p><a class="person-link" href="person.php?id=<?= urlencode($person['id']) ?>">View profile</a></p>
+        <p><a class="person-link" href="person?id=<?= urlencode($person['id']) ?>">View profile</a></p>
     </div>
     <?php if (!empty($person['email']) || !empty($person['linkedin'])): ?>
     <div class="person-contacts" aria-hidden="false">

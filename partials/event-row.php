@@ -37,7 +37,7 @@ if (!empty($event['date'])) {
             <?php if (!empty($event['registration_url']) && empty($isPast)): ?>
                 <a class="event-cta" href="<?= htmlspecialchars($event['registration_url']) ?>" target="_blank" rel="noopener">Register</a>
             <?php endif; ?>
-            <a class="event-link" href="event.php?id=<?= urlencode($event['id']) ?>">Details</a>
+            <a class="event-link" href="event?id=<?= urlencode($event['id']) ?>">Details</a>
         </div>
     </div>
 </article>

@@ -1,106 +1,170 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Governance & Development | Cross-Cutting Excellence</title>
-    <link rel="stylesheet" href="assets/css/faculty.css?v=20251227.2">
-</head>
-<body>
-    <?php include 'header.php'; ?>
+<?php
+require_once 'config/database.php';
+$meta = [
+    'title' => 'Governance & Development | Faculty Endeavour | CCE',
+    'description' => 'Governance practitioners are equipped with seculo-spiritual aptitude so they can produce godly and competent leadership to drive true development locally, nationally and globally.',
+];
+include 'header.php';
 
-    <main class="faculty-page">
-        <section class="faculty-hero">
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <div class="hero-icon">G</div>
-                <div class="hero-text">
-                    <h1 class="hero-title">Governance & Development</h1>
-                    <p class="hero-description">Equipping governance practitioners with seculo-spiritual aptitude to produce godly and competent leadership that drives true development.</p>
-                    <span class="hero-badge">GAD</span>
-                </div>
-            </div>
-        </section>
+// Fetch Faculty Leader
+$leaderStmt = $pdo->prepare("SELECT * FROM people WHERE faculty_id = ? LIMIT 1");
+$leaderStmt->execute(['gad']);
+$leader = $leaderStmt->fetch();
 
-        <div class="faculty-content">
-            <section class="content-section">
-                <h2>Overview</h2>
-                <p>Governance practitioners (e.g. politicians, legislators, technocrats and civil society actors and media) are equipped with seculo-spiritual aptitude so they can produce godly and competent leadership to drive true development locally, nationally and globally.</p>
-            </section>
+// Fetch Recent & Upcoming Events for this Faculty
+$eventsStmt = $pdo->prepare("SELECT * FROM events WHERE faculty_id = ? ORDER BY start_date DESC LIMIT 3");
+$eventsStmt->execute(['gad']);
+$events = $eventsStmt->fetchAll();
 
-            <section class="content-section">
-                <h2>Mission</h2>
-                <p>To develop governance professionals who integrate spiritual wisdom with technical competence, creating leadership that drives sustainable development across all levels of society.</p>
-            </section>
+// Fetch Latest News for this Faculty
+$newsStmt = $pdo->prepare("SELECT * FROM news WHERE faculty_id = ? ORDER BY published_at DESC LIMIT 3");
+$newsStmt->execute(['gad']);
+$news = $newsStmt->fetchAll();
+?>
 
-            <section class="content-section">
-                <h2>2025 Q1 Initiatives</h2>
-                <h3 style="font-size: 1.5rem; font-weight: 400; color: #252163; margin: 2rem 0 1rem 0;">Governance Track</h3>
-                <ul class="focus-list">
-                    <li>Identify 100 young Christians planning careers in government, legislature, judiciary, and civil society</li>
-                    <li>Conduct 3 trainings to assist identified persons in writing their profile and life purpose plan</li>
-                    <li>Set up knowledge repository to acquire, store and share relevant governance resources</li>
-                    <li>Build contact and profile database of Christian professionals in governance</li>
-                </ul>
-                <h3 style="font-size: 1.5rem; font-weight: 400; color: #252163; margin: 2rem 0 1rem 0;">Development Track</h3>
-                <ul class="focus-list">
-                    <li>Train 10 young tertiary-level Christians to write weekly articles on Sustainable Development Goals (SDGs)</li>
-                    <li>Publish 100 articles on development integrated with godliness content</li>
-                    <li>Organise annual CCE Conference (Excel-25)</li>
-                </ul>
-            </section>
-
-            <section class="content-section">
-                <h2>Key Areas of Focus</h2>
-                <ul class="focus-list">
-                    <li>Public Policy and Administration</li>
-                    <li>Legislative Processes and Governance</li>
-                    <li>Civil Society and Media Relations</li>
-                    <li>Ethical Leadership Development</li>
-                    <li>Community Development Strategies</li>
-                    <li>Sustainable Development Goals (SDGs)</li>
-                </ul>
-            </section>
-
-            <section class="content-section">
-                <h2>Programs and Activities</h2>
-                <p>CCE offers specialized training programs, workshops, and conferences designed to equip governance practitioners with both technical skills and spiritual insight. Our programs focus on developing leaders who can navigate complex political and social landscapes while maintaining godly principles.</p>
-            </section>
-
-            <section class="content-section past-events-section">
-                <h2>Past Events & Activities</h2>
-                <div class="events-grid">
-                    <div class="event-item">
-                        <div class="event-date">December 2024</div>
-                        <h3>Excel-24 Annual Conference</h3>
-                        <p>Annual conference bringing together governance practitioners, featuring keynote speakers on ethical leadership and sustainable development.</p>
-                    </div>
-                    <div class="event-item">
-                        <div class="event-date">October 2024</div>
-                        <h3>SDG Article Writing Workshop</h3>
-                        <p>Trained 10 young Christians to write compelling articles on Sustainable Development Goals integrated with godliness principles.</p>
-                    </div>
-                    <div class="event-item">
-                        <div class="event-date">August 2024</div>
-                        <h3>Leadership Profiling Training</h3>
-                        <p>Three-day intensive training for 33 young leaders to develop their professional profiles and life purpose plans.</p>
-                    </div>
-                    <div class="event-item">
-                        <div class="event-date">June 2024</div>
-                        <h3>Christian Governance Network Launch</h3>
-                        <p>Launched professional network connecting Christian governance practitioners across government, legislature, and civil society.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="content-section cta-section">
-                <h2>Get Involved</h2>
-                <p>Join our network of governance professionals committed to transforming leadership and development. Whether you're a politician, civil servant, or community leader, CCE provides the resources and community you need to excel.</p>
-                <a href="get-involved.php" class="cta-button">Join This Faculty →</a>
-            </section>
+<main class="flex-grow bg-white">
+    <!-- FACULTY HERO -->
+    <section class="bg-primary text-white border-b-4 border-secondary pt-16 pb-32 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 flex items-center justify-center pointer-events-none">
+            <span class="text-[250px] md:text-[400px] font-heading font-bold leading-none tracking-tighter">GAD</span>
         </div>
-    </main>
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <nav class="flex text-sm text-gray-400 font-medium uppercase tracking-widest mb-8">
+                <a href="index" class="hover:text-white transition-colors">Home</a>
+                <span class="mx-3 border-l border-gray-500"></span>
+                <a href="faculty" class="hover:text-white transition-colors">Faculties</a>
+                <span class="mx-3 border-l border-gray-500"></span>
+                <span class="text-white">GAD</span>
+            </nav>
+            
+            <div class="flex items-center gap-3 mb-6">
+                <span class="inline-block bg-secondary text-white text-xs font-bold uppercase tracking-widest px-3 py-1">Faculty Endeavour</span>
+                <span class="inline-block bg-white text-primary text-xs font-bold uppercase tracking-widest px-3 py-1">GAD</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight max-w-4xl">
+                Governance & Development
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl">
+                Governance practitioners are equipped with seculo-spiritual aptitude so they can produce godly and competent leadership to drive true development locally, nationally and globally.
+            </p>
+        </div>
+    </section>
 
-    <?php include 'footer.php'; ?>
-</body>
-</html>
+    <!-- FACULTY CONTENT -->
+    <section class="py-16 -mt-20 relative z-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-8">
+                
+                <!-- Main Content Area -->
+                <div class="lg:w-2/3 bg-white p-8 md:p-12 shadow-xl border border-gray-100">
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-heading font-bold text-primary mb-6 border-b-2 border-secondary pb-2 inline-block">VISION & MISSION</h2>
+                        <p class="text-gray-700 leading-loose text-lg font-light">
+                            The Governance & Development (GAD) faculty is dedicated to raising a new generation of leaders who understand that true development is rooted in righteous governance. We believe that when governance is driven by godly principles, the resulting policies and structures will invariably lead to sustainable development, justice, and equity.
+                        </p>
+                    </div>
+
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-heading font-bold text-primary mb-6 border-b-2 border-secondary pb-2 inline-block">KEY OBJECTIVES</h2>
+                        <ul class="list-disc pl-6 space-y-4 text-gray-700 text-lg font-light marker:text-secondary">
+                            <li>Equip leaders with biblical principles for public administration and policy-making.</li>
+                                <li>Develop frameworks for ethical governance and anti-corruption strategies.</li>
+                                <li>Train practitioners to implement sustainable development goals with a Christian worldview.</li>
+                                <li>Foster a network of Christian politicians, civil servants, and development workers.</li>
+                                
+                        </ul>
+                    </div>
+                    
+                    <?php if($events): ?>
+                    <div class="mt-16 pt-12 border-t border-gray-100">
+                        <h2 class="text-3xl font-heading font-bold text-primary mb-8 border-b-2 border-secondary pb-2 inline-block">RECENT & UPCOMING EVENTS</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <?php foreach($events as $event): ?>
+                            <a href="event?id=<?= $event['id'] ?>" class="block group border border-gray-200 hover:border-secondary transition-colors bg-gray-50">
+                                <?php if($event['image']): ?>
+                                <img src="<?= htmlspecialchars($event['image']) ?>" alt="<?= htmlspecialchars($event['title']) ?>" class="w-full h-48 object-cover">
+                                <?php endif; ?>
+                                <div class="p-6">
+                                    <div class="text-xs font-bold text-secondary uppercase tracking-widest mb-2"><?= htmlspecialchars($event['date_display']) ?></div>
+                                    <h3 class="text-xl font-heading font-bold text-primary group-hover:text-secondary transition-colors mb-2"><?= htmlspecialchars($event['title']) ?></h3>
+                                    <p class="text-gray-600 text-sm line-clamp-2"><?= htmlspecialchars($event['excerpt']) ?></p>
+                                </div>
+                            </a>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+
+                    <?php if($news): ?>
+                    <div class="mt-16 pt-12 border-t border-gray-100">
+                        <h2 class="text-3xl font-heading font-bold text-primary mb-8 border-b-2 border-secondary pb-2 inline-block">LATEST NEWS</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <?php foreach($news as $article): ?>
+                            <a href="news-article?id=<?= $article['id'] ?>" class="block group border border-gray-200 hover:border-secondary transition-colors bg-gray-50">
+                                <?php if($article['featured_image']): ?>
+                                <img src="<?= htmlspecialchars($article['featured_image']) ?>" alt="<?= htmlspecialchars($article['title']) ?>" class="w-full h-48 object-cover">
+                                <?php endif; ?>
+                                <div class="p-6">
+                                    <div class="text-xs font-bold text-secondary uppercase tracking-widest mb-2"><?= date('M d, Y', strtotime($article['published_at'])) ?></div>
+                                    <h3 class="text-xl font-heading font-bold text-primary group-hover:text-secondary transition-colors mb-2"><?= htmlspecialchars($article['title']) ?></h3>
+                                    <p class="text-gray-600 text-sm line-clamp-2"><?= htmlspecialchars($article['excerpt']) ?></p>
+                                </div>
+                            </a>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+                </div>
+
+                <!-- Sidebar Area -->
+                <div class="lg:w-1/3 space-y-8">
+                    <?php if($leader): ?>
+                    <!-- Faculty Leader Card -->
+                    <div class="bg-gray-50 p-8 border border-gray-200 border-t-4 border-t-primary text-center">
+                        <?php if($leader['photo']): ?>
+                        <img src="<?= htmlspecialchars($leader['photo']) ?>" alt="<?= htmlspecialchars($leader['name']) ?>" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-white shadow-md mb-4">
+                        <?php else: ?>
+                        <div class="w-32 h-32 rounded-full mx-auto bg-gray-200 flex items-center justify-center border-4 border-white shadow-md mb-4">
+                            <i class="fas fa-user text-4xl text-gray-400"></i>
+                        </div>
+                        <?php endif; ?>
+                        <h3 class="text-xl font-heading font-bold text-primary"><?= htmlspecialchars($leader['name']) ?></h3>
+                        <p class="text-secondary font-bold text-sm uppercase tracking-widest mb-4"><?= htmlspecialchars($leader['role']) ?></p>
+                        <p class="text-gray-600 font-light text-sm mb-4"><?= htmlspecialchars($leader['bio_short']) ?></p>
+                        <?php if($leader['email']): ?>
+                        <a href="mailto:<?= htmlspecialchars($leader['email']) ?>" class="inline-block bg-primary hover:bg-gray-800 text-white text-xs font-bold uppercase tracking-widest px-4 py-2 transition-colors">Contact</a>
+                        <?php endif; ?>
+                    </div>
+                    <?php endif; ?>
+
+                    <!-- Target Audience Card -->
+                    <div class="bg-gray-50 p-8 border border-gray-200 border-t-4 border-t-primary">
+                        <h3 class="text-xl font-heading font-bold text-primary mb-4 uppercase tracking-wider">Who Should Join?</h3>
+                        <p class="text-gray-600 font-light leading-relaxed mb-6">
+                            Politicians, Civil Servants, Policy Makers, NGO Leaders, and Development Consultants.
+                        </p>
+                        <hr class="border-gray-200 mb-6">
+                        <p class="text-sm text-gray-500 italic">
+                            Professionals seeking to align their career with God's redemptive purpose.
+                        </p>
+                    </div>
+
+                    <!-- Call to Action Card -->
+                    <div class="bg-primary text-white p-8 border-b-4 border-secondary">
+                        <h3 class="text-2xl font-heading font-bold mb-4">Ready to Engage?</h3>
+                        <p class="text-gray-300 font-light mb-6">
+                            Become a member of the GAD faculty and start transforming your sphere of influence today.
+                        </p>
+                        <a href="get-involved" class="block w-full text-center bg-secondary hover:bg-orange-600 text-white font-bold uppercase tracking-widest px-6 py-4 transition-colors">
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<?php include 'footer.php'; ?>

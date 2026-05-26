@@ -118,7 +118,7 @@
             <div class="cta-section">
                 <h2>Join Us at Excel 2024</h2>
                 <p>Be part of a movement of Christian professionals committed to transforming their spheres of influence with the wisdom of God.</p>
-                <a href="get-involved.php" class="cta-button">Register Your Interest</a>
+                <a href="get-involved" class="cta-button">Register Your Interest</a>
             </div>
         </section>
     </main>
