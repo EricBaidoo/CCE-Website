@@ -5,21 +5,23 @@ require_once '../config/database.php';
 require_once 'helpers.php';
 
 $action = $_GET['action'] ?? 'list';
-$message = '';
-$error = '';
+$message = $_SESSION['flash_message'] ?? '';
+$error = $_SESSION['flash_error'] ?? '';
+unset($_SESSION['flash_message'], $_SESSION['flash_error']);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['delete_id'])) {
         // Prevent deleting the only admin
         $adminCount = $pdo->query("SELECT COUNT(*) FROM users")->fetchColumn();
         if ($adminCount <= 1) {
-            $error = "Cannot delete the last remaining admin user.";
+            $_SESSION['flash_error'] = "Cannot delete the last remaining admin user.";
         } else {
             $stmt = $pdo->prepare("DELETE FROM users WHERE id = ?");
             $stmt->execute([$_POST['delete_id']]);
-            $message = "User deleted successfully.";
+            $_SESSION['flash_message'] = "User deleted successfully.";
         }
-        $action = 'list';
+        header("Location: users.php?action=list");
+        exit;
     } else {
         $id = $_POST['id'] ?? null;
         $username = trim($_POST['username'] ?? '');
@@ -38,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $stmt = $pdo->prepare("UPDATE users SET username=?, password_hash=?, role=? WHERE id=?");
                     try {
                         $stmt->execute([$username, $hash, $role, $id]);
-                        $message = "User updated successfully (password changed).";
+                        $_SESSION['flash_message'] = "User updated successfully (password changed).";
                     } catch (PDOException $e) {
                         $error = "Username might already exist.";
                     }
@@ -47,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $stmt = $pdo->prepare("UPDATE users SET username=?, role=? WHERE id=?");
                     try {
                         $stmt->execute([$username, $role, $id]);
-                        $message = "User updated successfully.";
+                        $_SESSION['flash_message'] = "User updated successfully.";
                     } catch (PDOException $e) {
                         $error = "Username might already exist.";
                     }
@@ -62,13 +64,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $stmt = $pdo->prepare("INSERT INTO users (username, password_hash, role) VALUES (?, ?, ?)");
                     try {
                         $stmt->execute([$username, $hash, $role]);
-                        $message = "User created successfully.";
+                        $_SESSION['flash_message'] = "User created successfully.";
                     } catch (PDOException $e) {
                         $error = "Username already exists.";
                     }
                 }
             }
-            if (empty($error)) $action = 'list';
+            if (empty($error)) {
+                header("Location: users.php?action=list");
+                exit;
+            }
         }
     }
 }

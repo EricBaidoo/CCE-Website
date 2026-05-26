@@ -5,14 +5,16 @@ require_once '../config/database.php';
 require_once 'helpers.php';
 
 $action = $_GET['action'] ?? 'list';
-$message = '';
+$message = $_SESSION['flash_message'] ?? '';
+unset($_SESSION['flash_message']);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['delete_id'])) {
         $stmt = $pdo->prepare("DELETE FROM hero_slides WHERE id = ?");
         $stmt->execute([$_POST['delete_id']]);
-        $message = "Slide deleted successfully.";
-        $action = 'list';
+        $_SESSION['flash_message'] = "Slide deleted successfully.";
+        header("Location: hero.php?action=list");
+        exit;
     } else {
         $id = $_POST['id'] ?? null;
         $title = $_POST['title'] ?? '';
@@ -36,13 +38,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($id) {
             $stmt = $pdo->prepare("UPDATE hero_slides SET title=?, description=?, button_text=?, button_link=?, slide_order=?, image_path=? WHERE id=?");
             $stmt->execute([$title, $description, $button_text, $button_link, $slide_order, $imagePath, $id]);
-            $message = "Slide updated successfully.";
+            $_SESSION['flash_message'] = "Slide updated successfully.";
         } else {
             $stmt = $pdo->prepare("INSERT INTO hero_slides (title, description, button_text, button_link, slide_order, image_path) VALUES (?, ?, ?, ?, ?, ?)");
             $stmt->execute([$title, $description, $button_text, $button_link, $slide_order, $imagePath]);
-            $message = "Slide added successfully.";
+            $_SESSION['flash_message'] = "Slide added successfully.";
         }
-        $action = 'list';
+        header("Location: hero.php?action=list");
+        exit;
     }
 }
 ?>

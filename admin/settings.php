@@ -7,7 +7,9 @@ if (!isset($_SESSION['admin_id'])) {
 require_once '../config/database.php';
 require_once 'helpers.php';
 
-$message = '';
+$message = $_SESSION['flash_message'] ?? '';
+unset($_SESSION['flash_message']);
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = $pdo->prepare("UPDATE site_settings SET setting_value = ? WHERE setting_key = ?");
     if (isset($_POST['settings']) && is_array($_POST['settings'])) {
@@ -50,7 +52,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
     
-    $message = "Global settings updated successfully.";
+    $_SESSION['flash_message'] = "Global settings updated successfully.";
+    header("Location: settings.php");
+    exit;
 }
 
 // Fetch all current settings

@@ -5,14 +5,16 @@ require_once '../config/database.php';
 require_once 'helpers.php';
 
 $action = $_GET['action'] ?? 'list';
-$message = '';
+$message = $_SESSION['flash_message'] ?? '';
+unset($_SESSION['flash_message']);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['delete_id'])) {
         $stmt = $pdo->prepare("DELETE FROM companies WHERE id = ?");
         $stmt->execute([$_POST['delete_id']]);
-        $message = "Company deleted successfully.";
-        $action = 'list';
+        $_SESSION['flash_message'] = "Company deleted successfully.";
+        header("Location: companies.php?action=list");
+        exit;
     } else {
         $id = $_POST['id'] ?? null;
         $name = $_POST['name'] ?? '';
@@ -33,13 +35,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($id) {
             $stmt = $pdo->prepare("UPDATE companies SET name=?, description=?, logo=? WHERE id=?");
             $stmt->execute([$name, $description, $logoPath, $id]);
-            $message = "Company updated successfully.";
+            $_SESSION['flash_message'] = "Company updated successfully.";
         } else {
             $stmt = $pdo->prepare("INSERT INTO companies (name, description, logo) VALUES (?, ?, ?)");
             $stmt->execute([$name, $description, $logoPath]);
-            $message = "Company added successfully.";
+            $_SESSION['flash_message'] = "Company added successfully.";
         }
-        $action = 'list';
+        header("Location: companies.php?action=list");
+        exit;
     }
 }
 ?>

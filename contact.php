@@ -1,8 +1,22 @@
 <?php
+session_start();
 $meta = [
     'title' => 'Contact Us - CCE',
     'description' => 'Get in touch with Cross-Cutting Excellence (CCE) for partnerships, training and events.',
 ];
+
+// Handle form submission via PRG
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // In a real app, you would send an email here using mail() or PHPMailer.
+    // For now, we'll just set a success message.
+    $_SESSION['flash_message'] = "Thank you! Your message has been sent successfully. We will get back to you shortly.";
+    header("Location: contact.php");
+    exit;
+}
+
+$message = $_SESSION['flash_message'] ?? '';
+unset($_SESSION['flash_message']);
+
 include 'header.php';
 ?>
 
@@ -28,6 +42,11 @@ include 'header.php';
             <!-- CONTACT FORM -->
             <div class="bg-white p-8 md:p-12 shadow-xl border border-gray-100">
                 <h2 class="text-3xl font-heading font-bold text-primary mb-8 border-b-2 border-gray-100 pb-4">Send a Message</h2>
+                <?php if ($message): ?>
+                    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
+                        <?= htmlspecialchars($message) ?>
+                    </div>
+                <?php endif; ?>
                 <form action="#" method="post" class="space-y-6">
                     <div>
                         <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2" for="name">Full Name</label>

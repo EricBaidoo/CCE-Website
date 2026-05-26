@@ -26,38 +26,37 @@ $news = $pdo->query("SELECT * FROM news ORDER BY published_at DESC LIMIT 4")->fe
 <main id="main-content" role="main" class="flex-grow bg-light">
     
     <!-- MAIN HERO (Dynamic Carousel) -->
-    <section class="relative bg-dark border-b-4 border-secondary overflow-hidden">
-        <div id="hero-carousel" class="flex transition-transform duration-700 ease-in-out h-full w-full">
+    <section class="relative bg-dark border-b-4 border-secondary overflow-hidden h-[85vh] lg:h-[35rem]">
+        <div id="hero-carousel" class="relative h-full w-full">
             <?php foreach ($hero_slides as $index => $slide): ?>
-            <div class="min-w-full h-full relative flex flex-col lg:flex-row shrink-0">
+            <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out flex flex-col lg:flex-row bg-dark <?= $index === 0 ? 'opacity-100 z-10 pointer-events-auto' : 'opacity-0 z-0 pointer-events-none' ?>">
                 
-                <!-- Content Column -->
-                <div class="lg:w-1/2 p-8 md:p-16 flex flex-col justify-center min-h-[31.25rem] bg-dark relative z-10">
+                <!-- Image Column (Background on Mobile, Right Column on Desktop) -->
+                <div class="absolute inset-0 lg:static lg:w-1/2 h-full lg:border-l-4 border-secondary z-10 order-1 lg:order-2">
+                    <img src="<?= htmlspecialchars($slide['image_path']) ?>" alt="<?= htmlspecialchars($slide['title']) ?>" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 lg:opacity-80 mix-blend-luminosity lg:mix-blend-normal">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/80 to-transparent lg:bg-gradient-to-l lg:from-dark lg:to-transparent"></div>
+                </div>
+
+                <!-- Content Column (Foreground on Mobile, Left Column on Desktop) -->
+                <div class="w-full lg:w-1/2 p-6 md:p-16 flex flex-col justify-end lg:justify-center h-full bg-transparent lg:bg-dark relative z-20 pb-28 lg:pb-16 order-2 lg:order-1">
                     <div class="max-w-xl">
-                        <div class="inline-block border-l-4 border-secondary pl-4 mb-6">
-                            <span class="text-secondary font-bold tracking-widest uppercase text-sm">Official Framework</span>
+                        <div class="inline-block border-l-4 border-secondary pl-4 mb-4 lg:mb-6">
+                            <span class="text-secondary font-bold tracking-widest uppercase text-xs lg:text-sm">Official Framework</span>
                         </div>
-                        <h1 class="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6 uppercase tracking-wide">
+                        <h1 class="font-heading font-bold text-3xl md:text-5xl lg:text-6xl text-white leading-tight mb-4 lg:mb-6 uppercase tracking-wide">
                             <?= htmlspecialchars($slide['title']) ?>
                         </h1>
-                        <p class="text-gray-300 text-lg md:text-xl leading-relaxed mb-10 font-light border-l border-white/20 pl-6">
+                        <p class="text-gray-300 text-base md:text-xl leading-relaxed mb-8 lg:mb-10 font-light border-l border-white/20 pl-4 lg:pl-6">
                             <?= htmlspecialchars($slide['description']) ?>
                         </p>
                         <?php if(!empty($slide['button_text']) && !empty($slide['button_link'])): ?>
                         <div class="flex">
-                            <a href="<?= htmlspecialchars($slide['button_link']) ?>" class="bg-secondary hover:bg-orange-600 text-white font-bold py-4 px-8 uppercase tracking-widest text-sm transition-colors text-center shadow-lg">
+                            <a href="<?= htmlspecialchars($slide['button_link']) ?>" class="bg-secondary hover:bg-orange-600 text-white font-bold py-3 px-6 lg:py-4 lg:px-8 uppercase tracking-widest text-xs lg:text-sm transition-colors text-center shadow-lg">
                                 <?= htmlspecialchars($slide['button_text']) ?>
                             </a>
                         </div>
                         <?php endif; ?>
                     </div>
-                </div>
-
-                <!-- Image Column -->
-                <div class="lg:w-1/2 min-h-[25rem] lg:min-h-full relative border-l-4 border-secondary">
-                    <img src="<?= htmlspecialchars($slide['image_path']) ?>" alt="<?= htmlspecialchars($slide['title']) ?>" class="absolute inset-0 w-full h-full object-cover grayscale opacity-80 mix-blend-luminosity">
-                    <!-- Overlay gradient for depth -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent lg:bg-gradient-to-l"></div>
                 </div>
 
             </div>
@@ -89,8 +88,18 @@ $news = $pdo->query("SELECT * FROM news ORDER BY published_at DESC LIMIT 4")->fe
         const totalSlides = <?= count($hero_slides) ?>;
         
         function updateCarousel() {
-            if(!carousel) return;
-            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+            const slides = document.querySelectorAll('.carousel-slide');
+            slides.forEach((slide, index) => {
+                if(index === currentSlide) {
+                    slide.classList.replace('opacity-0', 'opacity-100');
+                    slide.classList.replace('z-0', 'z-10');
+                    slide.classList.replace('pointer-events-none', 'pointer-events-auto');
+                } else {
+                    slide.classList.replace('opacity-100', 'opacity-0');
+                    slide.classList.replace('z-10', 'z-0');
+                    slide.classList.replace('pointer-events-auto', 'pointer-events-none');
+                }
+            });
             dots.forEach((dot, index) => {
                 if(index === currentSlide) {
                     dot.classList.replace('bg-white/30', 'bg-secondary');

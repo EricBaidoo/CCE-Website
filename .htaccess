@@ -1,4 +1,14 @@
 RewriteEngine On
+
+# 1. Redirect index.php to the directory root (/)
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^(.*)index\.php$ $1 [R=301,L]
+
+# 2. Redirect any other .php request to the extensionless version
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^(.*)\.php$ $1 [R=301,L]
+
+# 3. Internally map extensionless requests to the .php file if it exists
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]

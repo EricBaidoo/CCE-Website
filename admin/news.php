@@ -5,14 +5,16 @@ require_once '../config/database.php';
 require_once 'helpers.php';
 
 $action = $_GET['action'] ?? 'list';
-$message = '';
+$message = $_SESSION['flash_message'] ?? '';
+unset($_SESSION['flash_message']);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['delete_id'])) {
         $stmt = $pdo->prepare("DELETE FROM news WHERE id = ?");
         $stmt->execute([$_POST['delete_id']]);
-        $message = "News article deleted successfully.";
-        $action = 'list';
+        $_SESSION['flash_message'] = "News article deleted successfully.";
+        header("Location: news.php?action=list");
+        exit;
     } else {
         $id = $_POST['id'] ?? null;
         $title = $_POST['title'] ?? '';
@@ -37,15 +39,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($id) {
             $stmt = $pdo->prepare("UPDATE news SET title=?, author=?, published_at=?, excerpt=?, content=?, featured_image=?, faculty_id=? WHERE id=?");
             $stmt->execute([$title, $author, $published_at, $excerpt, $content, $imagePath, $faculty_id, $id]);
-            $message = "News article updated successfully.";
+            $_SESSION['flash_message'] = "News article updated successfully.";
         } else {
             // Generate a slug-like ID
             $newId = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $title), '-')) . '-' . uniqid();
             $stmt = $pdo->prepare("INSERT INTO news (id, title, author, published_at, excerpt, content, featured_image, faculty_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
             $stmt->execute([$newId, $title, $author, $published_at, $excerpt, $content, $imagePath, $faculty_id]);
-            $message = "News article published successfully.";
+            $_SESSION['flash_message'] = "News article published successfully.";
         }
-        $action = 'list';
+        header("Location: news.php?action=list");
+        exit;
     }
 }
 ?>

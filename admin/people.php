@@ -5,14 +5,16 @@ require_once '../config/database.php';
 require_once 'helpers.php';
 
 $action = $_GET['action'] ?? 'list';
-$message = '';
+$message = $_SESSION['flash_message'] ?? '';
+unset($_SESSION['flash_message']);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['delete_id'])) {
         $stmt = $pdo->prepare("DELETE FROM people WHERE id = ?");
         $stmt->execute([$_POST['delete_id']]);
-        $message = "Person deleted successfully.";
-        $action = 'list';
+        $_SESSION['flash_message'] = "Person deleted successfully.";
+        header("Location: people.php?action=list");
+        exit;
     } else {
         $id = $_POST['id'] ?? null;
         $name = $_POST['name'] ?? '';
@@ -39,15 +41,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Update
             $stmt = $pdo->prepare("UPDATE people SET name=?, role=?, company=?, email=?, linkedin=?, bio_short=?, image=?, faculty_id=? WHERE id=?");
             $stmt->execute([$name, $role, $company, $email, $linkedin, $bio_short, $imagePath, $faculty_id, $id]);
-            $message = "Person updated successfully.";
+            $_SESSION['flash_message'] = "Person updated successfully.";
         } else {
             // Insert
             $newId = uniqid('person_');
             $stmt = $pdo->prepare("INSERT INTO people (id, name, role, company, email, linkedin, bio_short, image, faculty_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
             $stmt->execute([$newId, $name, $role, $company, $email, $linkedin, $bio_short, $imagePath, $faculty_id]);
-            $message = "Person added successfully.";
+            $_SESSION['flash_message'] = "Person added successfully.";
         }
-        $action = 'list';
+        header("Location: people.php?action=list");
+        exit;
     }
 }
 ?>

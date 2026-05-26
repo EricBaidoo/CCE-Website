@@ -5,14 +5,16 @@ require_once '../config/database.php';
 require_once 'helpers.php';
 
 $action = $_GET['action'] ?? 'list';
-$message = '';
+$message = $_SESSION['flash_message'] ?? '';
+unset($_SESSION['flash_message']);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['delete_id'])) {
         $stmt = $pdo->prepare("DELETE FROM events WHERE id = ?");
         $stmt->execute([$_POST['delete_id']]);
-        $message = "Event deleted successfully.";
-        $action = 'list';
+        $_SESSION['flash_message'] = "Event deleted successfully.";
+        header("Location: events.php?action=list");
+        exit;
     } else {
         $id = $_POST['id'] ?? null;
         $title = $_POST['title'] ?? '';
@@ -40,14 +42,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($id) {
             $stmt = $pdo->prepare("UPDATE events SET title=?, date_display=?, start_date=?, end_date=?, location=?, excerpt=?, registration_url=?, is_featured=?, image=?, faculty_id=? WHERE id=?");
             $stmt->execute([$title, $date_display, $start_date, $end_date, $location, $excerpt, $registration_url, $is_featured, $imagePath, $faculty_id, $id]);
-            $message = "Event updated successfully.";
+            $_SESSION['flash_message'] = "Event updated successfully.";
         } else {
             $newId = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $title), '-')) . '-' . uniqid();
             $stmt = $pdo->prepare("INSERT INTO events (id, title, date_display, start_date, end_date, location, excerpt, registration_url, is_featured, image, faculty_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             $stmt->execute([$newId, $title, $date_display, $start_date, $end_date, $location, $excerpt, $registration_url, $is_featured, $imagePath, $faculty_id]);
-            $message = "Event created successfully.";
+            $_SESSION['flash_message'] = "Event created successfully.";
         }
-        $action = 'list';
+        header("Location: events.php?action=list");
+        exit;
     }
 }
 ?>
