@@ -25,6 +25,7 @@ function isActive($page, $currentPage) {
         <a href="hero.php" class="block px-4 py-2 rounded-lg <?= isActive('hero.php', $currentPage) ?>">Hero Carousel</a>
         <a href="people.php" class="block px-4 py-2 rounded-lg <?= isActive('people.php', $currentPage) ?>">Network / People</a>
         <a href="companies.php" class="block px-4 py-2 rounded-lg <?= isActive('companies.php', $currentPage) ?>">Institutional Partners</a>
+        <a href="users.php" class="block px-4 py-2 rounded-lg <?= isActive('users.php', $currentPage) ?>">Admin Users</a>
     </nav>
     <div class="p-4 border-t border-white/10">
         <a href="logout.php" class="block px-4 py-2 text-sm text-gray-300 hover:text-white flex items-center gap-2">

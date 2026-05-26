@@ -2,7 +2,7 @@
 // Expect $person variable available in scope
 if (!isset($person)) return;
 ?>
-<?php $avatar = 'assets/image/avatars/' . $person['id'] . '-w400.jpg';
+<?php $avatar = 'assets/image/avatars/' . $person['id'] . '-w400.webp';
 if (!file_exists(__DIR__ . '/../' . $avatar)) { $avatar = $person['photo']; }
 ?>
 <article class="person-card" tabindex="0" data-person-id="<?= htmlspecialchars($person['id']) ?>" data-person-name="<?= htmlspecialchars($person['name']) ?>" data-person-role="<?= htmlspecialchars($person['role']) ?>" data-person-photo="<?= htmlspecialchars($avatar) ?>" data-person-bio="<?= htmlspecialchars($person['bio_long']) ?>" data-person-email="<?= htmlspecialchars(isset($person['email']) ? $person['email'] : '') ?>" data-person-linkedin="<?= htmlspecialchars(isset($person['linkedin']) ? $person['linkedin'] : '') ?>">

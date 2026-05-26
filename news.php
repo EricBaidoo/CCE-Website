@@ -21,7 +21,7 @@ $newsToDisplay = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $meta = [
     'title' => 'News & Reports - CCE Official',
     'description' => 'Latest news, stories and media from Cross-Cutting Excellence (CCE). Stay updated with our latest reports, recaps and announcements.',
-    'image' => '/CCE/assets/image/logo.webp'
+    'image' => 'assets/image/logo.webp'
 ];
 
 include 'header.php';

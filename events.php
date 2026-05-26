@@ -40,7 +40,7 @@ $filtered = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $meta = [
     'title' => 'Events & Conferences - CCE',
     'description' => 'Explore upcoming and past events, workshops, and conferences by the Cross-Cutting Excellence Network.',
-    'image' => '/CCE/assets/image/logo.webp'
+    'image' => 'assets/image/logo.webp'
 ];
 
 include 'header.php';

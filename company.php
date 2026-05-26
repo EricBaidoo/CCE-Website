@@ -25,7 +25,7 @@ include 'header.php';
         <div class="bg-white border-t-4 border-secondary p-12 md:p-16 shadow-lg text-center">
             
             <div class="w-48 h-48 md:w-64 md:h-64 mx-auto mb-10 flex items-center justify-center p-8 border border-gray-100 shadow-inner bg-gray-50/50">
-                <img src="<?= htmlspecialchars($company['logo'] ?? 'assets/image/placeholder.jpg') ?>" alt="<?= htmlspecialchars($company['name']) ?> Logo" class="max-w-full max-h-full object-contain mix-blend-multiply">
+                <img src="<?= htmlspecialchars($company['logo'] ?? 'assets/image/companies-and-people/cce-logo.webp') ?>" alt="<?= htmlspecialchars($company['name']) ?> Logo" class="max-w-full max-h-full object-contain mix-blend-multiply">
             </div>
 
             <h1 class="text-primary font-heading font-bold text-4xl mb-4 uppercase tracking-widest"><?= htmlspecialchars($company['name']) ?></h1>
