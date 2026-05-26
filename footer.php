@@ -93,18 +93,30 @@
         </div>
 
         <!-- Bottom Bar -->
-        <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] sm:text-xs text-gray-500 uppercase tracking-widest font-bold">
-            <div class="text-center md:text-left">
+        <div class="flex flex-col lg:flex-row justify-between items-center gap-6 text-[10px] sm:text-xs text-gray-500 uppercase tracking-widest font-bold">
+            
+            <div class="text-center lg:text-left order-2 lg:order-1">
                 &copy; <?= date('Y'); ?> CROSS-CUTTING EXCELLENCE. ALL RIGHTS RESERVED.
             </div>
-            <div class="flex items-center gap-4 sm:gap-6 divide-x divide-gray-700">
-                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition-colors pl-4 sm:pl-6">Terms of Use</a>
-                <a href="admin/" class="hover:text-secondary transition-colors pl-4 sm:pl-6 flex items-center gap-1">
-                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                    Admin Login
+            
+            <!-- Prominent Developer Badge -->
+            <div class="order-1 lg:order-2">
+                <a href="https://e7world.tech" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-2 bg-dark/80 hover:bg-dark px-5 py-2.5 rounded-full shadow-inner border border-white/5 hover:border-secondary/30 transition-all duration-300">
+                    <span class="text-gray-400 normal-case tracking-normal font-medium text-xs sm:text-sm group-hover:text-gray-300 transition-colors">Powered by</span>
+                    <span class="text-secondary group-hover:text-white font-black tracking-widest text-xs sm:text-sm transition-colors">E7 TECHNOLOGY SOLUTIONS</span>
+                    <svg class="w-3.5 h-3.5 text-secondary group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                 </a>
             </div>
+
+            <div class="flex items-center gap-4 sm:gap-6 divide-x divide-gray-700 order-3 text-center lg:text-right">
+                <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                <a href="#" class="hover:text-white transition-colors pl-4 sm:pl-6">Terms</a>
+                <a href="admin/" class="hover:text-secondary transition-colors pl-4 sm:pl-6 flex items-center gap-1">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    Admin
+                </a>
+            </div>
+
         </div>
     </div>
 </footer>
