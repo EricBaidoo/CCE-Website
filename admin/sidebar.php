@@ -30,7 +30,7 @@ function isActive($page, $currentPage) {
 <div id="sidebar-overlay" class="fixed inset-0 bg-black/60 z-40 hidden md:hidden backdrop-blur-sm transition-opacity opacity-0 duration-300 cursor-pointer"></div>
 
 <!-- Sidebar -->
-<aside id="sidebar" class="w-64 bg-primary text-white flex flex-col h-screen fixed md:sticky top-0 left-0 z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out shadow-2xl md:shadow-none">
+<aside id="sidebar" class="w-64 bg-primary text-white flex flex-col h-[100dvh] fixed md:sticky top-0 left-0 z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out shadow-2xl md:shadow-none">
     <div class="p-6 flex justify-between items-center shrink-0">
         <h2 class="text-2xl font-bold tracking-tight">CCE Admin</h2>
         <!-- Close button for mobile -->
