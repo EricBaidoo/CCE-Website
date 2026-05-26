@@ -2,7 +2,7 @@
 // config/database.php
 
 // Define environment ('development' for local XAMPP, 'production' for live Git deployment)
-define('ENVIRONMENT', 'production');
+define('ENVIRONMENT', 'development');
 
 if (ENVIRONMENT === 'development') {
     ini_set('display_errors', 1);
