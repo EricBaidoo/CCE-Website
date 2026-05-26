@@ -131,7 +131,7 @@ $news = $pdo->query("SELECT * FROM news ORDER BY published_at DESC LIMIT 4")->fe
                     <!-- Left Sidebar (Portrait & Title) -->
                     <div class="lg:col-span-4 flex flex-col items-center text-center lg:items-start lg:text-left">
                         <div class="w-40 h-40 md:w-64 md:h-64 mb-6 border-4 border-white shadow-lg overflow-hidden shrink-0 mx-auto lg:mx-0">
-                            <img src="<?= htmlspecialchars($setting('coordinator_image', 'assets/image/placeholder-user.png')) ?>" alt="<?= htmlspecialchars($setting('coordinator_name')) ?>" class="w-full h-full object-cover grayscale" onerror="this.src='assets/image/hero/001-w800.jpg';">
+                            <img src="<?= htmlspecialchars($setting('coordinator_image', 'assets/image/pics/coordinator.webp')) ?>" alt="<?= htmlspecialchars($setting('coordinator_name')) ?>" class="w-full h-full object-cover grayscale" onerror="this.src='assets/image/hero/001-w800.webp';">
                         </div>
                         <div class="border-t-2 border-secondary pt-4 w-full max-w-xs mx-auto lg:mx-0">
                             <h2 class="text-primary font-heading font-bold text-2xl uppercase tracking-widest leading-tight mb-1"><?= htmlspecialchars($setting('coordinator_name')) ?></h2>
@@ -197,7 +197,7 @@ $news = $pdo->query("SELECT * FROM news ORDER BY published_at DESC LIMIT 4")->fe
                     <img src="assets/image/FE-icons/<?= htmlspecialchars($fac['icon']) ?>.svg" alt="<?= htmlspecialchars($fac['name']) ?>" class="w-12 h-12 mb-4" onerror="this.style.display='none'">
                     <h3 class="text-lg font-heading font-bold text-primary mb-2 uppercase leading-tight"><?= htmlspecialchars($fac['name']) ?></h3>
                     <p class="text-gray-600 font-light text-sm mb-4 leading-snug"><?= htmlspecialchars($fac['desc']) ?></p>
-                    <a href="faculty.php#<?= $fac['id'] ?>" class="text-primary font-bold text-xs uppercase tracking-widest hover:text-secondary flex items-center gap-1 mt-auto">
+                    <a href="faculty#<?= $fac['id'] ?>" class="text-primary font-bold text-xs uppercase tracking-widest hover:text-secondary flex items-center gap-1 mt-auto">
                         View Details <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </a>
                 </div>
@@ -321,7 +321,7 @@ $news = $pdo->query("SELECT * FROM news ORDER BY published_at DESC LIMIT 4")->fe
                 foreach ($marqueeCompanies as $company): 
                 ?>
                 <a href="company?id=<?= htmlspecialchars($company['id']) ?>" class="inline-flex justify-center items-center w-40 md:w-48 shrink-0 hover:scale-105 transition-transform duration-300">
-                    <img src="<?= htmlspecialchars($company['logo'] ?? 'assets/image/placeholder.jpg') ?>" alt="<?= htmlspecialchars($company['name'] ?? 'Company') ?>" class="max-h-16 md:max-h-20 w-full object-contain">
+                    <img src="<?= htmlspecialchars($company['logo'] ?? 'assets/image/companies-and-people/cce-logo.webp') ?>" alt="<?= htmlspecialchars($company['name'] ?? 'Company') ?>" class="max-h-16 md:max-h-20 w-full object-contain">
                 </a>
                 <?php endforeach; ?>
             </div>

@@ -2,7 +2,7 @@
 $meta = [
     'title' => 'Faculty Endeavours - 8 Strategic Areas of Excellence',
     'description' => 'We equip Christian Professionals to be excellent in high-end productivity across 8 Faculty Endeavours',
-    'image' => '/CCE/assets/image/hero/001-w2000.jpg'
+    'image' => 'assets/image/hero/001-w2000.webp'
 ];
 include 'header.php';
 
