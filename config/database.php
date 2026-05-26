@@ -1,26 +1,17 @@
 <?php
-// config/database.php
+// config/database.php — LOCAL XAMPP DEVELOPMENT
+// This file is gitignored and will NOT be pushed.
 
-// Check for a local override file (for XAMPP development)
-// This file is gitignored, so it won't affect production
-if (file_exists(__DIR__ . '/database.local.php')) {
-    require_once __DIR__ . '/database.local.php';
-    return; // Stop here, local config handles everything
-}
+define('ENVIRONMENT', 'development');
 
-// ==============================
-// PRODUCTION CREDENTIALS BELOW
-// ==============================
-define('ENVIRONMENT', 'production');
-
-ini_set('display_errors', 0);
-ini_set('display_startup_errors', 0);
-error_reporting(0);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 $host = 'localhost';
-$db   = 'u420775839_cce_production';
-$user = 'u420775839_cce_admin';
-$pass = 'Eric0056@2024';
+$db   = 'cce_db';
+$user = 'root';
+$pass = 'root';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
@@ -33,6 +24,6 @@ $options = [
 try {
     $pdo = new PDO($dsn, $user, $pass, $options);
 } catch (\PDOException $e) {
-    die('Database connection failed. Please check your credentials.');
+    throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
 ?>

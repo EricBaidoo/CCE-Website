@@ -59,6 +59,7 @@ temp/
 # PHP specific
 vendor/
 composer.lock
+config/database.php
 
 # XAMPP specific
 error.log
