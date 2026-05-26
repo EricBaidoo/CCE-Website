@@ -1,25 +1,26 @@
 <?php
 // config/database.php
 
-// Define environment ('development' for local XAMPP, 'production' for live Git deployment)
-define('ENVIRONMENT', 'development');
-
-if (ENVIRONMENT === 'development') {
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
-} else {
-    ini_set('display_errors', 0);
-    ini_set('display_startup_errors', 0);
-    error_reporting(0);
+// Check for a local override file (for XAMPP development)
+// This file is gitignored, so it won't affect production
+if (file_exists(__DIR__ . '/database.local.php')) {
+    require_once __DIR__ . '/database.local.php';
+    return; // Stop here, local config handles everything
 }
 
-// Database Credentials
-// IMPORTANT FOR GIT DEPLOYMENT: If deploying to a live server, update these values via your hosting panel (e.g. cPanel or environment variables).
+// ==============================
+// PRODUCTION CREDENTIALS BELOW
+// ==============================
+define('ENVIRONMENT', 'production');
+
+ini_set('display_errors', 0);
+ini_set('display_startup_errors', 0);
+error_reporting(0);
+
 $host = 'localhost';
-$db   = 'cce_db'; // Change this to your live database name (e.g. cce_production)
-$user = 'root'; // Change this to your live database user
-$pass = 'root'; // Change this to your live database password
+$db   = 'u420775839_cce_production';
+$user = 'u420775839_cce_admin';
+$pass = 'Eric0056@2024';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
@@ -32,11 +33,6 @@ $options = [
 try {
     $pdo = new PDO($dsn, $user, $pass, $options);
 } catch (\PDOException $e) {
-    if (ENVIRONMENT === 'development') {
-        throw new \PDOException($e->getMessage(), (int)$e->getCode());
-    } else {
-        // In production, just show a generic message to prevent leaking sensitive credentials
-        die('Database connection failed. Please ensure your database credentials in config/database.php are correct.');
-    }
+    die('Database connection failed. Please check your credentials.');
 }
 ?>
