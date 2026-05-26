@@ -140,11 +140,11 @@ $news = $pdo->query("SELECT * FROM news ORDER BY published_at DESC LIMIT 4")->fe
                     <!-- Left Sidebar (Portrait & Title) -->
                     <div class="lg:col-span-4 flex flex-col items-center text-center lg:items-start lg:text-left">
                         <div class="w-40 h-40 md:w-64 md:h-64 mb-6 border-4 border-white shadow-lg overflow-hidden shrink-0 mx-auto lg:mx-0">
-                            <img src="<?= htmlspecialchars($setting('coordinator_image', 'assets/image/pics/coordinator.webp')) ?>" alt="<?= htmlspecialchars($setting('coordinator_name')) ?>" class="w-full h-full object-cover grayscale" onerror="this.src='assets/image/hero/001-w800.webp';">
+                            <img src="<?= htmlspecialchars($setting('coordinator_image', 'assets/image/pics/coordinator.webp')) ?>" alt="<?= htmlspecialchars($setting('coordinator_name')) ?>" class="w-full h-full object-cover" onerror="this.src='assets/image/hero/001-w800.webp';">
                         </div>
                         <div class="border-t-2 border-secondary pt-4 w-full max-w-xs mx-auto lg:mx-0">
-                            <h2 class="text-primary font-heading font-bold text-2xl uppercase tracking-widest leading-tight mb-1"><?= htmlspecialchars($setting('coordinator_name')) ?></h2>
-                            <p class="text-sm text-gray-500 font-bold tracking-widest uppercase">Cross-Cutting Excellence</p>
+                            <h2 class="text-primary font-heading font-bold text-2xl uppercase tracking-widest leading-tight mb-1"><?= htmlspecialchars($setting('coordinator_name', 'Coordinator Name')) ?></h2>
+                            <p class="text-sm text-gray-500 font-bold tracking-widest uppercase">The General Coordinator</p>
                         </div>
                     </div>
                     
