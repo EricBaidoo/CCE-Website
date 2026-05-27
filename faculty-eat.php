@@ -46,7 +46,7 @@ $news = $newsStmt->fetchAll();
                 Education & Training
             </h1>
             <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl">
-                Professional educationist and technical trainers receive knowledge and skills to formulate and implement an educational system that functions efficiently to drive industry and promote the glory of God.
+                <?= htmlspecialchars($setting('faculty_eat_hero_desc')) ?>
             </p>
         </div>
     </section>
@@ -61,18 +61,23 @@ $news = $newsStmt->fetchAll();
                     <div class="mb-12">
                         <h2 class="text-3xl font-heading font-bold text-primary mb-6 border-b-2 border-secondary pb-2 inline-block">VISION & MISSION</h2>
                         <p class="text-gray-700 leading-loose text-lg font-light">
-                            Education shapes the mind of the next generation. The Education & Training (EAT) faculty seeks to redeem the educational sector by infusing curriculum development, pedagogical methods, and institutional administration with the manifold wisdom of God. We aim to produce educators who do not just impart knowledge, but build character.
+                            <?= htmlspecialchars($setting('faculty_eat_vision_mission')) ?>
                         </p>
                     </div>
 
                     <div class="mb-12">
                         <h2 class="text-3xl font-heading font-bold text-primary mb-6 border-b-2 border-secondary pb-2 inline-block">KEY OBJECTIVES</h2>
                         <ul class="list-disc pl-6 space-y-4 text-gray-700 text-lg font-light marker:text-secondary">
-                            <li>Design and advocate for value-based educational curricula.</li>
-                                <li>Enhance the pedagogical skills of Christian educators.</li>
-                                <li>Promote excellence and integrity in educational administration.</li>
-                                <li>Bridge the gap between academia and industry through functional training.</li>
-                                
+                            <?php 
+                            $objectives = explode("\n", trim($setting('faculty_eat_objectives_html')));
+                            foreach($objectives as $obj): 
+                                if(trim($obj)): 
+                            ?>
+                                <li><?= htmlspecialchars(trim(strip_tags($obj))) ?></li>
+                            <?php 
+                                endif;
+                            endforeach; 
+                            ?>
                         </ul>
                     </div>
                     
@@ -142,7 +147,7 @@ $news = $newsStmt->fetchAll();
                     <div class="bg-gray-50 p-8 border border-gray-200 border-t-4 border-t-primary">
                         <h3 class="text-xl font-heading font-bold text-primary mb-4 uppercase tracking-wider">Who Should Join?</h3>
                         <p class="text-gray-600 font-light leading-relaxed mb-6">
-                            Teachers, Lecturers, School Administrators, Curriculum Developers, and Corporate Trainers.
+                            <?= htmlspecialchars($setting('faculty_eat_audience')) ?>
                         </p>
                         <hr class="border-gray-200 mb-6">
                         <p class="text-sm text-gray-500 italic">

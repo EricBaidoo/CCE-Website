@@ -44,6 +44,8 @@ function isActive($page, $currentPage) {
         <div class="pt-4 pb-2">
             <p class="px-4 text-xs font-bold text-gray-400 uppercase tracking-wider">Content Management</p>
         </div>
+        <a href="pages" class="block px-4 py-2 rounded-lg <?= isActive('pages.php', $currentPage) ?>">Page Content</a>
+        <a href="roadmap" class="block px-4 py-2 rounded-lg <?= isActive('roadmap.php', $currentPage) ?>">Strategic Roadmap</a>
         <a href="news" class="block px-4 py-2 rounded-lg <?= isActive('news.php', $currentPage) ?>">News</a>
         <a href="events" class="block px-4 py-2 rounded-lg <?= isActive('events.php', $currentPage) ?>">Events</a>
         

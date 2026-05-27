@@ -46,7 +46,7 @@ $news = $newsStmt->fetchAll();
                 Science & Technology
             </h1>
             <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl">
-                Christian professional scientist and technologist are provided with further resources to position them at the cutting edge of explorative science and innovative technology which is both ethical and godly.
+                <?= htmlspecialchars($setting('faculty_sat_hero_desc')) ?>
             </p>
         </div>
     </section>
@@ -61,18 +61,23 @@ $news = $newsStmt->fetchAll();
                     <div class="mb-12">
                         <h2 class="text-3xl font-heading font-bold text-primary mb-6 border-b-2 border-secondary pb-2 inline-block">VISION & MISSION</h2>
                         <p class="text-gray-700 leading-loose text-lg font-light">
-                            Innovation drives the modern world. In the Science & Technology (SAT) faculty, we challenge Christian professionals to be at the forefront of scientific discovery and technological advancement. We emphasize that God is the author of science, and technology should be harnessed ethically to solve human problems and glorify the Creator.
+                            <?= htmlspecialchars($setting('faculty_sat_vision_mission')) ?>
                         </p>
                     </div>
 
                     <div class="mb-12">
                         <h2 class="text-3xl font-heading font-bold text-primary mb-6 border-b-2 border-secondary pb-2 inline-block">KEY OBJECTIVES</h2>
                         <ul class="list-disc pl-6 space-y-4 text-gray-700 text-lg font-light marker:text-secondary">
-                            <li>Promote ethical research and innovation in STEM fields.</li>
-                                <li>Equip tech professionals to build solutions that address real-world challenges.</li>
-                                <li>Foster discussions on the intersection of faith, science, and bioethics.</li>
-                                <li>Provide mentorship for young Christian scientists and engineers.</li>
-                                
+                            <?php 
+                            $objectives = explode("\n", trim($setting('faculty_sat_objectives_html')));
+                            foreach($objectives as $obj): 
+                                if(trim($obj)): 
+                            ?>
+                                <li><?= htmlspecialchars(trim(strip_tags($obj))) ?></li>
+                            <?php 
+                                endif;
+                            endforeach; 
+                            ?>
                         </ul>
                     </div>
                     
@@ -142,7 +147,7 @@ $news = $newsStmt->fetchAll();
                     <div class="bg-gray-50 p-8 border border-gray-200 border-t-4 border-t-primary">
                         <h3 class="text-xl font-heading font-bold text-primary mb-4 uppercase tracking-wider">Who Should Join?</h3>
                         <p class="text-gray-600 font-light leading-relaxed mb-6">
-                            Engineers, Software Developers, Researchers, Medical Scientists, and IT Professionals.
+                            <?= htmlspecialchars($setting('faculty_sat_audience')) ?>
                         </p>
                         <hr class="border-gray-200 mb-6">
                         <p class="text-sm text-gray-500 italic">

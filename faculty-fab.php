@@ -46,7 +46,7 @@ $news = $newsStmt->fetchAll();
                 Finance & Business
             </h1>
             <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl">
-                Finance and business drive economies because they are the gatekeepers of global resources. Christians must engage this arena with competence and godliness.
+                <?= htmlspecialchars($setting('faculty_fab_hero_desc')) ?>
             </p>
         </div>
     </section>
@@ -61,18 +61,23 @@ $news = $newsStmt->fetchAll();
                     <div class="mb-12">
                         <h2 class="text-3xl font-heading font-bold text-primary mb-6 border-b-2 border-secondary pb-2 inline-block">VISION & MISSION</h2>
                         <p class="text-gray-700 leading-loose text-lg font-light">
-                            Wealth creation and resource management are crucial for global influence. The Finance & Business (FAB) faculty equips Christian entrepreneurs and financial professionals to operate with uncompromised integrity while achieving market-leading excellence. We believe business is a legitimate calling that can be used to advance God's kingdom.
+                            <?= htmlspecialchars($setting('faculty_fab_vision_mission')) ?>
                         </p>
                     </div>
 
                     <div class="mb-12">
                         <h2 class="text-3xl font-heading font-bold text-primary mb-6 border-b-2 border-secondary pb-2 inline-block">KEY OBJECTIVES</h2>
                         <ul class="list-disc pl-6 space-y-4 text-gray-700 text-lg font-light marker:text-secondary">
-                            <li>Instill biblical principles of wealth creation, stewardship, and investment.</li>
-                                <li>Equip entrepreneurs to build scalable, sustainable, and ethical businesses.</li>
-                                <li>Promote Kingdom-minded economic policies and financial practices.</li>
-                                <li>Facilitate networking and resource sharing among Christian business leaders.</li>
-                                
+                            <?php 
+                            $objectives = explode("\n", trim($setting('faculty_fab_objectives_html')));
+                            foreach($objectives as $obj): 
+                                if(trim($obj)): 
+                            ?>
+                                <li><?= htmlspecialchars(trim(strip_tags($obj))) ?></li>
+                            <?php 
+                                endif;
+                            endforeach; 
+                            ?>
                         </ul>
                     </div>
                     
@@ -142,7 +147,7 @@ $news = $newsStmt->fetchAll();
                     <div class="bg-gray-50 p-8 border border-gray-200 border-t-4 border-t-primary">
                         <h3 class="text-xl font-heading font-bold text-primary mb-4 uppercase tracking-wider">Who Should Join?</h3>
                         <p class="text-gray-600 font-light leading-relaxed mb-6">
-                            Entrepreneurs, Bankers, Accountants, Investors, and Corporate Executives.
+                            <?= htmlspecialchars($setting('faculty_fab_audience')) ?>
                         </p>
                         <hr class="border-gray-200 mb-6">
                         <p class="text-sm text-gray-500 italic">

@@ -28,18 +28,17 @@ $news = $pdo->query("SELECT * FROM news ORDER BY published_at DESC LIMIT 4")->fe
     <!-- MAIN HERO (Dynamic Carousel) -->
     <section class="relative bg-dark border-b-4 border-secondary overflow-hidden h-[85vh] lg:h-[35rem]">
         <div id="hero-carousel" class="relative h-full w-full">
-            <?php foreach ($hero_slides as $index => $slide): ?>
+            <?php foreach ($hero_slides as $index => $slide): 
+                $isTextLeft = ($slide['layout_style'] ?? 'text_left') === 'text_left';
+                $textOrderClass = $isTextLeft ? 'order-2 lg:order-1' : 'order-2 lg:order-2';
+                $imageOrderClass = $isTextLeft ? 'order-1 lg:order-2' : 'order-1 lg:order-1';
+                $imageBorderClass = $isTextLeft ? 'lg:border-l-4' : 'lg:border-r-4';
+            ?>
             <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out flex flex-col lg:flex-row bg-dark <?= $index === 0 ? 'opacity-100 z-10 pointer-events-auto' : 'opacity-0 z-0 pointer-events-none' ?>">
                 
-                <!-- Image Column (Background on Mobile, Right Column on Desktop) -->
-                <div class="absolute inset-0 lg:static lg:w-1/2 h-full lg:border-l-4 border-secondary z-10 order-1 lg:order-2">
-                    <img src="<?= htmlspecialchars($slide['image_path']) ?>" alt="<?= htmlspecialchars($slide['title']) ?>" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 lg:opacity-80 mix-blend-luminosity lg:mix-blend-normal">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/80 to-transparent lg:bg-gradient-to-l lg:from-dark lg:to-transparent"></div>
-                </div>
-
-                <!-- Content Column (Foreground on Mobile, Left Column on Desktop) -->
-                <div class="w-full lg:w-1/2 p-6 md:p-16 flex flex-col justify-end lg:justify-center h-full bg-transparent lg:bg-dark relative z-20 pb-28 lg:pb-16 order-2 lg:order-1">
-                    <div class="max-w-xl">
+                <!-- Content Column (Foreground on Mobile) -->
+                <div class="w-full lg:w-1/2 p-6 md:p-16 flex flex-col justify-end lg:justify-center h-full bg-dark relative z-20 pb-28 lg:pb-16 <?= $textOrderClass ?>">
+                    <div class="max-w-xl <?= !$isTextLeft ? 'ml-auto' : '' ?>">
                         <div class="inline-block border-l-4 border-secondary pl-4 mb-4 lg:mb-6">
                             <span class="text-secondary font-bold tracking-widest uppercase text-xs lg:text-sm">Official Framework</span>
                         </div>
@@ -59,6 +58,27 @@ $news = $pdo->query("SELECT * FROM news ORDER BY published_at DESC LIMIT 4")->fe
                     </div>
                 </div>
 
+                <!-- Image Column (Background on Mobile) -->
+                <div class="hidden lg:block lg:w-1/2 h-full <?= $imageBorderClass ?> border-secondary relative z-10 <?= $imageOrderClass ?> bg-dark">
+                    <img src="<?= htmlspecialchars($slide['image_path']) ?>" alt="<?= htmlspecialchars($slide['title']) ?>" class="absolute inset-0 w-full h-full object-cover <?= htmlspecialchars($slide['image_position'] ?? 'object-center') ?>">
+                    
+                    <?php if (!empty($slide['image_caption_name']) || !empty($slide['image_caption_title'])): ?>
+                    <div class="absolute bottom-0 left-0 right-0 p-8 pt-24 bg-gradient-to-t from-dark/90 to-transparent flex flex-col justify-end">
+                        <?php if (!empty($slide['image_caption_name'])): ?>
+                        <p class="text-white font-bold text-2xl uppercase tracking-wide"><?= htmlspecialchars($slide['image_caption_name']) ?></p>
+                        <?php endif; ?>
+                        <?php if (!empty($slide['image_caption_title'])): ?>
+                        <p class="text-secondary font-medium text-base mt-1 tracking-wide"><?= htmlspecialchars($slide['image_caption_title']) ?></p>
+                        <?php endif; ?>
+                    </div>
+                    <?php endif; ?>
+                </div>
+
+                <!-- Mobile Image Background -->
+                <div class="absolute inset-0 w-full h-full z-0 lg:hidden block">
+                    <img src="<?= htmlspecialchars($slide['image_path']) ?>" alt="<?= htmlspecialchars($slide['title']) ?>" class="absolute inset-0 w-full h-full object-cover <?= htmlspecialchars($slide['image_position'] ?? 'object-center') ?> opacity-40">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/90 to-transparent"></div>
+                </div>
             </div>
             <?php endforeach; ?>
         </div>
@@ -191,7 +211,7 @@ $news = $pdo->query("SELECT * FROM news ORDER BY published_at DESC LIMIT 4")->fe
     <section class="py-20 bg-light border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-end border-b-2 border-primary pb-4 mb-12">
-                <h2 class="text-primary font-heading font-bold text-3xl md:text-4xl">FACULTIES ENDEAVOURS</h2>
+                <h2 class="text-primary font-heading font-bold text-3xl md:text-4xl"><?= htmlspecialchars($setting('home_faculties_title', 'FACULTIES ENDEAVOURS')) ?></h2>
                 <a href="faculty" class="hidden md:block text-secondary font-bold text-sm uppercase tracking-widest hover:text-primary">View Frameworks</a>
             </div>
             
@@ -217,7 +237,7 @@ $news = $pdo->query("SELECT * FROM news ORDER BY published_at DESC LIMIT 4")->fe
                     <img src="assets/image/FE-icons/<?= htmlspecialchars($fac['icon']) ?>.svg" alt="<?= htmlspecialchars($fac['name']) ?>" class="w-12 h-12 mb-4" onerror="this.style.display='none'">
                     <h3 class="text-lg font-heading font-bold text-primary mb-2 uppercase leading-tight"><?= htmlspecialchars($fac['name']) ?></h3>
                     <p class="text-gray-600 font-light text-sm mb-4 leading-snug"><?= htmlspecialchars($fac['desc']) ?></p>
-                    <a href="faculty#<?= $fac['id'] ?>" class="text-primary font-bold text-xs uppercase tracking-widest hover:text-secondary flex items-center gap-1 mt-auto">
+                    <a href="faculty-<?= $fac['id'] ?>" class="text-primary font-bold text-xs uppercase tracking-widest hover:text-secondary flex items-center gap-1 mt-auto">
                         View Details <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </a>
                 </div>

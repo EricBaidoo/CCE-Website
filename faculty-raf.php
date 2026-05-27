@@ -46,7 +46,7 @@ $news = $newsStmt->fetchAll();
                 Relationship & Family
             </h1>
             <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl">
-                Relationships are the foundation of society. CCE has programmes that grow multi-dimensional relationships and build strong godly families. We train counselors and life coaches.
+                <?= htmlspecialchars($setting('faculty_raf_hero_desc')) ?>
             </p>
         </div>
     </section>
@@ -61,18 +61,23 @@ $news = $newsStmt->fetchAll();
                     <div class="mb-12">
                         <h2 class="text-3xl font-heading font-bold text-primary mb-6 border-b-2 border-secondary pb-2 inline-block">VISION & MISSION</h2>
                         <p class="text-gray-700 leading-loose text-lg font-light">
-                            The family is the basic unit of society, and strong relationships are the bedrock of human flourishing. The Relationship & Family (RAF) faculty focuses on restoring the biblical model of family and community. We train professionals to provide healing, guidance, and structure to broken relationships and families.
+                            <?= htmlspecialchars($setting('faculty_raf_vision_mission')) ?>
                         </p>
                     </div>
 
                     <div class="mb-12">
                         <h2 class="text-3xl font-heading font-bold text-primary mb-6 border-b-2 border-secondary pb-2 inline-block">KEY OBJECTIVES</h2>
                         <ul class="list-disc pl-6 space-y-4 text-gray-700 text-lg font-light marker:text-secondary">
-                            <li>Train and certify Christian counselors and life coaches.</li>
-                                <li>Develop programs that strengthen marriages and family dynamics.</li>
-                                <li>Address contemporary relational challenges with biblical wisdom.</li>
-                                <li>Promote mental and emotional wellness within the Christian community.</li>
-                                
+                            <?php 
+                            $objectives = explode("\n", trim($setting('faculty_raf_objectives_html')));
+                            foreach($objectives as $obj): 
+                                if(trim($obj)): 
+                            ?>
+                                <li><?= htmlspecialchars(trim(strip_tags($obj))) ?></li>
+                            <?php 
+                                endif;
+                            endforeach; 
+                            ?>
                         </ul>
                     </div>
                     
@@ -142,7 +147,7 @@ $news = $newsStmt->fetchAll();
                     <div class="bg-gray-50 p-8 border border-gray-200 border-t-4 border-t-primary">
                         <h3 class="text-xl font-heading font-bold text-primary mb-4 uppercase tracking-wider">Who Should Join?</h3>
                         <p class="text-gray-600 font-light leading-relaxed mb-6">
-                            Counselors, Social Workers, Life Coaches, Marriage Therapists, and Pastors.
+                            <?= htmlspecialchars($setting('faculty_raf_audience')) ?>
                         </p>
                         <hr class="border-gray-200 mb-6">
                         <p class="text-sm text-gray-500 italic">

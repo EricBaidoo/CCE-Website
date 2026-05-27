@@ -46,7 +46,7 @@ $news = $newsStmt->fetchAll();
                 Communication & Media
             </h1>
             <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl">
-                The Lord Jesus Christ was a master communicator. Christians must be well equipped to access and control the global communication and media space.
+                <?= htmlspecialchars($setting('faculty_cam_hero_desc')) ?>
             </p>
         </div>
     </section>
@@ -61,18 +61,23 @@ $news = $newsStmt->fetchAll();
                     <div class="mb-12">
                         <h2 class="text-3xl font-heading font-bold text-primary mb-6 border-b-2 border-secondary pb-2 inline-block">VISION & MISSION</h2>
                         <p class="text-gray-700 leading-loose text-lg font-light">
-                            Media is the most powerful tool for shaping public opinion in the 21st century. The Communication & Media (CAM) faculty trains Christian communicators, journalists, and media executives to tell compelling stories with truth and integrity. We aim to flood the media space with light and counteract narratives of despair.
+                            <?= htmlspecialchars($setting('faculty_cam_vision_mission')) ?>
                         </p>
                     </div>
 
                     <div class="mb-12">
                         <h2 class="text-3xl font-heading font-bold text-primary mb-6 border-b-2 border-secondary pb-2 inline-block">KEY OBJECTIVES</h2>
                         <ul class="list-disc pl-6 space-y-4 text-gray-700 text-lg font-light marker:text-secondary">
-                            <li>Develop excellence in journalism, broadcasting, and digital media.</li>
-                                <li>Train media professionals in ethical reporting and truth-telling.</li>
-                                <li>Equip ministries and organizations with modern communication strategies.</li>
-                                <li>Create platforms for authentic and impactful Christian storytelling.</li>
-                                
+                            <?php 
+                            $objectives = explode("\n", trim($setting('faculty_cam_objectives_html')));
+                            foreach($objectives as $obj): 
+                                if(trim($obj)): 
+                            ?>
+                                <li><?= htmlspecialchars(trim(strip_tags($obj))) ?></li>
+                            <?php 
+                                endif;
+                            endforeach; 
+                            ?>
                         </ul>
                     </div>
                     
@@ -142,7 +147,7 @@ $news = $newsStmt->fetchAll();
                     <div class="bg-gray-50 p-8 border border-gray-200 border-t-4 border-t-primary">
                         <h3 class="text-xl font-heading font-bold text-primary mb-4 uppercase tracking-wider">Who Should Join?</h3>
                         <p class="text-gray-600 font-light leading-relaxed mb-6">
-                            Journalists, Broadcasters, PR Professionals, Social Media Managers, and Content Creators.
+                            <?= htmlspecialchars($setting('faculty_cam_audience')) ?>
                         </p>
                         <hr class="border-gray-200 mb-6">
                         <p class="text-sm text-gray-500 italic">

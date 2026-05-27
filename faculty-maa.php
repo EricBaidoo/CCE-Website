@@ -46,7 +46,7 @@ $news = $newsStmt->fetchAll();
                 Missions & Apologetics
             </h1>
             <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl">
-                Preparing professionals to engage culture with the gospel, defend the faith thoughtfully and serve missionally across borders.
+                <?= htmlspecialchars($setting('faculty_maa_hero_desc')) ?>
             </p>
         </div>
     </section>
@@ -61,18 +61,23 @@ $news = $newsStmt->fetchAll();
                     <div class="mb-12">
                         <h2 class="text-3xl font-heading font-bold text-primary mb-6 border-b-2 border-secondary pb-2 inline-block">VISION & MISSION</h2>
                         <p class="text-gray-700 leading-loose text-lg font-light">
-                            The Great Commission requires both passion and intellectual rigor. The Missions & Apologetics (MAA) faculty prepares professionals to articulate and defend the Christian worldview in a pluralistic society. We also mobilize professionals to use their secular skills as vehicles for global missions and cross-cultural outreach.
+                            <?= htmlspecialchars($setting('faculty_maa_vision_mission')) ?>
                         </p>
                     </div>
 
                     <div class="mb-12">
                         <h2 class="text-3xl font-heading font-bold text-primary mb-6 border-b-2 border-secondary pb-2 inline-block">KEY OBJECTIVES</h2>
                         <ul class="list-disc pl-6 space-y-4 text-gray-700 text-lg font-light marker:text-secondary">
-                            <li>Equip believers to defend the Christian faith with logic, evidence, and grace.</li>
-                                <li>Train professionals for bi-vocational missions in closed or secular nations.</li>
-                                <li>Engage secular ideologies and alternative worldviews effectively.</li>
-                                <li>Support frontline missionaries with professional and technical expertise.</li>
-                                
+                            <?php 
+                            $objectives = explode("\n", trim($setting('faculty_maa_objectives_html')));
+                            foreach($objectives as $obj): 
+                                if(trim($obj)): 
+                            ?>
+                                <li><?= htmlspecialchars(trim(strip_tags($obj))) ?></li>
+                            <?php 
+                                endif;
+                            endforeach; 
+                            ?>
                         </ul>
                     </div>
                     
@@ -142,7 +147,7 @@ $news = $newsStmt->fetchAll();
                     <div class="bg-gray-50 p-8 border border-gray-200 border-t-4 border-t-primary">
                         <h3 class="text-xl font-heading font-bold text-primary mb-4 uppercase tracking-wider">Who Should Join?</h3>
                         <p class="text-gray-600 font-light leading-relaxed mb-6">
-                            Apologists, Missionaries, Theologians, and Bi-vocational Professionals.
+                            <?= htmlspecialchars($setting('faculty_maa_audience')) ?>
                         </p>
                         <hr class="border-gray-200 mb-6">
                         <p class="text-sm text-gray-500 italic">

@@ -22,6 +22,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $button_text = $_POST['button_text'] ?? '';
         $button_link = $_POST['button_link'] ?? '';
         $slide_order = $_POST['slide_order'] ?? 0;
+        $image_position = $_POST['image_position'] ?? 'object-center';
+        $layout_style = $_POST['layout_style'] ?? 'text_left';
+        $image_caption_name = $_POST['image_caption_name'] ?? '';
+        $image_caption_title = $_POST['image_caption_title'] ?? '';
         $imagePath = $_POST['existing_image'] ?? '';
         
         if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
@@ -36,12 +40,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         if ($id) {
-            $stmt = $pdo->prepare("UPDATE hero_slides SET title=?, description=?, button_text=?, button_link=?, slide_order=?, image_path=? WHERE id=?");
-            $stmt->execute([$title, $description, $button_text, $button_link, $slide_order, $imagePath, $id]);
+            $stmt = $pdo->prepare("UPDATE hero_slides SET title=?, description=?, button_text=?, button_link=?, slide_order=?, image_path=?, image_position=?, layout_style=?, image_caption_name=?, image_caption_title=? WHERE id=?");
+            $stmt->execute([$title, $description, $button_text, $button_link, $slide_order, $imagePath, $image_position, $layout_style, $image_caption_name, $image_caption_title, $id]);
             $_SESSION['flash_message'] = "Slide updated successfully.";
         } else {
-            $stmt = $pdo->prepare("INSERT INTO hero_slides (title, description, button_text, button_link, slide_order, image_path) VALUES (?, ?, ?, ?, ?, ?)");
-            $stmt->execute([$title, $description, $button_text, $button_link, $slide_order, $imagePath]);
+            $stmt = $pdo->prepare("INSERT INTO hero_slides (title, description, button_text, button_link, slide_order, image_path, image_position, layout_style, image_caption_name, image_caption_title) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            $stmt->execute([$title, $description, $button_text, $button_link, $slide_order, $imagePath, $image_position, $layout_style, $image_caption_name, $image_caption_title]);
             $_SESSION['flash_message'] = "Slide added successfully.";
         }
         header("Location: hero.php?action=list");
@@ -121,7 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php elseif ($action === 'edit'): ?>
             <?php
             $id = $_GET['id'] ?? null;
-            $slide = ['title'=>'', 'description'=>'', 'button_text'=>'', 'button_link'=>'', 'slide_order'=>'0', 'image_path'=>''];
+            $slide = ['title'=>'', 'description'=>'', 'button_text'=>'', 'button_link'=>'', 'slide_order'=>'0', 'image_path'=>'', 'image_position'=>'object-center', 'layout_style'=>'text_left', 'image_caption_name'=>'', 'image_caption_title'=>''];
             if ($id) {
                 $stmt = $pdo->prepare("SELECT * FROM hero_slides WHERE id = ?");
                 $stmt->execute([$id]);
@@ -168,6 +172,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <label class="block text-sm font-medium text-gray-700 mb-1">Display Order</label>
                             <input type="number" name="slide_order" value="<?= htmlspecialchars($slide['slide_order']) ?>" class="w-full border-gray-300 rounded-md shadow-sm border p-2 focus:ring-secondary focus:border-secondary">
                             <p class="text-xs text-gray-500 mt-1">Lower numbers appear first.</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Image Focus (Position)</label>
+                            <select name="image_position" class="w-full border-gray-300 rounded-md shadow-sm border p-2 focus:ring-secondary focus:border-secondary">
+                                <option value="object-center" <?= $slide['image_position'] === 'object-center' ? 'selected' : '' ?>>Center</option>
+                                <option value="object-top" <?= $slide['image_position'] === 'object-top' ? 'selected' : '' ?>>Top</option>
+                                <option value="object-bottom" <?= $slide['image_position'] === 'object-bottom' ? 'selected' : '' ?>>Bottom</option>
+                                <option value="object-left" <?= $slide['image_position'] === 'object-left' ? 'selected' : '' ?>>Left</option>
+                                <option value="object-right" <?= $slide['image_position'] === 'object-right' ? 'selected' : '' ?>>Right</option>
+                            </select>
+                            <p class="text-xs text-gray-500 mt-1">Adjust if image gets cropped badly.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Layout Style</label>
+                            <select name="layout_style" class="w-full border-gray-300 rounded-md shadow-sm border p-2 focus:ring-secondary focus:border-secondary">
+                                <option value="text_left" <?= $slide['layout_style'] === 'text_left' ? 'selected' : '' ?>>Text Left, Image Right</option>
+                                <option value="text_right" <?= $slide['layout_style'] === 'text_right' ? 'selected' : '' ?>>Image Left, Text Right</option>
+                            </select>
+                            <p class="text-xs text-gray-500 mt-1">Which side should the text appear on desktop?</p>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t border-gray-200 pt-4 mt-2">
+                        <h3 class="text-sm font-bold text-gray-800 mb-4 uppercase">Optional Image Overlay (Caption)</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Image Subject Name</label>
+                                <input type="text" name="image_caption_name" value="<?= htmlspecialchars($slide['image_caption_name']) ?>" class="w-full border-gray-300 rounded-md shadow-sm border p-2 focus:ring-secondary focus:border-secondary" placeholder="e.g. Emmanuel Kwame Mensah">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Image Subject Title</label>
+                                <input type="text" name="image_caption_title" value="<?= htmlspecialchars($slide['image_caption_title']) ?>" class="w-full border-gray-300 rounded-md shadow-sm border p-2 focus:ring-secondary focus:border-secondary" placeholder="e.g. General Coordinator">
+                            </div>
                         </div>
                     </div>
 
