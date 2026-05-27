@@ -143,7 +143,18 @@ $news = $pdo->query("SELECT * FROM news ORDER BY published_at DESC LIMIT 4")->fe
                             <img src="<?= htmlspecialchars($setting('coordinator_image', 'assets/image/pics/coordinator.webp')) ?>" alt="<?= htmlspecialchars($setting('coordinator_name')) ?>" class="w-full h-full object-cover" onerror="this.src='assets/image/hero/001-w800.webp';">
                         </div>
                         <div class="border-t-2 border-secondary pt-4 w-full max-w-xs mx-auto lg:mx-0">
-                            <h2 class="text-primary font-heading font-bold text-2xl uppercase tracking-widest leading-tight mb-1"><?= htmlspecialchars($setting('coordinator_name', 'Coordinator Name')) ?></h2>
+                            <h2 class="text-primary font-heading font-bold text-2xl uppercase tracking-widest leading-tight mb-1">
+                                <?php
+                                $coordName = $setting('coordinator_name', 'Coordinator Name');
+                                $nameParts = explode(' ', $coordName);
+                                $firstName = array_shift($nameParts);
+                                $otherNames = implode(' ', $nameParts);
+                                ?>
+                                <span class="block"><?= htmlspecialchars($firstName) ?></span>
+                                <?php if($otherNames): ?>
+                                <span class="block"><?= htmlspecialchars($otherNames) ?></span>
+                                <?php endif; ?>
+                            </h2>
                             <p class="text-sm text-gray-500 font-bold tracking-widest uppercase">The General Coordinator</p>
                         </div>
                     </div>
