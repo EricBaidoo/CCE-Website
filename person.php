@@ -29,7 +29,7 @@ include 'header.php';
                 <div class="w-48 h-48 md:w-64 md:h-64 shrink-0 border-4 border-white shadow-lg overflow-hidden bg-gray-100">
                     <?php if (!empty($person['photo']) || !empty($person['image'])): ?>
                         <?php $img = !empty($person['image']) ? $person['image'] : $person['photo']; ?>
-                        <img src="<?= htmlspecialchars($img) ?>" alt="<?= htmlspecialchars($person['name']) ?>" class="w-full h-full object-cover">
+                        <img src="<?= htmlspecialchars($img) ?>" alt="<?= htmlspecialchars($person['name']) ?>" class="w-full h-full object-cover object-top">
                     <?php else: ?>
                         <svg class="w-full h-full text-gray-300 p-8" fill="currentColor" viewBox="0 0 24 24"><path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
                     <?php endif; ?>

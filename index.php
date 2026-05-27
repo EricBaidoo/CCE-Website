@@ -320,26 +320,26 @@ $news = $pdo->query("SELECT * FROM news ORDER BY published_at DESC LIMIT 4")->fe
         <div class="relative w-full overflow-hidden py-4">
             
             <!-- Infinite Marquee Track -->
-            <div class="flex gap-8 animate-marquee hover:[animation-play-state:paused] whitespace-nowrap items-center w-max px-8">
+            <div class="flex gap-8 animate-marquee hover:[animation-play-state:paused] whitespace-nowrap items-stretch w-max px-8">
                 <?php 
                 // Duplicate array to ensure seamless marquee loop
                 $marqueePeople = array_merge($people, $people, $people);
                 foreach ($marqueePeople as $person): 
                 ?>
-                <a href="person?id=<?= htmlspecialchars($person['id']) ?>" class="flex items-center gap-6 bg-white p-6 border border-gray-200 hover:border-secondary transition-colors group cursor-pointer shadow-sm hover:shadow-md w-80 shrink-0">
+                <a href="person?id=<?= htmlspecialchars($person['id']) ?>" class="flex items-center gap-6 bg-white p-6 border border-gray-200 hover:border-secondary transition-colors group cursor-pointer shadow-sm hover:shadow-md w-80 shrink-0 h-full">
                     <div class="w-20 h-20 shrink-0 border-2 border-gray-100 overflow-hidden group-hover:border-secondary transition-colors">
                         <?php if (!empty($person['image']) || !empty($person['photo'])): ?>
                             <?php $img = !empty($person['image']) ? $person['image'] : $person['photo']; ?>
-                            <img src="<?= htmlspecialchars($img) ?>" alt="<?= htmlspecialchars($person['name'] ?? '') ?>" class="w-full h-full object-contain bg-white transition-all">
+                            <img src="<?= htmlspecialchars($img) ?>" alt="<?= htmlspecialchars($person['name'] ?? '') ?>" class="w-full h-full object-cover object-top transition-all">
                         <?php else: ?>
                             <svg class="w-10 h-10 text-gray-300 m-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
                         <?php endif; ?>
                     </div>
-                    <div class="overflow-hidden">
-                        <h3 class="font-heading font-bold text-lg text-primary truncate"><?= htmlspecialchars($person['name'] ?? '') ?></h3>
-                        <p class="text-secondary text-xs uppercase tracking-widest font-bold mb-1 truncate"><?= htmlspecialchars($person['role'] ?? 'CCE Member') ?></p>
+                    <div class="overflow-hidden whitespace-normal break-words">
+                        <h3 class="font-heading font-bold text-lg text-primary leading-tight mb-1"><?= htmlspecialchars($person['name'] ?? '') ?></h3>
+                        <p class="text-secondary text-xs uppercase tracking-widest font-bold mb-1 leading-snug"><?= htmlspecialchars($person['role'] ?? 'CCE Member') ?></p>
                         <?php if (!empty($person['company'])): ?>
-                            <p class="text-gray-500 text-sm italic truncate"><?= htmlspecialchars($person['company']) ?></p>
+                            <p class="text-gray-500 text-sm italic leading-snug"><?= htmlspecialchars($person['company']) ?></p>
                         <?php endif; ?>
                     </div>
                 </a>
