@@ -29,7 +29,7 @@ $faculties = [
             </nav>
             <div class="max-w-4xl">
                 <span class="inline-block bg-white text-primary text-xs font-bold uppercase tracking-widest px-3 py-1 mb-6">Strategic Focus Areas</span>
-                <h1 class="text-5xl md:text-7xl font-heading font-bold mb-6 leading-none">THE 8 FACULTY ENDEAVOURS</h1>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-none">THE 8 FACULTY ENDEAVOURS</h1>
                 <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl">
                     We equip Christian Professionals to be excellent in high-end productivity across eight distinct spheres of global influence.
                 </p>

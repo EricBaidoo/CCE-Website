@@ -29,7 +29,7 @@ include 'header.php';
                 <span class="mx-3 border-l border-gray-500"></span>
                 <span class="text-white">Contact Us</span>
             </nav>
-            <h1 class="text-5xl md:text-7xl font-heading font-bold mb-6 leading-none">GET IN TOUCH</h1>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-none">GET IN TOUCH</h1>
             <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl">
                 We'd love to hear from you. Send us a message and our team will respond as soon as possible.
             </p>

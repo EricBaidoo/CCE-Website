@@ -40,7 +40,7 @@ include 'header.php';
             </nav>
             
             <span class="inline-block bg-secondary text-white text-xs font-bold uppercase tracking-widest px-3 py-1 mb-6">Report</span>
-            <h1 class="text-4xl md:text-6xl font-heading font-bold mb-8 leading-tight">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-8 leading-tight">
                 <?= htmlspecialchars($article['title']) ?>
             </h1>
             

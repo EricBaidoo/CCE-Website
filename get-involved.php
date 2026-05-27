@@ -11,7 +11,7 @@ include 'header.php';
     <section class="bg-primary text-white border-b-4 border-secondary pt-16 pb-32">
         <div class="max-w-5xl mx-auto px-4 text-center">
             <span class="inline-block bg-secondary text-white text-xs font-bold uppercase tracking-widest px-3 py-1 mb-6">Join The Network</span>
-            <h1 class="text-5xl md:text-7xl font-heading font-bold mb-6 leading-none">GET INVOLVED</h1>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-none">GET INVOLVED</h1>
             <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl mx-auto">
                 Discover opportunities to volunteer, consult, or partner with us to transform our generation by the power of Christ.
             </p>

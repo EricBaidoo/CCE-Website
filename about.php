@@ -17,7 +17,7 @@ include 'header.php';
             </nav>
             <div class="max-w-4xl">
                 <span class="inline-block bg-white text-primary text-xs font-bold uppercase tracking-widest px-3 py-1 mb-6">Official Charter</span>
-                <h1 class="text-5xl md:text-7xl font-heading font-bold mb-6 leading-none">THE CROSS-CUTTING EXCELLENCE MANDATE</h1>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-none">THE CROSS-CUTTING EXCELLENCE MANDATE</h1>
                 <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl">
                     Building the capacity of professionals to transform their various spheres of endeavour with the manifold wisdom of God.
                 </p>

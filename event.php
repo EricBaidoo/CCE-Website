@@ -52,7 +52,7 @@ include 'header.php';
                 <?php endif; ?>
             </div>
             
-            <h1 class="text-4xl md:text-6xl font-heading font-bold mb-8 leading-tight max-w-4xl">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-8 leading-tight max-w-4xl">
                 <?= htmlspecialchars($event['title']) ?>
             </h1>
         </div>

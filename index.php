@@ -43,7 +43,7 @@ $news = $pdo->query("SELECT * FROM news ORDER BY published_at DESC LIMIT 4")->fe
                         <div class="inline-block border-l-4 border-secondary pl-4 mb-4 lg:mb-6">
                             <span class="text-secondary font-bold tracking-widest uppercase text-xs lg:text-sm">Official Framework</span>
                         </div>
-                        <h1 class="font-heading font-bold text-3xl md:text-5xl lg:text-6xl text-white leading-tight mb-4 lg:mb-6 uppercase tracking-wide">
+                        <h1 class="font-heading font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4 lg:mb-6 uppercase tracking-wide">
                             <?= htmlspecialchars($slide['title']) ?>
                         </h1>
                         <p class="text-gray-300 text-base md:text-xl leading-relaxed mb-8 lg:mb-10 font-light border-l border-white/20 pl-4 lg:pl-6">
@@ -332,8 +332,9 @@ $news = $pdo->query("SELECT * FROM news ORDER BY published_at DESC LIMIT 4")->fe
                 $marqueeCompanies = array_merge($companies, $companies, $companies);
                 foreach ($marqueeCompanies as $company): 
                 ?>
-                <a href="company?id=<?= htmlspecialchars($company['id']) ?>" class="inline-flex justify-center items-center w-40 md:w-48 shrink-0 hover:scale-105 transition-transform duration-300">
+                <a href="company?id=<?= htmlspecialchars($company['id']) ?>" class="inline-flex flex-col justify-center items-center w-40 md:w-48 shrink-0 hover:scale-105 transition-transform duration-300 gap-4">
                     <img src="<?= htmlspecialchars($company['logo'] ?? 'assets/image/companies-and-people/cce-logo.webp') ?>" alt="<?= htmlspecialchars($company['name'] ?? 'Company') ?>" class="max-h-16 md:max-h-20 w-full object-contain">
+                    <span class="text-primary font-bold text-xs uppercase tracking-widest text-center whitespace-normal leading-tight"><?= htmlspecialchars($company['name'] ?? '') ?></span>
                 </a>
                 <?php endforeach; ?>
             </div>

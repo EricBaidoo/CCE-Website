@@ -42,7 +42,7 @@ $news = $newsStmt->fetchAll();
                 <span class="inline-block bg-white text-primary text-xs font-bold uppercase tracking-widest px-3 py-1">EAT</span>
             </div>
             
-            <h1 class="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight max-w-4xl">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight max-w-4xl">
                 Education & Training
             </h1>
             <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl">
