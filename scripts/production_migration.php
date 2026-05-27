@@ -133,6 +133,28 @@ try {
     }
     echo "Checked/Inserted $count missing settings.<br>";
 
+    // 4. Detailed Faculty Contents
+    echo "<h3>4. Seeding Detailed Faculty Content...</h3>";
+    $facList = [
+        'gad' => 'Governance & Development',
+        'eat' => 'Education & Training',
+        'sat' => 'Science & Technology',
+        'paa' => 'Philosophy & Arts',
+        'fab' => 'Finance & Business',
+        'raf' => 'Relationship & Family',
+        'maa' => 'Missions & Apologetics',
+        'cam' => 'Communication & Media',
+    ];
+    $countFac = 0;
+    foreach ($facList as $code => $name) {
+        $stmt->execute(["faculty_{$code}_hero_desc", "Welcome to the $name Faculty Endeavour. We are equipping Christian professionals to transform this sphere with the wisdom of God."]);
+        $stmt->execute(["faculty_{$code}_vision_mission", "Our vision is to see the $name sector fully aligned with God's redemptive purpose. Our mission is to build the capacity of practitioners to exercise godly wisdom, competence, and seculo-spiritual aptitude in every engagement."]);
+        $stmt->execute(["faculty_{$code}_objectives", "To provide rigorous training and capacity building for professionals.\nTo foster a supportive network of Christian practitioners.\nTo develop innovative, ethical, and sustainable solutions.\nTo influence policies and frameworks with biblical principles."]);
+        $stmt->execute(["faculty_{$code}_audience", "Professionals seeking to align their career with God's redemptive purpose."]);
+        $countFac += 4;
+    }
+    echo "Checked/Inserted $countFac faculty detailed settings.<br>";
+
     // Remove obsolete settings to keep db clean
     $pdo->exec("DELETE FROM site_settings WHERE setting_key LIKE 'home_welcome_%' OR setting_key LIKE 'about_roadmap_%'");
     echo "Cleaned up old obsolete settings.<br>";

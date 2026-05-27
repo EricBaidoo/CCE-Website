@@ -69,7 +69,7 @@ $news = $newsStmt->fetchAll();
                         <h2 class="text-3xl font-heading font-bold text-primary mb-6 border-b-2 border-secondary pb-2 inline-block">KEY OBJECTIVES</h2>
                         <ul class="list-disc pl-6 space-y-4 text-gray-700 text-lg font-light marker:text-secondary">
                             <?php 
-                            $objectives = explode("\n", trim($setting('faculty_cam_objectives_html')));
+                            $objectives = explode("\n", trim($setting('faculty_cam_objectives')));
                             foreach($objectives as $obj): 
                                 if(trim($obj)): 
                             ?>
