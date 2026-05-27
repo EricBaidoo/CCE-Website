@@ -18,7 +18,7 @@ function isActive($page, $currentPage) {
 <!-- Mobile Header -->
 <div class="md:hidden bg-primary text-white p-4 flex justify-between items-center w-full shrink-0 shadow-md relative z-30">
     <div class="font-bold text-xl flex items-center gap-3">
-        <img src="../assets/image/CCE%20LOGO.png" alt="CCE Logo" class="h-8 object-contain">
+        <img src="../assets/image/logo.webp" alt="CCE Logo" class="h-8 object-contain">
         CCE Admin
     </div>
     <button id="mobile-menu-btn" class="p-2 text-gray-300 hover:text-white transition-colors focus:outline-none">
@@ -33,7 +33,7 @@ function isActive($page, $currentPage) {
 <aside id="sidebar" class="w-64 bg-primary text-white flex flex-col h-[100dvh] fixed md:sticky top-0 left-0 z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out shadow-2xl md:shadow-none">
     <div class="p-6 flex justify-between items-center shrink-0">
         <div class="flex items-center gap-3">
-            <img src="../assets/image/CCE%20LOGO.png" alt="CCE Logo" class="h-10 object-contain">
+            <img src="../assets/image/logo.webp" alt="CCE Logo" class="h-10 object-contain">
             <h2 class="text-2xl font-bold tracking-tight">CCE Admin</h2>
         </div>
         <!-- Close button for mobile -->
