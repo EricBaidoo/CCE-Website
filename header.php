@@ -108,7 +108,7 @@
                 <img src="<?= htmlspecialchars($setting('site_logo', 'assets/image/logo.webp')) ?>" alt="CCE Logo" class="h-16 w-16 object-contain">
                 <div class="flex flex-col justify-center border-l-2 border-secondary pl-4">
                     <span class="font-heading font-bold text-primary text-2xl leading-none tracking-normal">Cross-Cutting</span>
-                    <span class="font-heading font-bold text-gray-500 text-lg leading-none tracking-normal mt-1">Excellence</span>
+                    <span class="font-heading font-bold text-secondary text-lg leading-none tracking-normal mt-1">Excellence</span>
                 </div>
             </a>
 
