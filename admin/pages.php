@@ -84,6 +84,12 @@ $faculties_list = [
 ];
 
 foreach ($faculties_list as $code => $name) {
+    // Add Homepage fields
+    $page_schema['Homepage']["home_faculty_{$code}_desc"] = ['label' => "$name (Homepage Brief Content)", 'type' => 'textarea'];
+    $page_schema['Homepage']["home_faculty_{$code}_image"] = ['label' => "$name (Homepage Icon/Image)", 'type' => 'image'];
+}
+
+foreach ($faculties_list as $code => $name) {
     $page_schema["Faculty: $name"] = [
         "faculty_{$code}_hero_desc" => ['label' => 'Hero Description', 'type' => 'textarea'],
         "faculty_{$code}_vision_mission" => ['label' => 'Vision & Mission Text', 'type' => 'textarea'],
@@ -95,8 +101,27 @@ foreach ($faculties_list as $code => $name) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = $pdo->prepare("INSERT INTO site_settings (setting_key, setting_value) VALUES (?, ?) ON DUPLICATE KEY UPDATE setting_value = ?");
     
-    foreach ($_POST['settings'] as $key => $value) {
-        $stmt->execute([$key, $value, $value]);
+    if (isset($_POST['settings'])) {
+        foreach ($_POST['settings'] as $key => $value) {
+            $stmt->execute([$key, $value, $value]);
+        }
+    }
+    
+    if (isset($_FILES['settings_files'])) {
+        $uploadDir = '../assets/image/FE-icons/';
+        if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
+        
+        foreach ($_FILES['settings_files']['name'] as $key => $filename) {
+            if ($_FILES['settings_files']['error'][$key] === UPLOAD_ERR_OK) {
+                $tmpName = $_FILES['settings_files']['tmp_name'][$key];
+                $destFile = $uploadDir . $key . '_' . time() . '.webp';
+                $finalPath = convertAndSaveToWebp($tmpName, $destFile);
+                if ($finalPath) {
+                    $imagePath = preg_replace('/^\.\.\//', '', $finalPath);
+                    $stmt->execute([$key, $imagePath, $imagePath]);
+                }
+            }
+        }
     }
     
     $_SESSION['flash_message'] = "Page content updated successfully.";
@@ -142,7 +167,7 @@ function getVal($key, $current_settings) {
             <p class="text-gray-500 mt-1">Edit the text and descriptions that appear across various pages.</p>
         </div>
 
-        <form action="" method="POST" class="space-y-8">
+        <form action="" method="POST" enctype="multipart/form-data" class="space-y-8">
             <?php foreach ($page_schema as $group_name => $fields): ?>
                 <details class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden group mb-4">
                     <summary class="bg-gray-50 px-6 py-4 border-b border-gray-200 cursor-pointer font-bold text-xl text-primary flex justify-between items-center hover:bg-indigo-50 transition-colors">
@@ -150,16 +175,24 @@ function getVal($key, $current_settings) {
                         <svg class="w-6 h-6 transform transition-transform group-open:rotate-180 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </summary>
                     <div class="p-6 space-y-6">
-                        <?php foreach ($fields as $key => $field): ?>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1"><?= htmlspecialchars($field['label']) ?></label>
-                                <?php if ($field['type'] === 'textarea'): ?>
-                                    <textarea name="settings[<?= $key ?>]" rows="4" class="w-full border-gray-300 rounded-md shadow-sm border p-2 focus:ring-secondary focus:border-secondary"><?= getVal($key, $current_settings) ?></textarea>
-                                <?php else: ?>
-                                    <input type="text" name="settings[<?= $key ?>]" value="<?= getVal($key, $current_settings) ?>" class="w-full border-gray-300 rounded-md shadow-sm border p-2 focus:ring-secondary focus:border-secondary">
-                                <?php endif; ?>
-                            </div>
-                        <?php endforeach; ?>
+                            <?php foreach ($fields as $key => $field): ?>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1"><?= htmlspecialchars($field['label']) ?></label>
+                                    <?php if ($field['type'] === 'textarea'): ?>
+                                        <textarea name="settings[<?= $key ?>]" rows="4" class="w-full border-gray-300 rounded-md shadow-sm border p-2 focus:ring-secondary focus:border-secondary"><?= getVal($key, $current_settings) ?></textarea>
+                                    <?php elseif ($field['type'] === 'image'): ?>
+                                        <?php $currentImg = getVal($key, $current_settings); ?>
+                                        <?php if ($currentImg): ?>
+                                            <div class="mb-2">
+                                                <img src="../<?= $currentImg ?>" class="h-16 object-contain bg-gray-50 rounded border border-gray-200">
+                                            </div>
+                                        <?php endif; ?>
+                                        <input type="file" name="settings_files[<?= $key ?>]" accept="image/*" class="w-full border-gray-300 rounded-md shadow-sm border p-2 focus:ring-secondary focus:border-secondary">
+                                    <?php else: ?>
+                                        <input type="text" name="settings[<?= $key ?>]" value="<?= getVal($key, $current_settings) ?>" class="w-full border-gray-300 rounded-md shadow-sm border p-2 focus:ring-secondary focus:border-secondary">
+                                    <?php endif; ?>
+                                </div>
+                            <?php endforeach; ?>
                     </div>
                 </details>
             <?php endforeach; ?>

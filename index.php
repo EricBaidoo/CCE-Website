@@ -218,26 +218,29 @@ $news = $pdo->query("SELECT * FROM news ORDER BY published_at DESC LIMIT 4")->fe
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border border-gray-200 bg-white">
                 <?php
                 $faculties = [
-                    ['id'=>'gad', 'icon'=>'GAD', 'name'=>'Governance & Development', 'desc'=>'Strengthening public policy and institutional capacity.'],
-                    ['id'=>'eat', 'icon'=>'EAT', 'name'=>'Education & Training', 'desc'=>'Empowering educators to formulate robust systems.'],
-                    ['id'=>'sat', 'icon'=>'SAT', 'name'=>'Science & Technology', 'desc'=>'Promoting ethical innovation and research.'],
-                    ['id'=>'paa', 'icon'=>'PAA', 'name'=>'Philosophy & Arts', 'desc'=>'Integrating culture to shape global worldviews.'],
-                    ['id'=>'fab', 'icon'=>'FAB', 'name'=>'Finance & Business', 'desc'=>'Driving economies with competence and godliness.'],
-                    ['id'=>'raf', 'icon'=>'RAF', 'name'=>'Relationship & Family', 'desc'=>'Building strong godly families and relationships.'],
-                    ['id'=>'maa', 'icon'=>'MAA', 'name'=>'Missions & Apologetics', 'desc'=>'Engaging culture and defending the faith.'],
-                    ['id'=>'cam', 'icon'=>'CAM', 'name'=>'Communication & Media', 'desc'=>'Communicating truth in the global media space.'],
+                    ['id'=>'gad', 'icon'=>'GAD', 'name'=>'Governance & Development', 'default_desc'=>'Strengthening public policy and institutional capacity.'],
+                    ['id'=>'eat', 'icon'=>'EAT', 'name'=>'Education & Training', 'default_desc'=>'Empowering educators to formulate robust systems.'],
+                    ['id'=>'sat', 'icon'=>'SAT', 'name'=>'Science & Technology', 'default_desc'=>'Promoting ethical innovation and research.'],
+                    ['id'=>'paa', 'icon'=>'PAA', 'name'=>'Philosophy & Arts', 'default_desc'=>'Integrating culture to shape global worldviews.'],
+                    ['id'=>'fab', 'icon'=>'FAB', 'name'=>'Finance & Business', 'default_desc'=>'Driving economies with competence and godliness.'],
+                    ['id'=>'raf', 'icon'=>'RAF', 'name'=>'Relationship & Family', 'default_desc'=>'Building strong godly families and relationships.'],
+                    ['id'=>'maa', 'icon'=>'MAA', 'name'=>'Missions & Apologetics', 'default_desc'=>'Engaging culture and defending the faith.'],
+                    ['id'=>'cam', 'icon'=>'CAM', 'name'=>'Communication & Media', 'default_desc'=>'Communicating truth in the global media space.'],
                 ];
                 foreach ($faculties as $index => $fac): 
                     // Add borders for strict grid look (2 rows of 4)
                     $borderRight = ($index % 4 === 3) ? "" : "lg:border-r";
                     $borderBottom = ($index > 3) ? "" : "border-b";
                     $borderClass = "border-b md:border-b-0 md:border-r border-gray-200 {$borderRight} {$borderBottom}";
+                    
+                    $dynDesc = $setting("home_faculty_{$fac['id']}_desc", $fac['default_desc']);
+                    $dynIcon = $setting("home_faculty_{$fac['id']}_image", "assets/image/FE-icons/{$fac['icon']}.svg");
                 ?>
-                <div class="p-6 hover:bg-gray-50 transition-colors <?= $borderClass ?>">
-                    <img src="assets/image/FE-icons/<?= htmlspecialchars($fac['icon']) ?>.svg" alt="<?= htmlspecialchars($fac['name']) ?>" class="w-12 h-12 mb-4" onerror="this.style.display='none'">
+                <div class="p-6 hover:bg-gray-50 transition-colors <?= $borderClass ?> flex flex-col">
+                    <img src="<?= htmlspecialchars($dynIcon) ?>" alt="<?= htmlspecialchars($fac['name']) ?>" class="w-12 h-12 mb-4 object-contain" onerror="this.style.display='none'">
                     <h3 class="text-lg font-heading font-bold text-primary mb-2 uppercase leading-tight"><?= htmlspecialchars($fac['name']) ?></h3>
-                    <p class="text-gray-600 font-light text-sm mb-4 leading-snug"><?= htmlspecialchars($fac['desc']) ?></p>
-                    <a href="faculty-<?= $fac['id'] ?>" class="text-primary font-bold text-xs uppercase tracking-widest hover:text-secondary flex items-center gap-1 mt-auto">
+                    <p class="text-gray-600 font-light text-sm mb-4 leading-snug"><?= htmlspecialchars($dynDesc) ?></p>
+                    <a href="faculty-<?= $fac['id'] ?>" class="text-primary font-bold text-xs uppercase tracking-widest hover:text-secondary flex items-center gap-1 mt-auto pt-2">
                         View Details <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </a>
                 </div>

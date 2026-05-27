@@ -18,7 +18,7 @@ function isActive($page, $currentPage) {
 <!-- Mobile Header -->
 <div class="md:hidden bg-primary text-white p-4 flex justify-between items-center w-full shrink-0 shadow-md relative z-30">
     <div class="font-bold text-xl flex items-center gap-3">
-        <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+        <img src="../assets/image/CCE%20LOGO.png" alt="CCE Logo" class="h-8 object-contain">
         CCE Admin
     </div>
     <button id="mobile-menu-btn" class="p-2 text-gray-300 hover:text-white transition-colors focus:outline-none">
@@ -32,7 +32,10 @@ function isActive($page, $currentPage) {
 <!-- Sidebar -->
 <aside id="sidebar" class="w-64 bg-primary text-white flex flex-col h-[100dvh] fixed md:sticky top-0 left-0 z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out shadow-2xl md:shadow-none">
     <div class="p-6 flex justify-between items-center shrink-0">
-        <h2 class="text-2xl font-bold tracking-tight">CCE Admin</h2>
+        <div class="flex items-center gap-3">
+            <img src="../assets/image/CCE%20LOGO.png" alt="CCE Logo" class="h-10 object-contain">
+            <h2 class="text-2xl font-bold tracking-tight">CCE Admin</h2>
+        </div>
         <!-- Close button for mobile -->
         <button id="mobile-close-btn" class="md:hidden p-2 text-gray-400 hover:text-white focus:outline-none -mr-2">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>

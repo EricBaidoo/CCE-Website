@@ -105,7 +105,23 @@ try {
         'about_ops_4_title' => 'Community Development',
         'about_ops_4_desc' => 'We undertake projects aimed at achieving Sustainable Development Goals (SDGs) at the basic level where real lives are touched. Areas include Education, Social Protection, Gender, and Nutrition.',
         'about_ops_5_title' => 'Volunteering and Internships',
-        'about_ops_5_desc' => 'Our projects provide opportunities for young people to acquire practical experience in development work. Students are exposed to practical situations that draw out their potential to explore solutions.'
+        'about_ops_5_desc' => 'Our projects provide opportunities for young people to acquire practical experience in development work. Students are exposed to practical situations that draw out their potential to explore solutions.',
+        'home_faculty_gad_desc' => 'Strengthening public policy and institutional capacity.',
+        'home_faculty_gad_image' => 'assets/image/FE-icons/GAD.svg',
+        'home_faculty_eat_desc' => 'Empowering educators to formulate robust systems.',
+        'home_faculty_eat_image' => 'assets/image/FE-icons/EAT.svg',
+        'home_faculty_sat_desc' => 'Promoting ethical innovation and research.',
+        'home_faculty_sat_image' => 'assets/image/FE-icons/SAT.svg',
+        'home_faculty_paa_desc' => 'Integrating culture to shape global worldviews.',
+        'home_faculty_paa_image' => 'assets/image/FE-icons/PAA.svg',
+        'home_faculty_fab_desc' => 'Driving economies with competence and godliness.',
+        'home_faculty_fab_image' => 'assets/image/FE-icons/FAB.svg',
+        'home_faculty_raf_desc' => 'Building strong godly families and relationships.',
+        'home_faculty_raf_image' => 'assets/image/FE-icons/RAF.svg',
+        'home_faculty_maa_desc' => 'Engaging culture and defending the faith.',
+        'home_faculty_maa_image' => 'assets/image/FE-icons/MAA.svg',
+        'home_faculty_cam_desc' => 'Communicating truth in the global media space.',
+        'home_faculty_cam_image' => 'assets/image/FE-icons/CAM.svg'
     ];
 
     $stmt = $pdo->prepare("INSERT INTO site_settings (setting_key, setting_value) VALUES (?, ?) ON DUPLICATE KEY UPDATE setting_value = IF(setting_value = '' OR setting_value IS NULL, VALUES(setting_value), setting_value)");
