@@ -315,9 +315,12 @@ $news = $pdo->query("SELECT * FROM news ORDER BY published_at DESC LIMIT 4")->fe
     </section>
 
     <!-- INSTITUTIONAL PARTNERS (Companies) -->
-    <section class="py-12 bg-light border-t border-gray-200 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 mb-8">
-            <h2 class="text-sm font-bold text-gray-400 tracking-widest uppercase text-center">CCE CORPORATE BUSINESS ALLIANCES</h2>
+    <section class="py-20 bg-light border-t border-gray-200 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 mb-12">
+            <div class="flex justify-between items-end border-b-2 border-primary pb-4">
+                <h2 class="text-primary font-heading font-bold text-3xl md:text-4xl">CCE CORPORATE BUSINESS ALLIANCES</h2>
+                <a href="companies" class="hidden md:block text-secondary font-bold text-sm uppercase tracking-widest hover:text-primary">View All Alliances</a>
+            </div>
         </div>
         
         <div class="relative w-full overflow-hidden py-4">
